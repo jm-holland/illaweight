@@ -1,0 +1,61 @@
+/**
+*  illaWeightCss v1.0.0
+*  https://illaweight.illaweb.fr
+*
+*  Copyright(c) 2024 jm Holland
+*  licence : CC BY-NC-ND 4.0
+*/
+
+/** === Margin / padding === */
+
+$ems: 1, 2, 3, 4, 5, 6, 7;
+$directions: "", "-bottom", "-top", "-left", "-right";
+
+/* Paddings and Margins */
+@each $em in $ems {
+  @each $dir in $directions {
+    $dir-in-rule: str-slice($dir, 2, 2);
+
+    .m#{$dir-in-rule}-#{$em} {
+      margin#{$dir}: $em + rem;
+    }
+    .p#{$dir-in-rule}-#{$em} {
+      padding#{$dir}: $em + rem;
+    }
+  }
+}
+/** === Media query === */
+$breakpoints: (
+  "little": (
+    max-width: 376px,
+  ),
+  "small": (
+    max-width: 768px,
+  ),
+  "medium": (
+    max-width: 1024px,
+  ),
+  "large": (
+    max-width: 1200px,
+  ),
+  "min-small": (
+    min-width: 768px,
+  ),
+  "min-medium": (
+    min-width: 1024px,
+  ),
+  "min-large": (
+    min-width: 1200px,
+  ),
+) !default;
+
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

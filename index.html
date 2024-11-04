@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Framework CSS pour illaCss" />
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Title -->
+    <title>illaCss_framework</title>
+  </head>
+  <body>
+    <nav class="navigation" aria-label="navigation">
+      <!-- Brand -->
+      <div class="brand">
+        <a href="/" title="Aller à la page d'accueil">
+          <img src="/illacss.png" alt="logo de la marque" />
+        </a>
+      </div>
+      <!-- Menu Hamburger-->
+      <input
+        class="menu-hamburger"
+        type="checkbox"
+        id="menu-hamburger"
+        aria-label="Open the menu"
+      />
+      <label class="menu-icon" for="menu-hamburger">
+        <span class="hamburger-icon" aria-hidden="true"></span>
+      </label>
+      <ul class="menu">
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#blockquote">Blockquote</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#list">List</a></li>
+        <li><a href="#card">Card</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li>
+          <a href="#javascript" aria-label="submenu">Javascript</a>
+          <ul>
+            <li><a href="#darkMod">Dark Mode</a></li>
+             <li><a href="#scrollToTop">Scroll to top</a></li>
+          <li><a href="#portfolio-script">Portfolio</a></li>
+          <li><a href="#alertMessage">Alert Message</a></li>
+          </ul>
+        </li>
+        <!-- Dark Mode-->
+        <li>
+          <input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/>
+          <label for="themeSwitch" class="checkbox-label">
+            <span class="moon" title="Dark">&#9789;</span>
+            <span class="sun" title="light">&#10039;</span>
+            <span class="ball" title="Dark mode"></span>
+          </label>
+          <script type="module" src="/js/themeSwitch.js"></script>
+        </li>
+      </ul>
+    </nav>
+    <wrapper>
+      <!-- code html navigation -->
+      <pre class="mt-1">
+        <code class="language-html">
+/** === Navigation bar === */
+&lt;nav class="navigation" aria-label="navigation"&gt;
+  &lt;div class="brand"&gt;
+    &lt;a href="/" title="Aller à la page d'accueil"&gt;
+      &lt;img src="/illacss.png" alt="logo de la marque" /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  /** Menu hamburger */
+  &lt;input class="menu-hamburger" type="checkbox" id="menu-hamburger" aria-label="Open the menu"/&gt;
+  &lt;label class="menu-icon" for="menu-hamburger"&gt;
+    &lt;span class="hamburger-icon" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;/label&gt;
+  /** Menu principal */
+  &lt;ul class="menu"&gt;
+    &lt;li&gt;&lt;a href="#typography">Typography&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#blockquote">Blockquote&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#buttons">Buttons&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" aria-label="submenu"&gt;Javascript&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#darkMode"&gt;Dark Mode&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;li&gt;    
+    /** Dark Mode switch */
+      &lt;input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/&gt;
+        &lt;label for="themeSwitch" class="checkbox-label"&gt;
+          &lt;span class="moon" title="Dark"&gt;&#9789;&lt;/span&gt;
+          &lt;span class="sun" title="light"&gt;&#10039;&lt;/span&gt;
+          &lt;span class="ball" title="Dark mode"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+      &lt;script type="module" src="/js/themeSwitch.js"&gt;alt;/script&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+      </code></pre>
+    <!-- alert Message -->
+      <div class="alert alert-warning hidden">
+        <div class="alert-content">
+          <span class="alert-icon"></span>
+          <div class="message">
+            <span class="text text-1"></span>
+            <span class="text text-2">Notifications générales du site </span>
+          </div>
+        </div>
+        <span class="alert-close">&#x10102;</span>
+        <div class="progress active"></div>
+      </div>
+      <script type="module" src="./js/alertMessage.js"></script>
+
+    <main>
+      <h1 class="text-center">illaWeightCSS Preview</h1>
+      <!-- Typography -->
+      <section id="typography" class="section">
+        <h2>Typography</h2>
+        <div class="row">
+          <div class="col border">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>
+              Paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Duis id lacus eu nulla porta sagittis non nec dui. Vivamus iaculis
+              aliquet diam. Proin eu ullamcorper metus, at imperdiet ante.
+            </p>
+            <p>This <mark>marks</mark> the history of FeatherCSS</p>
+            <p>
+              You need to add
+              <strong><code>data-theme=&quot;dark or light&quot;</code></strong>
+              attribute to your markup to enable Dark Mode.
+            </p>
+          </div>
+          <div class="col border" dir="rtl">
+            <h1 class="heading-1">Heading 1</h1>
+            <h2 class="heading-2">Heading 2</h2>
+            <h3 class="heading-3">Heading 3</h3>
+            <h4 class="heading-4">Heading 4</h4>
+            <h5 class="heading-5">Heading 5</h5>
+            <h6 class="heading-6">Heading 6</h6>
+            <p>
+              Paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Duis id lacus eu nulla porta sagittis non nec dui. Vivamus iaculis
+              aliquet diam. Proin eu ullamcorper metus, at imperdiet ante.
+            </p>
+            <p>This <mark>marks</mark> the history of FeatherCSS</p>
+            <p>
+              You need to add
+              <strong><code>data-theme=&quot;dark or light&quot;</code></strong>
+              attribute to your markup to enable Dark Mode.
+            </p>
+          </div>
+        </div>
+        <pre class="mt-1">
+          <code class="language-html">
+  &lt;h1&gt;Heading 1&lt;/h1&gt;
+  &lt;h2&gt;Heading 2&lt;/h2&gt;
+  &lt;h3&gt;Heading 3&lt;/h3&gt;
+  &lt;h4&gt;Heading 4&lt;/h4&gt;
+  &lt;h5&gt;Heading 5&lt;/h5&gt;
+  &lt;h6&gt;Heading 6&lt;/h6&gt;
+  &lt;p&gt;
+    Paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis id lacus eu nulla porta sagittis non nec dui. Vivamus iaculis
+    aliquet diam. Proin eu ullamcorper metus, at imperdiet ante.   
+  &lt;/p&gt;
+  &lt;p&gt;This &lt;mark&gt;marks&lt;/mark&gt; the history of FeatherCSS&lt;/p&gt;
+  &lt;p&gt;
+    You need to add &lt;strong&gt;&lt;code&gt;data-theme=&quot;dark or light&quot;&lt;/code&gt;&lt;/strong&gt; attribute to your markup to enable Dark Mode.
+  &lt;/p&gt;  
+</code>
+        </pre>
+      </section>
+       <hr class="hr-style" />  
+      <!-- Blockotes -->
+      <section id="blockquote" class="section">
+        <h2>Blockquote</h2>
+        <div class="row">
+          <div class="col border">
+            <blockquote>This changed my life, literally.</blockquote>
+          </div>
+          <div class="col border" dir="rtl">
+            <blockquote>This changed my life, literally.</blockquote>
+          </div>
+        </div>
+        <pre class="mt-1">
+          <code class="language-html">
+&lt;blockquote&gt;This changes my life, litterally.&lt;/blocquote&gt;
+          </code>
+        </pre>
+      </section>
+       <hr class="hr-style" />  
+       <section id="social" class="section">
+        <h2>Socials</h2>
+                  <!-- Social group -->
+          <div class="socials">
+            <a href="#"  title="Join us on Facebook">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#"  title="Join us on Twitter">
+              <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#"  title="Join us on Google+">
+              <i class="fa-brands fa-google-plus" aria-hidden="true"></i>
+            </a>
+            <a href="#"  title="Join us on Dribbble">
+              <i class="fa-brands fa-dribbble" aria-hidden="true"></i>
+            </a>
+            <a href="#"  title="Join us on Vimeo">
+              <i class="fa-brands fa-vimeo" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="Join us on Pinterest">
+              <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="Join us on Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" title="Join us on Linked In">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+<pre class="mt-1">
+  <code class="language-html">
+ &lt;div class="socials"&gt;
+    &lt;a href="#" title="Join us on Facebook"&gt;
+      &lt;i class="fa-brands fa-facebook" aria-hidden="true">&lt;/i&gt;
+    &lt;/a&gt;
+&lt;/div&gt;  
+ </code>
+</pre>
+          <!-- /social group -->
+       </section>
+       <hr class="hr-style">
+      <!-- Buttons -->
+      <section id="buttons" class="section">
+        <h2>Buttons</h2>
+        
+          <div class="container">
+            <button class="button">Default Button</button>
+            <button class="button button-primary">Primary Button</button>
+            <button class="button button-clear">Clear Button</button>
+            <button class="button button-secondary">Secondary button</button>
+            <button class="button button-warning">Warning button</button>
+            <button class="button button-error">Error button</button>
+          </div>
+          
+            <pre class="mt-1">
+            <code class="language-html">
+&lt;button class="button"&gt;Default button&lt;/button&gt;
+&lt;button class="button button-priamry"&gt;Primary button&lt;/button&gt;
+&lt;button class="button button-clear"&gt;Default button&lt;/button&gt;
+&lt;button class="button button-secondary"&gt;Secondary button&lt;/button&gt;
+&lt;button class="button button-warning"&gt;Warning button&lt;/button&gt;
+&lt;button class="button button-error"&gt;Error button&lt;/button&gt;
+            </code>
+          </pre>
+         
+      </section>
+       <hr class="hr-style" />  
+      <!-- Liste -->
+      <section id="list" class="section">
+        <h2 >List</h2>
+         <div class="container border">
+            <ul>
+              <li>Waffles</li>
+              <li>Pancakes</li>
+            </ul>
+            <ol>
+              <li>Add 100g flour into a bowl</li>
+              <li>Add 2x eggs into the bowl and mix</li>
+            </ol>
+
+            <dl>
+              <dt>Room Size</dt>
+              <dd>1,200 SQFT</dd>
+              <dt>Bathrooms</dt>
+              <dd>2</dd>
+            </dl>
+              <ul class="reset">
+                <li><a href="#list">Link 1</a></li>
+                <li><a href="#list">Link 2</a></li>
+              </ul>
+          </div>
+<pre class="mt-1">
+  <code class="language-html">
+  &lt;ul&gt;
+    &lt;li&gt;Waffles&lt;/li&gt;
+    &lt;li&gt;Pancakes&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Add 100g flour into a bowl&lt;/li&gt;
+    &lt;li&gt;Add 2x eggs into the bowl and mix&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;dl&gt;
+    &lt;dt&gt;Room Size&lt;/dt&gt;
+    &lt;dd&gt;1,200 SQFT&lt;/dd&gt;
+    &lt;dt&gt;Bathrooms&lt;/dt&gt;
+    &lt;dd&gt;2</dd>
+  &lt;/dl&gt;
+ 
+    &lt;ul class="reset"&gt;
+      &lt;li&gt;&lt;a href="#list"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#list"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+  </code>
+</pre>
+      </section>
+     <hr class="hr-style" />  
+     <!-- Card row col-->
+      <section class="section" id="card">
+        <!-- Card column flex -->
+        <h2>Card</h2>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Title card</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laboriosam optio vero velit excepturi nesciunt non aliquid
+                    obcaecati veritatis, voluptatibus a, quia possimus
+                    consequuntur nihil fugit doloremque nisi harum aspernatur
+                    beatae.
+                  </p>
+                </div>
+                <div class="card-footer">Footer reference text</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Title card</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laboriosam optio vero velit excepturi nesciunt non aliquid
+                    obcaecati veritatis, voluptatibus a, quia possimus
+                    consequuntur nihil fugit doloremque nisi harum aspernatur
+                    beatae.
+                  </p>
+                </div>
+                <div class="card-footer">Footer reference text</div>
+              </div>
+            </div><div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Title card</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laboriosam optio vero velit excepturi nesciunt non aliquid
+                    obcaecati veritatis, voluptatibus a, quia possimus
+                    consequuntur nihil fugit doloremque nisi harum aspernatur
+                    beatae.
+                  </p>
+                </div>
+                <div class="card-footer">Footer reference text</div>
+              </div>
+            </div><div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Title card</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laboriosam optio vero velit excepturi nesciunt non aliquid
+                    obcaecati veritatis, voluptatibus a, quia possimus
+                    consequuntur nihil fugit doloremque nisi harum aspernatur
+                    beatae.
+                  </p>
+                </div>
+                <div class="card-footer">Footer reference text</div>
+              </div>
+            </div><div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Title card</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laboriosam optio vero velit excepturi nesciunt non aliquid
+                    obcaecati veritatis, voluptatibus a, quia possimus
+                    consequuntur nihil fugit doloremque nisi harum aspernatur
+                    beatae.
+                  </p>
+                </div>
+                <div class="card-footer">Footer reference text</div>
+              </div>
+            </div><div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <h3>Title card</h3>
+                </div>
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laboriosam optio vero velit excepturi nesciunt non aliquid
+                    obcaecati veritatis, voluptatibus a, quia possimus
+                    consequuntur nihil fugit doloremque nisi harum aspernatur
+                    beatae.
+                  </p>
+                </div>
+                <div class="card-footer">Footer reference text</div>
+              </div>
+            </div>
+          </div>
+<pre class="mt-1">
+  <code class="language-html">
+&lt;div class="card"&gt;
+    &lt;div class="card-header"&gt;
+      &lt;h3&gt;title card&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="card-content"&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Laboriosam optio vero velit excepturi nesciunt non aliquid
+        obcaecati veritatis, voluptatibus a, quia possimus
+        consequuntur nihil fugit doloremque nisi harum aspernatur
+        beatae.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="card-footer"&gt;footer reference texte&lt;/div&gt;
+&lt;/div&gt;
+
+  </code>
+</pre>
+       </section>
+           <hr class="hr-style" />
+<!-- Form -->
+      <section id="form" class="section">
+        <div class="container">
+          <form method="post">
+            <div class="form">
+              <!-- Form input -->
+              <p class="form-control">
+                <label for="name">Username</label>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Enter your username"
+                />
+                <span class="form-success-message" aria-live="polite"
+                  >Your username is available</span
+                >
+              </p>
+              <p class="form-control">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="your password"
+                />
+                <span class="form-error-message" aria-live="polite"
+                  >Password is too weak</span
+                >
+              </p>
+              <div class="form-control">
+                <label for="meeting-time">Date</label>
+                <input type="datetime-local" id="meeting-time" name="meeting-time"  min="2024-11-07T00:00" max="2030-06-14T00:00" />
+              </div>
+              <!-- Form select -->
+              <div class="select">
+                <label for="pet-select">Choose a pet:</label>
+                <select name="pets" id="pet-select">
+                  <option value="">--Please choose an option--</option>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="hamster">Hamster</option>
+                  <option value="parrot">Parrot</option>
+                  <option value="spider">Spider</option>
+                  <option value="goldfish">Goldfish</option>
+                </select>
+              </div>
+              <!-- input radio -->
+              <fieldset>
+                <legend>Select a maintenance drone:</legend>
+                <div>
+                  <input
+                    type="radio"
+                    id="huey"
+                    name="drone"
+                    value="huey"
+                    checked
+                  />
+                  <label for="huey">Huey</label>
+                </div>
+                <div>
+                  <input type="radio" id="dewey" name="drone" value="dewey" />
+                  <label for="dewey">Dewey</label>
+                </div>
+                <div>
+                  <input type="radio" id="louie" name="drone" value="louie" />
+                  <label for="louie">Louie</label>
+                </div>
+              </fieldset>
+              <!-- input checkbox -->
+              <fieldset>
+                <legend>Choose your monster's features:</legend>
+                <div>
+                  <input type="checkbox" id="scales" name="scales" checked />
+                  <label for="scales">Scales</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="horns" name="horns" />
+                  <label for="horns">Horns</label>
+                </div>
+              </fieldset>
+              <!-- Textarea -->
+              <div class="form-control">
+                <span class="label-text">Additional Comment</span>
+                <textarea
+                  id="comment"
+                  placeholder="Type your comment"
+                  rows="3"
+                ></textarea>
+              </div>
+              <!-- input color -->
+              <p>Choose your monster's colors:</p>
+              <div>
+                <input type="color" id="head" name="head" value="#e66465" />
+                <label for="head">Head</label>
+              </div>
+              <div>
+                <input type="color" id="body" name="body" value="#f6b73c" />
+                <label for="body">Body</label>
+              </div>
+              <button class="button btn-primary mt-2" type="submit">
+                Send
+              </button>
+            </div>
+          </form>
+        </div> 
+<pre class="mt-1">
+  <code class="language-html">
+  &lt;div class="container"&gt;
+          &lt;form method="post"&gt;
+            &lt;div class="form"&gt;
+              &lt;p class="form-control"&gt;
+                &lt;label for="name">Username&lt;/label&gt;
+                &lt;input type="text" name="username" id="username" placeholder="Enter your username" /&gt;
+                &lt;span class="form-success-message" aria-live="polite"&gt;
+                Your username is available
+                &lt;/span&gt;
+              &lt;/p&gt;
+
+              &lt;p class="form-control"&gt;
+                &lt;label for="password"&gt;Password&lt;/label&gt;
+                &lt;input type="password" id="password" name="password" placeholder="your password" /&gt;
+                &lt;span class="form-error-message" aria-live="polite"&gt;
+                Password is too weak
+                &lt;/span&gt;
+              &lt;/p&gt;
+                 &lt;p class="form-control"&gt;
+                &lt;label for="meeting-time"&gt;Date&lt;/label&gt;
+                &lt;input type="datetime-local" id="meeting-time" name="meeting-time" min="2024-11-07T00:00" max="2030-06-14T00:00" /&gt;
+              &lt;/p&gt;
+              &lt;div class="select"&gt;
+                &lt;label for="pet-select"&gt;Choose a pet:&lt;/label&gt;
+                &lt;select name="pets" id="pet-select"&gt;
+                  &lt;option value=""&gt;--Please choose an option--&lt;/option&gt;
+                  &lt;option value="dog"&gt;Dog&lt;/option&gt;
+                  &lt;option value="cat"&gt;Cat&lt;/option&gt;
+                  &lt;option value="hamster"&gt;Hamster&lt;/option&gt;
+                  &lt;option value="parrot"&gt;Parrot&lt;/option&gt;
+                  &lt;option value="spider"&gt;Spider&lt;/option&gt;
+                  &lt;option value="goldfish"&gt;Goldfish&lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+             
+              &lt;fieldset&gt;
+                &lt;legend&gt;Select a maintenance drone:&lt;/legend&gt;
+                &lt;div&gt;
+                  &lt;input type="radio" id="huey" name="drone"  value="huey" checked /&gt;
+                  &lt;label for="huey"&gt;Huey&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;input type="radio" id="dewey" name="drone" value="dewey" /&gt;
+                  &lt;label for="dewey"&gt;Dewey&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;input type="radio" id="louie" name="drone" value="louie" /&gt;
+                  &lt;label for="louie"&gt;Louie&lt;/label&gt;
+                &lt;/div&gt;
+              &lt;/fieldset&gt;
+           
+              &lt;fieldset&gt;
+                &lt;legend&gt;Choose your monster's features:&lt;/legend&gt;
+                &lt;div&gt;
+                  &lt;input type="checkbox" id="scales" name="scales" checked /&gt;
+                  &lt;label for="scales"&gt;Scales&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;input type="checkbox" id="horns" name="horns" /&gt;
+                  &lt;label for="horns"&gt;Horns&lt;/label&gt;
+                &lt;/div&gt;
+              &lt;/fieldset&gt;
+            
+              &lt;div class="form-control"&gt;
+                &lt;span class="label-text"&gt;Additional Comment&lt;/span&gt;
+                &lt;textarea id="comment" placeholder="Type your comment"rows="3"&gt;&lt;/textarea&gt;
+              &lt;/div&gt;
+             
+              &lt;p&gt;Choose your monster's colors:&lt;/p&gt;
+              &lt;div&gt;
+                &lt;input type="color" id="head" name="head" value="#e66465" /&gt;
+                &lt;label for="head"&gt;Head&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div&gt;
+                &lt;input type="color" id="body" name="body" value="#f6b73c" /&gt;
+                &lt;label for="body"&gt;Body&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;button class="button btn-primary mt-2" type="submit"&gt;
+                Send
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt; 
+  </code>
+</pre>
+      </section>
+      <hr class="hr-style">
+<!-- Table -->
+      <section id="table" class="preview-section">
+        <h2 class="preview-title">Table</h2>
+        <div class="container mt-1">
+          <table>
+            <caption>
+             List of concurrents&nbsp;(<small>caption on bottom</small>)
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Person</th>
+                <th scope="col">Most interest in</th>
+                <th scope="col">Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Chris</th>
+                <td>HTML tables</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <th scope="row">Dennis</th>
+                <td>Web accessibility</td>
+                <td>45</td>
+              </tr>
+              <tr>
+                <th scope="row">Sarah</th>
+                <td>JavaScript frameworks</td>
+                <td>29</td>
+              </tr>
+              <tr>
+                <th scope="row">Karen</th>
+                <td>Web performance</td>
+                <td>36</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="2">Average age</th>
+                <td>33</td>
+              </tr>
+            </tfoot>
+          </table>
+          </div>
+        </div>
+        <pre class="mt-1">
+          <code class="language-html">
+  &lt;table&gt;
+    &lt;caption&gt;
+      List of concurrents&nbsp;(&lt;small&gt;caption on bottom&lt;/small&gt;)
+    &lt;/caption&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope="col"&gt;Person&lt;/th&gt;
+        &lt;th scope="col"&gt;Most interest in&lt;/th&gt;
+        &lt;th scope="col"&gt;Age&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Chris&lt;/th&gt;
+        &lt;td&gt;HTML tables&lt;/td&gt;
+        &lt;td&gt;22&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Dennis&lt;/th&gt;
+        &lt;td&gt;Web accessibility&lt;/td&gt;
+        &lt;td&gt;45&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Sarah&lt;/th&gt;
+        &lt;td&gt;JavaScript frameworks&lt;/td&gt;
+        &lt;td&gt;29&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Karen&lt;/th&gt;
+        &lt;td&gt;Web performance&lt;/td&gt;
+        &lt;td&gt;36&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+      &lt;tr&gt;
+        &lt;th scope="row" colspan="2"&gt;Average age&lt;/th&gt;
+        &lt;td&gt;3&lt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tfoot&gt;
+  &lt;/table&gt;
+          </code>
+        </pre>
+      </section>
+<hr class="hr-style">
+  <!-- Portfolio -->
+      <section id="portfolio" class="section">
+         <h2>Portfolio</h2>
+          <div>
+            <ul class="portfolio-menu">
+              <li class="current" data-target="all">All</li>
+              <li data-target="landscape">Landscape</li>
+              <li data-target="architect">Architecture</li>
+              <li data-target="sky">Sky</li>
+              <li data-target="divers">Divers</li>
+            </ul>
+            <div class="portfolio-item">
+              <div class="card" data-item="landscape">
+                <img src="https://picsum.photos/id/12/600" alt="description" />
+              </div>
+              <div class="card" data-item="divers">
+                <img src="https://picsum.photos/id/31/600" alt="description" />
+              </div>
+              <div class="card" data-item="sky">
+                <img src="https://picsum.photos/id/38/600" alt="description" />
+              </div>
+              <div class="card" data-item="landscape">
+                <img src="https://picsum.photos/id/46/600" alt="description" />
+              </div>
+              <div class="card" data-item="divers">
+                <img src="https://picsum.photos/id/73/600" alt="description" />
+              </div>
+              <div class="card" data-item="architect">
+                <img src="https://picsum.photos/id/78/600" alt="description" />
+              </div>
+              <div class="card" data-item="divers">
+                <img src="https://picsum.photos/id/80/600" alt="description" />
+              </div>
+              <div class="card" data-item="sky">
+                <img src="https://picsum.photos/id/383/600" alt="description" />
+              </div>
+              <div class="card" data-item="architect">
+                <img src="https://picsum.photos/id/444/600" alt="description" />
+              </div>
+              <div class="card" data-item="landscape">
+                <img src="https://picsum.photos/id/443/600" alt="description" />
+              </div>
+              <div class="card" data-item="male">
+                <img src="https://picsum.photos/id/25/600" alt="description" />
+              </div>
+              <div class="card" data-item="architect">
+                <img src="https://picsum.photos/id/142/600" alt="description" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="module" src="/js/portfolio.js"></script>
+        <pre class="mt-1">
+          <code class="language-html">
+ &lt;div&gt;
+  &lt;ul class="portfolio-menu"&gt;
+    &lt;li class="current" data-target="all"&gt;All&lt;/li&gt;
+    &lt;li data-target="landscape"&gt;Landscape&lt;/li&gt;
+    &lt;li data-target="architect"&gt;Architecture&lt;/li&gt;
+    &lt;li data-target="sky"&gt;Sky&lt;/li&gt;
+    &lt;li data-target="divers"&gt;Divers&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="portfolio-item"&gt;
+    &lt;div class="card" data-item="landscape"&gt;
+      &lt;img src="https://picsum.photos/id/12/600" alt="description" /&gt;
+    &lt;/div&gt;
+    &lt;div class="card" data-item="divers"&gt;
+      &lt;img src="https://picsum.photos/id/31/600" alt="description" /&gt;
+    &lt;/div&gt;
+    &lt;div class="card" data-item="sky"&gt;
+      &lt;img src="https://picsum.photos/id/38/600" alt="description" /&gt;
+    &lt;/div&gt;
+    &lt;div class="card" data-item="landscape"&gt;
+      &lt;img src="https://picsum.photos/id/46/600" alt="description" /&gt;
+    &lt;/div&gt; 
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code>
+        </pre>
+      </section>
+
+      <section id="javascript" class="section">
+        <h2>Javascript</h2>
+        <ul>
+          <li>
+            <a href="#darkkMod">Dark Mode</a>
+          </li>
+          <li><a href="#scrollToTop">Scroll to top</a></li>
+          <li><a href="#portfolio-script">Portfolio</a></li>
+          <li><a href="#alertMessage">Alert Message</a></li>
+        </ul>
+        <div class="container" id="darkMod">
+          <pre>
+            <code class="language-javascript">
+/** === Dark Mode === */
+const themes = {
+  light: "light",
+  dark: "dark",
+};
+const dataAttribute = "data-theme";
+const checkedAttribute = "aria-checked";
+const hiddenAttribute = "hidden";
+const localStorageKey = "theme";
+
+// Check if the OS is set to prefer the dark colour scheme
+function userPrefersDarkThemeInOs() {
+  return (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+}
+// Set the theme attribute on the document element (aka on &lt;html&gt;)
+function setThemeAttribute(theme) {
+  document.documentElement.setAttribute(dataAttribute, theme);
+}
+
+// Get theme attribute on the document element (aka on &lt;html&gt;)
+function getThemeAttribute() {
+  return document.documentElement.getAttribute(dataAttribute);
+}
+
+// Get the local storage value
+function getLocalStorage() {
+  if (!window.localStorage) {
+    return;
+  }
+  return window.localStorage.getItem(localStorageKey);
+}
+
+// Set the local storage value
+function setLocalStorage(theme) {
+  if (!window.localStorage) {
+    return;
+  }
+  window.localStorage.setItem(localStorageKey, theme);
+}
+
+// Set the checked attribute on the switch toggle element
+function setSwitch(state, toggleSwitch) {
+  toggleSwitch.setAttribute(checkedAttribute, state);
+}
+
+// Perform theme switch
+function switchTheme(toggleSwitch) {
+  const wasChecked = toggleSwitch.getAttribute(checkedAttribute) === "true";
+  setSwitch(!wasChecked, toggleSwitch);
+  if (!wasChecked) {
+    setThemeAttribute(themes.dark);
+    setLocalStorage(themes.dark);
+  } else {
+    setThemeAttribute(themes.light);
+    setLocalStorage(themes.light);
+  }
+}
+
+// Initialise the theme switch element
+function initThemeToggleSwitch(switchButtonSelector) {
+  // Get theme toggle switch
+  const toggleSwitch = document.querySelector(switchButtonSelector);
+  if (getThemeAttribute() === themes.dark) {
+    setSwitch(true, toggleSwitch);
+  }
+
+  // Add click event to theme toggle switch
+  toggleSwitch.addEventListener(
+    "click",
+    () => switchTheme(toggleSwitch),
+    false
+  );
+
+  // Show theme toggle
+  document.querySelector(".themeSwitch").removeAttribute(hiddenAttribute);
+}
+
+/* Main theme initialisation */
+function initTheme() {
+  /* Check for local storage or OS level preference */
+  const localStorageValue = getLocalStorage();
+  if (localStorageValue) {
+    setThemeAttribute(localStorageValue);
+  } else if (userPrefersDarkThemeInOs()) {
+    setThemeAttribute(themes.dark);
+  }
+}
+
+/** Run initial theme setup straight away (before DOM ready)
+ * This ensures theme is set before the page loads
+ * and avoids visual flickering
+ */
+initTheme();
+
+/* Wait until DOM loaded before setting up toggle switch element */
+window.addEventListener("DOMContentLoaded", () => {
+  initThemeToggleSwitch("#themeSwitch");
+});
+        </code>
+      </pre>
+       </div>
+       <div class="container" id="scrollToTop">
+        <pre>
+          <code class="language-javascript">
+/** === Sroll to top === */
+document.addEventListener("scroll", handleScroll);
+
+let scrollToTopBtn = document.querySelector(".top-btn");
+
+function handleScroll() {
+  let scrollableHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  let GOLDEN_RATIO = 0.5;
+
+  if (document.documentElement.scrollTop / scrollableHeight > GOLDEN_RATIO) {
+    //show button
+
+    scrollToTopBtn.style.display = "block";
+  } else {
+    //hide button
+
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+
+    behavior: "smooth",
+  });
+}
+          
+          </code>
+        </pre>
+       </div>
+       <div class="container" id="portfolio-script">
+        <pre>
+          <code class="language-javascript">
+/** === Portfolio === */
+let sortMenu = document.querySelector(".portfolio-menu").children;
+console.log(sortMenu);
+let sortItem = document.querySelector(".portfolio-item").children;
+for (const element of sortMenu) {
+  console.log(element);
+  element.addEventListener("click", function () {
+    for (const element of sortMenu) {
+      element.classList.remove("current");
+    }
+    this.classList.add("current");
+
+    let targetData = this.getAttribute("data-target");
+
+    for (const element of sortItem) {
+      element.classList.remove("active");
+      element.classList.add("delete");
+
+      if (
+        element.getAttribute("data-item") == targetData || targetData == "all"
+      ) {
+        element.classList.remove("delete");
+        element.classList.add("active");
+      }
+    }
+  });
+}
+          </code>
+        </pre>
+       </div>
+       <div class="container" id="alertMessage">
+        <pre><code class="language-javascript">
+/** === Alert Message === */
+let alert = document.querySelector(".alert");
+let closeIcon = document.querySelector(".alert-close");
+let progress = document.querySelector(".progress");
+let timer;
+timer = setTimeout(() => {
+  alert.classList.add("hidden");
+
+  progress.classList.add("hidden");
+}, 6000); //1s = 1000 milliseconds
+
+closeIcon.addEventListener("click", () => {
+  alert.classList.add("hidden");
+  clearTimeout(timer);
+});
+
+        </code></pre>
+       </div>
+      </section>
+    </main>
+     <!-- Footer-->
+      <footer class="footer">
+        <p>copyright © 2024</p>
+        <p><a href="https://illaweb.fr">illaweb studio</a></p>
+        <a href="#top" class="top-btn">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </footer>
+    </wrapper>
+    <script type="module" src="/main.js"></script>
+     <script type="module" src="./js/scrollToTop.js"></script>
+  </body>
+</html>

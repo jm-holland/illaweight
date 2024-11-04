@@ -1,0 +1,132 @@
+/**
+*  illaWeightCss v1.0.0
+*  https://illaweight.illaweb.fr
+*
+*  Copyright(c) 2024 jm Holland
+*  licence : CC BY-NC-ND 4.0
+*/
+
+h1 {
+  font-family: "Comfortaa", cursive;
+  margin: 0 0 1rem;
+  line-height: var(--base-line-height);
+  font-weight: 500;
+
+  font-size: calc(var(--base-font-size) * 3.428);
+  color: var(--color-gray-0);
+}
+h2 {
+  font-family: "Comfortaa", cursive;
+  margin: 0 0 1rem;
+  line-height: var(--base-line-height);
+  font-weight: 500;
+  font-size: calc(var(--base-font-size) * 2.75);
+  color: var(--color-gray-0);
+}
+h3 {
+  font-family: "Comfortaa", cursive;
+  margin: 0 0 1rem;
+  line-height: var(--base-line-height);
+  font-weight: 500;
+  font-size: calc(var(--base-font-size) * 2);
+  color: var(--color-gray-1);
+}
+h4 {
+  font-family: "Comfortaa", cursive;
+  margin: 0 0 1rem;
+  line-height: var(--base-line-height);
+  font-weight: 500;
+  font-size: calc(var(--base-font-size) * 1.5);
+  color: var(--color-gray-1);
+}
+h5 {
+  font-family: "Comfortaa", cursive;
+  margin: 0 0 1rem;
+  line-height: var(--base-line-height);
+  font-weight: 500;
+  font-size: calc(var(--base-font-size) * 1.3);
+  color: var(--color-gray-2);
+}
+h6 {
+  font-family: "Comfortaa", cursive;
+  margin: 0 0 1rem;
+  line-height: var(--base-line-height);
+  font-weight: 500;
+  font-size: calc(var(--base-font-size) * 1.15);
+  color: var(--color-gray-2);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+p {
+  font-size: normal;
+  line-height: var(--base-line-height);
+  color: var(--color-gray-2);
+}
+.heading- {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  &1 {
+    font-size: 3rem;
+    color: var(--color-gray-0);
+  }
+  &2 {
+    font-size: 2.25rem;
+
+    color: var(--color-gray-0);
+  }
+  &3 {
+    font-size: 1.5rem;
+    color: var(--color-gray-1);
+  }
+  &4 {
+    font-size: 1.313rem;
+    color: var(--color-gray-1);
+  }
+  &5 {
+    font-size: 1.125rem;
+    color: var(--color-gray-2);
+  }
+  &6 {
+    font-size: 1rem;
+    color: var(--color-gray-2);
+  }
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.hr-style {
+  border: none;
+  border-top: 2px solid var(--color-border);
+  overflow: visible;
+  text-align: center;
+  margin: 3rem 5rem;
+  @include responsive("medium") {
+    margin: 2rem 3rem;
+  }
+  @include responsive("small") {
+    margin: 2rem 2rem;
+  }
+  &::after {
+    background-color: var(--color-background);
+    padding: 0 1rem;
+    position: relative;
+    content: "\203B  \203B  \203B";
+    top: -6px;
+  }
+}
+.text-center {
+  text-align: center;
+}
+code {
+  font-size: 1rem;
+  border-radius: var(--roundness-2);
+}
+.center {
+  text-align: center;
+}
