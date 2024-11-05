@@ -1,10 +1,4 @@
 /** == Dark mod switch == */
-/** DARK THEME SWITCHING
- * Toggle dark "data-theme" element attribute
- * Saves and loads stored theme preference to local storage
- * Defaults to dark theme if set as preferred at the OS level
- * User setting overrides OS setting
- */
 
 const themes = {
   light: "light",
@@ -12,10 +6,9 @@ const themes = {
 };
 const dataAttribute = "data-theme";
 const checkedAttribute = "aria-checked";
-const hiddenAttribute = "hidden";
 const localStorageKey = "theme";
 
-// Check if the OS is set to prefer the dark colour scheme
+// Check if the OS is set to prefer the dark color scheme
 function userPrefersDarkThemeInOs() {
   return (
     window.matchMedia &&
@@ -80,14 +73,9 @@ function initThemeToggleSwitch(switchButtonSelector) {
     () => switchTheme(toggleSwitch),
     false
   );
-
-  // Show theme toggle
-  document.querySelector(".themeSwitch").removeAttribute(hiddenAttribute);
 }
 
-/* Main theme initialisation */
 function initTheme() {
-  /* Check for local storage or OS level preference */
   const localStorageValue = getLocalStorage();
   if (localStorageValue) {
     setThemeAttribute(localStorageValue);
@@ -96,13 +84,10 @@ function initTheme() {
   }
 }
 
-/** Run initial theme setup straight away (before DOM ready)
- * This ensures theme is set before the page loads
- * and avoids visual flickering
- */
 initTheme();
 
-/* Wait until DOM loaded before setting up toggle switch element */
 window.addEventListener("DOMContentLoaded", () => {
-  initThemeToggleSwitch("#themeSwitch");
+  if (typeof initThemeToggleSwitch !== undefined) {
+    initThemeToggleSwitch("#themeSwitch");
+  }
 });

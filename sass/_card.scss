@@ -11,11 +11,13 @@
   display: inline-flex;
   flex-direction: column;
   padding: 0.5rem;
+  max-width: 350px;
   background-color: var((--color-background));
   border: 1px solid var(--color-border);
   border-radius: var(--roundness-3);
   box-shadow: var(--color-shadow);
-  .card-header {
+
+  .card-header-text {
     background-color: var(--color-gray-6);
     padding: 0.5rem 0 0 0.5rem;
     border-radius: var(--roundness-2);

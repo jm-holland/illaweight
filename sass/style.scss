@@ -30,9 +30,7 @@ body {
   height: auto;
   min-height: 100vh;
   margin: 2rem;
-  p {
-    margin: 0 2rem;
-  }
+
   @include responsive("medium") {
     margin: 1rem;
     p {
@@ -117,6 +115,7 @@ mark {
 .row {
   display: flex;
   flex-flow: row wrap;
+  align-items: stretch;
   justify-content: center;
   .col {
     flex: 1;
@@ -125,9 +124,11 @@ mark {
     flex-basis: 25%;
     @include responsive("medium") {
       flex-basis: 33%;
+      margin: 0.25rem;
     }
     @include responsive("small") {
       flex-basis: auto;
+      margin: 0;
     }
   }
 }

@@ -11,14 +11,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <!-- Title -->
-    <title>illaCss_framework</title>
+    <title>illaWeightCss_framework</title>
   </head>
   <body>
     <nav class="navigation" aria-label="navigation">
       <!-- Brand -->
       <div class="brand">
         <a href="/" title="Aller à la page d'accueil">
-          <img src="/illacss.png" alt="logo de la marque" />
+         <p>{...}</p>
+         <img src="/illaWeight.png" alt="logo illawebWeight Css">
         </a>
       </div>
       <!-- Menu Hamburger-->
@@ -51,7 +52,7 @@
         </li>
         <!-- Dark Mode-->
         <li>
-          <input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/>
+          <input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode" aria-checked="false"/>
           <label for="themeSwitch" class="checkbox-label">
             <span class="moon" title="Dark">&#9789;</span>
             <span class="sun" title="light">&#10039;</span>
@@ -61,9 +62,31 @@
         </li>
       </ul>
     </nav>
+      <!-- alert Message -->
+      <div class="alert alert-warning ">
+        <div class="alert-content">
+          <span class="alert-icon"></span>
+          <div class="message">
+            <span class="text text-1"></span>
+            <span class="text text-2">Notifications générales du site </span>
+          </div>
+        </div>
+        <span class="alert-close">&#x10102;</span>
+        <div class="progress active"></div>
+      </div>
+      <script type="module" src="/js/alertMessage.js"></script>
+
     <wrapper>
+      <div class="hero">
+          <img src="/illaWeightCss_logo.png" alt="logo" class="mb-4">
+          <img src="/illaWeightCss.png" alt="Logo du framework illaWeight">
+          <p class="heading-3 mt-4">A Dark Mode ready minimalist CSS framework</p>
+       <div class="row"><div class="col"><button class="button button-primary">Download</button></div>
+       <div class="col"><a href="#" class="button button-clear">Documentation</a></div></div>
+      </div>
       <!-- code html navigation -->
-      <pre class="mt-1">
+       <p class="me-2">Navbar code </p>
+      <pre>
         <code class="language-html">
 /** === Navigation bar === */
 &lt;nav class="navigation" aria-label="navigation"&gt;
@@ -99,21 +122,9 @@
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
-      </code></pre>
-    <!-- alert Message -->
-      <div class="alert alert-warning hidden">
-        <div class="alert-content">
-          <span class="alert-icon"></span>
-          <div class="message">
-            <span class="text text-1"></span>
-            <span class="text text-2">Notifications générales du site </span>
-          </div>
-        </div>
-        <span class="alert-close">&#x10102;</span>
-        <div class="progress active"></div>
-      </div>
-      <script type="module" src="./js/alertMessage.js"></script>
-
+      </code>
+    </pre>
+  
     <main>
       <h1 class="text-center">illaWeightCSS Preview</h1>
       <!-- Typography -->
@@ -159,7 +170,8 @@
             </p>
           </div>
         </div>
-        <pre class="mt-1">
+        <p class="me-2 mt-2">Typography code</p>
+        <pre>
           <code class="language-html">
   &lt;h1&gt;Heading 1&lt;/h1&gt;
   &lt;h2&gt;Heading 2&lt;/h2&gt;
@@ -324,9 +336,43 @@
             <div class="col">
               <div class="card">
                 <div class="card-header">
-                  <h3>Title card</h3>
+                  <img src="https://picsum.photos/id/834/400/200" alt="description" />
+              </div>
+              <div class="card-content">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quod maiores vitae, delectus ex veritatis velit asperiores dignissimos incidunt repellendus non veniam excepturi enim cum aliquam. Voluptatum, perferendis deleniti?</p>
+              </div>
+            </div>
+            </div>
+               <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <img src="https://picsum.photos/id/634/400/200" alt="description" />
+              </div>
+              <div class="card-content">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quod maiores vitae, delectus ex veritatis velit asperiores dignissimos incidunt repellendus non veniam excepturi enim cum aliquam. Voluptatum, perferendis deleniti?</p>
+              </div>
+            </div>
+            </div>
+             <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <img src="https://picsum.photos/id/324/400/200" alt="description" />
+              </div>
+              <div class="card-content">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quod maiores vitae, delectus ex veritatis velit asperiores dignissimos incidunt repellendus non veniam excepturi enim cum aliquam. Voluptatum, perferendis deleniti?</p>
+              </div>
+            </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                   <img src="https://picsum.photos/id/1002/400/200" alt="description" />
                 </div>
-                <div class="card-content">
+                <div class="card-content"> 
+                  <h3>Title card</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Laboriosam optio vero velit excepturi nesciunt non aliquid
@@ -341,6 +387,42 @@
             <div class="col">
               <div class="card">
                 <div class="card-header">
+                   <img src="https://picsum.photos/id/852/400/200" alt="description" />
+                </div>
+                <div class="card-content"> 
+                  <h3>Title card</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laboriosam optio vero velit excepturi nesciunt non aliquid
+                    obcaecati veritatis, voluptatibus a, quia possimus
+                    consequuntur nihil fugit doloremque nisi harum aspernatur
+                    beatae.
+                  </p>
+                </div>
+                <div class="card-footer">Footer reference text</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                   <img src="https://picsum.photos/id/579/400/200" alt="description" />
+                </div>
+                <div class="card-content"> 
+                  <h3>Title card</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laboriosam optio vero velit excepturi nesciunt non aliquid
+                    obcaecati veritatis, voluptatibus a, quia possimus
+                    consequuntur nihil fugit doloremque nisi harum aspernatur
+                    beatae.
+                  </p>
+                </div>
+                <div class="card-footer">Footer reference text</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-header-text">
                   <h3>Title card</h3>
                 </div>
                 <div class="card-content">
@@ -356,7 +438,7 @@
               </div>
             </div><div class="col">
               <div class="card">
-                <div class="card-header">
+                <div class="card-header-text">
                   <h3>Title card</h3>
                 </div>
                 <div class="card-content">
@@ -370,41 +452,11 @@
                 </div>
                 <div class="card-footer">Footer reference text</div>
               </div>
-            </div><div class="col">
+            </div>
+          
+            <div class="col">
               <div class="card">
-                <div class="card-header">
-                  <h3>Title card</h3>
-                </div>
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam optio vero velit excepturi nesciunt non aliquid
-                    obcaecati veritatis, voluptatibus a, quia possimus
-                    consequuntur nihil fugit doloremque nisi harum aspernatur
-                    beatae.
-                  </p>
-                </div>
-                <div class="card-footer">Footer reference text</div>
-              </div>
-            </div><div class="col">
-              <div class="card">
-                <div class="card-header">
-                  <h3>Title card</h3>
-                </div>
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam optio vero velit excepturi nesciunt non aliquid
-                    obcaecati veritatis, voluptatibus a, quia possimus
-                    consequuntur nihil fugit doloremque nisi harum aspernatur
-                    beatae.
-                  </p>
-                </div>
-                <div class="card-footer">Footer reference text</div>
-              </div>
-            </div><div class="col">
-              <div class="card">
-                <div class="card-header">
+                <div class="card-header-text">
                   <h3>Title card</h3>
                 </div>
                 <div class="card-content">
@@ -423,7 +475,7 @@
 <pre class="mt-1">
   <code class="language-html">
 &lt;div class="card"&gt;
-    &lt;div class="card-header"&gt;
+    &lt;div class="card-header-text"&gt;
       &lt;h3&gt;title card&lt;/h3&gt;
     &lt;/div&gt;
     &lt;div class="card-content"&gt;
@@ -812,6 +864,7 @@
 
       <section id="javascript" class="section">
         <h2>Javascript</h2>
+        Here is the javascript code used for all the functions of the css framework
         <ul>
           <li>
             <a href="#darkkMod">Dark Mode</a>
@@ -823,29 +876,29 @@
         <div class="container" id="darkMod">
           <pre>
             <code class="language-javascript">
-/** === Dark Mode === */
+/** == Dark mod switch == */
+
 const themes = {
   light: "light",
   dark: "dark",
 };
 const dataAttribute = "data-theme";
 const checkedAttribute = "aria-checked";
-const hiddenAttribute = "hidden";
 const localStorageKey = "theme";
 
-// Check if the OS is set to prefer the dark colour scheme
+// Check if the OS is set to prefer the dark color scheme
 function userPrefersDarkThemeInOs() {
   return (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
   );
 }
-// Set the theme attribute on the document element (aka on &lt;html&gt;)
+// Set the theme attribute on the document element (aka on <html>)
 function setThemeAttribute(theme) {
   document.documentElement.setAttribute(dataAttribute, theme);
 }
 
-// Get theme attribute on the document element (aka on &lt;html&gt;)
+// Get theme attribute on the document element (aka on <html>)
 function getThemeAttribute() {
   return document.documentElement.getAttribute(dataAttribute);
 }
@@ -898,14 +951,9 @@ function initThemeToggleSwitch(switchButtonSelector) {
     () => switchTheme(toggleSwitch),
     false
   );
-
-  // Show theme toggle
-  document.querySelector(".themeSwitch").removeAttribute(hiddenAttribute);
 }
 
-/* Main theme initialisation */
 function initTheme() {
-  /* Check for local storage or OS level preference */
   const localStorageValue = getLocalStorage();
   if (localStorageValue) {
     setThemeAttribute(localStorageValue);
@@ -914,15 +962,12 @@ function initTheme() {
   }
 }
 
-/** Run initial theme setup straight away (before DOM ready)
- * This ensures theme is set before the page loads
- * and avoids visual flickering
- */
 initTheme();
 
-/* Wait until DOM loaded before setting up toggle switch element */
 window.addEventListener("DOMContentLoaded", () => {
-  initThemeToggleSwitch("#themeSwitch");
+  if (typeof initThemeToggleSwitch !== undefined) {
+    initThemeToggleSwitch("#themeSwitch");
+  }
 });
         </code>
       </pre>

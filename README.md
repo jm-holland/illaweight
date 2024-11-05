@@ -1,15 +1,19 @@
-# illaCss
+# illaWeightCss
 
-Un template css simple base sur les elements HTML et css d'après la documentation [Mozilla](https://developer.mozilla.org/fr/)
+A simple css framework Dark Mode ready based on HTML and CSS elements according to the [Mozilla](https://developer.mozilla.org/fr/) documentation.
 
-![Logo](/public/illacss.png)
+![logo](/public/illaWeightCss_logo.png)
+
+---
+
+![Logo](/public/illaWeightCss.png)
 
 ## Features
 
-**illaCss** is a starting point for every website or web app. We take care
+**illaWeightCss** is a starting point for every website or web app. We take care
 of all the CSS work that every site needs without making it look cookie-cutter:
 
-- A responsive grid that can be customized to your needs.
+- A responsive flex grid that can be customized to your needs.
 
 - A solid base built on [Normalize.css][] to fix cross-browser compatibility
   issues.
@@ -27,8 +31,6 @@ of all the CSS work that every site needs without making it look cookie-cutter:
 
 - Responsive by default, with a non-responsive option.
 
-- Small file size: **less than 200KB**.
-
 ## Appendix
 
 Index de référence
@@ -45,18 +47,22 @@ Index de référence
 
 ## Documentation
 
-[Documentation](https://illaweightcss.illaweb.fr)
+You can explore documentation to [Documentation](https://illaweightcss.illaweb.fr)
 
 ## Installation
 
 Install my-project with npm
 
 ```bash
+ git clone https://gitlab.com:jmholland/illaweightcss.git
+
  cd illaWeightCss
  npm install
  npm run dev
 
 ```
+
+or download CSS and javascript files and copy in your project.
 
 ## Screenshots
 

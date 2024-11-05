@@ -1,3 +1,6 @@
+/** === alert Message === */
+
+
 let alert = document.querySelector(".alert");
 let closeIcon = document.querySelector(".alert-close");
 let progress = document.querySelector(".progress");

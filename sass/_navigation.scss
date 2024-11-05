@@ -15,7 +15,7 @@
   position: sticky;
   top: 0;
   margin-bottom: 2rem;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
   background-color: var(--color-background);
   box-shadow: var(--color-shadow);
   z-index: 2;
@@ -23,9 +23,19 @@
     flex-wrap: wrap;
   }
   .brand {
+    a {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      p {
+        margin-right: 1rem;
+        font-size: calc(var(--base-font-size) * 1.5);
+      }
+    }
     height: fit-content;
     img {
-      max-height: 60px;
+      max-height: 40px;
     }
   }
   ul {
