@@ -1,3 +1,13 @@
+/**
+ *  illaWeightCss v1.0.0
+ *  https://illaweight.illaweb.fr
+ *
+ *  Copyright(c) 2024 jm Holland
+ *  licence : CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/
+ */
+
+/** === Scroll to top === */
+
 document.addEventListener("scroll", handleScroll);
 
 let scrollToTopBtn = document.querySelector(".top-btn");
