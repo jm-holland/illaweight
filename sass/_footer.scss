@@ -8,15 +8,25 @@
 
 /** == Footer == */
 .footer {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   bottom: 0;
   padding: 1rem;
   background-color: var(--color-gray-6);
   p {
     margin: 0 auto;
+  }
+  .logo-licence {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      height: 20px;
+      margin-right: 0.5rem;
+    }
   }
   .top-btn {
     display: none;
