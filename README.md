@@ -56,7 +56,7 @@ Install my-project with npm
 ```bash
  git clone https://gitlab.com:jmholland/illaweightcss.git
 
- cd illaWeightCss
+ cd illaWeightcss
  npm install
  npm run dev
 

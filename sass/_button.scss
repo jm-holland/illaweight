@@ -7,7 +7,7 @@
 */
 
 /** == Button ==*/
-
+@use "sass:color";
 .button {
   position: relative;
   display: inline-block;
@@ -40,7 +40,7 @@
 }
 
 @mixin button($name, $color) {
-  $hover-color: darken($color, 9%);
+  $hover-color: color.scale($color, $lightness: -18%);
   .#{$name} {
     background-color: $color;
     color: var(--color-gray-8);

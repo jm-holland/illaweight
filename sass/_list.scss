@@ -12,25 +12,31 @@ ol {
   margin: 1rem 0;
   padding: 0 0 0 2rem;
 }
+
 [dir="rtl"] ul,
 [dir="rtl"] ol {
   padding: 0 2rem 0 0;
 }
+
 ol {
   list-style: numeric;
 }
+
 ul {
   list-style: circle;
+
   .reset {
     display: inline-block;
     margin: 0;
     padding: 0;
     list-style: none;
+
     li {
       display: inline-block;
     }
   }
 }
+
 li {
   margin: 0;
   padding: 0;
@@ -38,6 +44,7 @@ li {
   font-size: var(--base-font-size);
   color: var(--color-gray-1);
 }
+
 /** == Description List == */
 dt {
   padding: 0 1rem 0 0;
@@ -45,6 +52,7 @@ dt {
   font-size: calc(var(--base-font-size) * 1.2);
   font-weight: bold;
   color: var(--color-gray-1);
+
   @include responsive("little") {
     margin: 0 0 0.25rem;
     clear: left;
@@ -52,23 +60,28 @@ dt {
     width: 25%;
   }
 }
+
 [dir="rtl"] dt {
   padding: 0 0 0 1rem;
+
   @include responsive("little") {
     clear: right;
     float: right;
   }
 }
+
 dl {
   margin: 1rem 0;
   padding: 0;
   list-style: numeric;
+
   &:after {
     content: "";
     display: table;
     clear: both;
   }
 }
+
 dd {
   margin: 0 0 0.5rem;
   padding: 0 1em;
@@ -76,11 +89,17 @@ dd {
   font-size: var(--base-font-size);
   font-weight: 600;
   color: var(--color-gray-1);
+
   @include responsive("little") {
     margin: 0 0 0.25rem;
     float: left;
   }
 }
+
+.clear {
+  list-style-type: none;
+}
+
 @include responsive("little") {
   [dir="rtl"] dd {
     float: right;

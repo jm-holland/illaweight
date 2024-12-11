@@ -5,7 +5,7 @@
 *  Copyright(c) 2024 jm Holland
 *  licence : CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/
 */
-
+@use "sass:color";
 .alert {
   position: fixed;
   top: 8vh;
@@ -80,7 +80,7 @@
 }
 
 @mixin alert($name, $color, $text, $alert-icon) {
-  $accent-color: darken($color, 20%);
+  $accent-color: color.scale($color, $lightness: -40%);
   .#{$name} {
     background-color: rgba($color, 0.8);
     border-left: 5px solid $accent-color;
