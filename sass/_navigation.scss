@@ -19,30 +19,37 @@
   background-color: var(--color-background);
   box-shadow: var(--color-shadow);
   z-index: 2;
+
   @include responsive("small") {
     flex-wrap: wrap;
   }
+
   .brand {
     a {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       justify-content: center;
+
       p {
         margin-right: 1rem;
         font-size: calc(var(--base-font-size) * 1.5);
       }
     }
+
     height: fit-content;
+
     img {
       max-height: 40px;
     }
   }
+
   ul {
     padding: 0;
     margin: 0;
     list-style: none;
     position: relative;
+
     @include responsive("small") {
       display: none;
       flex-direction: column;
@@ -53,12 +60,15 @@
       transform: 0.6s;
       transition: all 0.3s ease-in-out;
     }
+
     li {
       display: inline-block;
-      > a {
+
+      >a {
         &:after {
           content: "	\0025BE";
         }
+
         &:only-child:after {
           content: "";
         }
@@ -68,6 +78,7 @@
     a.active {
       color: var(--color-link-active);
     }
+
     a {
       display: block;
       padding: 0 10px;
@@ -76,15 +87,19 @@
       line-height: 2.5rem;
       text-decoration: none;
       transition: all 0.5s ease-in-out;
+
       &:focus {
         color: var(--color-link-focus);
       }
+
       &:visited {
         color: var(--color-link-visited);
       }
+
       &:active {
         color: var(--color-link-active);
       }
+
       &:hover {
         color: var(--color-primary);
         background-color: var(--color-background);
@@ -95,6 +110,7 @@
       }
     }
   }
+
   /* Hide Dropdowns by Default */
   ul ul {
     display: none;
@@ -103,7 +119,7 @@
   }
 
   /* Display Dropdowns on Hover */
-  ul li:hover > ul {
+  ul li:hover>ul {
     display: block;
     background-color: var(--color-background);
   }
@@ -114,6 +130,11 @@
     float: none;
     display: list-item;
     position: relative;
+
+    a {
+      background-color: var(--color-background);
+    }
+
     @include responsive("small") {
       left: 60px;
     }
@@ -124,6 +145,7 @@
     position: relative;
     top: -60px;
     left: 170px;
+    background-color: var(--color-background);
   }
 
   /** Hamburger menu */
@@ -134,11 +156,13 @@
     cursor: pointer;
     user-select: none;
   }
+
   .menu-icon {
     @include responsive("small") {
       display: block;
       position: relative;
       width: 30px;
+
       &::before,
       &::after,
       .hamburger-icon {
@@ -153,20 +177,24 @@
       }
     }
   }
+
   .menu-hamburger:checked {
-    ~ .menu-icon {
+    ~.menu-icon {
       &::before {
         transform: translateY(8px) rotate(135deg);
       }
+
       &::after {
         transform: translateY(-8px) rotate(-135deg);
       }
+
       span {
         transform: scale(0);
       }
     }
+
     @include responsive("small") {
-      ~ .menu {
+      ~.menu {
         display: flex;
         max-height: 100vh;
       }
