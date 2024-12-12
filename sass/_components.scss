@@ -1,11 +1,3 @@
-/**
-*  illaWeightCss v1.0.0
-*  https://illaweight.illaweb.fr
-*
-*  Copyright(c) 2024 jm Holland
-*  licence : CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/
-*/
-
 @use "sass:color";
 
 /** === Alert message ===*/
@@ -183,8 +175,6 @@
     }
 }
 
-/** === /alert message === */
-
 /** === Blockquote ==  */
 blockquote {
     margin: 1rem 0;
@@ -200,7 +190,6 @@ blockquote {
     border-right: 0.25rem solid var(--color-primary);
 }
 
-/* ==== /blocquote === */
 
 /** === Button === */
 .button {
@@ -257,7 +246,6 @@ blockquote {
 @include button(button-secondary, $secondary);
 @include button(button-warning, $danger);
 @include button(button-error, $error);
-/** ==== /button === */
 
 /** === Card === */
 .card {
@@ -285,9 +273,6 @@ blockquote {
         background-color: var(--color-gray-6);
     }
 }
-
-/** ==== /Card ====*/
-
 
 /** === Dark Mode switch === */
 .checkbox {
@@ -339,8 +324,6 @@ blockquote {
 .checkbox:checked+.checkbox-label .ball {
     transform: translateX(18px);
 }
-
-/** === /dark mode === */
 
 /* === Menu portfolio === */
 .portfolio-menu {
@@ -425,7 +408,7 @@ blockquote {
     }
 }
 
-/** ===  Form === */
+/** === Form === */
 form {
     display: flex;
     flex-direction: column;

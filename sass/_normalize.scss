@@ -1,16 +1,9 @@
-/**
-*  illaWeightCss v1.0.0
-*  https://illaweight.illaweb.fr
-*
-*  Copyright(c) 2024 jm Holland
-*  licence : CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/
-*/
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -38,6 +31,7 @@ pre {
 
 a {
   background-color: transparent;
+
   .button {
     text-decoration: none;
   }
@@ -142,7 +136,8 @@ textarea {
 }
 
 [type="search"] {
-  outline-offset: -2px; /* 2 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 [type="search"]::-webkit-search-decoration {

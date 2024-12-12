@@ -1,10 +1,125 @@
-/**
-*  illaWeightCss v1.0.0
-*  https://illaweight.illaweb.fr
-*
-*  Copyright(c) 2024 jm Holland
-*  licence : CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/
-*/
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--color-background);
+    background-color: var(--color-background);
+}
+
+body {
+    min-height: 100vh;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0;
+    background-color: var(--color-background);
+    font-family: var(--font-family);
+    color: var(--color-gray-1);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    margin: 2rem;
+
+    @include responsive("medium") {
+        margin: 1rem;
+
+        p {
+            margin: 0 1rem;
+        }
+    }
+
+    @include responsive("small") {
+        margin: 0.3rem;
+
+        p {
+            margin: 0 0.5rem;
+        }
+    }
+}
+
+main {
+    margin: 1rem;
+
+    @include responsive("small") {
+        margin: 0.5rem;
+    }
+
+    @include responsive("medium") {
+        margin: 0.75rem;
+    }
+}
+
+.section {
+    padding: 2rem;
+}
+
+.container {
+    margin: 1rem;
+    padding: 0 1rem;
+
+    @include responsive("small") {
+        margin: 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    @include responsive("medium") {
+        margin: 0.75rem;
+        padding: 0 0.75rem;
+    }
+}
+
+.border {
+    border: 1px solid var(--color-border);
+    border-radius: var(--roundness-2);
+}
+
+.strong {
+    font-size: large;
+    font-weight: bold;
+}
+
+figure {
+    img {
+        border-radius: var(--roundness-3);
+        box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+        margin: 0.5rem;
+
+        @include responsive("medium") {
+            box-shadow: 6px 6px 18px 0px rgba(66, 68, 90, 1);
+            border-radius: var(--roundness-2);
+        }
+
+        @include responsive("small") {
+            box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
+            border-radius: var(--roundness-1);
+        }
+    }
+}
+
+.image {
+    border-radius: var(--roundness-3);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+
+    @include responsive("medium") {
+        box-shadow: 6px 6px 18px 0px rgba(66, 68, 90, 1);
+        border-radius: var(--roundness-2);
+    }
+
+    @include responsive("small") {
+        box-shadow: 4px 4px 12px 0px rgba(66, 68, 90, 1);
+        border-radius: var(--roundness-1);
+    }
+}
+
+mark {
+    color: inherit;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0) 70%,
+            var(--color-highlight) 70%);
+}
 
 /** === Margin / padding === */
 
@@ -177,7 +292,6 @@ dd {
 
 }
 
-// real world example  260+80+620=960
 .aside {
     @include grid(260, 960);
 }
@@ -206,4 +320,29 @@ dd {
 
 .sixth {
     @include grid(160, 960);
+}
+
+/** == Flex Columns == */
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+
+    .col {
+        flex: 1;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        flex-basis: 25%;
+
+        @include responsive("medium") {
+            flex-basis: 33%;
+            margin: 0.25rem;
+        }
+
+        @include responsive("small") {
+            flex-basis: auto;
+            margin: 0;
+        }
+    }
 }
