@@ -1,0 +1,209 @@
+/**
+*  illaWeightCss v1.0.0
+*  https://illaweight.illaweb.fr
+*
+*  Copyright(c) 2024 jm Holland
+*  licence : CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/
+*/
+
+/** === Margin / padding === */
+
+$ems: 1, 2, 3, 4, 5, 6, 7;
+$directions: "", "-bottom", "-top", "-left", "-right";
+
+/* Paddings and Margins */
+@each $em in $ems {
+    @each $dir in $directions {
+        $dir-in-rule: str-slice($dir, 2, 2);
+
+        .m#{$dir-in-rule}-#{$em} {
+            margin#{$dir}: $em + rem;
+        }
+
+        .p#{$dir-in-rule}-#{$em} {
+            padding#{$dir}: $em + rem;
+        }
+    }
+}
+
+/* === list === */
+ul,
+ol {
+    margin: 1rem 0;
+    padding: 0 0 0 2rem;
+}
+
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+    padding: 0 2rem 0 0;
+}
+
+ol {
+    list-style: numeric;
+}
+
+ul {
+    list-style: circle;
+
+    .reset {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    line-height: var(--base-line-height);
+    font-size: var(--base-font-size);
+    color: var(--color-gray-1);
+}
+
+/** == Description List == */
+dt {
+    padding: 0 1rem 0 0;
+    line-height: var(--base-line-height);
+    font-size: calc(var(--base-font-size) * 1.2);
+    font-weight: bold;
+    color: var(--color-gray-1);
+
+    @include responsive("little") {
+        margin: 0 0 0.25rem;
+        clear: left;
+        float: left;
+        width: 25%;
+    }
+}
+
+[dir="rtl"] dt {
+    padding: 0 0 0 1rem;
+
+    @include responsive("little") {
+        clear: right;
+        float: right;
+    }
+}
+
+dl {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: numeric;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+dd {
+    margin: 0 0 0.5rem;
+    padding: 0 1em;
+    line-height: var(--base-line-height);
+    font-size: var(--base-font-size);
+    font-weight: 600;
+    color: var(--color-gray-1);
+
+    @include responsive("little") {
+        margin: 0 0 0.25rem;
+        float: left;
+    }
+}
+
+.clear {
+    list-style-type: none;
+}
+
+@include responsive("little") {
+    [dir="rtl"] dd {
+        float: right;
+    }
+}
+
+/** === column mixins === */
+@mixin grid($target, $context) {
+    width: (($target/$context)*100%);
+}
+
+// margin mixins
+@mixin mleft($target, $context) {
+    margin-left: (($target/$context)*100%);
+}
+
+@mixin mright($target, $context) {
+    margin-right: (($target/$context)*100%);
+}
+
+// basic clearfix
+.clearfix {
+    zoom: 1;
+
+    &:before,
+    &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// set a max width of 960 and show ugly salmon background
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+// fire in the hole!
+.row {
+    @extend .clearfix;
+}
+
+// column styles for presentation
+.col {
+    float: left; // required, duh
+    margin-bottom: 1em;
+    padding: 1em 0;
+
+
+}
+
+// real world example  260+80+620=960
+.aside {
+    @include grid(260, 960);
+}
+
+.content {
+    @include grid(620, 960);
+    @include mleft(80, 960);
+}
+
+// presentational boxes
+.half {
+    @include grid(480, 960);
+}
+
+.third {
+    @include grid(320, 960);
+}
+
+.fourth {
+    @include grid(240, 960);
+}
+
+.fifth {
+    @include grid(192, 960);
+}
+
+.sixth {
+    @include grid(160, 960);
+}
