@@ -1,30 +1,28 @@
 /** === Media query === */
 $breakpoints: (
-    "little": (max-width: 376px,
-    ),
-    "small": (max-width: 768px,
-    ),
-    "medium": (max-width: 1024px,
-    ),
-    "large": (max-width: 1200px,
-    ),
-    "min-small": (min-width: 768px,
-    ),
-    "min-medium": (min-width: 1024px,
-    ),
-    "min-large": (min-width: 1200px,
-    ),
+    "little": 376px,
+    "small": 768px,
+
+    "medium": 1024px,
+
+    "large": 1200px,
+    "min-small": 768px,
+
+    "min-medium": 1024px,
+
+    "min-large": 1200px,
+
     ) !default;
+
 
 @mixin responsive($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
-        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
             @content;
         }
     }
 
     @else {
-        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        +"Available breakpoints are: #{map-keys($breakpoints)}.";
+        @warn "Le point de rupture '#{$breakpoint}' n'existe pas dans la carte $breakpoints.";
     }
 }

@@ -1,4 +1,5 @@
 @use'../utils' as *;
+@use'./typography';
 
 html {
     scroll-behavior: smooth;
@@ -140,16 +141,16 @@ dd {
 
 /** === column mixins === */
 @mixin grid($target, $context) {
-    width: (($target/$context)*100%);
+    width: calc(($target/$context)*100%);
 }
 
 // margin mixins
 @mixin mleft($target, $context) {
-    margin-left: (($target/$context)*100%);
+    margin-left: calc(($target/$context)*100%);
 }
 
 @mixin mright($target, $context) {
-    margin-right: (($target/$context)*100%);
+    margin-right: calc(($target/$context)*100%);
 }
 
 // basic clearfix
