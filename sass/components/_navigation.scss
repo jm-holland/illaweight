@@ -1,0 +1,195 @@
+@use'../utils' as*;
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    margin-bottom: 2rem;
+    padding: 0.5rem 2rem;
+    background-color: var(--color-background);
+    box-shadow: var(--color-shadow);
+    z-index: 2;
+
+    @include responsive("small") {
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        a {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                margin-right: 1rem;
+                font-size: calc(var(--base-font-size) * 1.5);
+            }
+        }
+
+        height: fit-content;
+
+        img {
+            max-height: 40px;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+
+        @include responsive("small") {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 10px 10px;
+            width: 100%;
+            max-height: 0;
+            transform: 0.6s;
+            transition: all 0.3s ease-in-out;
+        }
+
+        li {
+            display: inline-block;
+
+            >a {
+                &:after {
+                    content: "	\0025BE";
+                }
+
+                &:only-child:after {
+                    content: "";
+                }
+            }
+        }
+
+        a.active {
+            color: var(--color-link-active);
+        }
+
+        a {
+            display: block;
+            padding: 0 10px;
+            color: var(--color-gray-2);
+            font-size: calc(var(--base-font-size) * 1.4);
+            line-height: 2.5rem;
+            text-decoration: none;
+            transition: all 0.5s ease-in-out;
+
+            &:focus {
+                color: var(--color-link-focus);
+            }
+
+            &:visited {
+                color: var(--color-link-visited);
+            }
+
+            &:active {
+                color: var(--color-link-active);
+            }
+
+            &:hover {
+                color: var(--color-primary);
+                background-color: var(--color-background);
+
+                &:after {
+                    content: "  \0025B4";
+                }
+            }
+        }
+    }
+
+    /* Hide Dropdowns by Default */
+    ul ul {
+        display: none;
+        position: absolute;
+        top: 40px;
+    }
+
+    /* Display Dropdowns on Hover */
+    ul li:hover>ul {
+        display: block;
+        background-color: var(--color-background);
+    }
+
+    /* First Tier Dropdown */
+    ul ul li {
+        width: 170px;
+        float: none;
+        display: list-item;
+        position: relative;
+
+        a {
+            background-color: var(--color-background);
+        }
+
+        @include responsive("small") {
+            left: 60px;
+        }
+    }
+
+    /* Second, Third and more Tiers	*/
+    ul ul ul li {
+        position: relative;
+        top: -60px;
+        left: 170px;
+        background-color: var(--color-background);
+    }
+
+    /** Hamburger menu */
+
+    .menu-hamburger,
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .menu-icon {
+        @include responsive("small") {
+            display: block;
+            position: relative;
+            width: 30px;
+
+            &::before,
+            &::after,
+            .hamburger-icon {
+                content: "";
+                display: block;
+                background-color: var(--color-primary);
+                height: 4px;
+                border-radius: 2px;
+                margin: 4px 0;
+                transform: 0.4s;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+    }
+
+    .menu-hamburger:checked {
+        ~.menu-icon {
+            &::before {
+                transform: translateY(8px) rotate(135deg);
+            }
+
+            &::after {
+                transform: translateY(-8px) rotate(-135deg);
+            }
+
+            span {
+                transform: scale(0);
+            }
+        }
+
+        @include responsive("small") {
+            ~.menu {
+                display: flex;
+                max-height: 100vh;
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@use'../utils' as *;
+@use'sass:color';
+
+.button {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+    text-align: center;
+    text-decoration: none;
+    width: max-content;
+    padding: 0.5rem 0.8rem 0.3rem;
+    color: var(--color-gray-1);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--roundness-3);
+    box-shadow: var(--color-shadow);
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+        background-color: var(--color-gray-5);
+    }
+
+    &:focus {
+        border-color: 1px solid var(--color-primary-focus);
+        outline: 0;
+    }
+}
+
+@mixin button($name, $color) {
+    $hover-color: color.scale($color, $lightness: -18%);
+
+    .#{$name} {
+        background-color: $color;
+        color: var(--color-gray-8);
+
+        &:hover {
+            background-color: $hover-color;
+            border-color: $color;
+        }
+
+        &:focus {
+            border-color: 1px solid $color;
+        }
+    }
+}
+
+@include button(button-primary, $primary);
+@include button(button-link, $link);
+@include button(button-secondary, $secondary);
+@include button(button-warning, $danger);
+@include button(button-error, $error);
+
+.checkbox {
+    display: none;
+    position: absolute;
+}
+
+.checkbox-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 50px;
+    height: 20px;
+    padding: 2px;
+    background-color: var(--color-gray-7);
+    border: 2px solid var(--color-gray-5);
+    border-radius: var(--roundness-2);
+
+    cursor: pointer;
+
+    .moon {
+        font-size: calc(var(--base-font-size) * 1.2);
+        font-weight: bold;
+        line-height: 0;
+        padding-top: 0.2rem;
+        color: var(--color-sun);
+    }
+
+    .sun {
+        font-size: calc(var(--base-font-size) * 1.2);
+        line-height: 0;
+        font-weight: bold;
+        padding: 0.2rem 0.2rem 0 0;
+        color: var(--color-danger);
+    }
+
+    .ball {
+        position: absolute;
+        left: 2px;
+        width: 25px;
+        height: 14px;
+        background-color: var(--color-gray-3);
+        border-radius: 5px;
+        transition: transform 0.3s linear;
+    }
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(18px);
+}

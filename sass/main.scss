@@ -6,14 +6,8 @@
 *  licence : CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/
 */
 
-
-
-@use "normalize";
-@import "layout";
-@import "colors";
-@import"variables";
-@import"components";
-@import"typography";
-@import"base";
+@use "./layout/normalize";
+@use"./base/base";
+@use'./layout/layout';
 @import "../node_modules/@tabler/icons-webfont/dist/tabler-icons.min.css";
 @import "../node_modules/highlight.js/styles/atom-one-dark.min.css";
