@@ -3,12 +3,12 @@
 @use'../components/alert_message';
 @use'../components/buttons';
 @use'../components/card';
-@use '../components/footer';
 @use'../components/form';
-@use'../components/navigation';
 @use'../components/portfolio';
 @use'../components/socialsIcon';
 @use'../components/table';
+@use'navigation';
+@use 'footer';
 
 .hero {
     display: flex;
