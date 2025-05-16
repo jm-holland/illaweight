@@ -32,29 +32,6 @@
     }
 }
 
-@mixin button($name, $color) {
-    $hover-color: color.scale($color, $lightness: -18%);
-
-    .#{$name} {
-        background-color: $color;
-        color: var(--color-gray-8);
-
-        &:hover {
-            background-color: $hover-color;
-            border-color: $color;
-        }
-
-        &:focus {
-            border-color: 0.063rem solid $color;
-        }
-    }
-}
-
-@include button(button-primary, $primary);
-@include button(button-link, $link);
-@include button(button-secondary, $secondary);
-@include button(button-warning, $danger);
-@include button(button-error, $error);
 
 .checkbox {
     display: none;
@@ -105,3 +82,28 @@
 .checkbox:checked+.checkbox-label .ball {
     transform: translateX(1.125rem);
 }
+
+/* === Création des couleurs des buttons ===*/
+@mixin button($name, $color) {
+    $hover-color: color.scale($color, $lightness: -28%);
+
+    .#{$name} {
+        background-color: $color;
+        color: var(--color-gray-8);
+
+        &:hover {
+            background-color: $hover-color;
+            border-color: $color;
+        }
+
+        &:focus {
+            border-color: 0.063rem solid $color;
+        }
+    }
+}
+
+@include button(button-primary, $primary);
+@include button(button-link, $link);
+@include button(button-secondary, $secondary);
+@include button(button-warning, $danger);
+@include button(button-error, $error);

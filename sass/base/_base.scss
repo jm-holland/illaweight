@@ -9,6 +9,7 @@ html {
 }
 
 body {
+    position: relative;
     min-height: 100vh;
     max-width: 75rem;
     margin: 0 auto;
@@ -16,6 +17,8 @@ body {
     background-color: var(--color-background);
     font-family: var(--font-family);
     color: var(--color-gray-1);
+    z-index: 1;
+
 }
 
 
