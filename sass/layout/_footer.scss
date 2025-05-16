@@ -19,7 +19,7 @@
         justify-content: space-between;
 
         img {
-            height: 20px;
+            height: 1.25rem;
             margin-right: 0.5rem;
         }
     }
@@ -37,11 +37,11 @@
         &::before {
             content: "";
             position: absolute;
-            top: -5px;
-            left: -6px;
-            width: 25px;
-            height: 25px;
-            border: 2px solid var(--color-border);
+            top: -0.313rem;
+            left: -0.375rem;
+            width: 1.563rem;
+            height: 1.563rem;
+            border: 0.125rem solid var(--color-border);
             border-radius: 50%;
             transition: all 0.5s ease;
         }

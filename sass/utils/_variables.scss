@@ -24,15 +24,14 @@ $link: hsl(186, 96%, 38%);
 $link-visited: hsl(210, 66%, 47%);
 $link-active: hsl(332, 90%, 50%);
 $link-focus: hsl(210, 66%, 52%);
-$shadow-hard: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-$shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-$shadow-dark-hard: rgba(255, 255, 255, 0.4) 0px 2px 4px,
-  rgba(255, 255, 255, 0.3) 0px 7px 13px -3px,
-  rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
-$shadow-dark: rgba(250, 250, 193, 0.25) 0px 2px 5px -1px,
-  rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
+$shadow-hard: rgba(0, 0, 0, 0.4) 0 0.125rem 0.25rem,
+  rgba(0, 0, 0, 0.3) 0 0.438rem 0.813rem -0.188rem, rgba(0, 0, 0, 0.2) 0 -0.188rem 0 inset;
+$shadow: rgba(50, 50, 93, 0.25) 0 0.125rem 0.313rem -0.063rem,
+  rgba(0, 0, 0, 0.3) 0 0.063rem 0.313rem -0.063rem;
+$shadow-dark-hard: rgba(255, 255, 255, 0.4) 0 0.125rem 0.25rem,
+  rgba(255, 255, 255, 0.3) 0 0.438rem 0.813rem -0.188rem,
+  rgba(255, 255, 255, 0.2) 0 -0.188rem 0 inset;
+$shadow-dark: rgba(250, 250, 193, 0.25) 0 0.125rem 0.313rem -0.063rem rgba(255, 255, 255, 0.3) 0 0.063rem 0.188rem -0.063rem;
 $background-light: #fafafa;
 $background-dark: rgb(29, 29, 29);
 

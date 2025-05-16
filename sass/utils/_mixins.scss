@@ -1,16 +1,16 @@
 /** === Media query === */
 $breakpoints: (
-    "little": 376px,
-    "small": 768px,
+    "little": 23.5rem,
+    "small": 48rem,
 
-    "medium": 1024px,
+    "medium": 64rem,
 
-    "large": 1200px,
-    "min-small": 768px,
+    "large": 75rem,
+    "min-small": 45rem,
 
-    "min-medium": 1024px,
+    "min-medium": 64rem,
 
-    "min-large": 1200px,
+    "min-large": 75rem,
 
     ) !default;
 

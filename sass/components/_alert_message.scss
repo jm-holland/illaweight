@@ -7,15 +7,12 @@
     top: 8vh;
     left: 10vw;
 
-    @include responsive("small") {
-        left: 2vw;
-    }
+
 
     width: max-content;
     border-radius: var(--roundness-3);
-    padding: 20px 35px 20px 25px;
-    overflow: hidden;
-    z-index: 10;
+    padding: 1.25rem 2.188rem 1.563rem 1.25rem;
+    overflow: clip;
     animation: bounce-in-right 2s ease-in-out;
 
     &.hidden {
@@ -32,8 +29,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 35px;
-            min-width: 35px;
+            height: 2.188rem;
+            min-width: 2.188rem;
             border-radius: 50%;
             font-size: calc(var(--base-font-size) * 1.5);
         }
@@ -57,9 +54,9 @@
 
     .alert-close {
         position: absolute;
-        top: 10px;
-        right: 15px;
-        padding: 5px;
+        top: 0.625rem;
+        right: 0.938rem;
+        padding: 0.313rem;
         cursor: pointer;
         opacity: 0.7;
 
@@ -70,9 +67,9 @@
 
     .progress {
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         left: 0;
-        height: 3px;
+        height: 0.188rem;
         width: 100%;
 
         &:before {
@@ -85,6 +82,10 @@
             width: 100%;
         }
     }
+
+    @include responsive("small") {
+        left: 2vw;
+    }
 }
 
 @mixin alert($name, $color, $text, $alert-icon) {
@@ -92,7 +93,7 @@
 
     .#{$name} {
         background-color: rgba($color, 0.8);
-        border-left: 5px solid $accent-color;
+        border-left: 0.313rem solid $accent-color;
 
         .alert-icon {
             background-color: $accent-color;
@@ -133,16 +134,16 @@
 @keyframes bounce-in-right {
     0% {
         opacity: 0;
-        transform: translateX(2000px);
+        transform: translateX(125rem);
     }
 
     60% {
         opacity: 1;
-        transform: translateX(-30px);
+        transform: translateX(-1.875rem);
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(0.625rem);
     }
 
     100% {

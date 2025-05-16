@@ -14,8 +14,8 @@ main {
 }
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  font-size: 2rem;
+  margin: 0.67rem 0;
 }
 
 hr {
@@ -26,7 +26,7 @@ hr {
 
 pre {
   font-family: monospace;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 a {
@@ -52,7 +52,7 @@ code,
 kbd,
 samp {
   font-family: monospace;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 small {
@@ -68,11 +68,11 @@ sup {
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -0.25rem;
 }
 
 sup {
-  top: -0.5em;
+  top: -0.5rem;
 }
 
 img {
@@ -104,7 +104,7 @@ select {
 }
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  padding: 0.35rem 0.75rem 0.625rem;
 }
 
 legend {
@@ -136,7 +136,7 @@ textarea {
 }
 
 [type="search"] {
-  outline-offset: -2px;
+  outline-offset: -0.125rem;
   /* 2 */
 }
 
