@@ -47,7 +47,7 @@ Index de référence
 
 ## Documentation
 
-You can explore documentation to [Documentation](https://illaweightcss.illaweb.fr)
+You can explore documentation to [Documentation](https://illaweight.ddns.net)
 
 ## Installation
 
@@ -89,8 +89,7 @@ or download CSS and javascript files and copy in your project.
 ## Develop with
 
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
+![VSCodium](https://img.shields.io/badge/VSCodium-2F80ED?style=for-the-badge&logo=vscodium&logoColor=white)
 ## languages
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
