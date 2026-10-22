@@ -1,72 +1,105 @@
 # illaWeightCss
 
-A simple css framework Dark Mode ready based on HTML and CSS elements according to the [Mozilla](https://developer.mozilla.org/fr/) documentation.
+A simple **Dark Mode ready** minimalist CSS framework based on HTML and CSS
+elements according to the [Mozilla](https://developer.mozilla.org/fr/)
+documentation — une grille responsive 12 colonnes, des utilitaires et des
+composants interactifs (modal, tabs, accordion), le tout dans **~10 kB gzip**.
 
-![logo](/public/illaWeightCss_logo.png)
+- Site & documentation : <https://illaweight.illaweb.fr>
+- Licence : [MIT](./LICENSE)
 
----
-
-![Logo](/public/illaWeightCss.png)
+![logo](public/illaWeight.png)
 
 ## Features
 
-**illaWeightCss** is a starting point for every website or web app. We take care
-of all the CSS work that every site needs without making it look cookie-cutter:
+**illaWeightCss** is a starting point for every website or web app. We take
+care of all the CSS work that every site needs without making it look
+cookie-cutter:
 
 - A responsive flex grid that can be customized to your needs.
-
-- A solid base built on [Normalize.css][] to fix cross-browser compatibility
-  issues.
-
+- A solid base built on [Normalize.css](https://necolas.github.io/normalize.css/)
+  to fix cross-browser compatibility issues.
 - Consistently styled buttons that work with `<a>` and `<button>` elements.
-
-- Styles for vertical and horizontal menus, including support for dropdown
-  menus.
-
+- Styles for vertical and horizontal menus, including support for dropdown menus.
 - Useful form alignments that look great on all screen sizes.
-
 - Various common table styles.
-
+- Dark mode toggle built in ([`data-theme`](https://illaweight.illaweb.fr/scripts.html#darkMod)).
+- Interactive components via `data-attributes` — no JS framework required.
 - An extremely minimalist look that is super-easy to customize.
-
 - Responsive by default, with a non-responsive option.
-
-## Appendix
-
-Index de référence
-
-## Color Reference
-
-| Color             | Hex                                               |
-| ----------------- | ------------------------------------------------- |
-| --color-primary   | ![#0597f2](https://placehold.co/15/0597f2/0597f2) |
-| --color-highlight | ![#44aff2](https://placehold.co/15/44aff2/44aff2) |
-| --color-success   | ![#04adbf](https://placehold.co/15/04adbf/04adbf) |
-| --color-danger    | ![#f2913d](https://placehold.co/15/f2913d/f2913d) |
-| --color-error     | ![#f20f79](https://placehold.co/15/f20f79/f20f79) |
-
-## Documentation
-
-You can explore documentation to [Documentation](https://illaweight.ddns.net)
 
 ## Installation
 
-Install my-project with npm
-
-```bash
- git clone https://gitlab.com:jmholland/illaweightcss.git
-
- cd illaWeightcss
- npm install
- npm run dev
-
+```sh
+npm install illaweightcss
 ```
 
-or download CSS and javascript files and copy in your project.
+ou via CDN ([jsDelivr](https://www.jsdelivr.com/package/npm/illaweightcss)) :
+
+```html
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"/>
+```
+
+Depuis les sources :
+
+```sh
+git clone https://gitlab.com/jmholland/illaweight.git
+cd illaweight
+npm install
+npm run dev
+```
+
+ou téléchargez le CSS et les fichiers JavaScript et copiez-les dans votre
+projet.
+
+## Démarrage
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"/>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="heading-1">Bonjour illaWeight</h1>
+      <button class="btn btn-primary">Cliquez-moi</button>
+    </main>
+  </body>
+</html>
+```
+
+## Color Reference
+
+| Variable          | Hex                                               |
+| ----------------- | ------------------------------------------------- |
+| --color-primary   | ![#0495ef](https://placehold.co/15/0495ef/0495ef) |
+| --color-highlight | ![#b3f0fd](https://placehold.co/15/b3f0fd/b3f0fd) |
+| --color-success   | ![#03abbd](https://placehold.co/15/03abbd/03abbd) |
+| --color-danger    | ![#f1903b](https://placehold.co/15/f1903b/f1903b) |
+| --color-error     | ![#f20c77](https://placehold.co/15/f20c77/f20c77) |
+
+## Contenu du paquet
+
+| Chemin                      | Contenu                                          |
+| --------------------------- | ------------------------------------------------ |
+| `illaWeightCss(.min).css`   | bundle CSS unique (polices incluses en relatif)  |
+| `js/alertMessage.js`        | notifications animées                            |
+| `js/interactions.js`        | API `data-attributes` modal / tabs / accordion   |
+| `js/menu_burger.js`         | menu hamburger + sous-menus ouverts au clic      |
+| `js/portfolio.js`           | léger filtrage de grille portfolio               |
+| `js/scrollToTop.js`         | bouton retour en haut                            |
+| `js/themeSwitch.js`         | bascule dark / light persistée                   |
+| `fonts/`                    | Comfortaa, Manjari, Quicksand + Tabler Icons     |
+
+Documentation complète des classes et des scripts :
+<https://illaweight.illaweb.fr>
 
 ## Screenshots
 
-![App Screenshot](/public/screenshot.png)
+![App Screenshot](public/screenshot.png)
 
 ## test on browsers
 
@@ -84,18 +117,18 @@ or download CSS and javascript files and copy in your project.
 
 ![CodePen](https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white)
 
-![GitLab](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white)
-
-## Develop with
+## Developed with
 
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![VSCodium](https://img.shields.io/badge/VSCodium-2F80ED?style=for-the-badge&logo=vscodium&logoColor=white)
+![VSCodium](https://img.shields.io/badge/VSCodium-2F80ED?style=for-the-badge&logo=VSCodium&logoColor=0023A3)
+![Sass](https://img.shields.io/badge/sass-hotpink.svg?style=for-the-badge&logo=Sass&logoColor=white)
+
 ## languages
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-# Operating OS
+## Operating OS
 
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)

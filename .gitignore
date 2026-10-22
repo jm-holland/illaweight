@@ -25,3 +25,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# paquet distribuable (genere par prepack)
+/illaWeightCss.css
+/illaWeightCss.min.css
+/fonts/
