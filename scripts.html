@@ -154,6 +154,22 @@
 			
 		<main id="main-content">
 				<h1 class="text-center">illaWeight JS</h1>
+		<div class="docs-layout">
+			<aside class="docs-nav" aria-label="Sommaire de la documentation">
+					<ul>
+						<li><a href="#menuBurger">Menu burger</a></li>
+						<li><a href="#darkMod">Dark mode</a></li>
+						<li><a href="#scrollToTop">Scroll to top</a></li>
+						<li><a href="#alertMessage">Alert message</a></li>
+						<li><a href="#portfolio-script">Portfolio</a></li>
+						<li><a href="#modalDemo">Modal</a></li>
+						<li><a href="#tabsDemo">Tabs</a></li>
+						<li><a href="#accordionDemo">Accordion</a></li>
+					</ul>
+					<a href="docs.html"><strong>Documentation CSS &rarr;</strong></a>
+				</aside>
+			<div class="docs-content">
+
 <section id="javascript" class="section">
 			<h2>Javascript</h2>
 			Here is the javascript code used for all the functions of the css framework
@@ -401,12 +417,18 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
 					<a href="#tab-css" data-tab aria-selected="false">CSS</a>
 					<a href="#tab-a11y" data-tab aria-selected="false">A11y</a>
 				</nav>
+<div class="docs-demo grid">
+    <div class="col-12 col-lg-6">
 				<div class="tab-content">
 					<div class="tab-pane active" id="tab-js">Contenu activé par <code>data-tab</code> sur les liens du <code>nav.tabs</code>.</div>
 					<div class="tab-pane" id="tab-css">Le panneau cible est identifié par le <code>href="#ancre"</code> du lien.</div>
 					<div class="tab-pane" id="tab-a11y">Les attributs <code>aria-selected</code> sont mis à jour automatiquement.</div>
 				</div>
-				<pre class="mt-1"><code class="language-html">
+				
+    </div>
+    <div class="col-12 col-lg-6">
+
+<pre class="mt-1"><code class="language-html">
 /** === Tabs === */
 &lt;nav class="tabs"&gt;
   &lt;a href="#tab-1" class="active" data-tab&gt;Tab 1&lt;/a&gt;
@@ -417,9 +439,14 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
   &lt;div class="tab-pane" id="tab-2"&gt;...&lt;/div&gt;
 &lt;/div&gt;
         </code></pre>
+    </div>
+</div>
+
 			</div>
 			<div class="container" id="accordionDemo">
 				<p class="me-2">Accordion</p>
+<div class="docs-demo grid">
+    <div class="col-12 col-lg-6">
 				<div class="accordion mb-2">
 					<details open>
 						<summary>Premier panneau</summary>
@@ -434,7 +461,11 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
 						<div class="accordion-content">Le signe + pivot en croix à l'ouverture.</div>
 					</details>
 				</div>
-				<pre><code class="language-html">
+				
+    </div>
+    <div class="col-12 col-lg-6">
+
+<pre><code class="language-html">
 /** === Accordion === */
 &lt;div class="accordion"&gt;
   &lt;details&gt;
@@ -443,9 +474,14 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
   &lt;/details&gt;
 &lt;/div&gt;
         </code></pre>
+    </div>
+</div>
+
 			</div>
 		</section>
-		</main>
+					</div>
+		</div>
+</main>
 <footer class="footer">
 			<p>
 				<a property="dct:title" rel="cc:attributionURL" href="https://gitlab.com/jmholland/illaweight.git">illaWeight
@@ -470,6 +506,7 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
 		</footer>
 		</wrapper>
 		<script type="module" src="/main.js"></script>
+		<script type="module" src="./js/docs.js"></script>
 		<script type="module" src="./js/scrollToTop.js"></script>
 	</body>
 </html>
