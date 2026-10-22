@@ -1,0 +1,72 @@
+@use'../utils' as*;
+
+/** === Grille 12 colonnes (CSS Grid, mobile-first) === */
+/**
+ * Usage :
+ *   <div class="grid">
+ *     <div class="col-12 col-md-6 col-lg-4">…</div>
+ *   </div>
+ * Les colonnes se replient automatiquement sur mobile : les classes
+ * responsive (sm/md/lg) ne s'appliquent qu'au-dessus du point de rupture.
+ */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+/* Spans de base (toutes tailles d'ecran) */
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        grid-column: span #{$i};
+    }
+}
+
+/* Spans responsive : appliques uniquement au-dessus du breakpoint */
+@mixin grid-cols($suffix, $breakpoint) {
+    @for $i from 1 through 12 {
+        .col-#{$suffix}-#{$i} {
+            grid-column: auto / span 12;
+        }
+    }
+
+    @include up($breakpoint) {
+        @for $i from 1 through 12 {
+            .col-#{$suffix}-#{$i} {
+                grid-column: span #{$i};
+            }
+        }
+    }
+}
+
+@include grid-cols("sm", "sm");
+@include grid-cols("md", "md");
+@include grid-cols("lg", "lg");
+
+/* Colonnes auto / pleine largeur par breakpoint */
+.col-auto {
+    grid-column: auto;
+}
+
+@include up("sm") {
+    .col-sm-auto {
+        grid-column: auto;
+    }
+
+    .col-sm-12 {
+        grid-column: span 12;
+    }
+}
+
+@include up("md") {
+    .col-md-auto {
+        grid-column: auto;
+    }
+}
+
+@include up("lg") {
+    .col-lg-auto {
+        grid-column: auto;
+    }
+}

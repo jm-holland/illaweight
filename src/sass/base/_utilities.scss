@@ -1,0 +1,218 @@
+@use'../utils' as*;
+
+/** === Utilitaires responsive (mobile-first : sm >= 48rem, md >= 64rem, lg >= 75rem) === */
+
+/** --- Affichage --- */
+.d-none {
+    display: none !important;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
+@include up("sm") {
+    .d-sm-none {
+        display: none !important;
+    }
+
+    .d-sm-block {
+        display: block !important;
+    }
+
+    .d-sm-flex {
+        display: flex !important;
+    }
+}
+
+@include up("md") {
+    .d-md-none {
+        display: none !important;
+    }
+
+    .d-md-block {
+        display: block !important;
+    }
+
+    .d-md-flex {
+        display: flex !important;
+    }
+}
+
+@include up("lg") {
+    .d-lg-none {
+        display: none !important;
+    }
+
+    .d-lg-block {
+        display: block !important;
+    }
+
+    .d-lg-flex {
+        display: flex !important;
+    }
+}
+
+/** --- Marges et paddings responsives --- */
+/**
+ * Complète les utilitaires statiques de _base.scss :
+ * {m,p}{,t,b,l,r,x,y}-{sm,md,lg}-{1..7}  ex. .mt-md-3, .px-sm-2
+ */
+@mixin spacing($prop, $prop-name, $suffix) {
+    @each $dir, $short in $short-directions {
+        @for $em from 1 through 7 {
+            .#{$prop}#{$short}-#{$suffix}-#{$em} {
+                @if $dir == "-x" {
+                    #{$prop-name}-left: $em * 1rem !important;
+                    #{$prop-name}-right: $em * 1rem !important;
+                }
+
+                @else if $dir == "-y" {
+                    #{$prop-name}-top: $em * 1rem !important;
+                    #{$prop-name}-bottom: $em * 1rem !important;
+                }
+
+                @else {
+                    #{$prop-name}#{$dir}: $em * 1rem !important;
+                }
+            }
+        }
+    }
+}
+
+$short-directions: (
+    "": "",
+    "-top": "t",
+    "-bottom": "b",
+    "-left": "l",
+    "-right": "r",
+    "-x": "x",
+    "-y": "y",
+);
+
+@include up("sm") {
+    @include spacing("m", "margin", "sm");
+    @include spacing("p", "padding", "sm");
+}
+
+@include up("md") {
+    @include spacing("m", "margin", "md");
+    @include spacing("p", "padding", "md");
+}
+
+@include up("lg") {
+    @include spacing("m", "margin", "lg");
+    @include spacing("p", "padding", "lg");
+}
+
+/** --- Typo --- */
+.text-center {
+    text-align: center !important;
+}
+
+.text-start {
+    text-align: left !important;
+}
+
+.text-end {
+    text-align: right !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-bold {
+    font-weight: bold !important;
+}
+
+.text-italic {
+    font-style: italic !important;
+}
+
+/** --- Couleurs --- */
+$color-classes: (
+    "primary": var(--color-primary),
+    "secondary": var(--color-secondary),
+    "success": var(--color-success),
+    "warning": var(--color-danger),
+    "error": var(--color-error),
+    "muted": var(--color-gray-6),
+);
+
+@each $name, $color in $color-classes {
+    .text-#{$name} {
+        color: $color !important;
+    }
+
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
+
+    .border-#{$name} {
+        border-color: $color !important;
+    }
+}
+
+/** --- Bordures / arrondis / ombres --- */
+.border-0 {
+    border: 0 !important;
+}
+
+.rounded {
+    border-radius: var(--roundness-1) !important;
+}
+
+.rounded-2 {
+    border-radius: var(--roundness-2) !important;
+}
+
+.rounded-3 {
+    border-radius: var(--roundness-3) !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.rounded-0 {
+    border-radius: 0 !important;
+}
+
+.shadow {
+    box-shadow: var(--color-shadow) !important;
+}
+
+.shadow-hard {
+    box-shadow: var(--color-shadow-hard) !important;
+}

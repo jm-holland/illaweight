@@ -28,3 +28,22 @@ $breakpoints: (
         @warn "Le point de rupture '#{$breakpoint}' n'existe pas dans la carte $breakpoints.";
     }
 }
+
+/** === Media query mobile-first (min-width) === */
+$grid-breakpoints: (
+    "sm": 48rem,
+    "md": 64rem,
+    "lg": 75rem,
+) !default;
+
+@mixin up($breakpoint) {
+    @if map.has-key($grid-breakpoints, $breakpoint) {
+        @media (min-width: map.get($grid-breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Le point de rupture '#{$breakpoint}' n'existe pas dans la carte $grid-breakpoints.";
+    }
+}

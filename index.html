@@ -73,6 +73,8 @@
 						<li><a href="#buttons">Buttons</a></li>
 						<li><a href="#list">List</a></li>
 						<li><a href="#col">Colonne</a></li>
+						<li><a href="#grid">Grid</a></li>
+						<li><a href="#utilities">Utilities</a></li>
 						<li><a href="#card">Card</a></li>
 						<li><a href="#form">Form</a></li>
 						<li><a href="#table">Table</a></li>
@@ -300,7 +302,8 @@
 							for classe that set margin or padding right
 						</li>
 					</ul>
-					<p>Where size is 1 to 7</p>
+					<p>Where size is 1 to 7. Des variantes responsive mobile-first existent par breakpoint :
+						<mark>.mt-md-3</mark>, <mark>.px-sm-2</mark>, <mark>.my-lg-1</mark>…</p>
 					<p>exemples :</p>
 					<pre class="mt-1">
             <code class="language-css">
@@ -613,6 +616,63 @@
 				</section>
 				<hr
 				class="hr-style"/>
+				<!-- Grid responsive -->
+				<section id="grid" class="section">
+					<h2>Grid responsive</h2>
+					<p>
+						Grille 12 colonnes mobile-first : container <mark>.grid</mark> + colonnes <mark>col-*</mark>.
+						Les classes responsive ne s'appliquent qu'au-dessus de leur point de rupture :
+						<mark>sm</mark> ≥ 48rem, <mark>md</mark> ≥ 64rem, <mark>lg</mark> ≥ 75rem.
+					</p>
+					<div class="grid mb-2">
+						<div class="col-12 col-md-8 border">col-12 col-md-8</div>
+						<div class="col-12 col-md-4 border">col-12 col-md-4</div>
+						<div class="col-6 col-md-4 col-lg-2 border">col-6 col-md-4 col-lg-2</div>
+						<div class="col-6 col-md-4 col-lg-2 border">col-6 col-md-4 col-lg-2</div>
+						<div class="col-12 col-md-4 col-lg-8 border">col-12 col-md-4 col-lg-8</div>
+						<div class="col-12 col-lg-6 border">col-12 col-lg-6</div>
+						<div class="col-12 col-lg-6 border">col-12 col-lg-6</div>
+					</div>
+					<pre class="mt-1">
+            <code class="language-html">
+&lt;div class="grid"&gt;
+  &lt;div class="col-12 col-md-8"&gt;Main&lt;/div&gt;
+  &lt;div class="col-12 col-md-4"&gt;Sidebar&lt;/div&gt;
+  &lt;div class="col-6 col-md-4 col-lg-2"&gt;1/6 sur mobile&lt;/div&gt;
+  ...
+&lt;/div&gt;
+            </code>
+          </pre>
+				</section>
+				<hr class="hr-style"/>
+				<!-- Utilities -->
+				<section id="utilities" class="section">
+					<h2>Utilities</h2>
+					<p>
+						Classes utilitaires responsive : affichage, typo, couleurs, bordures et spacing
+						avec variantes <mark>sm/md/lg</mark> (mobile-first).
+					</p>
+					<div class="container border mb-2">
+						<p class="mt-md-3 text-primary">text-primary + mt-md-3 (marge seulement ≥ md)</p>
+						<p class="bg-secondary white text-center">bg-secondary + text-center</p>
+						<p class="text-truncate">Texte tronqué automatiquement : Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+						<p class="rounded-3 shadow d-none d-md-block">Visible uniquement ≥ md : d-none + d-md-block</p>
+						<p>
+							<span class="rounded border border-primary px-2 py-1">border border-primary</span>
+							<span class="rounded-circle bg-error white">&nbsp;§&nbsp;</span>
+						</p>
+					</div>
+					<pre class="mt-1">
+            <code class="language-html">
+&lt;p class="mt-md-3"&gt;Marge appliquee uniquement a partir de md&lt;/p&gt;
+&lt;p class="bg-secondary text-center"&gt;Fond + centrage&lt;/p&gt;
+&lt;p class="text-truncate"&gt;Ellipsis automatique&lt;/p&gt;
+&lt;p class="d-none d-md-block"&gt;Affiche a partir de md&lt;/p&gt;
+&lt;span class="rounded border border-primary px-2 py-1"&gt;Pill&lt;/span&gt;
+            </code>
+          </pre>
+				</section>
+				<hr class="hr-style"/>
 				<!-- Card row col-->
 				<section
 					class="section" id="card">
