@@ -63,13 +63,14 @@
 }
 
 .landing-logo {
-    height: 4.5rem;
-    filter: drop-shadow(0 0.35rem 1rem var(--color-shadow));
+    height: clamp(6rem, 11vw, 9rem);
+    margin-top: 0.75rem;
+    filter: drop-shadow(0 0.5rem 1.1rem var(--color-shadow));
 }
 
 .landing-title {
     max-width: 52rem;
-    margin: 0.5rem auto 0;
+    margin: 0.75rem auto 0;
     font-size: clamp(1.8rem, 5vw, 3.2rem);
     line-height: 1.15;
 }
