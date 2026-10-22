@@ -1,0 +1,234 @@
+@use'../utils' as *;
+
+/** === Landing du site (page de presentation) === */
+
+/* --- hero --- */
+.hero.landing {
+    position: relative;
+    overflow: hidden;
+    gap: 0.75rem;
+    min-height: 0;
+    margin: 1rem;
+    padding: 4rem 0.5rem 3rem;
+    text-align: center;
+
+    @include responsive("small") {
+        margin: 0.5rem;
+        padding: 2.5rem 0.25rem 2rem;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* halos degrades derriere le hero */
+.landing-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(70px);
+    opacity: 0.45;
+
+    span {
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    span:nth-child(1) {
+        top: -6rem;
+        left: 12%;
+        width: 22rem;
+        height: 22rem;
+        background: var(--color-primary);
+    }
+
+    span:nth-child(2) {
+        top: 12rem;
+        right: 8%;
+        width: 16rem;
+        height: 16rem;
+        background: var(--color-success);
+    }
+
+    span:nth-child(3) {
+        bottom: -10rem;
+        left: 34%;
+        width: 18rem;
+        height: 18rem;
+        background: var(--color-error);
+    }
+}
+
+.landing-logo {
+    height: 4.5rem;
+    filter: drop-shadow(0 0.35rem 1rem var(--color-shadow));
+}
+
+.landing-title {
+    max-width: 52rem;
+    margin: 0.5rem auto 0;
+    font-size: clamp(1.8rem, 5vw, 3.2rem);
+    line-height: 1.15;
+}
+
+/* texte en degrade */
+.landing-gradient {
+    background: linear-gradient(
+        92deg,
+        var(--color-primary) 0%,
+        var(--color-success) 55%,
+        var(--color-error) 115%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.landing-sub {
+    max-width: 44rem;
+    margin: 0.75rem auto;
+    color: var(--color-gray-3);
+}
+
+.landing-cta {
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0.75rem 0 0;
+
+    .button {
+        white-space: nowrap;
+    }
+}
+
+.landing-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.75rem 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        min-width: 6.5rem;
+        margin: 0;
+        padding: 0.65rem 1rem;
+        border: 0.063rem solid var(--color-border);
+        border-radius: var(--roundness-3);
+        background: var(--color-background);
+        box-shadow: var(--color-shadow);
+    }
+
+    strong {
+        font-size: 1.2rem;
+        color: var(--color-primary);
+    }
+
+    span {
+        font-size: 0.78rem;
+        color: var(--color-gray-3);
+    }
+}
+
+/* --- cartes fonctionnalites (hover micro-interaction) --- */
+.landing-feature {
+    transition:
+        transform var(--transition-speed) ease,
+        box-shadow var(--transition-speed) ease;
+
+    &:hover {
+        transform: translateY(-0.2rem);
+        box-shadow: var(--color-shadow-hard);
+    }
+
+    .card-content {
+        padding: 1.1rem 1.25rem 1.25rem;
+    }
+}
+
+/* pastille coloree a la place des iconees */
+.landing-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* --- palette de couleurs --- */
+.landing-swatch-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.35rem 0;
+
+    > label {
+        min-width: 5.5rem;
+        font-size: 0.8rem;
+        color: var(--color-gray-3);
+    }
+}
+
+.landing-swatch {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 0.063rem solid var(--color-border);
+    border-radius: var(--roundness-2);
+}
+
+/* --- terminal quick start (panneau dark pur demo, scope data-theme) --- */
+.landing-terminal {
+    margin: 0;
+    overflow: hidden;
+    border: 0.063rem solid var(--color-border);
+    border-radius: var(--roundness-3);
+}
+
+.landing-terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 0.9rem;
+    background: var(--color-gray-6);
+
+    span {
+        width: 0.65rem;
+        height: 0.65rem;
+        border-radius: 50%;
+        background: var(--color-error);
+
+        &:nth-child(2) {
+            background: var(--color-highlight);
+        }
+
+        &:nth-child(3) {
+            background: var(--color-success);
+        }
+    }
+
+    em {
+        margin-left: auto;
+        font-size: 0.78rem;
+        font-style: normal;
+        color: var(--color-gray-4);
+    }
+}
+
+.landing-terminal > pre {
+    margin: 0 !important;
+    border: 0;
+    border-radius: 0;
+}

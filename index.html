@@ -140,97 +140,199 @@
 			
 
 			<main id="main-content">
-				<div class="hero">
-					<img src="/illaWeightCss_logo.png" alt="logo illaWeight CSS" class="mb-4" id="top">
-					<img src="/illaWeightCss.png" alt="Logo du framework illaWeight">
-					<p class="heading-3 mt-4">Un framework CSS minimaliste compatible avec le mode sombre</p>
-					<div class="row">
-						<div class="col">
-							<a class="button button-primary white" href="docs.html">Documentation</a>
-						</div>
-						<div class="col">
-							<a class="button button-secondary" href="https://gitlab.com/jmholland/illaweight">Télécharger</a>
+		<div class="hero landing">
+			<div class="landing-glow" aria-hidden="true">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<span class="badge badge-pill badge-primary mb-0">v1.0.0 &middot; licence MIT</span>
+			<img class="landing-logo mt-2" src="/illaWeightCss_logo.png" alt="logo illaWeight CSS" id="top"/>
+			<h1 class="landing-title">
+				Le framework CSS minimaliste,<br/>
+				<span class="landing-gradient">dark mode ready</span> et sans dependance.
+			</h1>
+			<p class="landing-sub">
+				typographic, grille responsive 12 colonnes, utilitaires et composants interactifs :
+				cette page entiere ne consomme presque rien, le CSS tient dans ~10 kB gzip.
+			</p>
+			<div class="row landing-cta">
+				<div class="col">
+					<a class="button button-primary" href="docs.html">Documentation</a>
+				</div>
+				<div class="col">
+					<a class="button button-secondary" href="scripts.html">Scripts JS</a>
+				</div>
+				<div class="col">
+					<a class="button button-clear" href="https://gitlab.com/jmholland/illaweight" target="_blank" rel="noopener noreferrer">GitLab</a>
+				</div>
+			</div>
+			<ul class="landing-stats">
+				<li><strong>10 kB</strong><span>gzip CSS</span></li>
+				<li><strong>12+</strong><span>composants</span></li>
+				<li><strong>0</strong><span>dependance JS</span></li>
+				<li><strong>MIT</strong><span>licence libre</span></li>
+			</ul>
+		</div>
+
+		<section class="section">
+			<h2 class="text-center">Pourquoi illaWeight ?</h2>
+			<div class="grid">
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="card landing-feature">
+						<div class="card-content">
+							<span class="landing-chip" style="background: var(--color-primary);">M</span>
+							<h3 class="mb-0">Minimaliste</h3>
+							<p class="mb-0">Un bundle unique : normalize, typographie, grille, composants et utilitaires dans un seul fichier.</p>
 						</div>
 					</div>
 				</div>
-
-				<section class="section">
-					<h2 class="text-center">Pourquoi illaWeight ?</h2>
-					<div class="grid">
-						<div class="col-12 col-md-6 col-lg-3">
-							<div class="card">
-								<div class="card-content">
-									<h3>Minimaliste</h3>
-									<p>Un seul fichier CSS de ~50 kB (9.8 kB gzip) : normalize, typo, grille, composants et utilitaires.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-md-6 col-lg-3">
-							<div class="card">
-								<div class="card-content">
-									<h3>Dark Mode ready</h3>
-									<p>Un simple attribut <code>data-theme</code> sur &lt;html&gt; et le commutateur <mark>themeSwitch.js</mark> avec persistance.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-md-6 col-lg-3">
-							<div class="card">
-								<div class="card-content">
-									<h3>Grille responsive</h3>
-									<p>12 colonnes mobile-first + utilitaires <code>col-sm/md/lg-*</code>, spacing et display responsive.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-md-6 col-lg-3">
-							<div class="card">
-								<div class="card-content">
-									<h3>Composants interactifs</h3>
-									<p>Modal, tabs, accordion via une API <code>data-attributes</code>, sans dépendance JS.</p>
-								</div>
-							</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="card landing-feature">
+						<div class="card-content">
+							<span class="landing-chip" style="background: var(--color-success);">D</span>
+							<h3 class="mb-0">Dark mode</h3>
+							<p class="mb-0">Un attribut <code>data-theme</code> sur un element (page entiere ou panneau local) et tout bascule proprement.</p>
 						</div>
 					</div>
-				</section>
-
-				<section class="section">
-					<h2 class="text-center">Aperçu rapide</h2>
-					<div class="grid">
-						<div class="col-12 col-md-6">
-							<div class="card">
-								<div class="card-header-text">
-									<h3>Composants</h3>
-								</div>
-								<div class="card-content">
-									<p>
-										<button class="button button-primary">Primary</button>
-										<button class="button">Default</button>
-									</p>
-									<p>
-										<span class="badge badge-primary">Badge</span>
-										<span class="badge badge-success">Success</span>
-										<span class="badge badge-pill badge-error">Pill</span>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-md-6">
-							<div class="card">
-								<div class="card-header-text">
-									<h3>Quick start</h3>
-								</div>
-								<div class="card-content">
-									<pre class="mb-0"><code class="language-bash">
-git clone https://gitlab.com/jmholland/illaweight.git
-npm install && npm run dev
-									</code></pre>
-								</div>
-							</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="card landing-feature">
+						<div class="card-content">
+							<span class="landing-chip" style="background: var(--color-error);">R</span>
+							<h3 class="mb-0">Responsive</h3>
+							<p class="mb-0">Grille 12 colonnes mobile-first + mixed col-sm/md/lg + utilitaires d'espacement et d'affichage.</p>
 						</div>
 					</div>
-					<p class="text-center mt-2">
-						<a class="button button-primary" href="docs.html">Voir la documentation complète</a>
-					</p>
-				</section>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="card landing-feature">
+						<div class="card-content">
+							<span class="landing-chip" style="background: var(--color-success-focus);">J</span>
+							<h3 class="mb-0">Interactif</h3>
+							<p class="mb-0">Modal, tabs, accordion par <code>data-attributes</code> : aucun framework JS, aucune dependance.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2 class="text-center">Vivant, pas une maquette</h2>
+			<p class="text-center landing-sub">
+				Tout ce qui suit est rendu uniquement par les classes du framework.
+			</p>
+			<div class="grid">
+				<div class="col-12 col-lg-7">
+					<div class="card">
+						<div class="card-header-text"><h3>Composants</h3></div>
+						<div class="card-content">
+							<p>
+								<button class="button button-primary">Primary</button>
+								<button class="button">Default</button>
+								<button class="button button-clear">Clear</button>
+							</p>
+							<p>
+								<span class="badge badge-primary">Info</span>
+								<span class="badge badge-success">Ok</span>
+								<span class="badge badge-warning">Attention</span>
+								<span class="badge badge-error">Erreur</span>
+								<span class="badge badge-pill badge-muted">Pill</span>
+							</p>
+							<p class="form-control">
+								<label for="landing-input">Nom de projet</label>
+								<input id="landing-input" type="text" placeholder="mon-app"/>
+							</p>
+							<ul class="pagination mb-0">
+								<li><a href="#">&laquo;</a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">2 &raquo;</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-5">
+					<div class="card landing-feature" data-theme="dark">
+						<div class="card-content">
+							<span class="badge badge-pill badge-primary mb-2">data-theme="dark" local</span>
+							<h3 class="mb-0">Un panneau sombre dans une page claire</h3>
+							<p class="mb-1">L'attribut marche a plusieurs niveaux : la carte utilise les variables du theme sombre, sans toucher au reste de la page — essayez le commutateur de la barre de menu.</p>
+							<p class="mb-0">
+								<button class="button button-primary">Bouton du theme courant</button>
+								<button class="button">Bouton neutre</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card landing-feature mt-2">
+				<div class="card-content">
+					<span class="landing-chip" style="background: var(--color-danger);">C</span>
+					<h4 class="mb-2">Palette &middot; variables CSS</h4>
+					<div class="landing-swatch-row">
+						<label>primaire / etat</label>
+						<span class="landing-swatch" style="background: var(--color-primary);" title="--color-primary"></span>
+						<span class="landing-swatch" style="background: var(--color-secondary);" title="--color-secondary"></span>
+						<span class="landing-swatch" style="background: var(--color-success);" title="--color-success"></span>
+						<span class="landing-swatch" style="background: var(--color-danger);" title="--color-danger"></span>
+						<span class="landing-swatch" style="background: var(--color-error);" title="--color-error"></span>
+						<span class="landing-swatch" style="background: var(--color-highlight);" title="--color-highlight"></span>
+					</div>
+					<div class="landing-swatch-row">
+						<label>echelle de gris</label>
+						<span class="landing-swatch" style="background: var(--color-gray-1);" title="--color-gray-1"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-2);" title="--color-gray-2"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-3);" title="--color-gray-3"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-4);" title="--color-gray-4"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-5);" title="--color-gray-5"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-6);" title="--color-gray-6"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-7);" title="--color-gray-7"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-8);" title="--color-gray-8"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2 class="text-center">Demarrer en une minute</h2>
+			<p class="text-center landing-sub mb-1">
+				Clonez le depot, importez le point d'entree Sass dans Vite, activez le dark mode avec un attribut.
+			</p>
+			<div class="grid">
+				<div class="col-12 col-md-6">
+					<div class="card landing-terminal" data-theme="dark">
+						<div class="landing-terminal-bar" aria-hidden="true">
+							<span></span><span></span><span></span>
+							<em>terminal</em>
+						</div>
+						<pre><code class="language-bash">git clone https://gitlab.com/jmholland/illaweight.git
+cd illaweight
+npm install
+npm run dev</code></pre>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="card landing-terminal" data-theme="dark">
+						<div class="landing-terminal-bar" aria-hidden="true">
+							<span></span><span></span><span></span>
+							<em>main.js</em>
+						</div>
+						<pre><code class="language-js">// styles du framework
+import "./src/sass/main.scss";
+
+// interactions optionnelles
+import "./js/interactions.js";</code></pre>
+					</div>
+				</div>
+			</div>
+			<p class="text-center mt-2">
+				<a class="button button-primary" href="docs.html">Lire la documentation complete</a>
+				<a class="button button-secondary" href="scripts.html">Voir les composants interactifs</a>
+			</p>
+		</section>
+</main>
 <footer class="footer">
 			<p>
 				<a property="dct:title" rel="cc:attributionURL" href="https://gitlab.com/jmholland/illaweight.git">illaWeight
