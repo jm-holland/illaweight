@@ -3,7 +3,7 @@
  *  https://illaweight.illaweb.fr
  *
  *  Copyright(c) 2024 jm Holland
- *  licence : CC BY-NC-ND 4.0 https://creativecommons.org/licenses/by-nc-nd/4.0/
+ *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
 /** === Scroll to top === */
