@@ -13,17 +13,17 @@
 		<meta property="og:title" content="illaWeight - Framework CSS Minimaliste et Dark Mode Ready">
 		<meta property="og:description" content="Découvrez illaWeight, un framework CSS minimaliste, léger et prêt pour le Dark Mode. Parfait pour démarrer rapidement vos projets web.">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="http://illaweight.ddns.net">
-		<meta property="og:image" content="http://illaweight.ddns.net/illaWeightCss.png">
+		<meta property="og:url" content="https://illaweight.illaweb.fr">
+		<meta property="og:image" content="https://illaweight.illaweb.fr/illaWeightCss.png">
 		<meta property="og:image:alt" content="Logo ou aperçu du framework illaWeight CSS">
 		<meta property="og:site_name" content="illaWeight CSS Framework">
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="illaWeight - Framework CSS Minimaliste et Dark Mode Ready">
 		<meta name="twitter:description" content="illaWeight : un framework CSS minimaliste, léger, et Dark Mode ready pour vos projets web.">
-		<meta name="twitter:image" content="http://illaweight.ddns.net/illaWeightCss.png">
+		<meta name="twitter:image" content="https://illaweight.illaweb.fr/illaWeightCss.png">
 		<meta name="twitter:image:alt" content="Logo ou aperçu du framework illaWeight CSS">
 		<link
-		rel="canonical" href="http://illaweight.ddns.net">
+		rel="canonical" href="https://illaweight.illaweb.fr">
 
 		<!-- Favicons-->
 		<link rel="icon" href="/illaWeight.png" type="image/png">
@@ -33,12 +33,17 @@
 		<link
 		rel="manifest" href="/site.webmanifest"/>
 
+		<!-- Preload des polices principales -->
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/Manjari/Manjari-Regular.woff2" crossorigin>
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/tabler-icons.woff2" crossorigin>
+
 		<!-- Title -->
 		<title>illaWeight - Framework CSS Minimaliste et Dark Mode Ready</title>
 
 	</head>
 
 	<body>
+		<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 		<nav
 			class="navigation" aria-label="navigation">
 			<!-- Brand -->
@@ -86,7 +91,7 @@
 				</li>
 				<!-- Dark Mode-->
 				<li>
-					<input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode" aria-checked="false"/>
+					<input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/>
 					<label for="themeSwitch" class="checkbox-label">
 						<span class="moon" title="Dark">&#9789;</span>
 						<span class="sun" title="light">&#10039;</span>
@@ -117,12 +122,7 @@
 				<img src="/illaWeightCss.png" alt="Logo du framework illaWeight">
 				<p class="heading-3 mt-4">A Dark Mode ready minimalist CSS framework</p>
 				<div class="row">
-					<div class="col">
-						<button class="button button-primary">
-							<a class="white" href="https://gitlab.com/jmholland/illaweight.git">Download</a>
-
-						</button>
-					</div>
+					<a class="button button-primary white" href="https://gitlab.com/jmholland/illaweight">Download</a>
 
 				</div>
 			</div>
@@ -170,7 +170,7 @@
       </code>
     </pre>
 			</div>
-			<main>
+			<main id="main-content">
 				<h1 class="text-center">illaWeightCSS Preview</h1>
 				<!-- Typography -->
 				<section id="typography" class="section">
@@ -796,7 +796,7 @@
 								class="form">
 								<!-- Form input -->
 								<p class="form-control">
-									<label for="name">Username</label>
+									<label for="username">Username</label>
 									<input type="text" name="username" id="username" placeholder="Enter your username"/>
 									<span class="form-success-message" aria-live="polite">Your username is available</span>
 								</p>

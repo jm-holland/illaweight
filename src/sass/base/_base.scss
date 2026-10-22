@@ -43,6 +43,36 @@ $directions: "", "-bottom", "-top", "-left", "-right";
     }
 }
 
+/** === Skip link (accessibilite) === */
+.skip-link {
+    position: absolute;
+    transform: translateY(-150%);
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 0.25rem 0;
+    z-index: 100;
+
+    &:focus {
+        transform: translateY(0);
+    }
+}
+
+/** === Reduced motion (accessibilite) === */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 /* === list === */
 ul,
 ol {
