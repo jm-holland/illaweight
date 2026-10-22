@@ -15,6 +15,7 @@
 
     &.hidden {
         transform: translateX(-10000%);
+        pointer-events: none;
         animation: bounce-out 2s ease-out;
     }
 

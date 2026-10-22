@@ -10,7 +10,7 @@
     padding: 0.5rem 2rem;
     background-color: var(--color-background);
     box-shadow: var(--color-shadow);
-    z-index: 2;
+    z-index: 30;
 
     @include responsive("medium") {
         flex-wrap: wrap;
@@ -58,6 +58,7 @@
 
         li {
             display: inline-block;
+            position: relative;
 
             >a {
                 &:after {
@@ -110,11 +111,12 @@
     ul ul {
         display: none;
         position: absolute;
-        top: 2.5rem;
+        top: 100%;
     }
 
-    /* Display Dropdowns on Hover */
-    ul li:hover>ul {
+    /* Display Dropdowns on Hover and keyboard focus */
+    ul li:hover>ul,
+    ul li:focus-within>ul {
         display: block;
         background-color: var(--color-background);
     }
