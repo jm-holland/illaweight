@@ -213,10 +213,16 @@
 					<section id="getting-started" class="section">
 						<h2>Getting started</h2>
 						<h5>Installation</h5>
+<div class="docs-demo grid">
+    <div class="col-12 col-md-6">
 						<p>
 							Le framework est disponible depuis le depôt Git. Clonez ou telechargez, puis importe le point d'entree Sass via Vite :
 						</p>
-						<pre>
+						
+    </div>
+    <div class="col-12 col-md-6">
+
+<pre>
             <code class="language-bash">
 git clone https://gitlab.com/jmholland/illaweight.git
 cd illaweight
@@ -224,6 +230,9 @@ npm install
 npm run dev
             </code>
 						</pre>
+    </div>
+</div>
+
 						<h5>Intégration du CSS (Vite)</h5>
 						<pre>
             <code class="language-js">
@@ -232,12 +241,18 @@ import "./src/sass/main.scss";
             </code>
 						</pre>
 						<h5>Dark Mode</h5>
+<div class="docs-demo grid">
+    <div class="col-12 col-md-6">
 						<p>
 							Ajoutez l'attribut <code class="language-html">&lt;html data-theme="light"&gt;</code>
 							(la valeur "dark" active le theme sombre). Le script <code>themeSwitch.js</code> gere le commutateur et la persistance dans localStorage.
 						</p>
 						<h5>Structure des fichiers</h5>
-						<pre>
+						
+    </div>
+    <div class="col-12 col-md-6">
+
+<pre>
             <code>
 src/sass/main.scss      &lt;- point d'entree (normalize, base, utilities, grid, layout)
 src/sass/base/          &lt;- typo, grille, utilitaires responsive
@@ -246,13 +261,16 @@ src/sass/layout/        &lt;- navigation, footer, layout, normalize
 js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tabs, accordion...)
             </code>
 						</pre>
+    </div>
+</div>
+
 					</section>
 
 							<!-- Typography -->
 				<section id="typography" class="section">
 					<h2>Typography</h2>
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="row">
 						<div class="col border">
 							<h1>Heading 1</h1>
@@ -303,7 +321,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</div>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 <p class="me-2 mt-2">Typography code</p>
 					
 <pre>
@@ -346,8 +364,6 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 																																																																																																																																																																																																																								            from a default Sass map ranging from 1em to 7em.
 					</p>
 					<h4>Notations</h4>
-<div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
 					<ul class="clear">
 						<li>
 							<span class="strong">
@@ -388,10 +404,12 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</ul>
 					<p>Where size is 1 to 7. Des variantes responsive mobile-first existent par breakpoint :
 						<mark>.mt-md-3</mark>, <mark>.px-sm-2</mark>, <mark>.my-lg-1</mark>…</p>
+<div class="docs-demo grid">
+    <div class="col-12 col-md-6">
 					<p>exemples :</p>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
             <code class="language-css">
@@ -412,7 +430,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 				<section id="blockquote" class="section">
 					<h2>Blockquote</h2>
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="row">
 						<div class="col border">
 							<blockquote>This changed my life, literally.</blockquote>
@@ -423,7 +441,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</div>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
           <code class="language-html">
@@ -439,7 +457,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 				<section id="list" class="section">
 					<h2>List</h2>
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="container border">
 						<ul class="clear">
 							<li>Categories</li>
@@ -472,7 +490,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</div>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
   <code class="language-html">
@@ -514,7 +532,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					<h2>Buttons</h2>
 
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="container">
 						<button class="button">Default Button</button>
 						<button class="button button-primary">Primary Button</button>
@@ -526,7 +544,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
             <code class="language-html">
@@ -547,6 +565,8 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 				<!-- Badge -->
 				<section id="badge" class="section">
 					<h2>Badge</h2>
+<div class="docs-demo grid">
+    <div class="col-12 col-md-6">
 					<p>
 						<span class="badge badge-primary">Primary</span>
 						<span class="badge badge-secondary">Secondary</span>
@@ -556,7 +576,11 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 						<span class="badge badge-muted">Muted</span>
 						<span class="badge badge-pill badge-primary">Pill</span>
 					</p>
-					<pre class="mt-1">
+					
+    </div>
+    <div class="col-12 col-md-6">
+
+<pre class="mt-1">
             <code class="language-html">
 &lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
 &lt;span class="badge badge-secondary"&gt;Secondary&lt;/span&gt;
@@ -567,6 +591,9 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;span class="badge badge-pill badge-primary"&gt;Pill&lt;/span&gt;
             </code>
           </pre>
+    </div>
+</div>
+
 				</section>
 				<hr class="hr-style"/>
 				<!-- Card row col-->
@@ -575,7 +602,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					<!-- Card column flex -->
 					<h2>Card</h2>
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="row">
 						<div class="col">
 							<div class="card">
@@ -725,7 +752,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</div>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
   <code class="language-html">
@@ -755,6 +782,8 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 				<!-- Table -->
 				<section id="table" class="preview-section">
 					<h2 class="preview-title">Table</h2>
+<div class="docs-demo grid">
+    <div class="col-12 col-md-6">
 					<div class="container mt-1">
 						<table>
 							<caption>
@@ -797,8 +826,11 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 							</tfoot>
 						</table>
 					</div>
-				</div>
-				<pre class="mt-1">
+				
+    </div>
+    <div class="col-12 col-md-6">
+
+<pre class="mt-1">
           <code class="language-html">
   &lt;table&gt;
     &lt;caption&gt;
@@ -842,12 +874,15 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
   &lt;/table&gt;
           </code>
         </pre>
+    </div>
+</div>
+
 			</section>
 				<hr class="hr-style"/>
 				<!-- Form -->
 				<section id="form" class="section">
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="container">
 						<form method="post">
 							<div
@@ -931,7 +966,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</div>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
   <code class="language-html">
@@ -1029,7 +1064,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 				<section id="pagination" class="section">
 					<h2>Pagination</h2>
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<ul class="pagination">
 						<li><a href="#pagination">&laquo;</a></li>
 						<li><a href="#pagination">1</a></li>
@@ -1041,7 +1076,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</ul>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
             <code class="language-html">
@@ -1077,7 +1112,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 						</div>
 					</div>
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="row">
 						<div class="col">
 							<h5>col</h5>
@@ -1137,7 +1172,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
             <code class="language-html">
@@ -1226,7 +1261,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 						<mark>sm</mark> ≥ 48rem, <mark>md</mark> ≥ 64rem, <mark>lg</mark> ≥ 75rem.
 					</p>
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="grid mb-2">
 						<div class="col-12 col-md-8 border">col-12 col-md-8</div>
 						<div class="col-12 col-md-4 border">col-12 col-md-4</div>
@@ -1238,7 +1273,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</div>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
             <code class="language-html">
@@ -1263,7 +1298,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 						avec variantes <mark>sm/md/lg</mark> (mobile-first).
 					</p>
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="container border mb-2">
 						<p class="mt-md-3 text-primary">text-primary + mt-md-3 (marge seulement ≥ md)</p>
 						<p class="bg-secondary white text-center">bg-secondary + text-center</p>
@@ -1276,7 +1311,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</div>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
             <code class="language-html">
@@ -1296,7 +1331,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					<h2>Socials</h2>
 					<!-- Social group -->
 <div class="docs-demo grid">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 					<div class="socials">
 						<a href="#" title="Join us on Facebook">
 							<i class="ti ti-brand-facebook"></i>
@@ -1322,7 +1357,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 					</div>
 					
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-md-6">
 
 <pre class="mt-1">
   <code class="language-html">
@@ -1342,6 +1377,8 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 			<!-- Portfolio -->
 			<section id="portfolio" class="section">
 				<h2>Portfolio</h2>
+<div class="docs-demo grid">
+    <div class="col-12 col-md-6">
 				<div>
 					<ul class="portfolio-menu">
 						<li class="current" data-target="all">All</li>
@@ -1389,9 +1426,12 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 						</div>
 					</div>
 				</div>
-			</div>
-			<script type="module" src="/js/portfolio.js"></script>
-			<pre class="mt-1">
+			
+    </div>
+    <div class="col-12 col-md-6">
+<script type="module" src="/js/portfolio.js"></script>
+			
+<pre class="mt-1">
           <code class="language-html">
  &lt;div&gt;
   &lt;ul class="portfolio-menu"&gt;
@@ -1418,11 +1458,17 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;/div&gt;
           </code>
         </pre>
+    </div>
+</div>
+
 		</section>
 				<hr class="hr-style"/>
 		
 		<!-- Footer-->
+					</div>
+		</div>
 </main>
+
 <footer class="footer">
 			<p>
 				<a property="dct:title" rel="cc:attributionURL" href="https://gitlab.com/jmholland/illaweight.git">illaWeight
