@@ -26,7 +26,7 @@
 		rel="canonical" href="https://illaweight.illaweb.fr">
 
 		<!-- Favicons-->
-		<link rel="icon" href="/illaWeight.png" type="image/png">
+		<link rel="icon" href="/favicon.ico" sizes="48x48">
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
@@ -46,7 +46,7 @@
 			<!-- Brand -->
 			<div class="brand">
 				<a href="/" title="Aller à la page d'accueil">
-					<p>{...}</p>
+				
 					<img src="/illaWeight.png" alt="logo illawebWeight Css">
 				</a>
 			</div>
@@ -82,7 +82,7 @@
 					<a href="docs.html#portfolio">Portfolio</a>
 				</li>
 				<li>
-					<a href="#" aria-label="submenu">Styles +</a>
+					<a href="#" aria-label="submenu">Styles <i class="ti ti-chevron-down" aria-hidden="true"></i></a>
 					<ul>
 						<li><a href="docs.html#badge">Badge</a></li>
 						<li><a href="docs.html#col">Colonnes</a></li>
@@ -94,7 +94,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#" aria-label="submenu">Javascript</a>
+					<a href="#" aria-label="submenu">Javascript <i class="ti ti-chevron-down" aria-hidden="true"></i></a>
 					<ul>
 						<li><a href="scripts.html#menuBurger">Menu burger</a></li>
 						<li><a href="scripts.html#darkMod">Dark Mode</a></li>
@@ -110,8 +110,8 @@
 				<li>
 					<input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/>
 					<label for="themeSwitch" class="checkbox-label">
-						<span class="moon" title="Dark">&#9789;</span>
-						<span class="sun" title="light">&#10039;</span>
+						<span class="moon" title="Dark"><i class="ti ti-moon" aria-hidden="true"></i></span>
+						<span class="sun" title="light"><i class="ti ti-sun" aria-hidden="true"></i></span>
 						<span class="ball" title="Dark mode"></span>
 					</label>
 					<script type="module" src="/js/themeSwitch.js"></script>
@@ -128,7 +128,7 @@
 					</span>
 				</div>
 			</div>
-			<span class="alert-close">&#x10102;</span>
+			<span class="alert-close" role="button" aria-label="Fermer l'alerte"><i class="ti ti-x" aria-hidden="true"></i></span>
 			<div class="progress active"></div>
 		</div>
 		<script type="module" src="/js/alertMessage.js"></script>
@@ -147,7 +147,7 @@
 				<span></span>
 			</div>
 			<span class="badge badge-pill badge-primary mb-0">v1.0.0 &middot; licence MIT</span>
-			<img class="landing-logo mt-2" src="/illaWeightCss_logo.png" alt="logo illaWeight CSS" id="top"/>
+			<img class="landing-logo mt-2" src="/illaWeight.png" alt="logo illaWeight CSS" id="top"/>
 			<h1 class="landing-title">
 				Le framework CSS minimaliste,<br/>
 				<span class="landing-gradient">dark mode ready</span> et sans dependance.
@@ -181,7 +181,7 @@
 				<div class="col-12 col-sm-6 col-lg-3">
 					<div class="card landing-feature">
 						<div class="card-content">
-							<span class="landing-chip" style="background: var(--color-primary);">M</span>
+							<span class="landing-chip" style="background: var(--color-primary);"><i class="ti ti-package" aria-hidden="true"></i></span>
 							<h3 class="mb-0">Minimaliste</h3>
 							<p class="mb-0">Un bundle unique : normalize, typographie, grille, composants et utilitaires dans un seul fichier.</p>
 						</div>
@@ -190,7 +190,7 @@
 				<div class="col-12 col-sm-6 col-lg-3">
 					<div class="card landing-feature">
 						<div class="card-content">
-							<span class="landing-chip" style="background: var(--color-success);">D</span>
+							<span class="landing-chip" style="background: var(--color-success);"><i class="ti ti-moon" aria-hidden="true"></i></span>
 							<h3 class="mb-0">Dark mode</h3>
 							<p class="mb-0">Un attribut <code>data-theme</code> sur un element (page entiere ou panneau local) et tout bascule proprement.</p>
 						</div>
@@ -199,7 +199,7 @@
 				<div class="col-12 col-sm-6 col-lg-3">
 					<div class="card landing-feature">
 						<div class="card-content">
-							<span class="landing-chip" style="background: var(--color-error);">R</span>
+							<span class="landing-chip" style="background: var(--color-error);"><i class="ti ti-layout-grid" aria-hidden="true"></i></span>
 							<h3 class="mb-0">Responsive</h3>
 							<p class="mb-0">Grille 12 colonnes mobile-first + mixed col-sm/md/lg + utilitaires d'espacement et d'affichage.</p>
 						</div>
@@ -208,7 +208,7 @@
 				<div class="col-12 col-sm-6 col-lg-3">
 					<div class="card landing-feature">
 						<div class="card-content">
-							<span class="landing-chip" style="background: var(--color-success-focus);">J</span>
+							<span class="landing-chip" style="background: var(--color-success-focus);"><i class="ti ti-bolt" aria-hidden="true"></i></span>
 							<h3 class="mb-0">Interactif</h3>
 							<p class="mb-0">Modal, tabs, accordion par <code>data-attributes</code> : aucun framework JS, aucune dependance.</p>
 						</div>

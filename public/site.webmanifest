@@ -1,21 +1,13 @@
 {
   "name": "illaWeight CSS",
   "short_name": "illaWeight",
-  "description": "illaWeight : un framework CSS minimaliste, léger et Dark Mode ready.",
-  "icons": [
-    {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ],
-  "theme_color": "#fafafa",
-  "background_color": "#fafafa",
+  "description": "Framework CSS minimaliste, dark mode ready",
+  "start_url": "https://illaweight.illaweb.fr/",
   "display": "standalone",
-  "start_url": "/"
+  "background_color": "#fafafa",
+  "theme_color": "#0b96f0",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
 }

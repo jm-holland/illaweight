@@ -26,7 +26,7 @@
 		rel="canonical" href="https://illaweight.illaweb.fr">
 
 		<!-- Favicons-->
-		<link rel="icon" href="/illaWeight.png" type="image/png">
+		<link rel="icon" href="/favicon.ico" sizes="48x48">
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
@@ -84,7 +84,7 @@
 					<a href="#portfolio">Portfolio</a>
 				</li>
 				<li>
-					<a href="#" aria-label="submenu">Styles +</a>
+					<a href="#" aria-label="submenu">Styles <i class="ti ti-chevron-down" aria-hidden="true"></i></a>
 					<ul>
 						<li><a href="#badge">Badge</a></li>
 						<li><a href="#col">Colonnes</a></li>
@@ -96,7 +96,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#" aria-label="submenu">Javascript</a>
+					<a href="#" aria-label="submenu">Javascript <i class="ti ti-chevron-down" aria-hidden="true"></i></a>
 					<ul>
 						<li><a href="scripts.html#menuBurger">Menu burger</a></li>
 						<li><a href="scripts.html#darkMod">Dark Mode</a></li>
@@ -112,8 +112,8 @@
 				<li>
 					<input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/>
 					<label for="themeSwitch" class="checkbox-label">
-						<span class="moon" title="Dark">&#9789;</span>
-						<span class="sun" title="light">&#10039;</span>
+						<span class="moon" title="Dark"><i class="ti ti-moon" aria-hidden="true"></i></span>
+						<span class="sun" title="light"><i class="ti ti-sun" aria-hidden="true"></i></span>
 						<span class="ball" title="Dark mode"></span>
 					</label>
 					<script type="module" src="/js/themeSwitch.js"></script>
@@ -130,7 +130,7 @@
 					</span>
 				</div>
 			</div>
-			<span class="alert-close">&#x10102;</span>
+			<span class="alert-close" role="button" aria-label="Fermer l'alerte"><i class="ti ti-x" aria-hidden="true"></i></span>
 			<div class="progress active"></div>
 		</div>
 		<script type="module" src="/js/alertMessage.js"></script>
