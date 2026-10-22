@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="description" content="Scripts JavaScript du framework illaWeight : menu burger, dark mode, alert message, scroll to top, portfolio filtre, modal, tabs et accordion via une API data-attributes.">
+		<meta name="keywords" content="illaWeight, framework CSS, CSS, minimalist CSS, dark mode, frontend, web development, responsive design, UI components, CSS léger">
+		<meta name="author" content="Jm Holland">
+		<meta http-equiv="Content-Language" content="fr">
+		<meta name="robots" content="index, follow">
+		<meta property="og:title" content="illaWeight - Scripts JavaScript (menu burger, dark mode, modal, tabs, accordion)">
+		<meta property="og:description" content="Documentation des scripts illaWeight : interactions des composants via data-attributes, detection de theme, notifications.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://illaweight.illaweb.fr/scripts.html">
+		<meta property="og:image" content="https://illaweight.illaweb.fr/illaWeightCss.png">
+		<meta property="og:image:alt" content="Logo ou aperçu du framework illaWeight CSS">
+		<meta property="og:site_name" content="illaWeight CSS Framework">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="illaWeight - Scripts JavaScript (menu burger, dark mode, modal, tabs, accordion)">
+		<meta name="twitter:description" content="Documentation des scripts illaWeight : interactions des composants via data-attributes, detection de theme, notifications.">
+		<meta name="twitter:image" content="https://illaweight.illaweb.fr/illaWeightCss.png">
+		<meta name="twitter:image:alt" content="Logo ou aperçu du framework illaWeight CSS">
+		<link
+		rel="canonical" href="https://illaweight.illaweb.fr">
+
+		<!-- Favicons-->
+		<link rel="icon" href="/illaWeight.png" type="image/png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+		<link
+		rel="manifest" href="/site.webmanifest"/>
+
+		<!-- Preload des polices principales -->
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/Manjari/Manjari-Regular.woff2" crossorigin>
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/tabler-icons.woff2" crossorigin>
+
+		<!-- Title -->
+		<title>illaWeight - Scripts JavaScript du Framework</title>
+
+	</head>
+<body>
+		<a class="skip-link" href="#main-content">Aller au contenu principal</a>
+		<nav
+			class="navigation" aria-label="navigation">
+			<!-- Brand -->
+			<div class="brand">
+				<a href="/" title="Aller à la page d'accueil">
+					<p>{...}</p>
+					<img src="/illaWeight.png" alt="logo illawebWeight Css">
+				</a>
+			</div>
+			<!-- Menu Hamburger-->
+			<input class="menu-hamburger" type="checkbox" id="menu-hamburger" aria-label="Open the menu"/>
+			<label class="menu-icon" for="menu-hamburger">
+				<span class="hamburger-icon" aria-hidden="true"></span>
+			</label>
+			<script type="module" src="/js/menu_burger.js"></script>
+			<ul class="menu">
+				<li>
+					<a href="docs.html#typography">Typography</a>
+				</li>
+				<li>
+					<a href="docs.html#blockquote">Blockquote</a>
+				</li>
+				<li>
+					<a href="docs.html#list">List</a>
+				</li>
+				<li>
+					<a href="docs.html#buttons">Buttons</a>
+				</li>
+				<li>
+					<a href="docs.html#card">Card</a>
+				</li>
+				<li>
+					<a href="docs.html#form">Form</a>
+				</li>
+				<li>
+					<a href="docs.html#table">Table</a>
+				</li>
+				<li>
+					<a href="docs.html#portfolio">Portfolio</a>
+				</li>
+				<li>
+					<a href="#" aria-label="submenu">Styles +</a>
+					<ul>
+						<li><a href="docs.html#badge">Badge</a></li>
+						<li><a href="docs.html#col">Colonnes</a></li>
+						<li><a href="docs.html#grid">Grid responsive</a></li>
+						<li><a href="docs.html#pagination">Pagination</a></li>
+						<li><a href="docs.html#social">Socials</a></li>
+						<li><a href="docs.html#margin">Spacing</a></li>
+						<li><a href="docs.html#utilities">Utilities</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" aria-label="submenu">Javascript</a>
+					<ul>
+						<li><a href="#menuBurger">Menu burger</a></li>
+						<li><a href="#darkMod">Dark Mode</a></li>
+						<li><a href="#scrollToTop">Scroll to top</a></li>
+						<li><a href="#alertMessage">Alert Message</a></li>
+						<li><a href="#portfolio-script">Portfolio</a></li>
+						<li><a href="#modalDemo">Modal</a></li>
+						<li><a href="#tabsDemo">Tabs</a></li>
+						<li><a href="#accordionDemo">Accordion</a></li>
+					</ul>
+				</li>
+				<!-- Dark Mode-->
+				<li>
+					<input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/>
+					<label for="themeSwitch" class="checkbox-label">
+						<span class="moon" title="Dark">&#9789;</span>
+						<span class="sun" title="light">&#10039;</span>
+						<span class="ball" title="Dark mode"></span>
+					</label>
+					<script type="module" src="/js/themeSwitch.js"></script>
+				</li>
+			</ul>
+		</nav>
+		<!-- alert Message -->
+		<div class="alert alert-warning ">
+			<div class="alert-content">
+				<span class="alert-icon"></span>
+				<div class="message">
+					<span class="text text-1"></span>
+					<span class="text text-2">Notifications générales du site
+					</span>
+				</div>
+			</div>
+			<span class="alert-close">&#x10102;</span>
+			<div class="progress active"></div>
+		</div>
+		<script type="module" src="/js/alertMessage.js"></script>
+
+		<!-- Modal demo -->
+		<div class="modal" id="modal-demo" role="dialog" aria-modal="true" aria-labelledby="modal-demo-title" aria-hidden="true">
+			<div class="modal-dialog" tabindex="-1">
+				<button class="modal-close" data-modal-close aria-label="Fermer">&times;</button>
+				<h3 id="modal-demo-title">Modal</h3>
+				<p>
+					Texte de la fenêtre modale. Fermeture via le bouton close, le bouton
+					ci-dessous, un clic sur le fond grisé ou la touche
+					<kbd>Esc</kbd>.
+				</p>
+				<button class="button button-primary" data-modal-close>Fermer</button>
+			</div>
+		</div>
+
+		<wrapper>
+			
+			
+		<main id="main-content">
+				<h1 class="text-center">illaWeight JS</h1>
+<section id="javascript" class="section">
+			<h2>Javascript</h2>
+			Here is the javascript code used for all the functions of the css framework
+			<ul>
+				<li>
+					<a href="#menuBurger"></a>Menu burger</li>
+				<li>
+					<a href="#darkMod">Dark Mode</a>
+				</li>
+				<li>
+					<a href="#scrollToTop">Scroll to top</a>
+				</li>
+				<li>
+					<a href="#portfolio-script">Portfolio</a>
+				</li>
+				<li>
+					<a href="#alertMessage">Alert Message</a>
+				</li>
+			</ul>
+			<div class="container" id="menuBurger">
+				<pre>
+            <code class="language-javascript">
+			/** == Menu Burger == */
+			document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', function () {
+        document.getElementById('menu-hamburger').checked = false;
+    });
+});
+</code>
+</pre>
+			</div>
+
+			<div class="container" id="darkMod">
+				<pre>
+            <code class="language-javascript">
+/** == Dark mod switch == */
+
+const themes = {
+  light: "light",
+  dark: "dark",
+};
+const dataAttribute = "data-theme";
+const checkedAttribute = "aria-checked";
+const localStorageKey = "theme";
+
+// Check if the OS is set to prefer the dark color scheme
+function userPrefersDarkThemeInOs() {
+  return (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+}
+// Set the theme attribute on the document element (aka on <html>)
+function setThemeAttribute(theme) {
+  document.documentElement.setAttribute(dataAttribute, theme);
+}
+
+// Get theme attribute on the document element (aka on <html>)
+function getThemeAttribute() {
+  return document.documentElement.getAttribute(dataAttribute);
+}
+
+// Get the local storage value
+function getLocalStorage() {
+  if (!window.localStorage) {
+    return;
+  }
+  return window.localStorage.getItem(localStorageKey);
+}
+
+// Set the local storage value
+function setLocalStorage(theme) {
+  if (!window.localStorage) {
+    return;
+  }
+  window.localStorage.setItem(localStorageKey, theme);
+}
+
+// Set the checked attribute on the switch toggle element
+function setSwitch(state, toggleSwitch) {
+  toggleSwitch.setAttribute(checkedAttribute, state);
+}
+
+// Perform theme switch
+function switchTheme(toggleSwitch) {
+  const wasChecked = toggleSwitch.getAttribute(checkedAttribute) === "true";
+  setSwitch(!wasChecked, toggleSwitch);
+  if (!wasChecked) {
+    setThemeAttribute(themes.dark);
+    setLocalStorage(themes.dark);
+  } else {
+    setThemeAttribute(themes.light);
+    setLocalStorage(themes.light);
+  }
+}
+
+// Initialise the theme switch element
+function initThemeToggleSwitch(switchButtonSelector) {
+  // Get theme toggle switch
+  const toggleSwitch = document.querySelector(switchButtonSelector);
+  if (getThemeAttribute() === themes.dark) {
+    setSwitch(true, toggleSwitch);
+  }
+
+  // Add click event to theme toggle switch
+  toggleSwitch.addEventListener(
+    "click",
+    () => switchTheme(toggleSwitch),
+    false
+  );
+}
+
+function initTheme() {
+  const localStorageValue = getLocalStorage();
+  if (localStorageValue) {
+    setThemeAttribute(localStorageValue);
+  } else if (userPrefersDarkThemeInOs()) {
+    setThemeAttribute(themes.dark);
+  }
+}
+
+initTheme();
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (typeof initThemeToggleSwitch !== undefined) {
+    initThemeToggleSwitch("#themeSwitch");
+  }
+});
+        </code>
+      </pre>
+			</div>
+			<div class="container" id="scrollToTop">
+				<pre>
+          <code class="language-javascript">
+/** === Sroll to top === */
+document.addEventListener("scroll", handleScroll);
+
+let scrollToTopBtn = document.querySelector(".top-btn");
+
+function handleScroll() {
+  let scrollableHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  let GOLDEN_RATIO = 0.5;
+
+  if (document.documentElement.scrollTop / scrollableHeight > GOLDEN_RATIO) {
+    //show button
+
+    scrollToTopBtn.style.display = "block";
+  } else {
+    //hide button
+
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+
+    behavior: "smooth",
+  });
+}
+          
+          </code>
+        </pre>
+			</div>
+			<div class="container" id="alertMessage">
+				<pre><code class="language-javascript">
+/** === Alert Message === */
+let alert = document.querySelector(".alert");
+let closeIcon = document.querySelector(".alert-close");
+let progress = document.querySelector(".progress");
+let timer;
+timer = setTimeout(() => {
+  alert.classList.add("hidden");
+
+  progress.classList.add("hidden");
+}, 6000); //1s = 1000 milliseconds
+
+closeIcon.addEventListener("click", () => {
+  alert.classList.add("hidden");
+  clearTimeout(timer);
+});
+
+        </code></pre>
+			</div><div class="container" id="portfolio-script">
+				<pre>
+          <code class="language-javascript">
+/** === Portfolio === */
+let sortMenu = document.querySelector(".portfolio-menu").children;
+console.log(sortMenu);
+let sortItem = document.querySelector(".portfolio-item").children;
+for (const element of sortMenu) {
+  console.log(element);
+  element.addEventListener("click", function () {
+    for (const element of sortMenu) {
+      element.classList.remove("current");
+    }
+    this.classList.add("current");
+
+    let targetData = this.getAttribute("data-target");
+
+    for (const element of sortItem) {
+      element.classList.remove("active");
+      element.classList.add("delete");
+
+      if (
+        element.getAttribute("data-item") == targetData || targetData == "all"
+      ) {
+        element.classList.remove("delete");
+        element.classList.add("active");
+      }
+    }
+  });
+}
+          </code>
+        </pre>
+			</div>
+			<div class="container" id="modalDemo">
+				<p class="me-2">Open the modal</p>
+				<button class="button button-primary" data-modal-open="modal-demo">Open modal</button>
+				<pre class="mt-1"><code class="language-html">
+/** === Modal === */
+&lt;button data-modal-open="modal-demo"&gt;Open modal&lt;/button&gt;
+
+&lt;div class="modal" id="modal-demo" role="dialog" aria-modal="true" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog" tabindex="-1"&gt;
+    &lt;button class="modal-close" data-modal-close aria-label="Fermer"&gt;&amp;times;&lt;/button&gt;
+    ...
+    &lt;button data-modal-close&gt;Fermer&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
+        </code></pre>
+			</div>
+			<div class="container" id="tabsDemo">
+				<p class="me-2">Tabs</p>
+				<nav class="tabs">
+					<a href="#tab-js" class="active" data-tab aria-selected="true">JS</a>
+					<a href="#tab-css" data-tab aria-selected="false">CSS</a>
+					<a href="#tab-a11y" data-tab aria-selected="false">A11y</a>
+				</nav>
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab-js">Contenu activé par <code>data-tab</code> sur les liens du <code>nav.tabs</code>.</div>
+					<div class="tab-pane" id="tab-css">Le panneau cible est identifié par le <code>href="#ancre"</code> du lien.</div>
+					<div class="tab-pane" id="tab-a11y">Les attributs <code>aria-selected</code> sont mis à jour automatiquement.</div>
+				</div>
+				<pre class="mt-1"><code class="language-html">
+/** === Tabs === */
+&lt;nav class="tabs"&gt;
+  &lt;a href="#tab-1" class="active" data-tab&gt;Tab 1&lt;/a&gt;
+  &lt;a href="#tab-2" data-tab&gt;Tab 2&lt;/a&gt;
+&lt;/nav&gt;
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="tab-1"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="tab-2"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+			</div>
+			<div class="container" id="accordionDemo">
+				<p class="me-2">Accordion</p>
+				<div class="accordion mb-2">
+					<details open>
+						<summary>Premier panneau</summary>
+						<div class="accordion-content">Contenu déplié par défaut grâce à l'attribut <code>open</code>.</div>
+					</details>
+					<details>
+						<summary>Deuxième panneau</summary>
+						<div class="accordion-content">Sans JavaScript : <code>&lt;details&gt;</code> / <code>&lt;summary&gt;</code> natifs.</div>
+					</details>
+					<details>
+						<summary>Troisième panneau</summary>
+						<div class="accordion-content">Le signe + pivot en croix à l'ouverture.</div>
+					</details>
+				</div>
+				<pre><code class="language-html">
+/** === Accordion === */
+&lt;div class="accordion"&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Titre&lt;/summary&gt;
+    &lt;div class="accordion-content"&gt;...&lt;/div&gt;
+  &lt;/details&gt;
+&lt;/div&gt;
+        </code></pre>
+			</div>
+		</section>
+		</main>
+<footer class="footer">
+			<p>
+				<a property="dct:title" rel="cc:attributionURL" href="https://gitlab.com/jmholland/illaweight.git">illaWeight
+																																																																																							            CSS</a>
+				by
+				<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://illaweb.fr">jm
+																																																																																							            Holland</a>
+				is licensed under
+				<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">CC BY-NC-ND 4.0
+
+				</a>
+				<div class="logo-licence">
+					<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="logo CC">
+					<img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="logo Person">
+					<img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="logo licence">
+					<img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="logo =">
+				</div>
+			</p>
+			<a href="#top" class="top-btn">
+				<i class="ti ti-arrow-up"></i>
+			</a>
+		</footer>
+		</wrapper>
+		<script type="module" src="/main.js"></script>
+		<script type="module" src="./js/scrollToTop.js"></script>
+	</body>
+</html>
