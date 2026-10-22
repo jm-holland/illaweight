@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /** === Media query === */
 $breakpoints: (
     "little": 23.5rem,
@@ -16,8 +18,8 @@ $breakpoints: (
 
 
 @mixin responsive($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @if map.has-key($breakpoints, $breakpoint) {
+        @media (max-width: map.get($breakpoints, $breakpoint)) {
             @content;
         }
     }

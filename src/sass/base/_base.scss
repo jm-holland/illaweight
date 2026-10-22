@@ -1,5 +1,6 @@
 @use'../utils' as *;
 @use'./typography';
+@use "sass:string";
 
 html {
     scroll-behavior: smooth;
@@ -30,7 +31,7 @@ $directions: "", "-bottom", "-top", "-left", "-right";
 /* Paddings and Margins */
 @each $em in $ems {
     @each $dir in $directions {
-        $dir-in-rule: str-slice($dir, 2, 2);
+        $dir-in-rule: string.slice($dir, 2, 2);
 
         .m#{$dir-in-rule}-#{$em} {
             margin#{$dir}: $em + rem;

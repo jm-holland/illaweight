@@ -1,0 +1,53 @@
+/**
+ *  illaWeightCss — sous-ensemble Tabler Icons
+ *  Généré à partir de @tabler/icons-webfont v3.49.0.
+ *  Seules les 8 icônes utilisées par le site sont incluses,
+ *  avec une police woff2 (voir public/fonts/tabler-icons.woff2).
+ *  Si une nouvelle icône est ajoutée, compléter ce fichier avec le
+ *  glyphe correspondant (codepoint dans node_modules/@tabler/icons-webfont/dist/tabler-icons.css).
+ */
+
+@font-face {
+  font-family: "tabler-icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/tabler-icons.woff2") format("woff2");
+}
+
+.ti {
+  font-family: "tabler-icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ti-arrow-up::before {
+  content: "\ea25";
+}
+.ti-brand-dribbble::before {
+  content: "\ec19";
+}
+.ti-brand-facebook::before {
+  content: "\ec1a";
+}
+.ti-brand-instagram::before {
+  content: "\ec20";
+}
+.ti-brand-linkedin::before {
+  content: "\ec8c";
+}
+.ti-brand-pinterest::before {
+  content: "\ec8d";
+}
+.ti-brand-twitter::before {
+  content: "\ec27";
+}
+.ti-brand-vimeo::before {
+  content: "\ed06";
+}
