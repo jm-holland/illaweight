@@ -55,13 +55,14 @@ section {
     }
 }
 
-/** demo face a son code */
+/** demo : visuel au-dessus, code en dessous, pleine largeur */
 .docs-demo {
-    align-items: start;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
 
     > div {
         min-width: 0; /* evite le debordement a l'interieur d'une grille */
+        grid-column: auto;
     }
 
     > div:last-child {
@@ -74,15 +75,6 @@ section {
             margin: 0.5rem 0 0;
             overflow-x: auto;
         }
-    }
-}
-
-/** grande demo (visuel plus haut que le code) : pleine largeur, code dessous */
-.docs-demo--stacked {
-    grid-template-columns: minmax(0, 1fr);
-
-    > div {
-        grid-column: auto;
     }
 }
 

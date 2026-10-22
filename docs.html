@@ -139,56 +139,14 @@
 
 		<wrapper>
 			
-			<div
-				class="container">
-				<!-- code html navigation -->
-				<p class="me-2">Navbar code
-				</p>
-				<pre>
-        <code class="language-html">
-/** === Navigation bar === */
-&lt;nav class="navigation" aria-label="navigation"&gt;
-  &lt;div class="brand"&gt;
-    &lt;a href="/" title="Aller à la page d'accueil"&gt;
-      &lt;img src="/image.png" alt="logo de la marque" /&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-  /** Menu hamburger */
-  &lt;input class="menu-hamburger" type="checkbox" id="menu-hamburger" aria-label="Open the menu"/&gt;
-  &lt;label class="menu-icon" for="menu-hamburger"&gt;
-    &lt;span class="hamburger-icon" aria-hidden="true"&gt;&lt;/span&gt;
-  &lt;/label&gt;
-  /** Menu principal */
-  &lt;ul class="menu"&gt;
-    &lt;li&gt;&lt;a href="#typography">Typography&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#blockquote">Blockquote&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#buttons">Buttons&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href="#" aria-label="submenu"&gt;Javascript&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href="#darkMode"&gt;Dark Mode&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;li&gt;    
-    /** Dark Mode switch */
-      &lt;input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/&gt;
-        &lt;label for="themeSwitch" class="checkbox-label"&gt;
-          &lt;span class="moon" title="Dark"&gt;&#9789;&lt;/span&gt;
-          &lt;span class="sun" title="light"&gt;&#10039;&lt;/span&gt;
-          &lt;span class="ball" title="Dark mode"&gt;&lt;/span&gt;
-        &lt;/label&gt;
-      &lt;script type="module" src="/js/themeSwitch.js"&gt;alt;/script&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-      </code>
-    </pre>
-			</div>
+			
 <main id="main-content">
 				<h1 class="text-center">illaWeightCSS Documentation</h1>
 		<div class="docs-layout">
 			<aside class="docs-nav" aria-label="Sommaire de la documentation">
 					<ul>
 						<li><a href="#getting-started">Getting started</a></li>
+						<li><a href="#navbar">Navbar</a></li>
 						<li><a href="#typography">Typographie</a></li>
 						<li><a href="#margin">Spacing</a></li>
 						<li><a href="#blockquote">Blockquote</a></li>
@@ -265,6 +223,54 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 </div>
 
 					</section>
+			<section id="navbar" class="section">
+				<h2>Barre de navigation</h2>
+				<p>
+					La barre de navigation est le premier composant du framework :
+					marque, liens a plat, sous-menus depliants (survol ou clic epingle),
+					interrupteur dark mode et menu burger responsive. Voir la barre reelle
+					en haut de chaque page. Code HTML structurel :
+				</p>
+				<pre>
+        <code class="language-html">
+/** === Navigation bar === */
+&lt;nav class="navigation" aria-label="navigation"&gt;
+  &lt;div class="brand"&gt;
+    &lt;a href="/" title="Aller à la page d'accueil"&gt;
+      &lt;img src="/image.png" alt="logo de la marque" /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  /** Menu hamburger */
+  &lt;input class="menu-hamburger" type="checkbox" id="menu-hamburger" aria-label="Open the menu"/&gt;
+  &lt;label class="menu-icon" for="menu-hamburger"&gt;
+    &lt;span class="hamburger-icon" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;/label&gt;
+  /** Menu principal */
+  &lt;ul class="menu"&gt;
+    &lt;li&gt;&lt;a href="#typography">Typography&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#blockquote">Blockquote&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#buttons">Buttons&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" aria-label="submenu"&gt;Javascript&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#darkMode"&gt;Dark Mode&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;li&gt;    
+    /** Dark Mode switch */
+      &lt;input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/&gt;
+        &lt;label for="themeSwitch" class="checkbox-label"&gt;
+          &lt;span class="moon" title="Dark"&gt;&#9789;&lt;/span&gt;
+          &lt;span class="sun" title="light"&gt;&#10039;&lt;/span&gt;
+          &lt;span class="ball" title="Dark mode"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+      &lt;script type="module" src="/js/themeSwitch.js"&gt;alt;/script&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+      </code>
+    </pre>
+			</section>
+
 
 							<!-- Typography -->
 				<section id="typography" class="section">
