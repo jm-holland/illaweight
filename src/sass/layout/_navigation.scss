@@ -121,6 +121,16 @@
         background-color: var(--color-background);
     }
 
+    /* Dropdown pinned open by click (class .open, voir js/menu_burger.js) */
+    ul li.open>ul {
+        display: block;
+        background-color: var(--color-background);
+    }
+
+    ul li.open>a:after {
+        content: " \0025B4";
+    }
+
     /* First Tier Dropdown */
     ul ul li {
         width: 10.625rem;
