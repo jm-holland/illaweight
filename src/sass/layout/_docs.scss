@@ -60,13 +60,11 @@ section {
     align-items: start;
     margin-bottom: 1rem;
 
-    .docs-demo-preview {
+    > div {
         min-width: 0; /* evite le debordement a l'interieur d'une grille */
     }
 
-    .docs-demo-code {
-        min-width: 0;
-
+    > div:last-child {
         p.me-2,
         p.me-1 {
             margin-top: 0;
@@ -75,7 +73,16 @@ section {
         pre {
             margin: 0.5rem 0 0;
             overflow-x: auto;
-            height: fit-content;
         }
     }
 }
+
+/** grande demo (visuel plus haut que le code) : pleine largeur, code dessous */
+.docs-demo--stacked {
+    grid-template-columns: minmax(0, 1fr);
+
+    > div {
+        grid-column: auto;
+    }
+}
+
