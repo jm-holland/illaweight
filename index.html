@@ -78,6 +78,8 @@
 						<li><a href="#card">Card</a></li>
 						<li><a href="#form">Form</a></li>
 						<li><a href="#table">Table</a></li>
+						<li><a href="#badge">Badge</a></li>
+						<li><a href="#pagination">Pagination</a></li>
 						<li><a href="#portfolio">Portfolio</a></li>
 					</ul>
 				</li>
@@ -88,6 +90,9 @@
 						<li><a href="#darkMod">Dark Mode</a></li>
 						<li><a href="#scrollToTop">Scroll to top</a></li>
 						<li><a href="#portfolio-script">Portfolio</a></li>
+						<li><a href="#modalDemo">Modal</a></li>
+						<li><a href="#tabsDemo">Tabs</a></li>
+						<li><a href="#accordionDemo">Accordion</a></li>
 						<li><a href="#alertMessage">Alert Message</a></li>
 					</ul>
 				</li>
@@ -117,6 +122,20 @@
 			<div class="progress active"></div>
 		</div>
 		<script type="module" src="/js/alertMessage.js"></script>
+
+		<!-- Modal demo -->
+		<div class="modal" id="modal-demo" role="dialog" aria-modal="true" aria-labelledby="modal-demo-title" aria-hidden="true">
+			<div class="modal-dialog" tabindex="-1">
+				<button class="modal-close" data-modal-close aria-label="Fermer">&times;</button>
+				<h3 id="modal-demo-title">Modal</h3>
+				<p>
+					Texte de la fenêtre modale. Fermeture via le bouton close, le bouton
+					ci-dessous, un clic sur le fond grisé ou la touche
+					<kbd>Esc</kbd>.
+				</p>
+				<button class="button button-primary" data-modal-close>Fermer</button>
+			</div>
+		</div>
 
 		<wrapper>
 			<div class="hero">
@@ -848,6 +867,57 @@
 				</section>
 				<hr
 				class="hr-style"/>
+				<!-- Badge -->
+				<section id="badge" class="section">
+					<h2>Badge</h2>
+					<p>
+						<span class="badge badge-primary">Primary</span>
+						<span class="badge badge-secondary">Secondary</span>
+						<span class="badge badge-success">Success</span>
+						<span class="badge badge-warning">Warning</span>
+						<span class="badge badge-error">Error</span>
+						<span class="badge badge-muted">Muted</span>
+						<span class="badge badge-pill badge-primary">Pill</span>
+					</p>
+					<pre class="mt-1">
+            <code class="language-html">
+&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-secondary"&gt;Secondary&lt;/span&gt;
+&lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="badge badge-error"&gt;Error&lt;/span&gt;
+&lt;span class="badge badge-muted"&gt;Muted&lt;/span&gt;
+&lt;span class="badge badge-pill badge-primary"&gt;Pill&lt;/span&gt;
+            </code>
+          </pre>
+				</section>
+				<hr class="hr-style"/>
+				<!-- Pagination -->
+				<section id="pagination" class="section">
+					<h2>Pagination</h2>
+					<ul class="pagination">
+						<li><a href="#pagination">&laquo;</a></li>
+						<li><a href="#pagination">1</a></li>
+						<li class="active"><a href="#pagination">2</a></li>
+						<li><a href="#pagination">3</a></li>
+						<li class="disabled"><span>&hellip;</span></li>
+						<li><a href="#pagination">9</a></li>
+						<li class="disabled"><span>&raquo;</span></li>
+					</ul>
+					<pre class="mt-1">
+            <code class="language-html">
+&lt;ul class="pagination"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;span&gt;&amp;hellip;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;span&gt;&amp;raquo;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+          </pre>
+				</section>
+				<hr class="hr-style"/>
 				<!-- Form -->
 				<section id="form" class="section">
 					<div class="container">
@@ -1398,7 +1468,75 @@ for (const element of sortMenu) {
           </code>
         </pre>
 			</div>
-			<div class="container" id="alertMessage">
+			<div class="container" id="modalDemo">
+				<p class="me-2">Open the modal</p>
+				<button class="button button-primary" data-modal-open="modal-demo">Open modal</button>
+				<pre class="mt-1"><code class="language-html">
+/** === Modal === */
+&lt;button data-modal-open="modal-demo"&gt;Open modal&lt;/button&gt;
+
+&lt;div class="modal" id="modal-demo" role="dialog" aria-modal="true" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog" tabindex="-1"&gt;
+    &lt;button class="modal-close" data-modal-close aria-label="Fermer"&gt;&amp;times;&lt;/button&gt;
+    ...
+    &lt;button data-modal-close&gt;Fermer&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
+        </code></pre>
+			</div>
+			<div class="container" id="tabsDemo">
+				<p class="me-2">Tabs</p>
+				<nav class="tabs">
+					<a href="#tab-js" class="active" data-tab aria-selected="true">JS</a>
+					<a href="#tab-css" data-tab aria-selected="false">CSS</a>
+					<a href="#tab-a11y" data-tab aria-selected="false">A11y</a>
+				</nav>
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab-js">Contenu activé par <code>data-tab</code> sur les liens du <code>nav.tabs</code>.</div>
+					<div class="tab-pane" id="tab-css">Le panneau cible est identifié par le <code>href="#ancre"</code> du lien.</div>
+					<div class="tab-pane" id="tab-a11y">Les attributs <code>aria-selected</code> sont mis à jour automatiquement.</div>
+				</div>
+				<pre class="mt-1"><code class="language-html">
+/** === Tabs === */
+&lt;nav class="tabs"&gt;
+  &lt;a href="#tab-1" class="active" data-tab&gt;Tab 1&lt;/a&gt;
+  &lt;a href="#tab-2" data-tab&gt;Tab 2&lt;/a&gt;
+&lt;/nav&gt;
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="tab-1"&gt;...&lt;/div&gt;
+  &lt;div class="tab-pane" id="tab-2"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+			</div>
+			<div class="container" id="accordionDemo">
+				<p class="me-2">Accordion</p>
+				<div class="accordion mb-2">
+					<details open>
+						<summary>Premier panneau</summary>
+						<div class="accordion-content">Contenu déplié par défaut grâce à l'attribut <code>open</code>.</div>
+					</details>
+					<details>
+						<summary>Deuxième panneau</summary>
+						<div class="accordion-content">Sans JavaScript : <code>&lt;details&gt;</code> / <code>&lt;summary&gt;</code> natifs.</div>
+					</details>
+					<details>
+						<summary>Troisième panneau</summary>
+						<div class="accordion-content">Le signe + pivot en croix à l'ouverture.</div>
+					</details>
+				</div>
+				<pre><code class="language-html">
+/** === Accordion === */
+&lt;div class="accordion"&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Titre&lt;/summary&gt;
+    &lt;div class="accordion-content"&gt;...&lt;/div&gt;
+  &lt;/details&gt;
+&lt;/div&gt;
+        </code></pre>
+			</div>
+		<div class="container" id="alertMessage">
 				<pre><code class="language-javascript">
 /** === Alert Message === */
 let alert = document.querySelector(".alert");
@@ -1445,5 +1583,6 @@ closeIcon.addEventListener("click", () => {
 		</wrapper>
 		<script type="module" src="/main.js"></script>
 		<script type="module" src="./js/scrollToTop.js"></script>
+		<script type="module" src="./js/interactions.js"></script>
 	</body>
 </html>

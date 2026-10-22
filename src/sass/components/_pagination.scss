@@ -1,0 +1,50 @@
+@use'../utils' as *;
+
+/** === Pagination === */
+/**
+ * Markup :
+ *   <ul class="pagination">
+ *     <li><a href="#">&laquo;</a></li>
+ *     <li class="active"><a href="#">1</a></li>
+ *     <li><a href="#">2</a></li>
+ *     <li class="disabled"><span>&raquo;</span></li>
+ *   </ul>
+ */
+ul.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+
+    a,
+    span {
+        display: block;
+        padding: 0.4rem 0.75rem;
+        border: 0.063rem solid var(--color-border);
+        border-radius: var(--roundness-1);
+        color: var(--color-link);
+        text-decoration: none;
+    }
+
+    a:hover {
+        border-color: var(--color-primary);
+    }
+
+    .active a {
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+        color: #fff;
+    }
+
+    .disabled {
+        a,
+        span {
+            color: var(--color-gray-5);
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+}

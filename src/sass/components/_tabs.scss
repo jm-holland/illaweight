@@ -1,0 +1,57 @@
+@use'../utils' as *;
+
+/** === Tabs === */
+/**
+ * Markup :
+ *   <nav class="tabs">
+ *     <a href="#tab-1" class="active" data-tab>Tab 1</a>
+ *     <a href="#tab-2" data-tab>Tab 2</a>
+ *   </nav>
+ *   <div class="tab-content">
+ *     <div class="tab-pane active" id="tab-1">...</div>
+ *     <div class="tab-pane" id="tab-2">...</div>
+ *   </div>
+ * Interactivite : js/interactions.js (data-tab).
+ */
+.tabs {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        margin: 0;
+        padding: 0;
+        border-bottom: 0.063rem solid var(--color-border);
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        margin-bottom: -0.063rem;
+        padding: 0.5rem 1rem;
+        border-bottom: 0.125rem solid transparent;
+        border-radius: var(--roundness-1) var(--roundness-1) 0 0;
+        color: var(--color-link);
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--color-gray-0);
+        }
+
+        &.active {
+            border-bottom-color: var(--color-primary);
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+    }
+}
+
+.tab-content {
+    .tab-pane {
+        display: none;
+        padding: 1rem 0;
+
+        &.active {
+            display: block;
+        }
+    }
+}

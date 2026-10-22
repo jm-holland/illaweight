@@ -1,0 +1,55 @@
+@use'../utils' as *;
+
+/** === Accordion === */
+/**
+ * Markup :
+ *   <div class="accordion">
+ *     <details>
+ *       <summary>Titre</summary>
+ *       <div class="accordion-content">...</div>
+ *     </details>
+ *   </div>
+ * Aucun JavaScript : <details> / <summary> natifs.
+ */
+.accordion {
+    border: 0.063rem solid var(--color-border);
+    border-radius: var(--roundness-2);
+
+    details {
+        &:not(:last-child) {
+            border-bottom: 0.063rem solid var(--color-border);
+        }
+    }
+
+    summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        list-style: none;
+        font-weight: 600;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: "+";
+            font-size: 1.25rem;
+            transition: transform 0.2s ease;
+        }
+    }
+
+    details[open] summary {
+        color: var(--color-primary);
+
+        &::after {
+            transform: rotate(45deg);
+        }
+    }
+
+    .accordion-content {
+        padding: 0 1rem 1rem;
+    }
+}

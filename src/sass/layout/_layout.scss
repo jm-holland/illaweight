@@ -1,12 +1,17 @@
 @use'../utils' as *;
 
 @use'../components/alert_message';
+@use'../components/accordion';
+@use'../components/badge';
 @use'../components/buttons';
 @use'../components/card';
 @use'../components/form';
+@use'../components/modal';
+@use'../components/pagination';
 @use'../components/portfolio';
 @use'../components/socialsIcon';
 @use'../components/table';
+@use'../components/tabs';
 @use'navigation';
 @use 'footer';
 
