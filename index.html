@@ -298,7 +298,8 @@
 		<section class="section">
 			<h2 class="text-center">Demarrer en une minute</h2>
 			<p class="text-center landing-sub mb-1">
-				Clonez le depot, importez le point d'entree Sass dans Vite, activez le dark mode avec un attribut.
+				Une balise link via CDN, ou npm install — parce que tout (polices, icones, modules JS)
+				travaille ensemble. Activez le dark mode avec un attribut.
 			</p>
 			<div class="grid">
 				<div class="col-12 col-md-6">
@@ -307,10 +308,12 @@
 							<span></span><span></span><span></span>
 							<em>terminal</em>
 						</div>
-						<pre><code class="language-bash">git clone https://gitlab.com/jmholland/illaweight.git
-cd illaweight
-npm install
-npm run dev</code></pre>
+						<pre><code class="language-bash"># sans installation :
+# une seule balise suffit
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"/&gt;
+
+# ou avec npm :
+npm install illaweightcss</code></pre>
 					</div>
 				</div>
 				<div class="col-12 col-md-6">
@@ -320,10 +323,10 @@ npm run dev</code></pre>
 							<em>main.js</em>
 						</div>
 						<pre><code class="language-js">// styles du framework
-import "./src/sass/main.scss";
+import "illaweightcss";
 
 // interactions optionnelles
-import "./js/interactions.js";</code></pre>
+import "illaweightcss/js/interactions.js";</code></pre>
 					</div>
 				</div>
 			</div>

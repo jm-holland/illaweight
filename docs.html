@@ -174,44 +174,99 @@
 <div class="docs-demo grid">
     <div class="col-12 col-md-6">
 						<p>
-							Le framework est disponible depuis le depôt Git. Clonez ou telechargez, puis importe le point d'entree Sass via Vite :
+							Le framework est publie sur npm sous le nom <code>illaweightcss</code>
+							(licence MIT, polices et icones incluses). Installez-le avec npm, ou
+							utilisez le CDN jsDelivr sans rien installer :
 						</p>
-						
+						<p class="me-2 mt-1">
+							Le paquet expose le CSS compile (<code>illaWeightCss(.min).css</code>),
+							les modules JS du framework et les polices en chemins relatifs : rien
+							d'autre a copier dans votre projet.
+						</p>
     </div>
     <div class="col-12 col-md-6">
-
 <pre>
             <code class="language-bash">
-git clone https://gitlab.com/jmholland/illaweight.git
-cd illaweight
-npm install
-npm run dev
+npm install illaweightcss
             </code>
 						</pre>
     </div>
 </div>
 
-						<h5>Intégration du CSS (Vite)</h5>
-						<pre>
+						<h5>Intégration du CSS</h5>
+<div class="docs-demo grid">
+    <div class="col-12 col-md-6">
+						<p>
+							Avec un bundler (Vite, esbuild...), importez le point d'entree du
+							paquet. Sur une page statique, une seule balise <code>link</code> suffit :
+						</p>
+    </div>
+    <div class="col-12 col-md-6">
+<pre>
             <code class="language-js">
-// main.js
-import "./src/sass/main.scss";
+// main.js (npm + bundler)
+import "illaweightcss";
+
+// page statique (CDN jsDelivr)
+&lt;link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"/&gt;
             </code>
 						</pre>
+    </div>
+</div>
+
+						<h5>Interactions optionnelles</h5>
+<div class="docs-demo grid">
+    <div class="col-12 col-md-6">
+						<p>
+							Modal, tabs et accordion s'activent par un import du module
+							d'interactions (details dans <a href="scripts.html#modalDemo">la doc JS</a>) :
+						</p>
+    </div>
+    <div class="col-12 col-md-6">
+<pre>
+            <code class="language-js">
+import "illaweightcss/js/interactions.js";
+            </code>
+						</pre>
+    </div>
+</div>
+
 						<h5>Dark Mode</h5>
 <div class="docs-demo grid">
     <div class="col-12 col-md-6">
 						<p>
 							Ajoutez l'attribut <code class="language-html">&lt;html data-theme="light"&gt;</code>
-							(la valeur "dark" active le theme sombre). Le script <code>themeSwitch.js</code> gere le commutateur et la persistance dans localStorage.
+							(la valeur "dark" active le theme sombre). Le script <code>themeSwitch.js</code> gere le commutateur
+							et la persistance dans localStorage :
 						</p>
-						<h5>Structure des fichiers</h5>
-						
     </div>
     <div class="col-12 col-md-6">
+<pre>
+            <code class="language-html">
+&lt;html lang="fr" data-theme="light"&gt;
+            </code>
+						</pre>
+    </div>
+</div>
 
+						<h5>Contribuer depuis les sources</h5>
+<div class="docs-demo grid">
+    <div class="col-12 col-md-6">
+						<p>
+							Le depôt git contient le point d'entree Sass et ce site de
+							documentation :
+						</p>
+						<h5>Structure du depôt</h5>
+    </div>
+    <div class="col-12 col-md-6">
 <pre>
             <code>
+git clone https://gitlab.com/jmholland/illaweight.git
+cd illaweight
+npm install
+npm run dev
+
 src/sass/main.scss      &lt;- point d'entree (normalize, base, utilities, grid, layout)
 src/sass/base/          &lt;- typo, grille, utilitaires responsive
 src/sass/components/    &lt;- buttons, card, form, table, modal, tabs, accordion...

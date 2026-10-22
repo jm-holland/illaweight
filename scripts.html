@@ -173,12 +173,27 @@
 <section id="javascript" class="section">
 			<h2>Javascript</h2>
 			<p class="mt-1">
-					Scripts JavaScript du framework. Modal, tabs et accordion fonctionnent via la
-					API <code>data-attributes</code> de <code>js/interactions.js</code> ; les autres rubriques
-					sont des modules autonomes (menu burger, theme, alerte, portfolio).
+					Scripts JavaScript du framework, livres avec le paquet npm (dossier
+					<code>js/</code>) : chargez-les tels quels sur une page statique via le CDN,
+					ou importez-les dans votre bundler. Modal, tabs et accordion
+					fonctionnent via l'API <code>data-attributes</code> de
+					<code>interactions.js</code> ; les autres rubriques sont des modules
+					autonomes (menu burger, theme, alerte, portfolio).
 				</p>
+<pre>
+            <code class="language-html">
+&lt;!-- CDN jsDelivr : chaque module s'ajoute tel quel --&gt;
+&lt;script type="module"
+        src="https://cdn.jsdelivr.net/npm/illaweightcss@1/js/menu_burger.js"&gt;&lt;/script&gt;
+&lt;script type="module"
+        src="https://cdn.jsdelivr.net/npm/illaweightcss@1/js/interactions.js"&gt;&lt;/script&gt;
+
+// ou avec npm + bundler (point d'entree JS)
+import "illaweightcss/js/interactions.js";
+            </code>
+						</pre>
 			<div class="container" id="menuBurger">
-				<p class="me-2 mt-1">Menu burger — code <code>menu_burger.js</code></p>
+				<p class="me-2 mt-1">Menu burger — module <code>js/menu_burger.js</code></p>
 				<pre>
             <code class="language-javascript">
 			/** == Menu Burger == */
@@ -352,7 +367,7 @@ closeIcon.addEventListener("click", () => {
 
         </code></pre>
 			</div><div class="container" id="portfolio-script">
-				<p class="me-2 mt-1">Portfolio — code <code>portfolio.js</code></p>
+				<p class="me-2 mt-1">Portfolio — module <code>js/portfolio.js</code></p>
 				<pre>
           <code class="language-javascript">
 /** === Portfolio === */
