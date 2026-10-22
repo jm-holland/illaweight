@@ -12,6 +12,10 @@
     box-shadow: var(--color-shadow);
     z-index: 2;
 
+    @include responsive("medium") {
+        flex-wrap: wrap;
+    }
+
     @include responsive("small") {
         flex-wrap: wrap;
     }
@@ -36,7 +40,7 @@
         }
     }
 
-    ul .menu {
+    .menu {
         padding: 0;
         margin: 0;
         list-style: none;
@@ -49,7 +53,6 @@
             margin: 0.625rem 0.625rem;
             width: 100%;
             max-height: 0;
-            transform: 0.6s;
             transition: all 0.3s ease-in-out;
         }
 
@@ -58,7 +61,7 @@
 
             >a {
                 &:after {
-                    content: "	\0025BE";
+                    content: " \0025BE";
                 }
 
                 &:only-child:after {
@@ -164,7 +167,6 @@
                 height: 0.25rem;
                 border-radius: 0.125rem;
                 margin: 0.25rem 0;
-                transform: 0.4s;
                 transition: all 0.4s ease-in-out;
             }
         }
