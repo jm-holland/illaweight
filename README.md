@@ -5,7 +5,7 @@ elements according to the [Mozilla](https://developer.mozilla.org/fr/)
 documentation — une grille responsive 12 colonnes, des utilitaires et des
 composants interactifs (modal, tabs, accordion), le tout dans **~10 kB gzip**.
 
-- Site & documentation : <https://illaweight.illaweb.fr>
+- Site & documentation : <https://illaweight.illaweb.eu>
 - Licence : [MIT](./LICENSE)
 
 ![logo](public/illaWeight.png)
@@ -23,7 +23,7 @@ cookie-cutter:
 - Styles for vertical and horizontal menus, including support for dropdown menus.
 - Useful form alignments that look great on all screen sizes.
 - Various common table styles.
-- Dark mode toggle built in ([`data-theme`](https://illaweight.illaweb.fr/scripts.html#darkMod)).
+- Dark mode toggle built in ([`data-theme`](https://illaweight.illaweb.eu/scripts.html#darkMod)).
 - Interactive components via `data-attributes` — no JS framework required.
 - An extremely minimalist look that is super-easy to customize.
 - Responsive by default, with a non-responsive option.
@@ -37,8 +37,10 @@ npm install illaweightcss
 ou via CDN ([jsDelivr](https://www.jsdelivr.com/package/npm/illaweightcss)) :
 
 ```html
-<link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"
+/>
 ```
 
 Depuis les sources :
@@ -59,8 +61,10 @@ projet.
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"
+    />
   </head>
   <body>
     <main class="container">
@@ -83,19 +87,19 @@ projet.
 
 ## Contenu du paquet
 
-| Chemin                      | Contenu                                          |
-| --------------------------- | ------------------------------------------------ |
-| `illaWeightCss(.min).css`   | bundle CSS unique (polices incluses en relatif)  |
-| `js/alertMessage.js`        | notifications animées                            |
-| `js/interactions.js`        | API `data-attributes` modal / tabs / accordion   |
-| `js/menu_burger.js`         | menu hamburger + sous-menus ouverts au clic      |
-| `js/portfolio.js`           | léger filtrage de grille portfolio               |
-| `js/scrollToTop.js`         | bouton retour en haut                            |
-| `js/themeSwitch.js`         | bascule dark / light persistée                   |
-| `fonts/`                    | Comfortaa, Manjari, Quicksand + Tabler Icons     |
+| Chemin                    | Contenu                                         |
+| ------------------------- | ----------------------------------------------- |
+| `illaWeightCss(.min).css` | bundle CSS unique (polices incluses en relatif) |
+| `js/alertMessage.js`      | notifications animées                           |
+| `js/interactions.js`      | API `data-attributes` modal / tabs / accordion  |
+| `js/menu_burger.js`       | menu hamburger + sous-menus ouverts au clic     |
+| `js/portfolio.js`         | léger filtrage de grille portfolio              |
+| `js/scrollToTop.js`       | bouton retour en haut                           |
+| `js/themeSwitch.js`       | bascule dark / light persistée                  |
+| `fonts/`                  | Comfortaa, Manjari, Quicksand + Tabler Icons    |
 
 Documentation complète des classes et des scripts :
-<https://illaweight.illaweb.fr>
+<https://illaweight.illaweb.eu>
 
 ## Screenshots
 

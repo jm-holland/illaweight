@@ -1,6 +1,6 @@
 /**
  *  illaWeightCss v1.1.0
- *  https://illaweight.illaweb.fr
+ *  https://illaweight.illaweb.eu
  *
  *  Copyright(c) 2024 jm Holland
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
