@@ -88,7 +88,7 @@ npm install illaweightcss
   <head>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/VOTRE_USER/illaweight@main/illaWeightCss.min.css"
+      href="https://cdn.jsdelivr.net/gh/jm-holland/illaweight@main/illaWeightCss.min.css"
     />
   </head>
   <body>
