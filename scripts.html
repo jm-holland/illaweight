@@ -172,23 +172,23 @@
 <section id="javascript" class="section">
 			<h2>Javascript</h2>
 			<p class="mt-1">
-					Scripts JavaScript du framework, livres avec le paquet npm (dossier
-					<code>js/</code>) : chargez-les tels quels sur une page statique via le CDN,
-					ou importez-les dans votre bundler. Modal, tabs et accordion
-					fonctionnent via l'API <code>data-attributes</code> de
+					Scripts JavaScript du framework, disponibles dans le dossier
+					<code>js/</code> du depot GitHub : chargez-les tels quels sur une page
+					statique via le CDN, ou importez-les depuis les sources locales. Modal,
+					tabs et accordion fonctionnent via l'API <code>data-attributes</code> de
 					<code>interactions.js</code> ; les autres rubriques sont des modules
 					autonomes (menu burger, theme, alerte, portfolio).
 				</p>
 <pre>
             <code class="language-html">
-&lt;!-- CDN jsDelivr : chaque module s'ajoute tel quel --&gt;
+&lt;!-- CDN GitHub : chaque module s'ajoute tel quel --&gt;
 &lt;script type="module"
-        src="https://cdn.jsdelivr.net/npm/illaweightcss@1/js/menu_burger.js"&gt;&lt;/script&gt;
+        src="https://cdn.jsdelivr.net/gh/VOTRE_USER/illaweight@main/js/menu_burger.js"&gt;&lt;/script&gt;
 &lt;script type="module"
-        src="https://cdn.jsdelivr.net/npm/illaweightcss@1/js/interactions.js"&gt;&lt;/script&gt;
+        src="https://cdn.jsdelivr.net/gh/VOTRE_USER/illaweight@main/js/interactions.js"&gt;&lt;/script&gt;
 
-// ou avec npm + bundler (point d'entree JS)
-import "illaweightcss/js/interactions.js";
+// ou depuis les sources locales (bundler)
+// import "./js/interactions.js";
             </code>
 						</pre>
 			<div class="container" id="menuBurger">
@@ -500,13 +500,13 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
 </main>
 <footer class="footer">
 			<p>
-				<a property="dct:title" rel="cc:attributionURL" href="https://gitlab.com/jmholland/illaweight.git">illaWeight
+				<a property="dct:title" rel="cc:attributionURL" href="https://github.com/VOTRE_USER/illaweight.git">illaWeight
 																																																																																							            CSS</a>
 				by
 				<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://illaweb.eu">jm
 																																																																																							            Holland</a>
 				is licensed under
-				<a href="https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE" target="_blank" rel="license noopener noreferrer">licence MIT
+				<a href="https://github.com/VOTRE_USER/illaweight/-/blob/main/LICENSE" target="_blank" rel="license noopener noreferrer">licence MIT
 
 				</a>
 			</p>

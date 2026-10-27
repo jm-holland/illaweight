@@ -8,9 +8,9 @@
  "homepage": "https://illaweight.illaweb.eu",
  "repository": {
   "type": "git",
-  "url": "git+https://gitlab.com/jmholland/illaweight.git"
+  "url": "git+https://github.com/VOTRE_USER/illaweight.git"
  },
- "bugs": "https://gitlab.com/jmholland/illaweight/-/issues",
+ "bugs": "https://github.com/VOTRE_USER/illaweight/issues",
  "keywords": [
   "css",
   "framework",
@@ -22,8 +22,6 @@
  ],
  "style": "illaWeightCss.css",
  "main": "illaWeightCss.css",
- "unpkg": "illaWeightCss.min.css",
- "jsdelivr": "illaWeightCss.min.css",
  "exports": {
   ".": "./illaWeightCss.min.css",
   "./expanded": "./illaWeightCss.css",

@@ -163,7 +163,7 @@
 					<a class="button button-secondary" href="scripts.html">Scripts JS</a>
 				</div>
 				<div class="col">
-					<a class="button button-clear" href="https://gitlab.com/jmholland/illaweight" target="_blank" rel="noopener noreferrer">GitLab</a>
+					<a class="button button-clear" href="https://github.com/VOTRE_USER/illaweight" target="_blank" rel="noopener noreferrer">GitHub</a>
 				</div>
 			</div>
 			<ul class="landing-stats">
@@ -309,10 +309,12 @@
 						</div>
 						<pre><code class="language-bash"># sans installation :
 # une seule balise suffit
-&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"/&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/VOTRE_USER/illaweight@main/illaWeightCss.min.css"/&gt;
 
-# ou avec npm :
-npm install illaweightcss</code></pre>
+# ou depuis git :
+git clone https://github.com/VOTRE_USER/illaweight.git
+cd illaweight
+npm install && npm run build:lib</code></pre>
 					</div>
 				</div>
 				<div class="col-12 col-md-6">
@@ -321,11 +323,11 @@ npm install illaweightcss</code></pre>
 							<span></span><span></span><span></span>
 							<em>main.js</em>
 						</div>
-						<pre><code class="language-js">// styles du framework
-import "illaweightcss";
+						<pre><code class="language-js">// styles du framework (depuis les sources du depot)
+// import "./illaWeightCss.css";
 
 // interactions optionnelles
-import "illaweightcss/js/interactions.js";</code></pre>
+// import "./js/interactions.js";</code></pre>
 					</div>
 				</div>
 			</div>
@@ -337,13 +339,13 @@ import "illaweightcss/js/interactions.js";</code></pre>
 </main>
 <footer class="footer">
 			<p>
-				<a property="dct:title" rel="cc:attributionURL" href="https://gitlab.com/jmholland/illaweight.git">illaWeight
+				<a property="dct:title" rel="cc:attributionURL" href="https://github.com/VOTRE_USER/illaweight.git">illaWeight
 																																																																																							            CSS</a>
 				by
 				<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://illaweb.eu">jm
 																																																																																							            Holland</a>
 				is licensed under
-				<a href="https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE" target="_blank" rel="license noopener noreferrer">licence MIT
+				<a href="https://github.com/VOTRE_USER/illaweight/-/blob/main/LICENSE" target="_blank" rel="license noopener noreferrer">licence MIT
 
 				</a>
 			</p>

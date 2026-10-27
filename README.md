@@ -30,30 +30,55 @@ cookie-cutter:
 
 ## Installation
 
+### Depuis Git (recommandé)
+
+Clonez le dépôt et construisez les fichiers distribuables :
+
 ```sh
-npm install illaweightcss
+git clone https://github.com/VOTRE_USER/illaweight.git
+cd illaweight
+npm install
+npm run build:lib
 ```
 
-ou via CDN ([jsDelivr](https://www.jsdelivr.com/package/npm/illaweightcss)) :
+Puis copiez dans votre projet :
+
+- `illaWeightCss.min.css` (ou `illaWeightCss.css`)
+- le dossier `fonts/`
+- les scripts dont vous avez besoin dans `js/`
+
+### Via CDN (aucune installation)
+
+Liez directement le fichier depuis GitHub :
 
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"
+  href="https://cdn.jsdelivr.net/gh/VOTRE_USER/illaweight@main/illaWeightCss.min.css"
 />
 ```
 
-Depuis les sources :
+ou directement depuis `raw.githubusercontent.com` :
 
-```sh
-git clone https://gitlab.com/jmholland/illaweight.git
-cd illaweight
-npm install
-npm run dev
+```html
+<link
+  rel="stylesheet"
+  href="https://raw.githubusercontent.com/VOTRE_USER/illaweight/main/illaWeightCss.min.css"
+/>
 ```
 
-ou téléchargez le CSS et les fichiers JavaScript et copiez-les dans votre
-projet.
+### Depuis une Release GitHub
+
+Téléchargez l'archive de la dernière [Release](https://github.com/VOTRE_USER/illaweight/releases)
+et copiez les fichiers dans votre projet.
+
+### Via npm (optionnel)
+
+Si vous préférez un gestionnaire de paquets :
+
+```sh
+npm install illaweightcss
+```
 
 ## Démarrage
 
@@ -63,7 +88,7 @@ projet.
   <head>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"
+      href="https://cdn.jsdelivr.net/gh/VOTRE_USER/illaweight@main/illaWeightCss.min.css"
     />
   </head>
   <body>

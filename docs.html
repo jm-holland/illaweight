@@ -173,9 +173,9 @@
 <div class="docs-demo grid">
     <div class="col-12 col-md-6">
 						<p>
-							Le framework est publie sur npm sous le nom <code>illaweightcss</code>
-							(licence MIT, polices et icones incluses). Installez-le avec npm, ou
-							utilisez le CDN jsDelivr sans rien installer :
+							Le framework se telecharge depuis GitHub. Clonez le depot, puis
+							construisez les fichiers avec <code>npm run build:lib</code> ; ou
+							liez directement le fichier via CDN sans rien installer :
 						</p>
 						<p class="me-2 mt-1">
 							Le paquet expose le CSS compile (<code>illaWeightCss(.min).css</code>),
@@ -186,7 +186,9 @@
     <div class="col-12 col-md-6">
 <pre>
             <code class="language-bash">
-npm install illaweightcss
+git clone https://github.com/VOTRE_USER/illaweight.git
+cd illaweight
+npm install && npm run build:lib
             </code>
 						</pre>
     </div>
@@ -203,12 +205,12 @@ npm install illaweightcss
     <div class="col-12 col-md-6">
 <pre>
             <code class="language-js">
-// main.js (npm + bundler)
-import "illaweightcss";
+// main.js (depuis les sources locales / bundler)
+// import "./illaWeightCss.css";
 
-// page statique (CDN jsDelivr)
+// page statique (CDN GitHub)
 &lt;link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/illaweightcss@1/illaWeightCss.min.css"/&gt;
+      href="https://cdn.jsdelivr.net/gh/VOTRE_USER/illaweight@main/illaWeightCss.min.css"/&gt;
             </code>
 						</pre>
     </div>
@@ -225,7 +227,7 @@ import "illaweightcss";
     <div class="col-12 col-md-6">
 <pre>
             <code class="language-js">
-import "illaweightcss/js/interactions.js";
+// import "./js/interactions.js";  (depuis les sources locales)
             </code>
 						</pre>
     </div>
@@ -261,10 +263,9 @@ import "illaweightcss/js/interactions.js";
     <div class="col-12 col-md-6">
 <pre>
             <code>
-git clone https://gitlab.com/jmholland/illaweight.git
+git clone https://github.com/VOTRE_USER/illaweight.git
 cd illaweight
-npm install
-npm run dev
+npm install && npm run build:lib
 
 src/sass/main.scss      &lt;- point d'entree (normalize, base, utilities, grid, layout)
 src/sass/base/          &lt;- typo, grille, utilitaires responsive
@@ -1531,13 +1532,13 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 
 <footer class="footer">
 			<p>
-				<a property="dct:title" rel="cc:attributionURL" href="https://gitlab.com/jmholland/illaweight.git">illaWeight
+				<a property="dct:title" rel="cc:attributionURL" href="https://github.com/VOTRE_USER/illaweight.git">illaWeight
 																																																																																							            CSS</a>
 				by
 				<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://illaweb.eu">jm
 																																																																																							            Holland</a>
 				is licensed under
-				<a href="https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE" target="_blank" rel="license noopener noreferrer">licence MIT
+				<a href="https://github.com/VOTRE_USER/illaweight/-/blob/main/LICENSE" target="_blank" rel="license noopener noreferrer">licence MIT
 
 				</a>
 			</p>
