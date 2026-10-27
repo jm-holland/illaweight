@@ -35,7 +35,7 @@ cookie-cutter:
 Clonez le dépôt et construisez les fichiers distribuables :
 
 ```sh
-git clone https://github.com/VOTRE_USER/illaweight.git
+git clone https://github.com/jm-holland/illaweight.git
 cd illaweight
 npm install
 npm run build:lib
@@ -54,7 +54,7 @@ Liez directement le fichier depuis GitHub :
 ```html
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/VOTRE_USER/illaweight@main/illaWeightCss.min.css"
+  href="https://cdn.jsdelivr.net/gh/jm-holland/illaweight@main/illaWeightCss.min.css"
 />
 ```
 
@@ -63,13 +63,13 @@ ou directement depuis `raw.githubusercontent.com` :
 ```html
 <link
   rel="stylesheet"
-  href="https://raw.githubusercontent.com/VOTRE_USER/illaweight/main/illaWeightCss.min.css"
+  href="https://raw.githubusercontent.com/jm-holland/illaweight/main/illaWeightCss.min.css"
 />
 ```
 
 ### Depuis une Release GitHub
 
-Téléchargez l'archive de la dernière [Release](https://github.com/VOTRE_USER/illaweight/releases)
+Téléchargez l'archive de la dernière [Release](https://github.com/jm-holland/illaweight/releases)
 et copiez les fichiers dans votre projet.
 
 ### Via npm (optionnel)

@@ -8,9 +8,9 @@
  "homepage": "https://illaweight.illaweb.eu",
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/VOTRE_USER/illaweight.git"
+  "url": "git+https://github.com/jm-holland/illaweight.git"
  },
- "bugs": "https://github.com/VOTRE_USER/illaweight/issues",
+ "bugs": "https://github.com/jm-holland/illaweight/issues",
  "keywords": [
   "css",
   "framework",
