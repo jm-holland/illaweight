@@ -1,209 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Documentation complete du framework illaWeight CSS : getting started, typographie, grille responsive 12 colonnes, utilitaires, boutons, cards, tables, formulaires, badges et pagination."
+    />
+    <meta
+      name="keywords"
+      content="illaWeight, framework CSS, CSS, minimalist CSS, dark mode, frontend, web development, responsive design, UI components, CSS léger"
+    />
+    <meta name="author" content="Jm Holland" />
+    <meta http-equiv="Content-Language" content="fr" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="illaWeight CSS - Documentation" />
+    <meta
+      property="og:description"
+      content="Documentation complete du framework CSS illaWeight : installation, composants, grille responsive, utilitaires et theming dark mode."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://illaweight.illaweb.eu/docs.html" />
+    <meta
+      property="og:image"
+      content="https://illaweight.illaweb.eu/illaWeightCss.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Logo ou aperçu du framework illaWeight CSS"
+    />
+    <meta property="og:site_name" content="illaWeight CSS Framework" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="illaWeight CSS - Documentation" />
+    <meta
+      name="twitter:description"
+      content="Documentation complete du framework CSS illaWeight : installation, composants, grille responsive, utilitaires et theming dark mode."
+    />
+    <meta
+      name="twitter:image"
+      content="https://illaweight.illaweb.eu/illaWeightCss.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Logo ou aperçu du framework illaWeight CSS"
+    />
+    <link rel="canonical" href="https://illaweight.illaweb.eu" />
 
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="description" content="Documentation complete du framework illaWeight CSS : getting started, typographie, grille responsive 12 colonnes, utilitaires, boutons, cards, tables, formulaires, badges et pagination.">
-		<meta name="keywords" content="illaWeight, framework CSS, CSS, minimalist CSS, dark mode, frontend, web development, responsive design, UI components, CSS léger">
-		<meta name="author" content="Jm Holland">
-		<meta http-equiv="Content-Language" content="fr">
-		<meta name="robots" content="index, follow">
-		<meta property="og:title" content="illaWeight CSS - Documentation">
-		<meta property="og:description" content="Documentation complete du framework CSS illaWeight : installation, composants, grille responsive, utilitaires et theming dark mode.">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://illaweight.illaweb.eu/docs.html">
-		<meta property="og:image" content="https://illaweight.illaweb.eu/illaWeightCss.png">
-		<meta property="og:image:alt" content="Logo ou aperçu du framework illaWeight CSS">
-		<meta property="og:site_name" content="illaWeight CSS Framework">
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="illaWeight CSS - Documentation">
-		<meta name="twitter:description" content="Documentation complete du framework CSS illaWeight : installation, composants, grille responsive, utilitaires et theming dark mode.">
-		<meta name="twitter:image" content="https://illaweight.illaweb.eu/illaWeightCss.png">
-		<meta name="twitter:image:alt" content="Logo ou aperçu du framework illaWeight CSS">
-		<link
-		rel="canonical" href="https://illaweight.illaweb.eu">
+    <!-- Favicons-->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-		<!-- Favicons-->
-		<link rel="icon" href="/favicon.ico" sizes="48x48">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-		<link
-		rel="manifest" href="/site.webmanifest"/>
+    <!-- Preload des polices principales -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/Manjari/Manjari-Regular.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/tabler-icons.woff2"
+      crossorigin
+    />
 
-		<!-- Preload des polices principales -->
-		<link rel="preload" as="font" type="font/woff2" href="/fonts/Manjari/Manjari-Regular.woff2" crossorigin>
-		<link rel="preload" as="font" type="font/woff2" href="/fonts/tabler-icons.woff2" crossorigin>
-
-		<!-- Title -->
-		<title>illaWeight - Documentation du Framework CSS</title>
-
-	</head>
-<body>
-		<a class="skip-link" href="#main-content">Aller au contenu principal</a>
-		<nav
-			class="navigation" aria-label="navigation">
-			<!-- Brand -->
-			<div class="brand">
-				<a href="/" title="Aller à la page d'accueil">
-					<img src="/illaWeight.png" alt="logo illawebWeight Css">
-				</a>
-			</div>
-			<!-- Menu Hamburger-->
-			<input class="menu-hamburger" type="checkbox" id="menu-hamburger" aria-label="Open the menu"/>
-			<label class="menu-icon" for="menu-hamburger">
-				<span class="hamburger-icon" aria-hidden="true"></span>
-			</label>
-			<script type="module" src="/js/menu_burger.js"></script>
-			<ul class="menu">
-				<li>
-					<a href="#typography">Typography</a>
-				</li>
-				<li>
-					<a href="#blockquote">Blockquote</a>
-				</li>
-				<li>
-					<a href="#list">List</a>
-				</li>
-				<li>
-					<a href="#buttons">Buttons</a>
-				</li>
-				<li>
-					<a href="#card">Card</a>
-				</li>
-				<li>
-					<a href="#form">Form</a>
-				</li>
-				<li>
-					<a href="#table">Table</a>
-				</li>
-				<li>
-					<a href="#portfolio">Portfolio</a>
-				</li>
-				<li>
-					<a href="#" aria-label="submenu">Styles</a>
-					<ul>
-						<li><a href="#badge">Badge</a></li>
-						<li><a href="#col">Colonnes</a></li>
-						<li><a href="#grid">Grid responsive</a></li>
-						<li><a href="#pagination">Pagination</a></li>
-						<li><a href="#social">Socials</a></li>
-						<li><a href="#margin">Spacing</a></li>
-						<li><a href="#utilities">Utilities</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#" aria-label="submenu">Javascript</a>
-					<ul>
-						<li><a href="scripts.html#menuBurger">Menu burger</a></li>
-						<li><a href="scripts.html#darkMod">Dark Mode</a></li>
-						<li><a href="scripts.html#scrollToTop">Scroll to top</a></li>
-						<li><a href="scripts.html#alertMessage">Alert Message</a></li>
-						<li><a href="scripts.html#portfolio-script">Portfolio</a></li>
-						<li><a href="scripts.html#modalDemo">Modal</a></li>
-						<li><a href="scripts.html#tabsDemo">Tabs</a></li>
-						<li><a href="scripts.html#accordionDemo">Accordion</a></li>
-					</ul>
-				</li>
-				<!-- Dark Mode-->
-				<li>
-					<input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/>
-					<label for="themeSwitch" class="checkbox-label">
-						<span class="moon" title="Dark"><i class="ti ti-moon" aria-hidden="true"></i></span>
-						<span class="sun" title="light"><i class="ti ti-sun" aria-hidden="true"></i></span>
-						<span class="ball" title="Dark mode"></span>
-					</label>
-					<script type="module" src="/js/themeSwitch.js"></script>
-				</li>
-			</ul>
-		</nav>
-		<!-- alert Message -->
-		<div class="alert alert-warning ">
-			<div class="alert-content">
-				<span class="alert-icon"></span>
-				<div class="message">
-					<span class="text text-1"></span>
-					<span class="text text-2">Notifications générales du site
-					</span>
-				</div>
-			</div>
-			<span class="alert-close" role="button" aria-label="Fermer l'alerte"><i class="ti ti-x" aria-hidden="true"></i></span>
-			<div class="progress active"></div>
-		</div>
-		<script type="module" src="/js/alertMessage.js"></script>
-
-		
-
-		<wrapper>
-			
-			
-<main id="main-content">
-				<h1 class="text-center">illaWeightCSS Documentation</h1>
-		<div class="docs-layout">
-			<aside class="docs-nav" aria-label="Sommaire de la documentation">
-					<ul>
-						<li><a href="#getting-started">Getting started</a></li>
-						<li><a href="#navbar">Navbar</a></li>
-						<li><a href="#typography">Typographie</a></li>
-						<li><a href="#margin">Spacing</a></li>
-						<li><a href="#blockquote">Blockquote</a></li>
-						<li><a href="#list">List</a></li>
-						<li><a href="#buttons">Buttons</a></li>
-						<li><a href="#badge">Badge</a></li>
-						<li><a href="#card">Card</a></li>
-						<li><a href="#table">Table</a></li>
-						<li><a href="#form">Form</a></li>
-						<li><a href="#pagination">Pagination</a></li>
-						<li><a href="#col">Colonnes</a></li>
-						<li><a href="#grid">Grid responsive</a></li>
-						<li><a href="#utilities">Utilities</a></li>
-						<li><a href="#social">Socials</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-					</ul>
-					<a href="scripts.html"><strong>Scripts JS &rarr;</strong></a>
-				</aside>
-			<div class="docs-content">
-
-
-					<section id="getting-started" class="section">
-						<h2>Getting started</h2>
-						<h5>Installation</h5>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-						<p>
-							Le framework se telecharge depuis GitHub. Clonez le depot, puis
-							construisez les fichiers avec <code>npm run build:lib</code> ; ou
-							liez directement le fichier via CDN sans rien installer :
-						</p>
-						<p class="me-2 mt-1">
-							Le paquet expose le CSS compile (<code>illaWeightCss(.min).css</code>),
-							les modules JS du framework et les polices en chemins relatifs : rien
-							d'autre a copier dans votre projet.
-						</p>
+    <!-- Title -->
+    <title>illaWeight - Documentation du Framework CSS</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+    <nav class="navigation" aria-label="navigation">
+      <!-- Brand -->
+      <div class="brand">
+        <a href="/" title="Aller à la page d'accueil">
+          <img src="/illaWeight.png" alt="logo illawebWeight Css" />
+        </a>
+      </div>
+      <!-- Menu Hamburger-->
+      <input
+        class="menu-hamburger"
+        type="checkbox"
+        id="menu-hamburger"
+        aria-label="Open the menu"
+      />
+      <label class="menu-icon" for="menu-hamburger">
+        <span class="hamburger-icon" aria-hidden="true"></span>
+      </label>
+      <script type="module" src="/js/menu_burger.js"></script>
+      <ul class="menu">
+        <li>
+          <a href="#typography">Typography</a>
+        </li>
+        <li>
+          <a href="#blockquote">Blockquote</a>
+        </li>
+        <li>
+          <a href="#list">List</a>
+        </li>
+        <li>
+          <a href="#buttons">Buttons</a>
+        </li>
+        <li>
+          <a href="#card">Card</a>
+        </li>
+        <li>
+          <a href="#form">Form</a>
+        </li>
+        <li>
+          <a href="#table">Table</a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#" aria-label="submenu">Styles</a>
+          <ul>
+            <li><a href="#badge">Badge</a></li>
+            <li><a href="#col">Colonnes</a></li>
+            <li><a href="#grid">Grid responsive</a></li>
+            <li><a href="#pagination">Pagination</a></li>
+            <li><a href="#social">Socials</a></li>
+            <li><a href="#margin">Spacing</a></li>
+            <li><a href="#utilities">Utilities</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" aria-label="submenu">Javascript</a>
+          <ul>
+            <li><a href="scripts.html#menuBurger">Menu burger</a></li>
+            <li><a href="scripts.html#darkMod">Dark Mode</a></li>
+            <li><a href="scripts.html#scrollToTop">Scroll to top</a></li>
+            <li><a href="scripts.html#alertMessage">Alert Message</a></li>
+            <li><a href="scripts.html#portfolio-script">Portfolio</a></li>
+            <li><a href="scripts.html#modalDemo">Modal</a></li>
+            <li><a href="scripts.html#tabsDemo">Tabs</a></li>
+            <li><a href="scripts.html#accordionDemo">Accordion</a></li>
+          </ul>
+        </li>
+        <!-- Dark Mode-->
+        <li>
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="themeSwitch"
+            aria-label="Dark Mode"
+          />
+          <label for="themeSwitch" class="checkbox-label">
+            <span class="moon" title="Dark"
+              ><i class="ti ti-moon" aria-hidden="true"></i
+            ></span>
+            <span class="sun" title="light"
+              ><i class="ti ti-sun" aria-hidden="true"></i
+            ></span>
+            <span class="ball" title="Dark mode"></span>
+          </label>
+          <script type="module" src="/js/themeSwitch.js"></script>
+        </li>
+      </ul>
+    </nav>
+    <!-- alert Message -->
+    <div class="alert alert-warning">
+      <div class="alert-content">
+        <span class="alert-icon"></span>
+        <div class="message">
+          <span class="text text-1"></span>
+          <span class="text text-2">Notifications générales du site </span>
+        </div>
+      </div>
+      <span class="alert-close" role="button" aria-label="Fermer l'alerte"
+        ><i class="ti ti-x" aria-hidden="true"></i
+      ></span>
+      <div class="progress active"></div>
     </div>
-    <div class="col-12 col-md-6">
-<pre>
+    <script type="module" src="/js/alertMessage.js"></script>
+    <wrapper>
+      <main id="main-content">
+        <h1 class="text-center">illaWeightCSS Documentation</h1>
+        <div class="docs-layout">
+          <aside class="docs-nav" aria-label="Sommaire de la documentation">
+            <ul>
+              <li><a href="#getting-started">Getting started</a></li>
+              <li><a href="#navbar">Navbar</a></li>
+              <li><a href="#typography">Typographie</a></li>
+              <li><a href="#margin">Spacing</a></li>
+              <li><a href="#blockquote">Blockquote</a></li>
+              <li><a href="#list">List</a></li>
+              <li><a href="#buttons">Buttons</a></li>
+              <li><a href="#badge">Badge</a></li>
+              <li><a href="#card">Card</a></li>
+              <li><a href="#table">Table</a></li>
+              <li><a href="#form">Form</a></li>
+              <li><a href="#pagination">Pagination</a></li>
+              <li><a href="#col">Colonnes</a></li>
+              <li><a href="#grid">Grid responsive</a></li>
+              <li><a href="#utilities">Utilities</a></li>
+              <li><a href="#social">Socials</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+            <a href="scripts.html"><strong>Scripts JS &rarr;</strong></a>
+          </aside>
+          <div class="docs-content">
+            <section id="getting-started" class="section">
+              <h2>Getting started</h2>
+              <h5>Installation</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    Le framework se telecharge depuis GitHub. Clonez le depot,
+                    puis construisez les fichiers avec
+                    <code>npm run build:lib</code> ; ou liez directement le
+                    fichier via CDN sans rien installer :
+                  </p>
+                  <p class="me-2 mt-1">
+                    Le paquet expose le CSS compile
+                    (<code>illaWeightCss(.min).css</code>), les modules JS du
+                    framework et les polices en chemins relatifs : rien d'autre
+                    a copier dans votre projet.
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
             <code class="language-bash">
 git clone https://github.com/jm-holland/illaweight.git
 cd illaweight
 npm install && npm run build:lib
             </code>
 						</pre>
-    </div>
-</div>
+                </div>
+              </div>
 
-						<h5>Intégration du CSS</h5>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-						<p>
-							Avec un bundler (Vite, esbuild...), importez le point d'entree du
-							paquet. Sur une page statique, une seule balise <code>link</code> suffit :
-						</p>
-    </div>
-    <div class="col-12 col-md-6">
-<pre>
+              <h5>Intégration du CSS</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    Avec un bundler (Vite, esbuild...), importez le point
+                    d'entree du paquet. Sur une page statique, une seule balise
+                    <code>link</code> suffit :
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
             <code class="language-js">
 // main.js (depuis les sources locales / bundler)
 // import "./illaWeightCss.css";
@@ -213,55 +255,60 @@ npm install && npm run build:lib
       href="https://cdn.jsdelivr.net/gh/jm-holland/illaweight@main/illaWeightCss.min.css"/&gt;
             </code>
 						</pre>
-    </div>
-</div>
+                </div>
+              </div>
 
-						<h5>Interactions optionnelles</h5>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-						<p>
-							Modal, tabs et accordion s'activent par un import du module
-							d'interactions (details dans <a href="scripts.html#modalDemo">la doc JS</a>) :
-						</p>
-    </div>
-    <div class="col-12 col-md-6">
-<pre>
+              <h5>Interactions optionnelles</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    Modal, tabs et accordion s'activent par un import du module
+                    d'interactions (details dans
+                    <a href="scripts.html#modalDemo">la doc JS</a>) :
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
             <code class="language-js">
 // import "./js/interactions.js";  (depuis les sources locales)
             </code>
 						</pre>
-    </div>
-</div>
+                </div>
+              </div>
 
-						<h5>Dark Mode</h5>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-						<p>
-							Ajoutez l'attribut <code class="language-html">&lt;html data-theme="light"&gt;</code>
-							(la valeur "dark" active le theme sombre). Le script <code>themeSwitch.js</code> gere le commutateur
-							et la persistance dans localStorage :
-						</p>
-    </div>
-    <div class="col-12 col-md-6">
-<pre>
+              <h5>Dark Mode</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    Ajoutez l'attribut
+                    <code class="language-html"
+                      >&lt;html data-theme="light"&gt;</code
+                    >
+                    (la valeur "dark" active le theme sombre). Le script
+                    <code>themeSwitch.js</code> gere le commutateur et la
+                    persistance dans localStorage :
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
             <code class="language-html">
 &lt;html lang="fr" data-theme="light"&gt;
             </code>
 						</pre>
-    </div>
-</div>
+                </div>
+              </div>
 
-						<h5>Contribuer depuis les sources</h5>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-						<p>
-							Le depôt git contient le point d'entree Sass et ce site de
-							documentation :
-						</p>
-						<h5>Structure du depôt</h5>
-    </div>
-    <div class="col-12 col-md-6">
-<pre>
+              <h5>Contribuer depuis les sources</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    Le depôt git contient le point d'entree Sass et ce site de
+                    documentation :
+                  </p>
+                  <h5>Structure du depôt</h5>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
             <code>
 git clone https://github.com/jm-holland/illaweight.git
 cd illaweight
@@ -274,19 +321,18 @@ src/sass/layout/        &lt;- navigation, footer, layout, normalize
 js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tabs, accordion...)
             </code>
 						</pre>
-    </div>
-</div>
-
-					</section>
-			<section id="navbar" class="section">
-				<h2>Barre de navigation</h2>
-				<p>
-					La barre de navigation est le premier composant du framework :
-					marque, liens a plat, sous-menus depliants (survol ou clic epingle),
-					interrupteur dark mode et menu burger responsive. Voir la barre reelle
-					en haut de chaque page. Code HTML structurel :
-				</p>
-				<pre>
+                </div>
+              </div>
+            </section>
+            <section id="navbar" class="section">
+              <h2>Barre de navigation</h2>
+              <p>
+                La barre de navigation est le premier composant du framework :
+                marque, liens a plat, sous-menus depliants (survol ou clic
+                epingle), interrupteur dark mode et menu burger responsive. Voir
+                la barre reelle en haut de chaque page. Code HTML structurel :
+              </p>
+              <pre>
         <code class="language-html">
 /** === Navigation bar === */
 &lt;nav class="navigation" aria-label="navigation"&gt;
@@ -324,68 +370,72 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;/nav&gt;
       </code>
     </pre>
-			</section>
+            </section>
 
+            <!-- Typography -->
+            <section id="typography" class="section">
+              <h2>Typography</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="row">
+                    <div class="col border">
+                      <h1>Heading 1</h1>
+                      <h2>Heading 2</h2>
+                      <h3>Heading 3</h3>
+                      <h4>Heading 4</h4>
+                      <h5>Heading 5</h5>
+                      <h6>Heading 6</h6>
+                      <p>
+                        Paragraph lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Duis id lacus eu nulla porta sagittis
+                        non nec dui. Vivamus iaculis aliquet diam. Proin eu
+                        ullamcorper metus, at imperdiet ante.
+                      </p>
+                      <p>
+                        This
+                        <mark>marks</mark>
+                        the history of FeatherCSS
+                      </p>
+                      <p>
+                        You need to add
+                        <strong>
+                          <code>data-theme=&quot;dark or light&quot;</code>
+                        </strong>
+                        attribute to your markup to enable Dark Mode.
+                      </p>
+                    </div>
+                    <div class="col border" dir="rtl">
+                      <h1 class="heading-1">Heading 1</h1>
+                      <h2 class="heading-2">Heading 2</h2>
+                      <h3 class="heading-3">Heading 3</h3>
+                      <h4 class="heading-4">Heading 4</h4>
+                      <h5 class="heading-5">Heading 5</h5>
+                      <h6 class="heading-6">Heading 6</h6>
+                      <p>
+                        Paragraph lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Duis id lacus eu nulla porta sagittis
+                        non nec dui. Vivamus iaculis aliquet diam. Proin eu
+                        ullamcorper metus, at imperdiet ante.
+                      </p>
+                      <p>
+                        This
+                        <mark>marks</mark>
+                        the history of FeatherCSS
+                      </p>
+                      <p>
+                        You need to add
+                        <strong>
+                          <code>data-theme=&quot;dark or light&quot;</code>
+                        </strong>
+                        attribute to your markup to enable Dark Mode.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <p class="me-2 mt-2">Typography code</p>
 
-							<!-- Typography -->
-				<section id="typography" class="section">
-					<h2>Typography</h2>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="row">
-						<div class="col border">
-							<h1>Heading 1</h1>
-							<h2>Heading 2</h2>
-							<h3>Heading 3</h3>
-							<h4>Heading 4</h4>
-							<h5>Heading 5</h5>
-							<h6>Heading 6</h6>
-							<p>
-								Paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit.
-																																																																																																																																																																																																																																																																																																                Duis id lacus eu nulla porta sagittis non nec dui. Vivamus iaculis
-																																																																																																																																																																																																																																																																																																                aliquet diam. Proin eu ullamcorper metus, at imperdiet ante.
-							</p>
-							<p>This
-								<mark>marks</mark>
-								the history of FeatherCSS</p>
-							<p>
-								You need to add
-								<strong>
-									<code>data-theme=&quot;dark or light&quot;</code>
-								</strong>
-								attribute to your markup to enable Dark Mode.
-							</p>
-						</div>
-						<div class="col border" dir="rtl">
-							<h1 class="heading-1">Heading 1</h1>
-							<h2 class="heading-2">Heading 2</h2>
-							<h3 class="heading-3">Heading 3</h3>
-							<h4 class="heading-4">Heading 4</h4>
-							<h5 class="heading-5">Heading 5</h5>
-							<h6 class="heading-6">Heading 6</h6>
-							<p>
-								Paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit.
-																																																																																																																																																																																																																																																																																																                Duis id lacus eu nulla porta sagittis non nec dui. Vivamus iaculis
-																																																																																																																																																																																																																																																																																																                aliquet diam. Proin eu ullamcorper metus, at imperdiet ante.
-							</p>
-							<p>This
-								<mark>marks</mark>
-								the history of FeatherCSS</p>
-							<p>
-								You need to add
-								<strong>
-									<code>data-theme=&quot;dark or light&quot;</code>
-								</strong>
-								attribute to your markup to enable Dark Mode.
-							</p>
-						</div>
-					</div>
-					
-    </div>
-    <div class="col-12 col-md-6">
-<p class="me-2 mt-2">Typography code</p>
-					
-<pre>
+                  <pre>
           <code class="language-html">
   &lt;h1&gt;Heading 1&lt;/h1&gt;
   &lt;h2&gt;Heading 2&lt;/h2&gt;
@@ -404,75 +454,75 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
   &lt;/p&gt;  
 </code>
         </pre>
-    </div>
-</div>
-
-				</section>
-				<hr class="hr-style"/>
-				<section class="section" id="margin">
-					<h2>Spacing</h2>
-					<h5>
-						<strong>illawebWeight CSS
-						</strong>includes a wide range of shorthand responsive margin, padding utility
-																																																																																																																																																																																																																								            classes to modify
-																																																																																																																																																																																																																								            an element's apparence.</h5>
-					<h6>Margin and padding</h6>
-					<p>
-						Assign responsive-friendly margin or padding values to an element or a subset of its sides with shorthand
-																																																																																																																																																																																																																								            classes.
-																																																																																																																																																																																																																								            Includes support for individual properties, all properties, and vertical and horizontal properties. Classes
-																																																																																																																																																																																																																								            are built
-																																																																																																																																																																																																																								            from a default Sass map ranging from 1em to 7em.
-					</p>
-					<h4>Notations</h4>
-					<ul class="clear">
-						<li>
-							<span class="strong">
-								<mark>m-</mark>
-							</span>
-							for classes that set margin.
-						</li>
-						<li>
-							<span class="strong">
-								<mark>p-</mark>
-							</span>
-							for classes that set padding.
-						</li>
-						<li>
-							<span class="strong">
-								<mark>mt- / pt-</mark>
-							</span>
-							for classe that set margin or padding top
-						</li>
-						<li>
-							<span class="strong">
-								<mark>mb- / pb-</mark>
-							</span>
-							for classe that set margin or padding bottom
-						</li>
-						<li>
-							<span class="strong">
-								<mark>ml- / pl-</mark>
-							</span>
-							for classe that set margin or padding left
-						</li>
-						<li>
-							<span class="strong">
-								<mark>mr- / pr-</mark>
-							</span>
-							for classe that set margin or padding right
-						</li>
-					</ul>
-					<p>Where size is 1 to 7. Des variantes responsive mobile-first existent par breakpoint :
-						<mark>.mt-md-3</mark>, <mark>.px-sm-2</mark>, <mark>.my-lg-1</mark>…</p>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<p>exemples :</p>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <section class="section" id="margin">
+              <h2>Spacing</h2>
+              <h5>
+                <strong>illawebWeight CSS </strong>includes a wide range of
+                shorthand responsive margin, padding utility classes to modify
+                an element's apparence.
+              </h5>
+              <h6>Margin and padding</h6>
+              <p>
+                Assign responsive-friendly margin or padding values to an
+                element or a subset of its sides with shorthand classes.
+                Includes support for individual properties, all properties, and
+                vertical and horizontal properties. Classes are built from a
+                default Sass map ranging from 1em to 7em.
+              </p>
+              <h4>Notations</h4>
+              <ul class="clear">
+                <li>
+                  <span class="strong">
+                    <mark>m-</mark>
+                  </span>
+                  for classes that set margin.
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>p-</mark>
+                  </span>
+                  for classes that set padding.
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>mt- / pt-</mark>
+                  </span>
+                  for classe that set margin or padding top
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>mb- / pb-</mark>
+                  </span>
+                  for classe that set margin or padding bottom
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>ml- / pl-</mark>
+                  </span>
+                  for classe that set margin or padding left
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>mr- / pr-</mark>
+                  </span>
+                  for classe that set margin or padding right
+                </li>
+              </ul>
+              <p>
+                Where size is 1 to 7. Des variantes responsive mobile-first
+                existent par breakpoint : <mark>.mt-md-3</mark>,
+                <mark>.px-sm-2</mark>, <mark>.my-lg-1</mark>…
+              </p>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>exemples :</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
             <code class="language-css">
 .mt-1{
   margin-top : 1em;
@@ -482,78 +532,72 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 }
             </code>
           </pre>
-    </div>
-</div>
-
-				</section>
-				<hr class="hr-style"/>
-				<!-- Blockotes -->
-				<section id="blockquote" class="section">
-					<h2>Blockquote</h2>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="row">
-						<div class="col border">
-							<blockquote>This changed my life, literally.</blockquote>
-						</div>
-						<div class="col border" dir="rtl">
-							<blockquote>This changed my life, literally.</blockquote>
-						</div>
-					</div>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Blockotes -->
+            <section id="blockquote" class="section">
+              <h2>Blockquote</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="row">
+                    <div class="col border">
+                      <blockquote>This changed my life, literally.</blockquote>
+                    </div>
+                    <div class="col border" dir="rtl">
+                      <blockquote>This changed my life, literally.</blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
           <code class="language-html">
 &lt;blockquote&gt;This changes my life, litterally.&lt;/blocquote&gt;
           </code>
         </pre>
-    </div>
-</div>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Liste -->
+            <section id="list" class="section">
+              <h2>List</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container border">
+                    <ul class="clear">
+                      <li>Categories</li>
+                      <li>Posts</li>
+                      <li>Users</li>
+                    </ul>
+                    <ul>
+                      <li>Waffles</li>
+                      <li>Pancakes</li>
+                    </ul>
+                    <ol>
+                      <li>Add 100g flour into a bowl</li>
+                      <li>Add 2x eggs into the bowl and mix</li>
+                    </ol>
 
-				</section>
-				<hr class="hr-style"/>
-				<!-- Liste -->
-				<section id="list" class="section">
-					<h2>List</h2>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="container border">
-						<ul class="clear">
-							<li>Categories</li>
-							<li>Posts</li>
-							<li>Users</li>
-						</ul>
-						<ul>
-							<li>Waffles</li>
-							<li>Pancakes</li>
-						</ul>
-						<ol>
-							<li>Add 100g flour into a bowl</li>
-							<li>Add 2x eggs into the bowl and mix</li>
-						</ol>
-
-						<dl>
-							<dt>Room Size</dt>
-							<dd>1,200 SQFT</dd>
-							<dt>Bathrooms</dt>
-							<dd>2</dd>
-						</dl>
-						<ul class="reset">
-							<li>
-								<a href="#list">Link 1</a>
-							</li>
-							<li>
-								<a href="#list">Link 2</a>
-							</li>
-						</ul>
-					</div>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                    <dl>
+                      <dt>Room Size</dt>
+                      <dd>1,200 SQFT</dd>
+                      <dt>Bathrooms</dt>
+                      <dd>2</dd>
+                    </dl>
+                    <ul class="reset">
+                      <li>
+                        <a href="#list">Link 1</a>
+                      </li>
+                      <li>
+                        <a href="#list">Link 2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
   <code class="language-html">
   &lt;ul class="clear"&gt;
     &lt;li&gt;Categories&lt;/li&gt;
@@ -573,9 +617,8 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
     &lt;dt&gt;Room Size&lt;/dt&gt;
     &lt;dd&gt;1,200 SQFT&lt;/dd&gt;
     &lt;dt&gt;Bathrooms&lt;/dt&gt;
-    &lt;dd&gt;2</dd>
+    &lt;dd&gt;2
   &lt;/dl&gt;
- 
     &lt;ul class="reset"&gt;
       &lt;li&gt;&lt;a href="#list"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href="#list"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
@@ -583,31 +626,33 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 
   </code>
 </pre>
-    </div>
-</div>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Buttons -->
+            <section id="buttons" class="section">
+              <h2>Buttons</h2>
 
-				</section>
-				<hr class="hr-style"/>
-				<!-- Buttons -->
-				<section id="buttons" class="section">
-					<h2>Buttons</h2>
-
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="container">
-						<button class="button">Default Button</button>
-						<button class="button button-primary">Primary Button</button>
-						<button class="button button-clear">Clear Button</button>
-						<button class="button button-secondary">Secondary button</button>
-						<button class="button button-warning">Warning button</button>
-						<button class="button button-error">Error button</button>
-					</div>
-
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container">
+                    <button class="button">Default Button</button>
+                    <button class="button button-primary">
+                      Primary Button
+                    </button>
+                    <button class="button button-clear">Clear Button</button>
+                    <button class="button button-secondary">
+                      Secondary button
+                    </button>
+                    <button class="button button-warning">
+                      Warning button
+                    </button>
+                    <button class="button button-error">Error button</button>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
             <code class="language-html">
 &lt;button class="button"&gt;Default button&lt;/button&gt;
 &lt;button class="button button-priamry"&gt;Primary button&lt;/button&gt;
@@ -617,31 +662,27 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;button class="button button-error"&gt;Error button&lt;/button&gt;
             </code>
           </pre>
-    </div>
-</div>
-
-
-				</section>
-				<hr class="hr-style"/>
-				<!-- Badge -->
-				<section id="badge" class="section">
-					<h2>Badge</h2>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<p>
-						<span class="badge badge-primary">Primary</span>
-						<span class="badge badge-secondary">Secondary</span>
-						<span class="badge badge-success">Success</span>
-						<span class="badge badge-warning">Warning</span>
-						<span class="badge badge-error">Error</span>
-						<span class="badge badge-muted">Muted</span>
-						<span class="badge badge-pill badge-primary">Pill</span>
-					</p>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Badge -->
+            <section id="badge" class="section">
+              <h2>Badge</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    <span class="badge badge-primary">Primary</span>
+                    <span class="badge badge-secondary">Secondary</span>
+                    <span class="badge badge-success">Success</span>
+                    <span class="badge badge-warning">Warning</span>
+                    <span class="badge badge-error">Error</span>
+                    <span class="badge badge-muted">Muted</span>
+                    <span class="badge badge-pill badge-primary">Pill</span>
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
             <code class="language-html">
 &lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
 &lt;span class="badge badge-secondary"&gt;Secondary&lt;/span&gt;
@@ -652,170 +693,196 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;span class="badge badge-pill badge-primary"&gt;Pill&lt;/span&gt;
             </code>
           </pre>
-    </div>
-</div>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Card row col-->
+            <section class="section" id="card">
+              <!-- Card column flex -->
+              <h2>Card</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/834/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Title</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Illo blanditiis quod maiores vitae, delectus
+                            ex veritatis velit asperiores dignissimos incidunt
+                            repellendus non veniam excepturi enim cum aliquam.
+                            Voluptatum, perferendis deleniti?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/258/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Title</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Illo blanditiis quod maiores vitae, delectus
+                            ex veritatis velit asperiores dignissimos incidunt
+                            repellendus non veniam excepturi enim cum aliquam.
+                            Voluptatum, perferendis deleniti?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/324/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Title</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Illo blanditiis quod maiores vitae, delectus
+                            ex veritatis velit asperiores dignissimos incidunt
+                            repellendus non veniam excepturi enim cum aliquam.
+                            Voluptatum, perferendis deleniti?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/1002/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Title card</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Footer reference text</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/852/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Title card</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Footer reference text</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/579/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Title card</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Footer reference text</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header-text">
+                          <h3>Title card</h3>
+                        </div>
+                        <div class="card-content">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Footer reference text</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header-text">
+                          <h3>Title card</h3>
+                        </div>
+                        <div class="card-content">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Footer reference text</div>
+                      </div>
+                    </div>
 
-				</section>
-				<hr class="hr-style"/>
-				<!-- Card row col-->
-				<section
-					class="section" id="card">
-					<!-- Card column flex -->
-					<h2>Card</h2>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="row">
-						<div class="col">
-							<div class="card">
-								<div class="card-header">
-									<img src="https://picsum.photos/id/834/400/200" alt="description"/>
-								</div>
-								<div class="card-content">
-									<h3>Title</h3>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quod maiores vitae,
-																																																																																																																																																																																																																																																																																																																																																																								                    delectus ex veritatis velit asperiores dignissimos incidunt repellendus non veniam excepturi enim
-																																																																																																																																																																																																																																																																																																																																																																								                    cum aliquam. Voluptatum, perferendis deleniti?</p>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-header">
-									<img src="https://picsum.photos/id/258/400/200" alt="description"/>
-								</div>
-								<div class="card-content">
-									<h3>Title</h3>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quod maiores vitae,
-																																																																																																																																																																																																																																																																																																																																																																								                    delectus ex veritatis velit asperiores dignissimos incidunt repellendus non veniam excepturi enim
-																																																																																																																																																																																																																																																																																																																																																																								                    cum aliquam. Voluptatum, perferendis deleniti?</p>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-header">
-									<img src="https://picsum.photos/id/324/400/200" alt="description"/>
-								</div>
-								<div class="card-content">
-									<h3>Title</h3>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo blanditiis quod maiores vitae,
-																																																																																																																																																																																																																																																																																																																																																																								                    delectus ex veritatis velit asperiores dignissimos incidunt repellendus non veniam excepturi enim
-																																																																																																																																																																																																																																																																																																																																																																								                    cum aliquam. Voluptatum, perferendis deleniti?</p>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-header">
-									<img src="https://picsum.photos/id/1002/400/200" alt="description"/>
-								</div>
-								<div class="card-content">
-									<h3>Title card</h3>
-									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																								                    Laboriosam optio vero velit excepturi nesciunt non aliquid
-																																																																																																																																																																																																																																																																																																																																																																								                    obcaecati veritatis, voluptatibus a, quia possimus
-																																																																																																																																																																																																																																																																																																																																																																								                    consequuntur nihil fugit doloremque nisi harum aspernatur
-																																																																																																																																																																																																																																																																																																																																																																								                    beatae.
-									</p>
-								</div>
-								<div class="card-footer">Footer reference text</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-header">
-									<img src="https://picsum.photos/id/852/400/200" alt="description"/>
-								</div>
-								<div class="card-content">
-									<h3>Title card</h3>
-									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																								                    Laboriosam optio vero velit excepturi nesciunt non aliquid
-																																																																																																																																																																																																																																																																																																																																																																								                    obcaecati veritatis, voluptatibus a, quia possimus
-																																																																																																																																																																																																																																																																																																																																																																								                    consequuntur nihil fugit doloremque nisi harum aspernatur
-																																																																																																																																																																																																																																																																																																																																																																								                    beatae.
-									</p>
-								</div>
-								<div class="card-footer">Footer reference text</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-header">
-									<img src="https://picsum.photos/id/579/400/200" alt="description"/>
-								</div>
-								<div class="card-content">
-									<h3>Title card</h3>
-									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																								                    Laboriosam optio vero velit excepturi nesciunt non aliquid
-																																																																																																																																																																																																																																																																																																																																																																								                    obcaecati veritatis, voluptatibus a, quia possimus
-																																																																																																																																																																																																																																																																																																																																																																								                    consequuntur nihil fugit doloremque nisi harum aspernatur
-																																																																																																																																																																																																																																																																																																																																																																								                    beatae.
-									</p>
-								</div>
-								<div class="card-footer">Footer reference text</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-header-text">
-									<h3>Title card</h3>
-								</div>
-								<div class="card-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																								                    Laboriosam optio vero velit excepturi nesciunt non aliquid
-																																																																																																																																																																																																																																																																																																																																																																								                    obcaecati veritatis, voluptatibus a, quia possimus
-																																																																																																																																																																																																																																																																																																																																																																								                    consequuntur nihil fugit doloremque nisi harum aspernatur
-																																																																																																																																																																																																																																																																																																																																																																								                    beatae.
-									</p>
-								</div>
-								<div class="card-footer">Footer reference text</div>
-							</div>
-						</div>
-						<div class="col">
-							<div class="card">
-								<div class="card-header-text">
-									<h3>Title card</h3>
-								</div>
-								<div class="card-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																								                    Laboriosam optio vero velit excepturi nesciunt non aliquid
-																																																																																																																																																																																																																																																																																																																																																																								                    obcaecati veritatis, voluptatibus a, quia possimus
-																																																																																																																																																																																																																																																																																																																																																																								                    consequuntur nihil fugit doloremque nisi harum aspernatur
-																																																																																																																																																																																																																																																																																																																																																																								                    beatae.
-									</p>
-								</div>
-								<div class="card-footer">Footer reference text</div>
-							</div>
-						</div>
-
-						<div class="col">
-							<div class="card">
-								<div class="card-header-text">
-									<h3>Title card</h3>
-								</div>
-								<div class="card-content">
-									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																								                    Laboriosam optio vero velit excepturi nesciunt non aliquid
-																																																																																																																																																																																																																																																																																																																																																																								                    obcaecati veritatis, voluptatibus a, quia possimus
-																																																																																																																																																																																																																																																																																																																																																																								                    consequuntur nihil fugit doloremque nisi harum aspernatur
-																																																																																																																																																																																																																																																																																																																																																																								                    beatae.
-									</p>
-								</div>
-								<div class="card-footer">Footer reference text</div>
-							</div>
-						</div>
-					</div>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header-text">
+                          <h3>Title card</h3>
+                        </div>
+                        <div class="card-content">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Footer reference text</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
   <code class="language-html">
 &lt;div class="card"&gt;
     &lt;div class="card-header-text"&gt;
@@ -835,63 +902,62 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 
   </code>
 </pre>
-    </div>
-</div>
-
-				</section>
-				<hr class="hr-style"/>
-				<!-- Table -->
-				<section id="table" class="preview-section">
-					<h2 class="preview-title">Table</h2>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="container mt-1">
-						<table>
-							<caption>
-								List of concurrents&nbsp;(<small>caption on bottom</small>)
-							</caption>
-							<thead>
-								<tr>
-									<th scope="col">Person</th>
-									<th scope="col">Most interest in</th>
-									<th scope="col">Age</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Chris</th>
-									<td>HTML tables</td>
-									<td>22</td>
-								</tr>
-								<tr>
-									<th scope="row">Dennis</th>
-									<td>Web accessibility</td>
-									<td>45</td>
-								</tr>
-								<tr>
-									<th scope="row">Sarah</th>
-									<td>JavaScript frameworks</td>
-									<td>29</td>
-								</tr>
-								<tr>
-									<th scope="row">Karen</th>
-									<td>Web performance</td>
-									<td>36</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<th scope="row" colspan="2">Average age</th>
-									<td>33</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Table -->
+            <section id="table" class="preview-section">
+              <h2 class="preview-title">Table</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container mt-1">
+                    <table>
+                      <caption>
+                        List of concurrents&nbsp;(<small
+                          >caption on bottom</small
+                        >)
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Person</th>
+                          <th scope="col">Most interest in</th>
+                          <th scope="col">Age</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Chris</th>
+                          <td>HTML tables</td>
+                          <td>22</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Dennis</th>
+                          <td>Web accessibility</td>
+                          <td>45</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Sarah</th>
+                          <td>JavaScript frameworks</td>
+                          <td>29</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Karen</th>
+                          <td>Web performance</td>
+                          <td>36</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th scope="row" colspan="2">Average age</th>
+                          <td>33</td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
           <code class="language-html">
   &lt;table&gt;
     &lt;caption&gt;
@@ -935,101 +1001,154 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
   &lt;/table&gt;
           </code>
         </pre>
-    </div>
-</div>
-
-			</section>
-				<hr class="hr-style"/>
-				<!-- Form -->
-				<section id="form" class="section">
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="container">
-						<form method="post">
-							<div
-								class="form">
-								<!-- Form input -->
-								<p class="form-control">
-									<label for="username">Username</label>
-									<input type="text" name="username" id="username" placeholder="Enter your username"/>
-									<span class="form-success-message" aria-live="polite">Your username is available</span>
-								</p>
-								<p class="form-control">
-									<label for="password">Password</label>
-									<input type="password" id="password" name="password" placeholder="your password"/>
-									<span class="form-error-message" aria-live="polite">Password is too weak</span>
-								</p>
-								<div class="form-control">
-									<label for="meeting-time">Date</label>
-									<input type="datetime-local" id="meeting-time" name="meeting-time" min="2024-11-07T00:00" max="2030-06-14T00:00"/>
-								</div>
-								<!-- Form select -->
-								<div class="select">
-									<label for="pet-select">Choose a pet:</label>
-									<select name="pets" id="pet-select">
-										<option value="">--Please choose an option--</option>
-										<option value="dog">Dog</option>
-										<option value="cat">Cat</option>
-										<option value="hamster">Hamster</option>
-										<option value="parrot">Parrot</option>
-										<option value="spider">Spider</option>
-										<option value="goldfish">Goldfish</option>
-									</select>
-								</div>
-								<!-- input radio -->
-								<fieldset>
-									<legend>Select a maintenance drone:</legend>
-									<div>
-										<input type="radio" id="huey" name="drone" value="huey" checked/>
-										<label for="huey">Huey</label>
-									</div>
-									<div>
-										<input type="radio" id="dewey" name="drone" value="dewey"/>
-										<label for="dewey">Dewey</label>
-									</div>
-									<div>
-										<input type="radio" id="louie" name="drone" value="louie"/>
-										<label for="louie">Louie</label>
-									</div>
-								</fieldset>
-								<!-- input checkbox -->
-								<fieldset>
-									<legend>Choose your monster's features:</legend>
-									<div>
-										<input type="checkbox" id="scales" name="scales" checked/>
-										<label for="scales">Scales</label>
-									</div>
-									<div>
-										<input type="checkbox" id="horns" name="horns"/>
-										<label for="horns">Horns</label>
-									</div>
-								</fieldset>
-								<!-- Textarea -->
-								<div class="form-control">
-									<span class="label-text">Additional Comment</span>
-									<textarea id="comment" placeholder="Type your comment" rows="3"></textarea>
-								</div>
-								<!-- input color -->
-								<p>Choose your monster's colors:</p>
-								<div>
-									<input type="color" id="head" name="head" value="#e66465"/>
-									<label for="head">Head</label>
-								</div>
-								<div>
-									<input type="color" id="body" name="body" value="#f6b73c"/>
-									<label for="body">Body</label>
-								</div>
-								<button class="button btn-primary mt-2" type="submit">
-									Send
-								</button>
-							</div>
-						</form>
-					</div>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Form -->
+            <section id="form" class="section">
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container">
+                    <form method="post">
+                      <div class="form">
+                        <!-- Form input -->
+                        <p class="form-control">
+                          <label for="username">Username</label>
+                          <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            placeholder="Enter your username"
+                          />
+                          <span class="form-success-message" aria-live="polite"
+                            >Your username is available</span
+                          >
+                        </p>
+                        <p class="form-control">
+                          <label for="password">Password</label>
+                          <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="your password"
+                          />
+                          <span class="form-error-message" aria-live="polite"
+                            >Password is too weak</span
+                          >
+                        </p>
+                        <div class="form-control">
+                          <label for="meeting-time">Date</label>
+                          <input
+                            type="datetime-local"
+                            id="meeting-time"
+                            name="meeting-time"
+                            min="2024-11-07T00:00"
+                            max="2030-06-14T00:00"
+                          />
+                        </div>
+                        <!-- Form select -->
+                        <div class="select">
+                          <label for="pet-select">Choose a pet:</label>
+                          <select name="pets" id="pet-select">
+                            <option value="">
+                              --Please choose an option--
+                            </option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                          </select>
+                        </div>
+                        <!-- input radio -->
+                        <fieldset>
+                          <legend>Select a maintenance drone:</legend>
+                          <div>
+                            <input
+                              type="radio"
+                              id="huey"
+                              name="drone"
+                              value="huey"
+                              checked
+                            />
+                            <label for="huey">Huey</label>
+                          </div>
+                          <div>
+                            <input
+                              type="radio"
+                              id="dewey"
+                              name="drone"
+                              value="dewey"
+                            />
+                            <label for="dewey">Dewey</label>
+                          </div>
+                          <div>
+                            <input
+                              type="radio"
+                              id="louie"
+                              name="drone"
+                              value="louie"
+                            />
+                            <label for="louie">Louie</label>
+                          </div>
+                        </fieldset>
+                        <!-- input checkbox -->
+                        <fieldset>
+                          <legend>Choose your monster's features:</legend>
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="scales"
+                              name="scales"
+                              checked
+                            />
+                            <label for="scales">Scales</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="horns" name="horns" />
+                            <label for="horns">Horns</label>
+                          </div>
+                        </fieldset>
+                        <!-- Textarea -->
+                        <div class="form-control">
+                          <span class="label-text">Additional Comment</span>
+                          <textarea
+                            id="comment"
+                            placeholder="Type your comment"
+                            rows="3"
+                          ></textarea>
+                        </div>
+                        <!-- input color -->
+                        <p>Choose your monster's colors:</p>
+                        <div>
+                          <input
+                            type="color"
+                            id="head"
+                            name="head"
+                            value="#e66465"
+                          />
+                          <label for="head">Head</label>
+                        </div>
+                        <div>
+                          <input
+                            type="color"
+                            id="body"
+                            name="body"
+                            value="#f6b73c"
+                          />
+                          <label for="body">Body</label>
+                        </div>
+                        <button class="button btn-primary mt-2" type="submit">
+                          Send
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
   <code class="language-html">
   &lt;div class="container"&gt;
           &lt;form method="post"&gt;
@@ -1116,30 +1235,27 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
         &lt;/div&gt; 
   </code>
 </pre>
-    </div>
-</div>
-
-				</section>
-				<hr class="hr-style"/>
-				<!-- Pagination -->
-				<section id="pagination" class="section">
-					<h2>Pagination</h2>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<ul class="pagination">
-						<li><a href="#pagination">&laquo;</a></li>
-						<li><a href="#pagination">1</a></li>
-						<li class="active"><a href="#pagination">2</a></li>
-						<li><a href="#pagination">3</a></li>
-						<li class="disabled"><span>&hellip;</span></li>
-						<li><a href="#pagination">9</a></li>
-						<li class="disabled"><span>&raquo;</span></li>
-					</ul>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Pagination -->
+            <section id="pagination" class="section">
+              <h2>Pagination</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <ul class="pagination">
+                    <li><a href="#pagination">&laquo;</a></li>
+                    <li><a href="#pagination">1</a></li>
+                    <li class="active"><a href="#pagination">2</a></li>
+                    <li><a href="#pagination">3</a></li>
+                    <li class="disabled"><span>&hellip;</span></li>
+                    <li><a href="#pagination">9</a></li>
+                    <li class="disabled"><span>&raquo;</span></li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
             <code class="language-html">
 &lt;ul class="pagination"&gt;
   &lt;li&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
@@ -1151,91 +1267,124 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;/ul&gt;
             </code>
           </pre>
-    </div>
-</div>
-
-				</section>
-				<hr class="hr-style"/>
-				<section class="section" id="col">
-					<h2>Colonnes</h2>
-					<div class="row">
-						<div class="aside">
-							<h5>Aside 30%</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis eum at voluptatum, dolores
-																																																																																																																																																																																																																																																																																																                voluptas eaque omnis ex odit vero, quasi facilis est distinctio inventore debitis praesentium aut rem
-																																																																																																																																																																																																																																																																																																                dolore!</p>
-						</div>
-						<div class="content">
-							<h5>Content 70%</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem culpa sunt provident reprehenderit vitae
-																																																																																																																																																																																																																																																																																																                esse deserunt non repellendus vero, fugit et ipsa perferendis repellat voluptatum quo velit doloremque
-																																																																																																																																																																																																																																																																																																                beatae necessitatibus.</p>
-						</div>
-					</div>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="row">
-						<div class="col">
-							<h5>col</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, vel fugit ut esse nostrum aut
-																																																																																																																																																																																																																																																																																																                blanditiis id, qui quas quam fuga suscipit vero quod, voluptates amet quibusdam ipsam consequuntur
-																																																																																																																																																																																																																																																																																																                repellendus!</p>
-						</div>
-						<div class="col">
-							<h5>col</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, vel fugit ut esse nostrum aut
-																																																																																																																																																																																																																																																																																																                blanditiis id, qui quas quam fuga suscipit vero quod, voluptates amet quibusdam ipsam consequuntur
-																																																																																																																																																																																																																																																																																																                repellendus!</p>
-						</div>
-						<div class="col">
-							<h5>col</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, vel fugit ut esse nostrum aut
-																																																																																																																																																																																																																																																																																																                blanditiis id, qui quas quam fuga suscipit vero quod, voluptates amet quibusdam ipsam consequuntur
-																																																																																																																																																																																																																																																																																																                repellendus!</p>
-						</div>
-						<div class="col">
-							<h5>col</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, vel fugit ut esse nostrum aut
-																																																																																																																																																																																																																																																																																																                blanditiis id, qui quas quam fuga suscipit vero quod, voluptates amet quibusdam ipsam consequuntur
-																																																																																																																																																																																																																																																																																																                repellendus!</p>
-						</div>
-						<div class="half">
-							<h5>
-								Half 50%</h5>
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente ut accusantium debitis ullam
-																																																																																																																																																																																																																																																																																																                possimus amet ipsam illum sint voluptatibus nemo similique tempora, cupiditate recusandae. Delectus quis
-																																																																																																																																																																																																																																																																																																                temporibus cumque tempora vel.</p>
-						</div>
-						<div class="third">
-							<h5>Third 33%</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aut repellendus blanditiis tempora
-																																																																																																																																																																																																																																																																																																                corrupti illo. Aliquam laboriosam eum voluptatem illum sint eligendi vitae molestias? Soluta alias hic
-																																																																																																																																																																																																																																																																																																                fugit minima! Perspiciatis?</p>
-						</div>
-						<div class="fourth">
-							<h5>Fourth 25%</h5>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error sequi accusantium inventore facilis,
-																																																																																																																																																																																																																																																																																																                aperiam impedit eius? Minima id veritatis totam? Nisi reprehenderit perspiciatis corporis quia,
-																																																																																																																																																																																																																																																																																																                molestias pariatur dolore eum dolorem?</p>
-						</div>
-						<div class="fifth">
-							<h5>Fifth 20%</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nobis dolor soluta officia cum nam eum
-																																																																																																																																																																																																																																																																																																                vitae quas nihil, ut autem facilis. Repudiandae magnam, labore modi omnis doloribus corrupti quo?</p>
-						</div>
-						<div class="sixth">
-							<h5>Sixth 16%</h5>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque explicabo deleniti totam dolor eveniet
-																																																																																																																																																																																																																																																																																																                porro deserunt incidunt minus odio praesentium placeat, quam sequi, corporis blanditiis quae id
-																																																																																																																																																																																																																																																																																																                aspernatur cupiditate velit.</p>
-						</div>
-					</div>
-
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <section class="section" id="col">
+              <h2>Colonnes</h2>
+              <div class="row">
+                <div class="aside">
+                  <h5>Aside 30%</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptate, officiis eum at voluptatum, dolores voluptas
+                    eaque omnis ex odit vero, quasi facilis est distinctio
+                    inventore debitis praesentium aut rem dolore!
+                  </p>
+                </div>
+                <div class="content">
+                  <h5>Content 70%</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                    culpa sunt provident reprehenderit vitae esse deserunt non
+                    repellendus vero, fugit et ipsa perferendis repellat
+                    voluptatum quo velit doloremque beatae necessitatibus.
+                  </p>
+                </div>
+              </div>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="row">
+                    <div class="col">
+                      <h5>col</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vitae, vel fugit ut esse nostrum aut blanditiis
+                        id, qui quas quam fuga suscipit vero quod, voluptates
+                        amet quibusdam ipsam consequuntur repellendus!
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h5>col</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vitae, vel fugit ut esse nostrum aut blanditiis
+                        id, qui quas quam fuga suscipit vero quod, voluptates
+                        amet quibusdam ipsam consequuntur repellendus!
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h5>col</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vitae, vel fugit ut esse nostrum aut blanditiis
+                        id, qui quas quam fuga suscipit vero quod, voluptates
+                        amet quibusdam ipsam consequuntur repellendus!
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h5>col</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vitae, vel fugit ut esse nostrum aut blanditiis
+                        id, qui quas quam fuga suscipit vero quod, voluptates
+                        amet quibusdam ipsam consequuntur repellendus!
+                      </p>
+                    </div>
+                    <div class="half">
+                      <h5>Half 50%</h5>
+                      <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Sapiente ut accusantium debitis ullam possimus
+                        amet ipsam illum sint voluptatibus nemo similique
+                        tempora, cupiditate recusandae. Delectus quis temporibus
+                        cumque tempora vel.
+                      </p>
+                    </div>
+                    <div class="third">
+                      <h5>Third 33%</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Enim, aut repellendus blanditiis tempora corrupti illo.
+                        Aliquam laboriosam eum voluptatem illum sint eligendi
+                        vitae molestias? Soluta alias hic fugit minima!
+                        Perspiciatis?
+                      </p>
+                    </div>
+                    <div class="fourth">
+                      <h5>Fourth 25%</h5>
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Error sequi accusantium inventore facilis, aperiam
+                        impedit eius? Minima id veritatis totam? Nisi
+                        reprehenderit perspiciatis corporis quia, molestias
+                        pariatur dolore eum dolorem?
+                      </p>
+                    </div>
+                    <div class="fifth">
+                      <h5>Fifth 20%</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi nobis dolor soluta officia cum nam eum vitae
+                        quas nihil, ut autem facilis. Repudiandae magnam, labore
+                        modi omnis doloribus corrupti quo?
+                      </p>
+                    </div>
+                    <div class="sixth">
+                      <h5>Sixth 16%</h5>
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Eaque explicabo deleniti totam dolor eveniet porro
+                        deserunt incidunt minus odio praesentium placeat, quam
+                        sequi, corporis blanditiis quae id aspernatur cupiditate
+                        velit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
             <code class="language-html">
 &lt;div class="row"&gt;
   &lt;div class="aside"&gt;
@@ -1308,35 +1457,40 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;/div&gt;
             </code>
           </pre>
-    </div>
-</div>
-
-				</section>
-				<hr class="hr-style"/>
-				<!-- Grid responsive -->
-				<section id="grid" class="section">
-					<h2>Grid responsive</h2>
-					<p>
-						Grille 12 colonnes mobile-first : container <mark>.grid</mark> + colonnes <mark>col-*</mark>.
-						Les classes responsive ne s'appliquent qu'au-dessus de leur point de rupture :
-						<mark>sm</mark> ≥ 48rem, <mark>md</mark> ≥ 64rem, <mark>lg</mark> ≥ 75rem.
-					</p>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="grid mb-2">
-						<div class="col-12 col-md-8 border">col-12 col-md-8</div>
-						<div class="col-12 col-md-4 border">col-12 col-md-4</div>
-						<div class="col-6 col-md-4 col-lg-2 border">col-6 col-md-4 col-lg-2</div>
-						<div class="col-6 col-md-4 col-lg-2 border">col-6 col-md-4 col-lg-2</div>
-						<div class="col-12 col-md-4 col-lg-8 border">col-12 col-md-4 col-lg-8</div>
-						<div class="col-12 col-lg-6 border">col-12 col-lg-6</div>
-						<div class="col-12 col-lg-6 border">col-12 col-lg-6</div>
-					</div>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Grid responsive -->
+            <section id="grid" class="section">
+              <h2>Grid responsive</h2>
+              <p>
+                Grille 12 colonnes mobile-first : container <mark>.grid</mark> +
+                colonnes <mark>col-*</mark>. Les classes responsive ne
+                s'appliquent qu'au-dessus de leur point de rupture :
+                <mark>sm</mark> ≥ 48rem, <mark>md</mark> ≥ 64rem,
+                <mark>lg</mark> ≥ 75rem.
+              </p>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="grid mb-2">
+                    <div class="col-12 col-md-8 border">col-12 col-md-8</div>
+                    <div class="col-12 col-md-4 border">col-12 col-md-4</div>
+                    <div class="col-6 col-md-4 col-lg-2 border">
+                      col-6 col-md-4 col-lg-2
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 border">
+                      col-6 col-md-4 col-lg-2
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-8 border">
+                      col-12 col-md-4 col-lg-8
+                    </div>
+                    <div class="col-12 col-lg-6 border">col-12 col-lg-6</div>
+                    <div class="col-12 col-lg-6 border">col-12 col-lg-6</div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
             <code class="language-html">
 &lt;div class="grid"&gt;
   &lt;div class="col-12 col-md-8"&gt;Main&lt;/div&gt;
@@ -1346,35 +1500,47 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;/div&gt;
             </code>
           </pre>
-    </div>
-</div>
-
-				</section>
-				<hr class="hr-style"/>
-				<!-- Utilities -->
-				<section id="utilities" class="section">
-					<h2>Utilities</h2>
-					<p>
-						Classes utilitaires responsive : affichage, typo, couleurs, bordures et spacing
-						avec variantes <mark>sm/md/lg</mark> (mobile-first).
-					</p>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="container border mb-2">
-						<p class="mt-md-3 text-primary">text-primary + mt-md-3 (marge seulement ≥ md)</p>
-						<p class="bg-secondary white text-center">bg-secondary + text-center</p>
-						<p class="text-truncate">Texte tronqué automatiquement : Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-						<p class="rounded-3 shadow d-none d-md-block">Visible uniquement ≥ md : d-none + d-md-block</p>
-						<p>
-							<span class="rounded border border-primary px-2 py-1">border border-primary</span>
-							<span class="rounded-circle bg-error white">&nbsp;§&nbsp;</span>
-						</p>
-					</div>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Utilities -->
+            <section id="utilities" class="section">
+              <h2>Utilities</h2>
+              <p>
+                Classes utilitaires responsive : affichage, typo, couleurs,
+                bordures et spacing avec variantes
+                <mark>sm/md/lg</mark> (mobile-first).
+              </p>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container border mb-2">
+                    <p class="mt-md-3 text-primary">
+                      text-primary + mt-md-3 (marge seulement ≥ md)
+                    </p>
+                    <p class="bg-secondary text-white text-center">
+                      bg-secondary + text-center
+                    </p>
+                    <p class="text-truncate">
+                      Texte tronqué automatiquement : Lorem ipsum dolor sit amet
+                      consectetur adipiscing elit, sed do eiusmod tempor ut
+                      labore et dolore magna aliqua.
+                    </p>
+                    <p class="rounded-3 shadow d-none d-md-block">
+                      Visible uniquement ≥ md : d-none + d-md-block
+                    </p>
+                    <p>
+                      <span class="rounded border border-primary px-2 py-1"
+                        >border border-primary</span
+                      >
+                      <span class="rounded-circle bg-error white"
+                        >&nbsp;§&nbsp;</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
             <code class="language-html">
 &lt;p class="mt-md-3"&gt;Marge appliquee uniquement a partir de md&lt;/p&gt;
 &lt;p class="bg-secondary text-center"&gt;Fond + centrage&lt;/p&gt;
@@ -1383,44 +1549,41 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;span class="rounded border border-primary px-2 py-1"&gt;Pill&lt;/span&gt;
             </code>
           </pre>
-    </div>
-</div>
-
-				</section>
-				<hr class="hr-style"/>
-				<section id="social" class="section">
-					<h2>Socials</h2>
-					<!-- Social group -->
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-					<div class="socials">
-						<a href="#" title="Join us on Facebook">
-							<i class="ti ti-brand-facebook"></i>
-						</a>
-						<a href="#" title="Join us on Twitter">
-							<i class="ti ti-brand-twitter" aria-hidden="true"></i>
-						</a>
-						<a href="#" title="Join us on Dribbble">
-							<i class="ti ti-brand-dribbble" aria-hidden="true"></i>
-						</a>
-						<a href="#" title="Join us on Vimeo">
-							<i class="ti ti-brand-vimeo" aria-hidden="true"></i>
-						</a>
-						<a href="#" title="Join us on Pinterest">
-							<i class="ti ti-brand-pinterest" aria-hidden="true"></i>
-						</a>
-						<a href="#" title="Join us on Instagram">
-							<i class="ti ti-brand-instagram" aria-hidden="true"></i>
-						</a>
-						<a href="#" title="Join us on Linked In">
-							<i class="ti ti-brand-linkedin" aria-hidden="true"></i>
-						</a>
-					</div>
-					
-    </div>
-    <div class="col-12 col-md-6">
-
-<pre class="mt-1">
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <section id="social" class="section">
+              <h2>Socials</h2>
+              <!-- Social group -->
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="socials">
+                    <a href="#" title="Join us on Facebook">
+                      <i class="ti ti-brand-facebook"></i>
+                    </a>
+                    <a href="#" title="Join us on Twitter">
+                      <i class="ti ti-brand-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Join us on Dribbble">
+                      <i class="ti ti-brand-dribbble" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Join us on Vimeo">
+                      <i class="ti ti-brand-vimeo" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Join us on Pinterest">
+                      <i class="ti ti-brand-pinterest" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Join us on Instagram">
+                      <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Join us on Linked In">
+                      <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
   <code class="language-html">
  &lt;div class="socials"&gt;
     &lt;a href="#" title="Join us on Facebook"&gt;
@@ -1429,70 +1592,105 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;/div&gt;  
  </code>
 </pre>
-    </div>
-</div>
+                </div>
+              </div>
 
-					<!-- /social group -->
-				</section>
-				<hr class="hr-style"/>
-			<!-- Portfolio -->
-			<section id="portfolio" class="section">
-				<h2>Portfolio</h2>
-<div class="docs-demo grid">
-    <div class="col-12 col-md-6">
-				<div>
-					<ul class="portfolio-menu">
-						<li class="current" data-target="all">All</li>
-						<li data-target="landscape">Landscape</li>
-						<li data-target="architect">Architecture</li>
-						<li data-target="sky">Sky</li>
-						<li data-target="divers">Divers</li>
-					</ul>
-					<div class="portfolio-item">
-						<div class="card" data-item="landscape">
-							<img src="https://picsum.photos/id/12/600" alt="description"/>
-						</div>
-						<div class="card" data-item="divers">
-							<img src="https://picsum.photos/id/31/600" alt="description"/>
-						</div>
-						<div class="card" data-item="sky">
-							<img src="https://picsum.photos/id/38/600" alt="description"/>
-						</div>
-						<div class="card" data-item="landscape">
-							<img src="https://picsum.photos/id/46/600" alt="description"/>
-						</div>
-						<div class="card" data-item="divers">
-							<img src="https://picsum.photos/id/73/600" alt="description"/>
-						</div>
-						<div class="card" data-item="architect">
-							<img src="https://picsum.photos/id/78/600" alt="description"/>
-						</div>
-						<div class="card" data-item="divers">
-							<img src="https://picsum.photos/id/80/600" alt="description"/>
-						</div>
-						<div class="card" data-item="sky">
-							<img src="https://picsum.photos/id/383/600" alt="description"/>
-						</div>
-						<div class="card" data-item="architect">
-							<img src="https://picsum.photos/id/444/600" alt="description"/>
-						</div>
-						<div class="card" data-item="landscape">
-							<img src="https://picsum.photos/id/443/600" alt="description"/>
-						</div>
-						<div class="card" data-item="male">
-							<img src="https://picsum.photos/id/25/600" alt="description"/>
-						</div>
-						<div class="card" data-item="architect">
-							<img src="https://picsum.photos/id/142/600" alt="description"/>
-						</div>
-					</div>
-				</div>
-			
-    </div>
-    <div class="col-12 col-md-6">
-<script type="module" src="/js/portfolio.js"></script>
-			
-<pre class="mt-1">
+              <!-- /social group -->
+            </section>
+            <hr class="hr-style" />
+            <!-- Portfolio -->
+            <section id="portfolio" class="section">
+              <h2>Portfolio</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div>
+                    <ul class="portfolio-menu">
+                      <li class="current" data-target="all">All</li>
+                      <li data-target="landscape">Landscape</li>
+                      <li data-target="architect">Architecture</li>
+                      <li data-target="sky">Sky</li>
+                      <li data-target="divers">Divers</li>
+                    </ul>
+                    <div class="portfolio-item">
+                      <div class="card" data-item="landscape">
+                        <img
+                          src="https://picsum.photos/id/12/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="divers">
+                        <img
+                          src="https://picsum.photos/id/31/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="sky">
+                        <img
+                          src="https://picsum.photos/id/38/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="landscape">
+                        <img
+                          src="https://picsum.photos/id/46/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="divers">
+                        <img
+                          src="https://picsum.photos/id/73/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="architect">
+                        <img
+                          src="https://picsum.photos/id/78/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="divers">
+                        <img
+                          src="https://picsum.photos/id/80/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="sky">
+                        <img
+                          src="https://picsum.photos/id/383/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="architect">
+                        <img
+                          src="https://picsum.photos/id/444/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="landscape">
+                        <img
+                          src="https://picsum.photos/id/443/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="male">
+                        <img
+                          src="https://picsum.photos/id/25/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="architect">
+                        <img
+                          src="https://picsum.photos/id/142/600"
+                          alt="description"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <script type="module" src="/js/portfolio.js"></script>
+
+                  <pre class="mt-1">
           <code class="language-html">
  &lt;div&gt;
   &lt;ul class="portfolio-menu"&gt;
@@ -1519,36 +1717,46 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;/div&gt;
           </code>
         </pre>
-    </div>
-</div>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
 
-		</section>
-				<hr class="hr-style"/>
-		
-		<!-- Footer-->
-					</div>
-		</div>
-</main>
+            <!-- Footer-->
+          </div>
+        </div>
+      </main>
 
-<footer class="footer">
-			<p>
-				<a property="dct:title" rel="cc:attributionURL" href="https://github.com/jm-holland/illaweight.git">illaWeight
-																																																																																							            CSS</a>
-				by
-				<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://illaweb.fr">jm
-																																																																																							            Holland</a>
-				is licensed under
-				<a href="https://github.com/jm-holland/illaweight/-/blob/main/LICENSE" target="_blank" rel="license noopener noreferrer">licence MIT
-
-				</a>
-			</p>
-			<a href="#top" class="top-btn">
-				<i class="ti ti-arrow-up"></i>
-			</a>
-		</footer>
-		</wrapper>
-		<script type="module" src="/main.js"></script>
-		<script type="module" src="./js/docs.js"></script>
-		<script type="module" src="./js/scrollToTop.js"></script>
-	</body>
+      <footer class="footer">
+        <p>
+          <a
+            property="dct:title"
+            rel="cc:attributionURL"
+            href="https://github.com/jm-holland/illaweight.git"
+            >illaWeight CSS</a
+          >
+          by
+          <a
+            rel="cc:attributionURL dct:creator"
+            property="cc:attributionName"
+            href="https://illaweb.fr"
+            >jm Holland</a
+          >
+          is licensed under
+          <a
+            href="https://github.com/jm-holland/illaweight/-/blob/main/LICENSE"
+            target="_blank"
+            rel="license noopener noreferrer"
+            >licence MIT
+          </a>
+        </p>
+        <a href="#top" class="top-btn">
+          <i class="ti ti-arrow-up"></i>
+        </a>
+      </footer>
+    </wrapper>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./js/docs.js"></script>
+    <script type="module" src="./js/scrollToTop.js"></script>
+  </body>
 </html>

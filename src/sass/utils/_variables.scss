@@ -55,6 +55,8 @@ $background-dark: rgb(40, 40, 40);
   --color-gray-6: #{$gray-6};
   --color-gray-7: #{$gray-7};
   --color-gray-8: #{$gray-8};
+  /* blanc invariable : ne subit pas l'inversion des gris en dark mode */
+  --color-white: hsl(0, 0%, 100%);
   --color-border: #{$border};
   --color-primary: #{$primary};
   --color-primary-focus: #{$primary-focus};
@@ -102,8 +104,10 @@ $background-dark: rgb(40, 40, 40);
   --color-danger-focus: #{$danger};
   --color-error: #{$error-focus};
   --color-error-focus: #{$error};
-  --color-secondary: #{$gray-3};
-  --color-secondary-focus: #{$gray-2};
+  /* secondary : figé à gray-2 (30%) → contraste avec le texte blanc constant
+     dans les deux themes (.bg-secondary, .badge-secondary) */
+  --color-secondary: #{$gray-2};
+  --color-secondary-focus: #{$gray-3};
   --color-shadow: #{$shadow-dark};
   --color-shadow-hard: #{$shadow-dark-hard};
 }
