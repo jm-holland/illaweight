@@ -24,6 +24,8 @@ cookie-cutter:
 - Useful form alignments that look great on all screen sizes.
 - Various common table styles.
 - Dark mode toggle built in ([`data-theme`](https://illaweight.illaweb.eu/scripts.html#darkMod)).
+- Couleurs **conformes WCAG 2.1 AA** en light et dark (texte ≥ 4.5:1, UI ≥ 3:1) :
+  teintes « texte » thématisées + fonds « solides » constants à texte blanc garanti.
 - Interactive components via `data-attributes` — no JS framework required.
 - An extremely minimalist look that is super-easy to customize.
 - Responsive by default, with a non-responsive option.
@@ -102,13 +104,26 @@ npm install illaweightcss
 
 ## Color Reference
 
-| Variable          | Hex                                               |
-| ----------------- | ------------------------------------------------- |
-| --color-primary   | ![#0495ef](https://placehold.co/15/0495ef/0495ef) |
-| --color-highlight | ![#b3f0fd](https://placehold.co/15/b3f0fd/b3f0fd) |
-| --color-success   | ![#03abbd](https://placehold.co/15/03abbd/03abbd) |
-| --color-danger    | ![#f1903b](https://placehold.co/15/f1903b/f1903b) |
-| --color-error     | ![#f20c77](https://placehold.co/15/f20c77/f20c77) |
+Palette **WCAG 2.1 AA** : les teintes « texte » varient selon le thème
+(sombrelight / claire dark), les **solides** restent constants pour garantir
+un texte blanc ≥ 4.5:1 partout (badges, fonds `bg-*`, skip-link, pagination).
+
+| Variable                        | Light (texte/fond) | Dark              |
+| ------------------------------- | ------------------- | ----------------- |
+| `--color-primary` · `-solid`    | ![#0477BE](https://placehold.co/15/0477BE/0477BE) `#0477BE` | ![#059CFA](https://placehold.co/15/059CFA/059CFA) `#059CFA` |
+| `--color-primary-focus`         | ![#035E96](https://placehold.co/15/035E96/035E96) `#035E96` | ![#23A8FB](https://placehold.co/15/23A8FB/23A8FB) `#23A8FB` |
+| `--color-highlight` (constant)  | ![#B4F0FE](https://placehold.co/15/B4F0FE/B4F0FE) `#B4F0FE` | ![#B4F0FE](https://placehold.co/15/B4F0FE/B4F0FE) `#B4F0FE` |
+| `--color-success` · `-solid`    | ![#037A87](https://placehold.co/15/037A87/037A87) `#037A87` | ![#04A7B9](https://placehold.co/15/04A7B9/04A7B9) `#04A7B9` |
+| `--color-success-focus`         | ![#02565F](https://placehold.co/15/02565F/02565F) `#02565F` | ![#05CBE1](https://placehold.co/15/05CBE1/05CBE1) `#05CBE1` |
+| `--color-danger` · `-solid`     | ![#B0590C](https://placehold.co/15/B0590C/B0590C) `#B0590C` | ![#EA7610](https://placehold.co/15/EA7610/EA7610) `#EA7610` |
+| `--color-error` · `-solid`      | ![#DA0B6C](https://placehold.co/15/DA0B6C/DA0B6C) `#DA0B6C` | ![#F65AA3](https://placehold.co/15/F65AA3/F65AA3) `#F65AA3` |
+| `--color-secondary` (constant)  | ![#4D4D4D](https://placehold.co/15/4D4D4D/4D4D4D) `#4D4D4D` | ![#4D4D4D](https://placehold.co/15/4D4D4D/4D4D4D) `#4D4D4D` |
+| `--color-muted-solid`           | ![#737373](https://placehold.co/15/737373/737373) `#737373` | ![#737373](https://placehold.co/15/737373/737373) `#737373` |
+| `--color-border`                | ![#8C8C8C](https://placehold.co/15/8C8C8C/8C8C8C) `#8C8C8C` | ![#B5B5B5](https://placehold.co/15/B5B5B5/B5B5B5) `#B5B5B5` |
+
+> `.text-secondary` / `.text-muted` = `--color-gray-3` (AA : `#737373` sur
+> fond clair, `#DBDBDB` sur fond sombre) — d'où la constante « solide » si le
+> gris doit servir de fond à du texte blanc.
 
 ## Contenu du paquet
 

@@ -47,7 +47,8 @@ $directions: "", "-bottom", "-top", "-left", "-right";
 .skip-link {
     position: absolute;
     transform: translateY(-150%);
-    background-color: var(--color-primary);
+    /* solide constant : blanc ≥ 4.5 sur les deux thèmes */
+    background-color: var(--color-primary-solid);
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 0 0 0.25rem 0;

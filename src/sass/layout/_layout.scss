@@ -115,7 +115,9 @@ figure {
 }
 
 mark {
-  color: inherit;
+  /* noir statique : lisible sur la surligne claire en light ET dark
+     (les gris s'inversent en dark → var(--color-gray-1) deviendrait blanc) */
+  color: var(--color-link-text);
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 70%,

@@ -1,5 +1,5 @@
 /**
- *  illaWeightCss v1.1.0
+ *  illaWeightCss v1.2.0
  *  https://illaweight.illaweb.eu
  *
  *  Copyright(c) 2024 jm Holland

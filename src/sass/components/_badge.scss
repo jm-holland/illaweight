@@ -17,12 +17,12 @@
 }
 
 @each $name, $color in (
-    "primary": var(--color-primary),
+    "primary": var(--color-primary-solid),
     "secondary": var(--color-secondary),
-    "success": var(--color-success),
-    "warning": var(--color-danger),
-    "error": var(--color-error),
-    "muted": var(--color-gray-6),
+    "success": var(--color-success-solid),
+    "warning": var(--color-warning-solid),
+    "error": var(--color-error-solid),
+    "muted": var(--color-muted-solid),
 ) {
     .badge-#{$name} {
         background-color: $color;

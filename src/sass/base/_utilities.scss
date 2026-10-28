@@ -157,24 +157,51 @@ $short-directions: (
 }
 
 /** --- Couleurs --- */
-$color-classes: (
+/* Texte : teinte thématisée, AA 4.5 sur le fond de page dans les deux modes.
+   secondary/muted = gris AA (gray-3 : 4.5 en light, 9.9 en dark). */
+$text-colors: (
   "primary": var(--color-primary),
-  "secondary": var(--color-secondary),
+  "secondary": var(--color-gray-3),
   "success": var(--color-success),
   "warning": var(--color-danger),
   "error": var(--color-error),
-  "muted": var(--color-gray-6),
+  "muted": var(--color-gray-3),
 );
 
-@each $name, $color in $color-classes {
+/* Fonds « pleins » : solides constants → texte blanc garanti ≥ 4.5, light et dark. */
+$bg-colors: (
+  "primary": var(--color-primary-solid),
+  "secondary": var(--color-secondary),
+  "success": var(--color-success-solid),
+  "warning": var(--color-warning-solid),
+  "error": var(--color-error-solid),
+  "muted": var(--color-muted-solid),
+);
+
+/* Bordures colorées : décoratives ; l'indicateur AA des composants
+   (input, pagination…) reste var(--color-border) ≥ 3:1. */
+$border-colors: (
+  "primary": var(--color-primary),
+  "secondary": var(--color-gray-3),
+  "success": var(--color-success),
+  "warning": var(--color-danger),
+  "error": var(--color-error),
+  "muted": var(--color-gray-3),
+);
+
+@each $name, $color in $text-colors {
   .text-#{$name} {
     color: $color !important;
   }
+}
 
+@each $name, $color in $bg-colors {
   .bg-#{$name} {
     background-color: $color !important;
   }
+}
 
+@each $name, $color in $border-colors {
   .border-#{$name} {
     border-color: $color !important;
   }

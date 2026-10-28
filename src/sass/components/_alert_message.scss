@@ -106,7 +106,9 @@
         }
 
         .text-1 {
-            color: $accent-color;
+            /* titre en contraste max sur le panneau teinté (AA 4.5 light+dark ;
+               l'accent statique échoue sur fond sombre) */
+            color: var(--color-gray-0);
 
             &::after {
                 content: $text;
@@ -115,7 +117,7 @@
         }
 
         .text-2 {
-            color: var(--color-gray-1);
+            color: var(--color-gray-0);
         }
 
         .progress:before {

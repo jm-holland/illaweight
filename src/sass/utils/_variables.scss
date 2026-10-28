@@ -9,21 +9,38 @@ $gray-5: hsl(0, 0%, 86%);
 $gray-6: hsl(0, 0%, 91%);
 $gray-7: hsl(0, 0%, 94%);
 $gray-8: hsl(0, 0%, 100%);
-$border: hsl(0, 0%, 71%);
-$primary: hsl(203, 96%, 48%);
-$primary-focus: hsl(203, 87%, 61%);
+/* Bordure : UI non-textuel, ≥ 3:1 sur les deux fonds de page (WCAG 1.4.11) */
+$border: hsl(0, 0%, 55%);
+$border-dark: hsl(0, 0%, 71%);
+/* primaire : light = solide (blanc dessus ≥ 4.5 / fg ≥ 4.6 sur #fafafa)
+   dark  = texte lisible sur #282828 (≥ 4.8) */
+$primary: hsl(203, 96%, 38%);
+$primary-focus: hsl(203, 96%, 30%);
+$primary-dark: hsl(203, 96%, 50%);
+$primary-dark-focus: hsl(203, 96%, 56%);
 $secondary: $gray-3;
+$secondary-focus: $gray-2;
 $highlight: hsl(191, 97%, 85%);
-$success: hsl(186, 96%, 38%);
-$success-focus: hsl(186, 98%, 50%);
-$danger: hsl(28, 87%, 59%);
-$danger-focus: hsl(28, 77%, 67%);
-$error: hsl(332, 90%, 50%);
-$error-focus: hsl(332, 88%, 67%);
-$link: hsl(186, 96%, 38%);
-$link-visited: hsl(210, 66%, 47%);
-$link-active: hsl(332, 90%, 50%);
-$link-focus: hsl(210, 66%, 52%);
+$success: hsl(186, 96%, 27%);
+$success-focus: hsl(186, 96%, 19%);
+$success-dark: hsl(186, 96%, 37%);
+$success-dark-focus: hsl(186, 96%, 45%);
+$danger: hsl(28, 87%, 37%);
+$danger-focus: hsl(28, 87%, 29%);
+$danger-dark: hsl(28, 87%, 49%);
+$danger-dark-focus: hsl(28, 87%, 55%);
+$error: hsl(332, 90%, 45%);
+$error-focus: hsl(332, 90%, 37%);
+$error-dark: hsl(332, 90%, 66%);
+$error-dark-focus: hsl(332, 90%, 66%);
+$link: hsl(186, 96%, 27%);
+$link-dark: hsl(186, 96%, 37%);
+$link-visited: hsl(210, 66%, 45%);
+$link-visited-dark: hsl(210, 66%, 60%);
+$link-active: hsl(332, 90%, 45%);
+$link-active-dark: hsl(332, 90%, 66%);
+$link-focus: hsl(210, 66%, 45%);
+$link-focus-dark: hsl(210, 66%, 62%);
 $shadow-hard:
   rgba(0, 0, 0, 0.4) 0 0.125rem 0.25rem,
   rgba(0, 0, 0, 0.3) 0 0.438rem 0.813rem -0.188rem,
@@ -74,6 +91,12 @@ $background-dark: rgb(40, 40, 40);
   --color-link-text: #{$gray-0};
   --color-secondary: #{$gray-2};
   --color-secondary-focus: #{$gray-3};
+  /* fonds « pleins » à texte blanc garanti : solides constants ≥ 4.5, light et dark */
+  --color-primary-solid: #{$primary};
+  --color-success-solid: #{$success};
+  --color-warning-solid: #{$danger};
+  --color-error-solid: #{$error};
+  --color-muted-solid: #{$gray-3};
   --color-shadow: #{$shadow};
   --color-shadow-hard: #{$shadow-hard};
   --roundness-1: 0.25rem;
@@ -95,19 +118,20 @@ $background-dark: rgb(40, 40, 40);
   --color-gray-6: #{$gray-2};
   --color-gray-7: #{$gray-1};
   --color-gray-8: #{$gray-0};
-  --color-border: #{$border};
-  --color-primary: #{$primary-focus};
-  --color-primary-focus: #{$primary};
-  --color-success: #{$success-focus};
-  --color-success-focus: #{$success};
-  --color-danger: #{$danger-focus};
-  --color-danger-focus: #{$danger};
-  --color-error: #{$error-focus};
-  --color-error-focus: #{$error};
-  /* secondary : figé à gray-2 (30%) → contraste avec le texte blanc constant
-     dans les deux themes (.bg-secondary, .badge-secondary) */
-  --color-secondary: #{$gray-2};
-  --color-secondary-focus: #{$gray-3};
+  --color-border: #{$border-dark};
+  /* teintes « texte » : lisibles sur #282828 (≥ 4.5) */
+  --color-primary: #{$primary-dark};
+  --color-primary-focus: #{$primary-dark-focus};
+  --color-success: #{$success-dark};
+  --color-success-focus: #{$success-dark-focus};
+  --color-danger: #{$danger-dark};
+  --color-danger-focus: #{$danger-dark-focus};
+  --color-error: #{$error-dark};
+  --color-error-focus: #{$error-dark-focus};
+  --color-link: #{$link-dark};
+  --color-link-visited: #{$link-visited-dark};
+  --color-link-active: #{$link-active-dark};
+  --color-link-focus: #{$link-focus-dark};
   --color-shadow: #{$shadow-dark};
   --color-shadow-hard: #{$shadow-dark-hard};
 }

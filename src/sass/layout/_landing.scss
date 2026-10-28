@@ -224,7 +224,8 @@
         margin-left: auto;
         font-size: 0.78rem;
         font-style: normal;
-        color: var(--color-gray-4);
+        /* gray-2 : ≥ 3:1 (petit texte) sur la barre gray-6, light et dark */
+        color: var(--color-gray-2);
     }
 }
 

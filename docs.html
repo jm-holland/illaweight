@@ -128,6 +128,7 @@
             <li><a href="#social">Socials</a></li>
             <li><a href="#margin">Spacing</a></li>
             <li><a href="#utilities">Utilities</a></li>
+            <li><a href="#colors">Couleurs &amp; a11y</a></li>
           </ul>
         </li>
         <li>
@@ -200,6 +201,7 @@
               <li><a href="#col">Colonnes</a></li>
               <li><a href="#grid">Grid responsive</a></li>
               <li><a href="#utilities">Utilities</a></li>
+            <li><a href="#colors">Couleurs &amp; a11y</a></li>
               <li><a href="#social">Socials</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
             </ul>
@@ -1531,7 +1533,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
                       <span class="rounded border border-primary px-2 py-1"
                         >border border-primary</span
                       >
-                      <span class="rounded-circle bg-error white"
+                      <span class="rounded-circle bg-error text-white"
                         >&nbsp;§&nbsp;</span
                       >
                     </p>
@@ -1547,6 +1549,186 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
 &lt;span class="rounded border border-primary px-2 py-1"&gt;Pill&lt;/span&gt;
             </code>
           </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Couleurs & accessibilité -->
+            <section id="colors" class="section">
+              <h2>Couleurs &amp; accessibilité</h2>
+              <p>
+                Palette conforme <mark>WCAG 2.1 AA</mark> : texte ≥ 4.5:1,
+                composants ≥ 3:1, vérifiée par audit automatisé en light et en
+                dark. Deux familles de variables :
+              </p>
+              <ul>
+                <li>
+                  <strong>Teintes « texte »</strong> — thématisées (sombres en
+                  light, claires en dark) : <code>--color-primary</code>,
+                  <code>--color-success</code>, <code>--color-danger</code>,
+                  <code>--color-error</code>, <code>--color-link</code> et
+                  dérivés. Le suffixe <code>-focus</code> désigne hover/focus :
+                  plus sombre en light, plus clair en dark.
+                </li>
+                <li>
+                  <strong>Solides constants</strong> — fonds à texte blanc
+                  garanti ≥ 4.5:1 quel que soit le thème :
+                  <code>--color-primary-solid</code>,
+                  <code>--color-success-solid</code>,
+                  <code>--color-warning-solid</code>,
+                  <code>--color-error-solid</code>,
+                  <code>--color-muted-solid</code>, <code>--color-secondary</code>.
+                </li>
+              </ul>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container border mb-2">
+                    <p>
+                      <span
+                        class="rounded"
+                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-primary-solid)"
+                        title="primary-solid · light #0477BE · dark #059CFA"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-success-solid)"
+                        title="success-solid · #037A87"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-warning-solid)"
+                        title="warning-solid · #B0590C"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-error-solid)"
+                        title="error-solid · #DA0B6C"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-secondary)"
+                        title="secondary · #4D4D4D (constant)"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; background: var(--color-highlight)"
+                        title="highlight · #B4F0FE (constant)"
+                      ></span>
+                    </p>
+                    <p class="bg-primary text-white">
+                      bg-primary + texte blanc (solide constant)
+                    </p>
+                    <p class="text-primary">
+                      text-primary : ≥ 4.5:1 dans les deux thèmes
+                    </p>
+                    <p>
+                      <span class="badge badge-secondary">secondary</span>
+                      <span class="badge badge-success">success</span>
+                      <span class="badge badge-warning">warning</span>
+                      <span class="badge badge-error">error</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+            <code class="language-html">
+&lt;!-- teintes texte (thématisées, AA 4.5 sur la page) --&gt;
+&lt;p class="text-primary"&gt;Texte primaire AA light + dark&lt;/p&gt;
+&lt;p class="text-muted"&gt;Muted = gray-3 AA par défaut&lt;/p&gt;
+&lt;a href="#"&gt;Lien : teinte thématisée automatiquement&lt;/a&gt;
+&lt;!-- fonds solides constants + texte blanc --&gt;
+&lt;p class="bg-primary text-white"&gt;Solide constant&lt;/p&gt;
+&lt;span class="badge badge-warning"&gt;Blanc garanti&lt;/span&gt;
+&lt;!-- blanc et canvas-texte constants : --&gt;
+&lt;span class="text-white"&gt;--color-white&lt;/span&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-10">
+                  <table>
+                    <caption>
+                      Variables couleur — hexadécimal par thème
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>Variable</th>
+                        <th>Light</th>
+                        <th>Dark</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>--color-primary</code></td>
+                        <td><code>#0477BE</code></td>
+                        <td><code>#059CFA</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-primary-focus</code></td>
+                        <td><code>#035E96</code></td>
+                        <td><code>#23A8FB</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-success</code></td>
+                        <td><code>#037A87</code></td>
+                        <td><code>#04A7B9</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-success-focus</code></td>
+                        <td><code>#02565F</code></td>
+                        <td><code>#05CBE1</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-danger</code></td>
+                        <td><code>#B0590C</code></td>
+                        <td><code>#EA7610</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-danger-focus</code></td>
+                        <td><code>#8A460A</code></td>
+                        <td><code>#F08628</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-error</code></td>
+                        <td><code>#DA0B6C</code></td>
+                        <td><code>#F65AA3</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-error-focus</code></td>
+                        <td><code>#B30959</code></td>
+                        <td><code>#F65AA3</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-link-visited</code></td>
+                        <td><code>#2773BE</code></td>
+                        <td><code>#5699DC</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-secondary</code> (constant)</td>
+                        <td><code>#4D4D4D</code></td>
+                        <td><code>#4D4D4D</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-border</code></td>
+                        <td><code>#8C8C8C</code></td>
+                        <td><code>#B5B5B5</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>.text-muted</code> (gray-3)</td>
+                        <td><code>#737373</code></td>
+                        <td><code>#DBDBDB</code></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>--color-white</code> /
+                          <code>--color-link-text</code> (constants)
+                        </td>
+                        <td><code>#FFFFFF</code></td>
+                        <td><code>#000000</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </section>
@@ -1585,7 +1767,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
   <code class="language-html">
  &lt;div class="socials"&gt;
     &lt;a href="#" title="Join us on Facebook"&gt;
-      &lt;i class="fa-brands fa-facebook" aria-hidden="true">&lt;/i&gt;
+      &lt;i class="ti-brands ti-facebook" aria-hidden="true">&lt;/i&gt;
     &lt;/a&gt;
 &lt;/div&gt;  
  </code>

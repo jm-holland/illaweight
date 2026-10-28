@@ -26,11 +26,13 @@ section {
 
         &:hover {
             background-color: var(--color-gray-0);
-            color: var(--color-primary);
+            /* inversion complète : le fond gray-0 bascule (noir/white slugable
+               runtime), le texte suit la fin opposée de la même échelle */
+            color: var(--color-gray-8);
         }
 
         &.active {
-            background-color: var(--color-primary);
+            background-color: var(--color-primary-solid);
             color: #fff;
         }
     }
