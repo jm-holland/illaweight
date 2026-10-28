@@ -26,6 +26,8 @@ cookie-cutter:
 - Dark mode toggle built in ([`data-theme`](https://illaweight.illaweb.eu/scripts.html#darkMod)).
 - Couleurs **conformes WCAG 2.1 AA** en light et dark (texte ≥ 4.5:1, UI ≥ 3:1) :
   teintes « texte » thématisées + fonds « solides » constants à texte blanc garanti.
+- A11y intégrée : focus clavier visible, utilitaire `.sr-only`, alertes ARIA,
+  focus trap modal, tabs au clavier, animation coupée si l'utilisateur la refuse.
 - Interactive components via `data-attributes` — no JS framework required.
 - An extremely minimalist look that is super-easy to customize.
 - Responsive by default, with a non-responsive option.

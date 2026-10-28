@@ -14,7 +14,9 @@ let modalTrigger = null;
 function openModal(modal) {
     modal.classList.add("active");
     modal.setAttribute("aria-hidden", "false");
+    modal.setAttribute("aria-modal", "true");
     document.body.style.overflow = "hidden";
+    modal.querySelector(".modal-dialog")?.setAttribute("tabindex", "-1");
 
     const focusable = modal.querySelector(
         "input:not([type=hidden]), button, [href], select, textarea, .modal-dialog"
@@ -71,6 +73,38 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
+/** Piège à focus (WCAG 2.1.2) : Tab/Shift+Tab restent dans la modale. */
+document.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") {
+        return;
+    }
+
+    const modal = document.querySelector(".modal.active");
+
+    if (!modal) {
+        return;
+    }
+
+    const focusables = modal.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([type=hidden]):not([disabled]), select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+
+    if (focusables.length === 0) {
+        return;
+    }
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+
+    if (event.shiftKey && (document.activeElement === first || !modal.contains(document.activeElement))) {
+        event.preventDefault();
+        last.focus();
+    } else if (!event.shiftKey && (document.activeElement === last || !modal.contains(document.activeElement))) {
+        event.preventDefault();
+        first.focus();
+    }
+});
+
 /** === Tabs — API data-attributes === */
 /** <a href="#pane-id" data-tab>  +  .tab-pane correspondant */
 
@@ -100,3 +134,51 @@ document.addEventListener("click", (event) => {
         el.classList.toggle("active", el === pane);
     });
 });
+
+/** Rôles ARIA : tablist / tab / tabpanel (WCAG — pattern Tabs). */
+document.querySelectorAll(".tabs").forEach((tabs) => {
+    tabs.setAttribute("role", "tablist");
+    tabs.querySelectorAll("[data-tab]").forEach((el) => {
+        el.setAttribute("role", "tab");
+        if (!el.hasAttribute("aria-selected")) {
+            el.setAttribute("aria-selected", "false");
+        }
+    });
+});
+document.querySelectorAll(".tab-pane").forEach((el) => {
+    if (!el.hasAttribute("role")) {
+        el.setAttribute("role", "tabpanel");
+    }
+});
+
+/** Clavier des onglets (WCAG 2.1.1) : flèches, Début/Fin. */
+document.addEventListener("keydown", (event) => {
+    const tab = event.target.closest("[data-tab]");
+
+    if (!tab) {
+        return;
+    }
+
+    const siblings = Array.from(
+        tab.closest(".tabs").querySelectorAll("[data-tab]")
+    );
+    const index = siblings.indexOf(tab);
+    let next = null;
+
+    if (event.key === "ArrowRight") {
+        next = siblings[(index + 1) % siblings.length];
+    } else if (event.key === "ArrowLeft") {
+        next = siblings[(index - 1 + siblings.length) % siblings.length];
+    } else if (event.key === "Home") {
+        next = siblings[0];
+    } else if (event.key === "End") {
+        next = siblings[siblings.length - 1];
+    }
+
+    if (next && next !== tab) {
+        event.preventDefault();
+        next.focus();
+        next.click();
+    }
+});
+

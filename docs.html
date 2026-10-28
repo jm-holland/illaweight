@@ -129,6 +129,7 @@
             <li><a href="#margin">Spacing</a></li>
             <li><a href="#utilities">Utilities</a></li>
             <li><a href="#colors">Couleurs &amp; a11y</a></li>
+            <li><a href="#a11y">Accessibilité</a></li>
           </ul>
         </li>
         <li>
@@ -201,7 +202,8 @@
               <li><a href="#col">Colonnes</a></li>
               <li><a href="#grid">Grid responsive</a></li>
               <li><a href="#utilities">Utilities</a></li>
-            <li><a href="#colors">Couleurs &amp; a11y</a></li>
+              <li><a href="#colors">Couleurs &amp; a11y</a></li>
+              <li><a href="#a11y">Accessibilité</a></li>
               <li><a href="#social">Socials</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
             </ul>
@@ -1577,7 +1579,8 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
                   <code>--color-success-solid</code>,
                   <code>--color-warning-solid</code>,
                   <code>--color-error-solid</code>,
-                  <code>--color-muted-solid</code>, <code>--color-secondary</code>.
+                  <code>--color-muted-solid</code>,
+                  <code>--color-secondary</code>.
                 </li>
               </ul>
               <div class="docs-demo grid">
@@ -1586,32 +1589,73 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
                     <p>
                       <span
                         class="rounded"
-                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-primary-solid)"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-primary-solid);
+                        "
                         title="primary-solid · light #0477BE · dark #059CFA"
                       ></span
                       ><span
                         class="rounded"
-                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-success-solid)"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-success-solid);
+                        "
                         title="success-solid · #037A87"
                       ></span
                       ><span
                         class="rounded"
-                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-warning-solid)"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-warning-solid);
+                        "
                         title="warning-solid · #B0590C"
                       ></span
                       ><span
                         class="rounded"
-                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-error-solid)"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-error-solid);
+                        "
                         title="error-solid · #DA0B6C"
                       ></span
                       ><span
                         class="rounded"
-                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; margin-right: 0.35rem; background: var(--color-secondary)"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-secondary);
+                        "
                         title="secondary · #4D4D4D (constant)"
                       ></span
                       ><span
                         class="rounded"
-                        style="display: inline-block; width: 1.6rem; height: 1.6rem; vertical-align: -0.3rem; background: var(--color-highlight)"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          background: var(--color-highlight);
+                        "
                         title="highlight · #B4F0FE (constant)"
                       ></span>
                     </p>
@@ -1733,31 +1777,82 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
               </div>
             </section>
             <hr class="hr-style" />
+            <!-- Accessibilité -->
+            <section id="a11y" class="section">
+              <h2>Accessibilité</h2>
+              <p>
+                Le framework applique automatiquement les critères
+                <mark>WCAG 2.1 AA</mark> : palette auditée (couleurs et
+                contrastes), focus clavier visible
+                (<code>:focus-visible</code>), cibles tactiles ≥ 24px,
+                animation neutralisée si <code>prefers-reduced-motion</code>.
+              </p>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container border mb-2">
+                    <p>
+                      Le texte ci-dessous est invisible à l'écran mais lu par
+                      les lecteurs d'écran :
+                      <span class="sr-only"
+                        >(message lu uniquement par la synthèse vocale)</span
+                      >
+                    </p>
+                    <p>
+                      <a href="#a11y">Lien de contenu « nu »</a> — reconnu par
+                      son soulignement, pas seulement par sa couleur.
+                    </p>
+                    <p>Un bouton icône porte toujours un nom accessible :</p>
+                    <pre>
+<code class="language-html">&lt;button class="btn" aria-label="Fermer"&gt; &lt;i class="ti ti-x"&gt;&lt;/i&gt; &lt;/button&gt;</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
+            <code class="language-html">
+&lt;span class="sr-only"&gt;Colonne triée : croissant&lt;/span&gt;
+&lt;button class="sr-only-focusable" aria-label="Menu"&gt;…&lt;/button&gt;
+
+&lt;!-- alerte : role="alert" + aria-live posés par alertMessage.js,
+     fermeture clavier (Entrée/Espace) + pause au survol --&gt;
+
+&lt;!-- modal : piège à focus + Échap gérés par interactions.js --&gt;
+
+&lt;!-- tabs : role="tablist/tab/tabpanel" + flèches/Orig/Fin
+     injectés par interactions.js --&gt;
+
+&lt;!-- thème : role="switch" + Entrée/Espace si le toggle
+     n'est pas un &lt;input&gt; natif (themeSwitch.js) --&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
             <section id="social" class="section">
               <h2>Socials</h2>
               <!-- Social group -->
               <div class="docs-demo grid">
                 <div class="col-12 col-md-6">
                   <div class="socials">
-                    <a href="#" title="Join us on Facebook">
+                    <a href="#" title="Rejoignez-nous sur Facebook">
                       <i class="ti ti-brand-facebook"></i>
                     </a>
-                    <a href="#" title="Join us on Twitter">
+                    <a href="#" title="Rejoignez-nous sur Twitter">
                       <i class="ti ti-brand-twitter" aria-hidden="true"></i>
                     </a>
-                    <a href="#" title="Join us on Dribbble">
+                    <a href="#" title="Rejoignez-nous sur Dribbble">
                       <i class="ti ti-brand-dribbble" aria-hidden="true"></i>
                     </a>
-                    <a href="#" title="Join us on Vimeo">
+                    <a href="#" title="Rejoignez-nous sur Vimeo">
                       <i class="ti ti-brand-vimeo" aria-hidden="true"></i>
                     </a>
-                    <a href="#" title="Join us on Pinterest">
+                    <a href="#" title="Rejoignez-nous sur Pinterest">
                       <i class="ti ti-brand-pinterest" aria-hidden="true"></i>
                     </a>
-                    <a href="#" title="Join us on Instagram">
+                    <a href="#" title="Rejoignez-nous sur Instagram">
                       <i class="ti ti-brand-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="#" title="Join us on Linked In">
+                    <a href="#" title="Rejoignez-nous sur Linked In">
                       <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
                     </a>
                   </div>
@@ -1766,7 +1861,7 @@ js/                     &lt;- scripts (menu burger, dark mode, alert, modal, tab
                   <pre class="mt-1">
   <code class="language-html">
  &lt;div class="socials"&gt;
-    &lt;a href="#" title="Join us on Facebook"&gt;
+    &lt;a href="#" title="Rejoignez-nous sur Facebook"&gt;
       &lt;i class="ti-brands ti-facebook" aria-hidden="true">&lt;/i&gt;
     &lt;/a&gt;
 &lt;/div&gt;  

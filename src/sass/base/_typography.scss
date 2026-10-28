@@ -88,6 +88,15 @@ a {
   color: var(--color-link);
 }
 
+/* lien « de contenu » (sans classe) : reconnaissable sans la couleur seule
+   (WCAG 1.4.1). Les liens stylisés (nav, menu, socials, tabs, badges…)
+   ont une classe et gardent leur style dédié. */
+a:not([class]) {
+  text-decoration: underline;
+  text-decoration-thickness: 0.078rem;
+  text-underline-offset: 0.18em;
+}
+
 p {
   font-size: normal;
   line-height: var(--base-line-height);

@@ -80,8 +80,13 @@ textarea {
     background-color: var(--color-gray-8);
 
     &:focus {
-        outline: 0;
         border-color: var(--color-primary-focus);
+    }
+
+    /* clavier : ring :focus-visible (suppression du outline:0) */
+    &:focus-visible {
+        outline: 0.125rem solid var(--color-primary);
+        outline-offset: 0.125rem;
     }
 }
 
@@ -94,8 +99,13 @@ input:not([type]) {
     box-sizing: border-box;
 
     &:focus {
-        outline: 0;
         border-color: var(--color-primary-focus);
+    }
+
+    /* clavier : ring :focus-visible (suppression du outline:0) */
+    &:focus-visible {
+        outline: 0.125rem solid var(--color-primary);
+        outline-offset: 0.125rem;
     }
 }
 

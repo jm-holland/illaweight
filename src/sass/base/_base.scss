@@ -74,6 +74,16 @@ $directions: "", "-bottom", "-top", "-left", "-right";
     }
 }
 
+/** === Focus clavier visible (WCAG 2.4.7 / 2.4.11) === */
+/* L'indicateur clavier ne repose pas sur la couleur seule ; le contour
+   primaire (AAA 4.5:1 sur les deux fonds) est conservé en mode
+   forced-colors. Les composants qui annulent `outline` (boutons,
+   champs…) déclarent leur propre :focus-visible. */
+:focus-visible {
+    outline: 0.125rem solid var(--color-primary);
+    outline-offset: 0.125rem;
+}
+
 /* === list === */
 ul,
 ol {

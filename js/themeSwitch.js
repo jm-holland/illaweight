@@ -69,18 +69,36 @@ function switchTheme(toggleSwitch) {
 
 // Initialise the theme switch element
 function initThemeToggleSwitch(switchButtonSelector) {
-  // Get theme toggle switch
-  const toggleSwitch = document.querySelector(switchButtonSelector);
-  if (getThemeAttribute() === themes.dark) {
-    setSwitch(true, toggleSwitch);
-  }
+    // Get theme toggle switch
+    const toggleSwitch = document.querySelector(switchButtonSelector);
+    if (getThemeAttribute() === themes.dark) {
+        setSwitch(true, toggleSwitch);
+    }
 
-  // Add click event to theme toggle switch
-  toggleSwitch.addEventListener(
-    "click",
-    () => switchTheme(toggleSwitch),
-    false
-  );
+    /* Cas d'un toggle non natif (<input type="checkbox">) : semantics
+       explicit + activation clavier (WCAG 2.1.1). */
+    if (!toggleSwitch.matches("input, button, a")) {
+        if (!toggleSwitch.hasAttribute("role")) {
+            toggleSwitch.setAttribute("role", "switch");
+        }
+        if (!toggleSwitch.hasAttribute("aria-label")) {
+            toggleSwitch.setAttribute("aria-label", "Thème sombre");
+        }
+        toggleSwitch.setAttribute("tabindex", "0");
+        toggleSwitch.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " " || event.key === "Spacebar") {
+                event.preventDefault();
+                event.target.click();
+            }
+        });
+    }
+
+    // Add click event to theme toggle switch
+    toggleSwitch.addEventListener(
+        "click",
+        () => switchTheme(toggleSwitch),
+        false
+    );
 }
 
 function initTheme() {

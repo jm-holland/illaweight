@@ -58,8 +58,17 @@
         padding: 0.313rem;
         cursor: pointer;
         opacity: 0.7;
+        /* cible tactile ≥ 24px (WCAG 2.5.8) */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.25rem;
+        min-height: 2.25rem;
+        font-size: 1.25rem;
+        color: var(--color-gray-1);
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
             opacity: 1;
         }
     }

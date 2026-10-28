@@ -38,8 +38,7 @@ et le versionnement suit [SemVer](https://semver.org/lang/fr/).
   `--color-primary-solid`, `--color-success-solid`, `--color-warning-solid`,
   `--color-error-solid`, `--color-muted-solid`.
 - Variables **invariables** : `--color-white` (blanc), `--color-link-text`
-  (noir de texte) et `--color-secondary` figé à `hsl(0, 0%, 30%)`.
-- Teintes de texte **thématisées pour dark** (précédemment absentes) :
+  (noir de texte) et `--color-secondary` figé à `hsl(0, 0%, 30%)`.- Teintes de texte **thématisées pour dark** (précédemment absentes) :
   `--color-primary` (50 %), `--color-success` (37 %), `--color-danger` (49 %),
   `--color-error` (66 %), `--color-link` (37 %), `--color-link-visited` (60 %),
   `--color-link-active` (66 %), `--color-link-focus` (62 %) et leurs
@@ -47,6 +46,23 @@ et le versionnement suit [SemVer](https://semver.org/lang/fr/).
 - Section documentation **« Couleurs & accessibilité »** (`#colors`) avec
   nuanciers dynamiques et table des hexadécimaux par thème ; palette à jour
   dans le README.
+- **Accessibilité (au-delà du contraste)** :
+  - focus clavier visible global `:focus-visible` (+ ring dédié sur boutons
+    et champs qui supprimait précédemment l'outline) — WCAG 2.4.7 / 2.4.11 ;
+  - utilitaires `.sr-only` et `.sr-only-focusable` ;
+  - liens de contenu « nus » soulignés (reconnaissance sans la couleur
+    seule) — WCAG 1.4.1 ;
+  - boutons de fermeture (alerte, modal) en cible tactile ≥ 24px — WCAG 2.5.8 ;
+  - `alertMessage.js` : `role="alert"` + `aria-live`, nom accessible et
+    activation clavier sur l'élément de fermeture, auto-fermeture suspendue
+    au survol/focus et désactivée si `prefers-reduced-motion` — WCAG 2.2.1 ;
+  - `interactions.js` : piège à focus + `aria-modal="true"` sur la modale,
+    rôles `tablist/tab/tabpanel` et navigation clavier (flèches, Orig, Fin)
+    des onglets ;
+  - `themeSwitch.js` : `role="switch"` + activation Entrée/Espace si le
+    toggle n'est pas un `<input>` natif.
+- Section documentation **« Accessibilité »** (`#a11y`) : récapitulatif des
+  mécanismes automatiques et des utilitaires.
 
 ### Corrigé
 
