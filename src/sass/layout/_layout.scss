@@ -1,122 +1,144 @@
-@use'../utils' as *;
+@use "../utils" as *;
 
-@use'../components/alert_message';
-@use'../components/accordion';
-@use'../components/badge';
-@use'../components/buttons';
-@use'../components/card';
-@use'../components/form';
-@use'../components/modal';
-@use'../components/pagination';
-@use'../components/portfolio';
-@use'../components/socialsIcon';
-@use'../components/table';
-@use'../components/tabs';
-@use'navigation';
-@use 'footer';
+@use "../components/alert_message";
+@use "../components/accordion";
+@use "../components/badge";
+@use "../components/buttons";
+@use "../components/card";
+@use "../components/form";
+@use "../components/modal";
+@use "../components/pagination";
+@use "../components/portfolio";
+@use "../components/socialsIcon";
+@use "../components/table";
+@use "../components/tabs";
+@use "navigation";
+@use "footer";
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    min-height: 100vh;
-    margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  min-height: 100vh;
+  margin: 2rem;
 
-    @include responsive("medium") {
-        margin: 1rem;
+  @include responsive("medium") {
+    margin: 1rem;
 
-        p {
-            margin: 0 1rem;
-        }
+    p {
+      margin: 0 1rem;
     }
+  }
 
-    @include responsive("small") {
-        margin: 0.3rem;
+  @include responsive("small") {
+    margin: 0.3rem;
 
-        p {
-            margin: 0 0.5rem;
-        }
+    p {
+      margin: 0 0.5rem;
     }
+  }
 }
 
 main {
-    margin: 1rem;
+  margin: 1rem;
 
-    @include responsive("small") {
-        margin: 0.5rem;
-    }
+  @include responsive("small") {
+    margin: 0.5rem;
+  }
 
-    @include responsive("medium") {
-        margin: 0.75rem;
-    }
+  @include responsive("medium") {
+    margin: 0.75rem;
+  }
 }
 
 .section {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .container {
-    margin: 1rem;
-    padding: 0 1rem;
+  margin: 1rem;
+  padding: 0 1rem;
 
-    @include responsive("small") {
-        margin: 0.5rem;
-        padding: 0 0.5rem;
-    }
+  @include responsive("small") {
+    margin: 0.5rem;
+    padding: 0 0.5rem;
+  }
 
-    @include responsive("medium") {
-        margin: 0.75rem;
-        padding: 0 0.75rem;
-    }
+  @include responsive("medium") {
+    margin: 0.75rem;
+    padding: 0 0.75rem;
+  }
 }
 
 .border {
-    border: 0.063rem solid var(--color-border);
-    border-radius: var(--roundness-2);
+  border: 0.063rem solid var(--color-border);
+  border-radius: var(--roundness-2);
 }
 
 .strong {
-    font-size: large;
-    font-weight: bold;
+  font-size: large;
+  font-weight: bold;
 }
 
 figure {
-    img {
-        border-radius: var(--roundness-3);
-        box-shadow: 0.5rem 0.5rem 1.5rem 0 rgba(66, 68, 90, 1);
-        margin: 0.5rem;
-
-        @include responsive("medium") {
-            box-shadow: 0.375rem 0.375rem 1.125rem 0 rgba(66, 68, 90, 1);
-            border-radius: var(--roundness-2);
-        }
-
-        @include responsive("small") {
-            box-shadow: 0.125rem 0.125rem 0.75rem 0px rgba(66, 68, 90, 1);
-            border-radius: var(--roundness-1);
-        }
-    }
-}
-
-.image {
+  img {
     border-radius: var(--roundness-3);
     box-shadow: 0.5rem 0.5rem 1.5rem 0 rgba(66, 68, 90, 1);
+    margin: 0.5rem;
 
     @include responsive("medium") {
-        box-shadow: 0.375rem 0.375rem 1.125rem 0 rgba(66, 68, 90, 1);
-        border-radius: var(--roundness-2);
+      box-shadow: 0.375rem 0.375rem 1.125rem 0 rgba(66, 68, 90, 1);
+      border-radius: var(--roundness-2);
     }
 
     @include responsive("small") {
-        box-shadow: 0.125rem 0.125rem 0.75rem 0px rgba(66, 68, 90, 1);
-        border-radius: var(--roundness-1);
+      box-shadow: 0.125rem 0.125rem 0.75rem 0px rgba(66, 68, 90, 1);
+      border-radius: var(--roundness-1);
     }
+  }
+}
+
+.image {
+  border-radius: var(--roundness-3);
+  box-shadow: 0.5rem 0.5rem 1.5rem 0 rgba(66, 68, 90, 1);
+
+  @include responsive("medium") {
+    box-shadow: 0.375rem 0.375rem 1.125rem 0 rgba(66, 68, 90, 1);
+    border-radius: var(--roundness-2);
+  }
+
+  @include responsive("small") {
+    box-shadow: 0.125rem 0.125rem 0.75rem 0px rgba(66, 68, 90, 1);
+    border-radius: var(--roundness-1);
+  }
 }
 
 mark {
-    color: inherit;
-    background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0) 70%,
-            var(--color-highlight) 70%);
+  color: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 70%,
+    var(--color-highlight) 70%
+  );
+}
+/* === Pages plein hauteur : login et administration === */
+body.page-fill {
+  max-width: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.page-fill main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
 }
