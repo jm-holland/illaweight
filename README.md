@@ -7,6 +7,7 @@ responsive 12 colonnes, des utilitaires et des composants interactifs
 (modale, onglets, accordéon), le tout dans **~10 kB gzip**.
 
 - Site & documentation : <https://illaweight.illaweb.eu>
+- English version (same site) : <https://illaweight.illaweb.eu/en/>
 - Licence : [MIT](./LICENSE)
 
 ![logo](public/illaWeight.png)

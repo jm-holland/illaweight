@@ -8,6 +8,9 @@
 
 /** === Message d'alerte === */
 
+/** Langue d'affichage : anglais sur les pages /en/, français par défaut. */
+const isEnPage = document.documentElement.lang.startsWith("en");
+
 const alert = document.querySelector(".alert");
 const closeIcon = document.querySelector(".alert-close");
 const progress = document.querySelector(".progress");
@@ -36,7 +39,7 @@ function setupAccessibility() {
     closeIcon.setAttribute("tabindex", "0");
     closeIcon.setAttribute("role", "button");
     if (!closeIcon.hasAttribute("aria-label")) {
-        closeIcon.setAttribute("aria-label", "Fermer la notification");
+        closeIcon.setAttribute("aria-label", isEnPage ? "Close notification" : "Fermer la notification");
     }
 }
 

@@ -8,6 +8,9 @@
 
 /** === Bascule du mode sombre === */
 
+/** Langue d'affichage : anglais sur les pages /en/, français par défaut. */
+const isEnPage = document.documentElement.lang.startsWith("en");
+
 const themes = {
   light: "light",
   dark: "dark",
@@ -82,7 +85,7 @@ function initThemeToggleSwitch(switchButtonSelector) {
             toggleSwitch.setAttribute("role", "switch");
         }
         if (!toggleSwitch.hasAttribute("aria-label")) {
-            toggleSwitch.setAttribute("aria-label", "Thème sombre");
+            toggleSwitch.setAttribute("aria-label", isEnPage ? "Dark theme" : "Thème sombre");
         }
         toggleSwitch.setAttribute("tabindex", "0");
         toggleSwitch.addEventListener("keydown", (event) => {

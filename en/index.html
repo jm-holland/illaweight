@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="description" content="illaWeight: a minimalist, lightweight CSS framework ready for dark mode. Responsive grid, utilities, interactive components (modal, tabs, accordion) — all in ~10 kB gzip.">
+		<meta name="keywords" content="illaWeight, CSS framework, CSS, minimalist CSS, dark mode, frontend development, web development, responsive design, UI components, lightweight CSS">
+		<meta name="author" content="Jm Holland">
+		<meta http-equiv="Content-Language" content="en">
+		<meta name="robots" content="index, follow">
+		<meta property="og:title" content="illaWeight - Minimalist CSS framework with built-in dark mode">
+		<meta property="og:description" content="illaWeight: a minimalist, lightweight CSS framework ready for dark mode.">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:url" content="https://illaweight.illaweb.eu/en/">
+		<meta property="og:image" content="https://illaweight.illaweb.eu/illaWeightCss.png">
+		<meta property="og:image:alt" content="illaWeight CSS framework logo or preview">
+		<meta property="og:site_name" content="illaWeight CSS Framework">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="illaWeight CSS - Documentation">
+		<meta name="twitter:description" content="Complete documentation of the illaWeight CSS framework: installation, components, responsive grid, utilities and dark mode theming.">
+		<meta name="twitter:image" content="https://illaweight.illaweb.eu/illaWeightCss.png">
+		<meta name="twitter:image:alt" content="illaWeight CSS framework logo or preview">
+		<link
+		rel="canonical" href="https://illaweight.illaweb.eu/en/">
+		<link rel="alternate" hreflang="fr" href="https://illaweight.illaweb.eu/">
+		<link rel="alternate" hreflang="en" href="https://illaweight.illaweb.eu/en/">
+		<link rel="alternate" hreflang="x-default" href="https://illaweight.illaweb.eu/">
+
+		<!-- Favicons-->
+		<link rel="icon" href="/favicon.ico" sizes="48x48">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+		<link
+		rel="manifest" href="/site.webmanifest"/>
+
+		<!-- Preload des polices principales -->
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/Manjari/Manjari-Regular.woff2" crossorigin>
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/tabler-icons.woff2" crossorigin>
+
+		<!-- Titre -->
+		<title>illaWeight - Minimalist CSS framework with built-in dark mode</title>
+
+	</head>
+<nav
+			class="navigation" aria-label="Navigation">
+			<!-- Marque -->
+			<div class="brand">
+				<a href="/en/" title="Go to the home page">
+					<img src="/illaWeight.png" alt="illaWeight CSS logo">
+				</a>
+			</div>
+			<!-- Menu hamburger-->
+			<input class="menu-hamburger" type="checkbox" id="menu-hamburger" aria-label="Open the menu"/>
+			<label class="menu-icon" for="menu-hamburger">
+				<span class="hamburger-icon" aria-hidden="true"></span>
+			</label>
+			<script type="module" src="/js/menu_burger.js"></script>
+			<ul class="menu">
+				<li>
+					<a href="docs.html#typography">Typography</a>
+				</li>
+				<li>
+					<a href="docs.html#blockquote">Blockquote</a>
+				</li>
+				<li>
+					<a href="docs.html#list">List</a>
+				</li>
+				<li>
+					<a href="docs.html#buttons">Buttons</a>
+				</li>
+				<li>
+					<a href="docs.html#card">Card</a>
+				</li>
+				<li>
+					<a href="docs.html#form">Form</a>
+				</li>
+				<li>
+					<a href="docs.html#table">Table</a>
+				</li>
+				<li>
+					<a href="docs.html#portfolio">Portfolio</a>
+				</li>
+				<li>
+					<a href="#" aria-label="submenu">Styles</a>
+					<ul>
+						<li><a href="docs.html#badge">Badge</a></li>
+						<li><a href="docs.html#col">Columns</a></li>
+						<li><a href="docs.html#grid">Responsive grid</a></li>
+						<li><a href="docs.html#pagination">Pagination</a></li>
+						<li><a href="docs.html#social">Social icons</a></li>
+						<li><a href="docs.html#margin">Spacing</a></li>
+						<li><a href="docs.html#utilities">Utilities</a></li>
+						<li><a href="docs.html#colors">Colors &amp; accessibility</a></li>
+						<li><a href="docs.html#a11y">Accessibility</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" aria-label="submenu">Javascript</a>
+					<ul>
+						<li><a href="scripts.html#menuBurger">Burger menu</a></li>
+						<li><a href="scripts.html#darkMod">Dark mode</a></li>
+						<li><a href="scripts.html#scrollToTop">Scroll to top</a></li>
+						<li><a href="scripts.html#alertMessage">Alert message</a></li>
+						<li><a href="scripts.html#portfolio-script">Portfolio</a></li>
+						<li><a href="scripts.html#modalDemo">Modal</a></li>
+						<li><a href="scripts.html#tabsDemo">Tabs</a></li>
+						<li><a href="scripts.html#accordionDemo">Accordion</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/" lang="fr" hreflang="fr" title="Passer à la version française">FR</a>
+				</li>
+				<!-- Mode sombre-->
+				<li>
+					<input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark mode"/>
+					<label for="themeSwitch" class="checkbox-label">
+						<span class="moon" title="Dark"><i class="ti ti-moon" aria-hidden="true"></i></span>
+						<span class="sun" title="Light"><i class="ti ti-sun" aria-hidden="true"></i></span>
+						<span class="ball" title="Dark mode"></span>
+					</label>
+					<script type="module" src="/js/themeSwitch.js"></script>
+				</li>
+			</ul>
+		</nav>
+		<!-- Message d'alerte -->
+		<div class="alert alert-warning ">
+			<div class="alert-content">
+				<span class="alert-icon"></span>
+				<div class="message">
+					<span class="text text-1"></span>
+					<span class="text text-2">General site notifications
+					</span>
+				</div>
+			</div>
+			<span class="alert-close" role="button" aria-label="Close the alert"><i class="ti ti-x" aria-hidden="true"></i></span>
+			<div class="progress active"></div>
+		</div>
+		<script type="module" src="/js/alertMessage.js"></script>
+
+		
+
+		<wrapper>
+			
+			
+
+			<main id="main-content">
+		<div class="hero landing">
+			<div class="landing-glow" aria-hidden="true">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<span class="badge badge-pill badge-primary mb-0">v1.2.0 &middot; MIT license</span>
+			<img class="landing-logo" src="/illaWeight.png" alt="illaWeight CSS logo" id="top"/>
+			<h1 class="landing-title">
+				The minimalist CSS framework,<br/>
+				<span class="landing-gradient">dark mode ready</span> and dependency-free.
+			</h1>
+			<p class="landing-sub">
+				typography, 12-column responsive grid, utilities and interactive components:
+				this entire page consumes almost nothing, the CSS fits in ~10 kB gzip.
+			</p>
+			<div class="row landing-cta">
+				<div class="col">
+					<a class="button button-primary" href="docs.html">Documentation</a>
+				</div>
+				<div class="col">
+					<a class="button button-secondary" href="scripts.html">JS Scripts</a>
+				</div>
+				<div class="col">
+					<a class="button button-clear" href="https://github.com/jm-holland/illaweight" target="_blank" rel="noopener noreferrer">GitHub</a>
+				</div>
+			</div>
+			<ul class="landing-stats">
+				<li><strong>10 kB</strong><span>gzip CSS</span></li>
+				<li><strong>12+</strong><span>components</span></li>
+				<li><strong>0</strong><span>JS dependencies</span></li>
+				<li><strong>MIT</strong><span>free license</span></li>
+			</ul>
+		</div>
+
+		<section class="section">
+			<h2 class="text-center">Why illaWeight?</h2>
+			<div class="grid">
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="card landing-feature">
+						<div class="card-content">
+							<span class="landing-chip" style="background: var(--color-primary);"><i class="ti ti-package" aria-hidden="true"></i></span>
+							<h3 class="mb-0">Minimalist</h3>
+							<p class="mb-0">A single bundle: normalize, typography, grid, components and utilities in one file.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="card landing-feature">
+						<div class="card-content">
+							<span class="landing-chip" style="background: var(--color-success);"><i class="ti ti-moon" aria-hidden="true"></i></span>
+							<h3 class="mb-0">Dark mode</h3>
+							<p class="mb-0">A <code>data-theme</code> attribute on an element (whole page or local panel) and everything switches cleanly.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="card landing-feature">
+						<div class="card-content">
+							<span class="landing-chip" style="background: var(--color-error);"><i class="ti ti-layout-grid" aria-hidden="true"></i></span>
+							<h3 class="mb-0">Responsive</h3>
+							<p class="mb-0">12-column mobile-first grid + mixed col-sm/md/lg variants + spacing and display utilities.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-3">
+					<div class="card landing-feature">
+						<div class="card-content">
+							<span class="landing-chip" style="background: var(--color-success-focus);"><i class="ti ti-bolt" aria-hidden="true"></i></span>
+							<h3 class="mb-0">Interactive</h3>
+							<p class="mb-0">Modal, tabs and accordion via <code>data-attributes</code>: no JS framework, no dependency.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2 class="text-center">Alive, not a mockup</h2>
+			<p class="text-center landing-sub">
+				Everything below is rendered purely with the framework's classes.
+			</p>
+			<div class="grid">
+				<div class="col-12 col-lg-7">
+					<div class="card">
+						<div class="card-header-text"><h3>Components</h3></div>
+						<div class="card-content">
+							<p>
+								<button class="button button-primary">Primary</button>
+								<button class="button">Default</button>
+								<button class="button button-clear">Clear</button>
+							</p>
+							<p>
+								<span class="badge badge-primary">Info</span>
+								<span class="badge badge-success">Ok</span>
+								<span class="badge badge-warning">Warning</span>
+								<span class="badge badge-error">Error</span>
+								<span class="badge badge-pill badge-muted">Pill</span>
+							</p>
+							<p class="form-control">
+								<label for="landing-input">Project name</label>
+								<input id="landing-input" type="text" placeholder="my-app"/>
+							</p>
+							<ul class="pagination mb-0">
+								<li><a href="#">&laquo;</a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4 &raquo;</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-5">
+					<div class="card landing-feature" data-theme="dark">
+						<div class="card-content">
+							<span class="badge badge-pill badge-primary mb-2">data-theme="dark" local</span>
+							<h3 class="mb-0">A dark panel on a light page</h3>
+							<p class="mb-1">The attribute works at multiple levels: the card uses the dark theme variables without touching the rest of the page — try the switch in the menu bar.</p>
+							<p class="mb-0">
+								<button class="button button-primary">Current theme button</button>
+								<button class="button">Neutral button</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card landing-feature mt-2">
+				<div class="card-content">
+					<span class="landing-chip" style="background: var(--color-danger);">C</span>
+					<h4 class="mb-2">Palette &middot; variables CSS</h4>
+					<div class="landing-swatch-row">
+						<label>primary / state</label>
+						<span class="landing-swatch" style="background: var(--color-primary);" title="--color-primary"></span>
+						<span class="landing-swatch" style="background: var(--color-secondary);" title="--color-secondary"></span>
+						<span class="landing-swatch" style="background: var(--color-success);" title="--color-success"></span>
+						<span class="landing-swatch" style="background: var(--color-danger);" title="--color-danger"></span>
+						<span class="landing-swatch" style="background: var(--color-error);" title="--color-error"></span>
+						<span class="landing-swatch" style="background: var(--color-highlight);" title="--color-highlight"></span>
+					</div>
+					<div class="landing-swatch-row">
+						<label>gray scale</label>
+						<span class="landing-swatch" style="background: var(--color-gray-1);" title="--color-gray-1"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-2);" title="--color-gray-2"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-3);" title="--color-gray-3"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-4);" title="--color-gray-4"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-5);" title="--color-gray-5"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-6);" title="--color-gray-6"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-7);" title="--color-gray-7"></span>
+						<span class="landing-swatch" style="background: var(--color-gray-8);" title="--color-gray-8"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2 class="text-center">Get started in one minute</h2>
+			<p class="text-center landing-sub mb-1">
+				A link tag via CDN, or npm install — because everything (fonts, icons, JS modules)
+				works together. Enable dark mode with an attribute.
+			</p>
+			<div class="grid">
+				<div class="col-12 col-md-6">
+					<div class="card landing-terminal" data-theme="dark">
+						<div class="landing-terminal-bar" aria-hidden="true">
+							<span></span><span></span><span></span>
+							<em>terminal</em>
+						</div>
+						<pre><code class="language-bash"># no install:
+# a single tag is enough
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jm-holland/illaweight@main/illaWeightCss.min.css"/&gt;
+
+# or from git:
+git clone https://github.com/jm-holland/illaweight.git
+cd illaweight
+npm install && npm run build:lib</code></pre>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="card landing-terminal" data-theme="dark">
+						<div class="landing-terminal-bar" aria-hidden="true">
+							<span></span><span></span><span></span>
+							<em>main.js</em>
+						</div>
+						<pre><code class="language-js">// framework styles (from the repository sources)
+// import "./illaWeightCss.css";
+
+// optional interactions
+// import "./js/interactions.js";</code></pre>
+					</div>
+				</div>
+			</div>
+			<p class="text-center mt-2">
+				<a class="button button-primary" href="docs.html">Read the full documentation</a>
+				<a class="button button-secondary" href="scripts.html">See the interactive components</a>
+			</p>
+		</section>
+</main>
+<footer class="footer">
+			<p>
+				<a property="dct:title" rel="cc:attributionURL" href="https://github.com/jm-holland/illaweight.git">illaWeight
+																																																																																							            CSS</a>
+				by
+				<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://illaweb.fr">jm
+																																																																																							            Holland</a>
+				under the
+				<a href="https://github.com/jm-holland/illaweight/-/blob/main/LICENSE" target="_blank" rel="license noopener noreferrer">MIT license
+
+				</a>
+			</p>
+			<a href="#top" class="top-btn">
+				<i class="ti ti-arrow-up"></i>
+			</a>
+		</footer>
+		</wrapper>
+		<script type="module" src="/main.js"></script>
+		<script type="module" src="/js/scrollToTop.js"></script>
+	</body>
+</html>

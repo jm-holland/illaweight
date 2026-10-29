@@ -1,0 +1,2050 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Complete documentation of the illaWeight CSS framework: getting started, typography, 12-column responsive grid, utilities, buttons, cards, tables, forms, badges and pagination."
+    />
+    <meta
+      name="keywords"
+      content="illaWeight, CSS framework, CSS, minimalist CSS, dark mode, front-end web development, responsive design, UI components, lightweight CSS"
+    />
+    <meta name="author" content="Jm Holland" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="illaWeight CSS - Documentation" />
+    <meta
+      property="og:description"
+      content="Complete documentation of the illaWeight CSS framework: installation, components, responsive grid, utilities and dark mode theming."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://illaweight.illaweb.eu/en/docs.html" />
+    <meta
+      property="og:image"
+      content="https://illaweight.illaweb.eu/illaWeightCss.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Preview or logo of the illaWeight CSS framework"
+    />
+    <meta property="og:site_name" content="illaWeight CSS Framework" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="illaWeight CSS - Documentation" />
+    <meta
+      name="twitter:description"
+      content="Complete documentation of the illaWeight CSS framework: installation, components, responsive grid, utilities and dark mode theming."
+    />
+    <meta
+      name="twitter:image"
+      content="https://illaweight.illaweb.eu/illaWeightCss.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Preview or logo of the illaWeight CSS framework"
+    />
+    <link rel="canonical" href="https://illaweight.illaweb.eu/en/docs.html" />
+    <link rel="alternate" hreflang="fr" href="https://illaweight.illaweb.eu/docs.html" />
+    <link rel="alternate" hreflang="en" href="https://illaweight.illaweb.eu/en/docs.html" />
+    <link rel="alternate" hreflang="x-default" href="https://illaweight.illaweb.eu/docs.html" />
+
+    <!-- Favicons-->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Preload des polices principales -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/Manjari/Manjari-Regular.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/tabler-icons.woff2"
+      crossorigin
+    />
+
+    <!-- Titre -->
+    <title>illaWeight - CSS Framework Documentation</title>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <nav class="navigation" aria-label="Navigation">
+      <!-- Marque -->
+      <div class="brand">
+        <a href="/en/" title="Go to the home page">
+          <img src="/illaWeight.png" alt="illaWeight CSS logo" />
+        </a>
+      </div>
+      <!-- Menu hamburger -->
+      <input
+        class="menu-hamburger"
+        type="checkbox"
+        id="menu-hamburger"
+        aria-label="Open the menu"
+      />
+      <label class="menu-icon" for="menu-hamburger">
+        <span class="hamburger-icon" aria-hidden="true"></span>
+      </label>
+      <script type="module" src="/js/menu_burger.js"></script>
+      <ul class="menu">
+        <li>
+          <a href="#typography">Typography</a>
+        </li>
+        <li>
+          <a href="#blockquote">Blockquote</a>
+        </li>
+        <li>
+          <a href="#list">List</a>
+        </li>
+        <li>
+          <a href="#buttons">Buttons</a>
+        </li>
+        <li>
+          <a href="#card">Card</a>
+        </li>
+        <li>
+          <a href="#form">Form</a>
+        </li>
+        <li>
+          <a href="#table">Table</a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#" aria-label="submenu">Styles</a>
+          <ul>
+            <li><a href="#badge">Badge</a></li>
+            <li><a href="#col">Columns</a></li>
+            <li><a href="#grid">Responsive grid</a></li>
+            <li><a href="#pagination">Pagination</a></li>
+            <li><a href="#social">Social icons</a></li>
+            <li><a href="#margin">Spacing</a></li>
+            <li><a href="#utilities">Utilities</a></li>
+            <li><a href="#colors">Colors &amp; accessibility</a></li>
+            <li><a href="#a11y">Accessibility</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" aria-label="submenu">Javascript</a>
+          <ul>
+            <li><a href="scripts.html#menuBurger">Burger menu</a></li>
+            <li><a href="scripts.html#darkMod">Dark mode</a></li>
+            <li><a href="scripts.html#scrollToTop">Scroll to top</a></li>
+            <li><a href="scripts.html#alertMessage">Alert message</a></li>
+            <li><a href="scripts.html#portfolio-script">Portfolio</a></li>
+            <li><a href="scripts.html#modalDemo">Modal</a></li>
+            <li><a href="scripts.html#tabsDemo">Tabs</a></li>
+            <li><a href="scripts.html#accordionDemo">Accordion</a></li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="/docs.html"
+            lang="fr"
+            hreflang="fr"
+            title="Passer à la version française"
+            >FR</a
+          >
+        </li>
+        <!-- Mode sombre -->
+        <li>
+          <input
+            type="checkbox"
+            class="checkbox"
+            id="themeSwitch"
+            aria-label="Dark mode"
+          />
+          <label for="themeSwitch" class="checkbox-label">
+            <span class="moon" title="Dark"
+              ><i class="ti ti-moon" aria-hidden="true"></i
+            ></span>
+            <span class="sun" title="Light"
+              ><i class="ti ti-sun" aria-hidden="true"></i
+            ></span>
+            <span class="ball" title="Dark mode"></span>
+          </label>
+          <script type="module" src="/js/themeSwitch.js"></script>
+        </li>
+      </ul>
+    </nav>
+    <!-- Message d'alerte -->
+    <div class="alert alert-warning">
+      <div class="alert-content">
+        <span class="alert-icon"></span>
+        <div class="message">
+          <span class="text text-1"></span>
+          <span class="text text-2">General site notifications </span>
+        </div>
+      </div>
+      <span class="alert-close" role="button" aria-label="Close the alert"
+        ><i class="ti ti-x" aria-hidden="true"></i
+      ></span>
+      <div class="progress active"></div>
+    </div>
+    <script type="module" src="/js/alertMessage.js"></script>
+    <wrapper>
+      <main id="main-content">
+        <h1 class="text-center">illaWeightCSS Documentation</h1>
+        <div class="docs-layout">
+          <aside class="docs-nav" aria-label="Documentation table of contents">
+            <ul>
+              <li><a href="#getting-started">Getting started</a></li>
+              <li><a href="#navbar">Navigation bar</a></li>
+              <li><a href="#typography">Typography</a></li>
+              <li><a href="#margin">Spacing</a></li>
+              <li><a href="#blockquote">Blockquote</a></li>
+              <li><a href="#list">List</a></li>
+              <li><a href="#buttons">Buttons</a></li>
+              <li><a href="#badge">Badge</a></li>
+              <li><a href="#card">Card</a></li>
+              <li><a href="#table">Table</a></li>
+              <li><a href="#form">Form</a></li>
+              <li><a href="#pagination">Pagination</a></li>
+              <li><a href="#col">Columns</a></li>
+              <li><a href="#grid">Responsive grid</a></li>
+              <li><a href="#utilities">Utilities</a></li>
+              <li><a href="#colors">Colors &amp; accessibility</a></li>
+              <li><a href="#a11y">Accessibility</a></li>
+              <li><a href="#social">Social icons</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+            <a href="scripts.html"><strong>JS Scripts &rarr;</strong></a>
+          </aside>
+          <div class="docs-content">
+            <section id="getting-started" class="section">
+              <h2>Getting started</h2>
+              <h5>Installation</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    The framework is downloaded from GitHub. Clone the
+                    repository, then build the files with
+                    <code>npm run build:lib</code>; or link the file directly
+                    via CDN without installing anything:
+                  </p>
+                  <p class="me-2 mt-1">
+                    The package exposes the compiled CSS
+                    (<code>illaWeightCss(.min).css</code>), the framework JS modules
+                    and the fonts in relative paths: nothing else
+                    to copy into your project.
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
+            <code class="language-bash">
+git clone https://github.com/jm-holland/illaweight.git
+cd illaweight
+npm install && npm run build:lib
+            </code>
+						</pre>
+                </div>
+              </div>
+
+              <h5>CSS integration</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    With a bundler (Vite, esbuild...), import the package
+                    entry point. On a static page, a single
+                    <code>link</code> tag is enough:
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
+            <code class="language-js">
+// main.js (from local sources / bundler)
+// import "./illaWeightCss.css";
+
+// static page (GitHub CDN)
+&lt;link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jm-holland/illaweight@main/illaWeightCss.min.css"/&gt;
+            </code>
+						</pre>
+                </div>
+              </div>
+
+              <h5>Interactions optionnelles</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    The modal, tabs and accordion are enabled by
+                    importing the interactions module (details in
+                    <a href="scripts.html#modalDemo">the JS docs</a>):
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
+            <code class="language-js">
+// import "./js/interactions.js";  (from local sources)
+            </code>
+						</pre>
+                </div>
+              </div>
+
+              <h5>Dark mode</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    Add the attribute
+                    <code class="language-html"
+                      >&lt;html data-theme="light"&gt;</code
+                    >
+                    (the value "dark" enables the dark theme). The
+                    <code>themeSwitch.js</code> script handles the switch and
+                    persistence in localStorage:
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
+            <code class="language-html">
+&lt;html lang="en" data-theme="light"&gt;
+            </code>
+						</pre>
+                </div>
+              </div>
+
+              <h5>Contributing from the sources</h5>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    The git repository contains the Sass entry point and this
+                    documentation site:
+                  </p>
+                  <h5>Repository structure</h5>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
+            <code>
+git clone https://github.com/jm-holland/illaweight.git
+cd illaweight
+npm install && npm run build:lib
+
+src/sass/main.scss      &lt;- entry point (normalize, base, utilities, grid, layout)
+src/sass/base/          &lt;- typography, grid, responsive utilities
+src/sass/components/    &lt;- buttons, card, form, table, modal, tabs, accordion...
+src/sass/layout/        &lt;- navigation, footer, layout, normalize
+js/                     &lt;- scripts (burger menu, dark mode, alert, modal, tabs, accordion...)
+            </code>
+						</pre>
+                </div>
+              </div>
+            </section>
+            <section id="navbar" class="section">
+              <h2>Navigation bar</h2>
+              <p>
+                The navigation bar is the first component of the framework:
+                brand, flat links, drop-down submenus (hover or pinned
+                click), dark mode switch and responsive burger menu. See
+                the real bar at the top of each page. Structural HTML code:
+              </p>
+              <pre>
+        <code class="language-html">
+/** === Navigation bar === */
+&lt;nav class="navigation" aria-label="Navigation"&gt;
+  &lt;div class="brand"&gt;
+    &lt;a href="/" title="Go to the home page"&gt;
+      &lt;img src="/image.png" alt="brand logo" /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  /** Burger menu */
+  &lt;input class="menu-hamburger" type="checkbox" id="menu-hamburger" aria-label="Open the menu"/&gt;
+  &lt;label class="menu-icon" for="menu-hamburger"&gt;
+    &lt;span class="hamburger-icon" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;/label&gt;
+  /** Main menu */
+  &lt;ul class="menu"&gt;
+    &lt;li&gt;&lt;a href="#typography">Typography&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#blockquote">Blockquote&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#buttons">Buttons&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" aria-label="submenu"&gt;Javascript&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#darkMode"&gt;Dark mode&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;li&gt;    
+    /** Dark mode switch */
+      &lt;input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark mode"/&gt;
+        &lt;label for="themeSwitch" class="checkbox-label"&gt;
+          &lt;span class="moon" title="Dark"&gt;&#9789;&lt;/span&gt;
+          &lt;span class="sun" title="Light"&gt;&#10039;&lt;/span&gt;
+          &lt;span class="ball" title="Dark mode"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+      &lt;script type="module" src="/js/themeSwitch.js"&gt;&lt;/script&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+      </code>
+    </pre>
+            </section>
+
+            <!-- Typographie -->
+            <section id="typography" class="section">
+              <h2>Typography</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="row">
+                    <div class="col border">
+                      <h1>Heading 1</h1>
+                      <h2>Heading 2</h2>
+                      <h3>Heading 3</h3>
+                      <h4>Heading 4</h4>
+                      <h5>Heading 5</h5>
+                      <h6>Heading 6</h6>
+                      <p>
+                        Paragraph lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Duis id lacus eu nulla porta sagittis
+                        non nec dui. Vivamus iaculis aliquet diam. Proin eu
+                        ullamcorper metus, at imperdiet ante.
+                      </p>
+                      <p>
+                        This
+                        <mark>marks</mark>
+                        the story of FeatherCSS
+                      </p>
+                      <p>
+                        Add
+                        <strong>
+                          <code>data-theme=&quot;dark or light&quot;</code>
+                        </strong>
+                        to your code to enable dark mode.
+                      </p>
+                    </div>
+                    <div class="col border" dir="rtl">
+                      <h1 class="heading-1">Heading 1</h1>
+                      <h2 class="heading-2">Heading 2</h2>
+                      <h3 class="heading-3">Heading 3</h3>
+                      <h4 class="heading-4">Heading 4</h4>
+                      <h5 class="heading-5">Heading 5</h5>
+                      <h6 class="heading-6">Heading 6</h6>
+                      <p>
+                        Paragraph lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Duis id lacus eu nulla porta sagittis
+                        non nec dui. Vivamus iaculis aliquet diam. Proin eu
+                        ullamcorper metus, at imperdiet ante.
+                      </p>
+                      <p>
+                        This
+                        <mark>marks</mark>
+                        the story of FeatherCSS
+                      </p>
+                      <p>
+                        Add
+                        <strong>
+                          <code>data-theme=&quot;dark or light&quot;</code>
+                        </strong>
+                        to your code to enable dark mode.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <p class="me-2 mt-2">Typography code</p>
+
+                  <pre>
+          <code class="language-html">
+  &lt;h1&gt;Heading 1&lt;/h1&gt;
+  &lt;h2&gt;Heading 2&lt;/h2&gt;
+  &lt;h3&gt;Heading 3&lt;/h3&gt;
+  &lt;h4&gt;Heading 4&lt;/h4&gt;
+  &lt;h5&gt;Heading 5&lt;/h5&gt;
+  &lt;h6&gt;Heading 6&lt;/h6&gt;
+  &lt;p&gt;
+    Paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Duis id lacus eu nulla porta sagittis non nec dui. Vivamus iaculis
+    aliquet diam. Proin eu ullamcorper metus, at imperdiet ante.   
+  &lt;/p&gt;
+  &lt;p&gt;This &lt;mark&gt;marks&lt;/mark&gt; the story of FeatherCSS&lt;/p&gt;
+  &lt;p&gt;
+    Add &lt;strong&gt;&lt;code&gt;data-theme=&quot;dark or light&quot;&lt;/code&gt;&lt;/strong&gt; to your code to enable dark mode.
+  &lt;/p&gt;  
+</code>
+        </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <section class="section" id="margin">
+              <h2>Spacing</h2>
+              <h5>
+                <strong>illaWeight CSS </strong>offers a wide set of
+                responsive margin and padding utility classes, in
+                shorthand notation, to adjust an element's spacing.
+              </h5>
+              <h6>Margins and padding</h6>
+              <p>
+                Assign responsive margin or padding values to an
+                element, or to a single side of it, using the
+                shorthand classes. Each property, all properties at once and
+                the vertical and horizontal axes are covered. The classes
+                build on a default Sass map ranging from 1em to 7em.
+              </p>
+              <h4>Notation</h4>
+              <ul class="clear">
+                <li>
+                  <span class="strong">
+                    <mark>m-</mark>
+                  </span>
+                  for classes that define the margin.
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>p-</mark>
+                  </span>
+                  for classes that define the padding.
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>mt- / pt-</mark>
+                  </span>
+                  for the top margin or padding.
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>mb- / pb-</mark>
+                  </span>
+                  for the bottom margin or padding.
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>ml- / pl-</mark>
+                  </span>
+                  for the left margin or padding.
+                </li>
+                <li>
+                  <span class="strong">
+                    <mark>mr- / pr-</mark>
+                  </span>
+                  for the right margin or padding.
+                </li>
+              </ul>
+              <p>
+                The size ranges from 1 to 7. Mobile-first responsive variants
+                exist per breakpoint: <mark>.mt-md-3</mark>,
+                <mark>.px-sm-2</mark>, <mark>.my-lg-1</mark>…
+              </p>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>Examples:</p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+            <code class="language-css">
+.mt-1{
+  margin-top : 1em;
+}
+.pl-3{
+  padding-left:3em;
+}
+            </code>
+          </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Citation -->
+            <section id="blockquote" class="section">
+              <h2>Blockquote</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="row">
+                    <div class="col border">
+                      <blockquote>This changed my life, literally.</blockquote>
+                    </div>
+                    <div class="col border" dir="rtl">
+                      <blockquote>This changed my life, literally.</blockquote>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+          <code class="language-html">
+&lt;blockquote&gt;This changes my life, literally.&lt;/blockquote&gt;
+          </code>
+        </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Liste -->
+            <section id="list" class="section">
+              <h2>List</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container border">
+                    <ul class="clear">
+                      <li>Categories</li>
+                      <li>Articles</li>
+                      <li>Users</li>
+                    </ul>
+                    <ul>
+                      <li>Waffles</li>
+                      <li>Pancakes</li>
+                    </ul>
+                    <ol>
+                      <li>Pour 100 g of flour into a bowl</li>
+                      <li>Crack 2 eggs into the bowl and mix</li>
+                    </ol>
+
+                    <dl>
+                      <dt>Surface</dt>
+                      <dd>111 m²</dd>
+                      <dt>Bathrooms</dt>
+                      <dd>2</dd>
+                    </dl>
+                    <ul class="reset">
+                      <li>
+                        <a href="#list">Link 1</a>
+                      </li>
+                      <li>
+                        <a href="#list">Link 2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+  <code class="language-html">
+  &lt;ul class="clear"&gt;
+    &lt;li&gt;Categories&lt;/li&gt;
+    &lt;li&gt;Articles&lt;/li&gt;
+    &lt;li&gt;Users&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Waffles&lt;/li&gt;
+    &lt;li&gt;Pancakes&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Pour 100 g of flour into a bowl&lt;/li&gt;
+    &lt;li&gt;Crack 2 eggs into the bowl and mix&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;dl&gt;
+    &lt;dt&gt;Surface&lt;/dt&gt;
+    &lt;dd&gt;111 m²&lt;/dd&gt;
+    &lt;dt&gt;Bathrooms&lt;/dt&gt;
+    &lt;dd&gt;2
+  &lt;/dl&gt;
+    &lt;ul class="reset"&gt;
+      &lt;li&gt;&lt;a href="#list"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#list"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+  </code>
+</pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Boutons -->
+            <section id="buttons" class="section">
+              <h2>Buttons</h2>
+
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container">
+                    <button class="button">Default button</button>
+                    <button class="button button-primary">
+                      Primary button
+                    </button>
+                    <button class="button button-secondary">
+                      Secondary button
+                    </button>
+                    <button class="button button-warning">
+                      Warning button
+                    </button>
+                    <button class="button button-error">Error button</button>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+            <code class="language-html">
+&lt;button class="button"&gt;Default button&lt;/button&gt;
+&lt;button class="button button-priamry"&gt;Primary button&lt;/button&gt;
+&lt;button class="button button-secondary"&gt;Secondary button&lt;/button&gt;
+&lt;button class="button button-warning"&gt;Warning button&lt;/button&gt;
+&lt;button class="button button-error"&gt;Error button&lt;/button&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Badge -->
+            <section id="badge" class="section">
+              <h2>Badge</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <p>
+                    <span class="badge badge-primary">Primary</span>
+                    <span class="badge badge-secondary">Secondary</span>
+                    <span class="badge badge-success">Success</span>
+                    <span class="badge badge-warning">Warning</span>
+                    <span class="badge badge-error">Error</span>
+                    <span class="badge badge-muted">Muted</span>
+                    <span class="badge badge-pill badge-primary">Pill</span>
+                  </p>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+            <code class="language-html">
+&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-secondary"&gt;Secondary&lt;/span&gt;
+&lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="badge badge-error"&gt;Error&lt;/span&gt;
+&lt;span class="badge badge-muted"&gt;Muted&lt;/span&gt;
+&lt;span class="badge badge-pill badge-primary"&gt;Pill&lt;/span&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Carte : row / col -->
+            <section class="section" id="card">
+              <!-- Carte : colonne flex -->
+              <h2>Card</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/834/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Title</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Illo blanditiis quod maiores vitae, delectus
+                            ex veritatis velit asperiores dignissimos incidunt
+                            repellendus non veniam excepturi enim cum aliquam.
+                            Voluptatum, perferendis deleniti?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/258/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Title</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Illo blanditiis quod maiores vitae, delectus
+                            ex veritatis velit asperiores dignissimos incidunt
+                            repellendus non veniam excepturi enim cum aliquam.
+                            Voluptatum, perferendis deleniti?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/324/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Title</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Illo blanditiis quod maiores vitae, delectus
+                            ex veritatis velit asperiores dignissimos incidunt
+                            repellendus non veniam excepturi enim cum aliquam.
+                            Voluptatum, perferendis deleniti?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/1002/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Card title</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Card footer reference text</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/852/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Card title</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Card footer reference text</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header">
+                          <img
+                            src="https://picsum.photos/id/579/400/200"
+                            alt="description"
+                          />
+                        </div>
+                        <div class="card-content">
+                          <h3>Card title</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Card footer reference text</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header-text">
+                          <h3>Card title</h3>
+                        </div>
+                        <div class="card-content">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Card footer reference text</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header-text">
+                          <h3>Card title</h3>
+                        </div>
+                        <div class="card-content">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Card footer reference text</div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-header-text">
+                          <h3>Card title</h3>
+                        </div>
+                        <div class="card-content">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laboriosam optio vero velit excepturi nesciunt
+                            non aliquid obcaecati veritatis, voluptatibus a,
+                            quia possimus consequuntur nihil fugit doloremque
+                            nisi harum aspernatur beatae.
+                          </p>
+                        </div>
+                        <div class="card-footer">Card footer reference text</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+  <code class="language-html">
+&lt;div class="card"&gt;
+    &lt;div class="card-header-text"&gt;
+      &lt;h3&gt;card title&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="card-content"&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Laboriosam optio vero velit excepturi nesciunt non aliquid
+        obcaecati veritatis, voluptatibus a, quia possimus
+        consequuntur nihil fugit doloremque nisi harum aspernatur
+        beatae.
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="card-footer"&gt;card footer reference text&lt;/div&gt;
+&lt;/div&gt;
+
+  </code>
+</pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Tableau -->
+            <section id="table" class="preview-section">
+              <h2 class="preview-title">Table</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container mt-1">
+                    <table>
+                      <caption>
+                        List of competitors&nbsp;(<small
+                          >caption at bottom</small
+                        >)
+                      </caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Person</th>
+                          <th scope="col">Field of interest</th>
+                          <th scope="col">Age</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Chris</th>
+                          <td>HTML tables</td>
+                          <td>22</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Dennis</th>
+                          <td>Web accessibility</td>
+                          <td>45</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Sarah</th>
+                          <td>JavaScript frameworks</td>
+                          <td>29</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Karen</th>
+                          <td>Web performance</td>
+                          <td>36</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th scope="row" colspan="2">Average age</th>
+                          <td>33</td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+          <code class="language-html">
+  &lt;table&gt;
+    &lt;caption&gt;
+      List of competitors&nbsp;(&lt;small&gt;caption at bottom&lt;/small&gt;)
+    &lt;/caption&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope="col"&gt;Person&lt;/th&gt;
+        &lt;th scope="col"&gt;Field of interest&lt;/th&gt;
+        &lt;th scope="col"&gt;Age&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Chris&lt;/th&gt;
+        &lt;td&gt;HTML tables&lt;/td&gt;
+        &lt;td&gt;22&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Dennis&lt;/th&gt;
+        &lt;td&gt;Web accessibility&lt;/td&gt;
+        &lt;td&gt;45&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Sarah&lt;/th&gt;
+        &lt;td&gt;JavaScript frameworks&lt;/td&gt;
+        &lt;td&gt;29&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Karen&lt;/th&gt;
+        &lt;td&gt;Web performance&lt;/td&gt;
+        &lt;td&gt;36&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+      &lt;tr&gt;
+        &lt;th scope="row" colspan="2"&gt;Average age&lt;/th&gt;
+        &lt;td&gt;3&lt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tfoot&gt;
+  &lt;/table&gt;
+          </code>
+        </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Formulaire -->
+            <section id="form" class="section">
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container">
+                    <form method="post">
+                      <div class="form">
+                        <!-- Champ de formulaire -->
+                        <p class="form-control">
+                          <label for="username">Username</label>
+                          <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            placeholder="Enter your username"
+                          />
+                          <span class="form-success-message" aria-live="polite"
+                            >Your username is available</span
+                          >
+                        </p>
+                        <p class="form-control">
+                          <label for="password">Password</label>
+                          <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="your password"
+                          />
+                          <span class="form-error-message" aria-live="polite"
+                            >Password too weak</span
+                          >
+                        </p>
+                        <div class="form-control">
+                          <label for="meeting-time">Date</label>
+                          <input
+                            type="datetime-local"
+                            id="meeting-time"
+                            name="meeting-time"
+                            min="2024-11-07T00:00"
+                            max="2030-06-14T00:00"
+                          />
+                        </div>
+                        <!-- Champ de sélection -->
+                        <div class="select">
+                          <label for="pet-select">Choose an animal:</label>
+                          <select name="pets" id="pet-select">
+                            <option value="">
+                              --Choose an option--
+                            </option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                          </select>
+                        </div>
+                        <!-- champ radio -->
+                        <fieldset>
+                          <legend>Choose a maintenance drone:</legend>
+                          <div>
+                            <input
+                              type="radio"
+                              id="huey"
+                              name="drone"
+                              value="huey"
+                              checked
+                            />
+                            <label for="huey">Huey</label>
+                          </div>
+                          <div>
+                            <input
+                              type="radio"
+                              id="dewey"
+                              name="drone"
+                              value="dewey"
+                            />
+                            <label for="dewey">Dewey</label>
+                          </div>
+                          <div>
+                            <input
+                              type="radio"
+                              id="louie"
+                              name="drone"
+                              value="louie"
+                            />
+                            <label for="louie">Louie</label>
+                          </div>
+                        </fieldset>
+                        <!-- champ à cocher -->
+                        <fieldset>
+                          <legend>Choose your monster's features:</legend>
+                          <div>
+                            <input
+                              type="checkbox"
+                              id="scales"
+                              name="scales"
+                              checked
+                            />
+                            <label for="scales">Scales</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="horns" name="horns" />
+                            <label for="horns">Horns</label>
+                          </div>
+                        </fieldset>
+                        <!-- Zone de texte -->
+                        <div class="form-control">
+                          <span class="label-text">Additional comment</span>
+                          <textarea
+                            id="comment"
+                            placeholder="Enter your comment"
+                            rows="3"
+                          ></textarea>
+                        </div>
+                        <!-- champ couleur -->
+                        <p>Choose your monster's colors:</p>
+                        <div>
+                          <input
+                            type="color"
+                            id="head"
+                            name="head"
+                            value="#e66465"
+                          />
+                          <label for="head">Head</label>
+                        </div>
+                        <div>
+                          <input
+                            type="color"
+                            id="body"
+                            name="body"
+                            value="#f6b73c"
+                          />
+                          <label for="body">Body</label>
+                        </div>
+                        <button class="button btn-primary mt-2" type="submit">
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+  <code class="language-html">
+  &lt;div class="container"&gt;
+          &lt;form method="post"&gt;
+            &lt;div class="form"&gt;
+              &lt;p class="form-control"&gt;
+                &lt;label for="name">Username&lt;/label&gt;
+                &lt;input type="text" name="username" id="username" placeholder="Enter your username" /&gt;
+                &lt;span class="form-success-message" aria-live="polite"&gt;
+                Your username is available
+                &lt;/span&gt;
+              &lt;/p&gt;
+
+              &lt;p class="form-control"&gt;
+                &lt;label for="password"&gt;Password&lt;/label&gt;
+                &lt;input type="password" id="password" name="password" placeholder="your password" /&gt;
+                &lt;span class="form-error-message" aria-live="polite"&gt;
+                Password too weak
+                &lt;/span&gt;
+              &lt;/p&gt;
+                 &lt;p class="form-control"&gt;
+                &lt;label for="meeting-time"&gt;Date&lt;/label&gt;
+                &lt;input type="datetime-local" id="meeting-time" name="meeting-time" min="2024-11-07T00:00" max="2030-06-14T00:00" /&gt;
+              &lt;/p&gt;
+              &lt;div class="select"&gt;
+                &lt;label for="pet-select"&gt;Choose an animal:&lt;/label&gt;
+                &lt;select name="pets" id="pet-select"&gt;
+                  &lt;option value=""&gt;--Choose an option--&lt;/option&gt;
+                  &lt;option value="dog"&gt;Dog&lt;/option&gt;
+                  &lt;option value="cat"&gt;Cat&lt;/option&gt;
+                  &lt;option value="hamster"&gt;Hamster&lt;/option&gt;
+                  &lt;option value="parrot"&gt;Parrot&lt;/option&gt;
+                  &lt;option value="spider"&gt;Spider&lt;/option&gt;
+                  &lt;option value="goldfish"&gt;Goldfish&lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+             
+              &lt;fieldset&gt;
+                &lt;legend&gt;Choose a maintenance drone:&lt;/legend&gt;
+                &lt;div&gt;
+                  &lt;input type="radio" id="huey" name="drone"  value="huey" checked /&gt;
+                  &lt;label for="huey"&gt;Huey&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;input type="radio" id="dewey" name="drone" value="dewey" /&gt;
+                  &lt;label for="dewey"&gt;Dewey&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;input type="radio" id="louie" name="drone" value="louie" /&gt;
+                  &lt;label for="louie"&gt;Louie&lt;/label&gt;
+                &lt;/div&gt;
+              &lt;/fieldset&gt;
+           
+              &lt;fieldset&gt;
+                &lt;legend&gt;Choose your monster's features:&lt;/legend&gt;
+                &lt;div&gt;
+                  &lt;input type="checkbox" id="scales" name="scales" checked /&gt;
+                  &lt;label for="scales"&gt;Scales&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                  &lt;input type="checkbox" id="horns" name="horns" /&gt;
+                  &lt;label for="horns"&gt;Horns&lt;/label&gt;
+                &lt;/div&gt;
+              &lt;/fieldset&gt;
+            
+              &lt;div class="form-control"&gt;
+                &lt;span class="label-text"&gt;Additional comment&lt;/span&gt;
+                &lt;textarea id="comment" placeholder="Enter your comment"rows="3"&gt;&lt;/textarea&gt;
+              &lt;/div&gt;
+             
+              &lt;p&gt;Choose your monster's colors:&lt;/p&gt;
+              &lt;div&gt;
+                &lt;input type="color" id="head" name="head" value="#e66465" /&gt;
+                &lt;label for="head"&gt;Head&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div&gt;
+                &lt;input type="color" id="body" name="body" value="#f6b73c" /&gt;
+                &lt;label for="body"&gt;Body&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;button class="button btn-primary mt-2" type="submit"&gt;
+                Submit
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt; 
+  </code>
+</pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Pagination -->
+            <section id="pagination" class="section">
+              <h2>Pagination</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <ul class="pagination">
+                    <li><a href="#pagination">&laquo;</a></li>
+                    <li><a href="#pagination">1</a></li>
+                    <li class="active"><a href="#pagination">2</a></li>
+                    <li><a href="#pagination">3</a></li>
+                    <li class="disabled"><span>&hellip;</span></li>
+                    <li><a href="#pagination">9</a></li>
+                    <li class="disabled"><span>&raquo;</span></li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+            <code class="language-html">
+&lt;ul class="pagination"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;span&gt;&amp;hellip;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;span&gt;&amp;raquo;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <section class="section" id="col">
+              <h2>Columns</h2>
+              <div class="row">
+                <div class="aside">
+                  <h5>Sidebar 30%</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptate, officiis eum at voluptatum, dolores voluptas
+                    eaque omnis ex odit vero, quasi facilis est distinctio
+                    inventore debitis praesentium aut rem dolore!
+                  </p>
+                </div>
+                <div class="content">
+                  <h5>Content 70%</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                    culpa sunt provident reprehenderit vitae esse deserunt non
+                    repellendus vero, fugit et ipsa perferendis repellat
+                    voluptatum quo velit doloremque beatae necessitatibus.
+                  </p>
+                </div>
+              </div>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="row">
+                    <div class="col">
+                      <h5>col</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vitae, vel fugit ut esse nostrum aut blanditiis
+                        id, qui quas quam fuga suscipit vero quod, voluptates
+                        amet quibusdam ipsam consequuntur repellendus!
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h5>col</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vitae, vel fugit ut esse nostrum aut blanditiis
+                        id, qui quas quam fuga suscipit vero quod, voluptates
+                        amet quibusdam ipsam consequuntur repellendus!
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h5>col</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vitae, vel fugit ut esse nostrum aut blanditiis
+                        id, qui quas quam fuga suscipit vero quod, voluptates
+                        amet quibusdam ipsam consequuntur repellendus!
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h5>col</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Vitae, vel fugit ut esse nostrum aut blanditiis
+                        id, qui quas quam fuga suscipit vero quod, voluptates
+                        amet quibusdam ipsam consequuntur repellendus!
+                      </p>
+                    </div>
+                    <div class="half">
+                      <h5>Half 50%</h5>
+                      <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Sapiente ut accusantium debitis ullam possimus
+                        amet ipsam illum sint voluptatibus nemo similique
+                        tempora, cupiditate recusandae. Delectus quis temporibus
+                        cumque tempora vel.
+                      </p>
+                    </div>
+                    <div class="third">
+                      <h5>Third 33%</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Enim, aut repellendus blanditiis tempora corrupti illo.
+                        Aliquam laboriosam eum voluptatem illum sint eligendi
+                        vitae molestias? Soluta alias hic fugit minima!
+                        Perspiciatis?
+                      </p>
+                    </div>
+                    <div class="fourth">
+                      <h5>Quarter 25%</h5>
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Error sequi accusantium inventore facilis, aperiam
+                        impedit eius? Minima id veritatis totam? Nisi
+                        reprehenderit perspiciatis corporis quia, molestias
+                        pariatur dolore eum dolorem?
+                      </p>
+                    </div>
+                    <div class="fifth">
+                      <h5>Fifth 20%</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi nobis dolor soluta officia cum nam eum vitae
+                        quas nihil, ut autem facilis. Repudiandae magnam, labore
+                        modi omnis doloribus corrupti quo?
+                      </p>
+                    </div>
+                    <div class="sixth">
+                      <h5>Sixth 16%</h5>
+                      <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Eaque explicabo deleniti totam dolor eveniet porro
+                        deserunt incidunt minus odio praesentium placeat, quam
+                        sequi, corporis blanditiis quae id aspernatur cupiditate
+                        velit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+            <code class="language-html">
+&lt;div class="row"&gt;
+  &lt;div class="aside"&gt;
+    &lt;h5&gt;Sidebar 30%&lt;/h5&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officiis eum at voluptatum, dolores
+      voluptas eaque omnis ex odit vero, quasi facilis est distinctio inventore debitis praesentium aut rem
+      dolore!&lt;/p&gt;
+  &lt;/div>
+  &lt;div class="content"&gt;
+    &lt;h5>Content 70%&lt;/h5&gt;
+    &lt;p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem culpa sunt provident reprehenderit vitae
+      esse deserunt non repellendus vero, fugit et ipsa perferendis repellat voluptatum quo velit doloremque
+      beatae necessitatibus.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col"&gt;
+    &lt;h5&gt;col&lt;/h5&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, vel fugit ut esse nostrum aut
+      blanditiis id, qui quas quam fuga suscipit vero quod, voluptates amet quibusdam ipsam consequuntur
+      repellendus!&lt;/&gt;>
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    &lt;h5&gt;col&lt;/h5&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, vel fugit ut esse nostrum aut
+      blanditiis id, qui quas quam fuga suscipit vero quod, voluptates amet quibusdam ipsam consequuntur
+      repellendus!&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    &lt;h5&gt;col&lt;/h5&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, vel fugit ut esse nostrum aut
+      blanditiis id, qui quas quam fuga suscipit vero quod, voluptates amet quibusdam ipsam consequuntur
+      repellendus!&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="col"&gt;
+    &lt;h5&gt;col&lt;/h5&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, vel fugit ut esse nostrum aut
+      blanditiis id, qui quas quam fuga suscipit vero quod, voluptates amet quibusdam ipsam consequuntur
+      repellendus!&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="half"&gt;
+    &lt;h5&gt; Half 50%&lt;/h5&gt;
+    &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente ut accusantium debitis ullam
+      possimus amet ipsam illum sint voluptatibus nemo similique tempora, cupiditate recusandae. Delectus quis
+      temporibus cumque tempora vel.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="third"&gt;
+    &lt;h5&gt;Third 33%&lt;/h5&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aut repellendus blanditiis tempora
+      corrupti illo. Aliquam laboriosam eum voluptatem illum sint eligendi vitae molestias? Soluta alias hic
+      fugit minima! Perspiciatis?&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="fourth"&gt;
+    &lt;h5&gt;Quarter 25%&lt;/h5&gt;
+    &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error sequi accusantium inventore facilis,
+      aperiam impedit eius? Minima id veritatis totam? Nisi reprehenderit perspiciatis corporis quia,
+      molestias pariatur dolore eum dolorem?&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="fifth"&gt;
+    &lt;h5&gt;Fifth 20%&lt;/h5&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nobis dolor soluta officia cum nam eum
+      vitae quas nihil, ut autem facilis. Repudiandae magnam, labore modi omnis doloribus corrupti quo?&lt;/p&gt;
+  &lt;div&gt;
+  &lt;div class="sixth"&gt;
+    &lt;h5&gt;Sixth 16%&lt;h5&gt;
+    &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque explicabo deleniti totam dolor eveniet
+      porro deserunt incidunt minus odio praesentium placeat, quam sequi, corporis blanditiis quae id
+      aspernatur cupiditate velit.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Grille responsive -->
+            <section id="grid" class="section">
+              <h2>Responsive grid</h2>
+              <p>
+                Mobile-first 12-column grid: container <mark>.grid</mark> +
+                columns <mark>col-*</mark>. The responsive classes only
+                apply above their breakpoint:
+                <mark>sm</mark> ≥ 48rem, <mark>md</mark> ≥ 64rem,
+                <mark>lg</mark> ≥ 75rem.
+              </p>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="grid mb-2">
+                    <div class="col-12 col-md-8 border">col-12 col-md-8</div>
+                    <div class="col-12 col-md-4 border">col-12 col-md-4</div>
+                    <div class="col-6 col-md-4 col-lg-2 border">
+                      col-6 col-md-4 col-lg-2
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2 border">
+                      col-6 col-md-4 col-lg-2
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-8 border">
+                      col-12 col-md-4 col-lg-8
+                    </div>
+                    <div class="col-12 col-lg-6 border">col-12 col-lg-6</div>
+                    <div class="col-12 col-lg-6 border">col-12 col-lg-6</div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+            <code class="language-html">
+&lt;div class="grid"&gt;
+  &lt;div class="col-12 col-md-8"&gt;Main&lt;/div&gt;
+  &lt;div class="col-12 col-md-4"&gt;Sidebar&lt;/div&gt;
+  &lt;div class="col-6 col-md-4 col-lg-2"&gt;1/6 on mobile&lt;/div&gt;
+  ...
+&lt;/div&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Utilitaires -->
+            <section id="utilities" class="section">
+              <h2>Utilities</h2>
+              <p>
+                Responsive utility classes: display, typography, colors,
+                borders and spacing with
+                <mark>sm/md/lg</mark> variants (mobile-first).
+              </p>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container border mb-2">
+                    <p class="mt-md-3 text-primary">
+                      text-primary + mt-md-3 (margin only ≥ md)
+                    </p>
+                    <p class="bg-secondary text-white text-center">
+                      bg-secondary + text-center
+                    </p>
+                    <p class="text-truncate">
+                      Automatically truncated text: Lorem ipsum dolor sit amet
+                      consectetur adipiscing elit, sed do eiusmod tempor ut
+                      labore et dolore magna aliqua.
+                    </p>
+                    <p class="rounded-3 shadow d-none d-md-block">
+                      Visible only ≥ md: d-none + d-md-block
+                    </p>
+                    <p>
+                      <span class="rounded border border-primary px-2 py-1"
+                        >border border-primary</span
+                      >
+                      <span class="rounded-circle bg-error text-white"
+                        >&nbsp;§&nbsp;</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+            <code class="language-html">
+&lt;p class="mt-md-3"&gt;Margin applied only from md&lt;/p&gt;
+&lt;p class="bg-secondary text-center"&gt;Background + centering&lt;/p&gt;
+&lt;p class="text-truncate"&gt;Automatic ellipsis&lt;/p&gt;
+&lt;p class="d-none d-md-block"&gt;Displayed from md&lt;/p&gt;
+&lt;span class="rounded border border-primary px-2 py-1"&gt;Pill&lt;/span&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Couleurs & accessibilité -->
+            <section id="colors" class="section">
+              <h2>Colors &amp; accessibility</h2>
+              <p>
+                Palette compliant with <mark>WCAG 2.1 AA</mark>: text ≥ 4.5:1,
+                components ≥ 3:1, verified by automated audit in light and
+                dark. Two families of variables:
+              </p>
+              <ul>
+                <li>
+                  <strong>“Text” shades</strong> — themed (dark in
+                  light, light in dark): <code>--color-primary</code>,
+                  <code>--color-success</code>, <code>--color-danger</code>,
+                  <code>--color-error</code>, <code>--color-link</code> and
+                  derivatives. The <code>-focus</code> suffix means hover and focus:
+                  darker in light, lighter in dark.
+                </li>
+                <li>
+                  <strong>Constant solids</strong> — backgrounds with white
+                  text guaranteed ≥ 4.5:1 in any theme:
+                  <code>--color-primary-solid</code>,
+                  <code>--color-success-solid</code>,
+                  <code>--color-warning-solid</code>,
+                  <code>--color-error-solid</code>,
+                  <code>--color-muted-solid</code>,
+                  <code>--color-secondary</code>.
+                </li>
+              </ul>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container border mb-2">
+                    <p>
+                      <span
+                        class="rounded"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-primary-solid);
+                        "
+                        title="primary-solid · light #0477BE · dark #059CFA"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-success-solid);
+                        "
+                        title="success-solid · #037A87"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-warning-solid);
+                        "
+                        title="warning-solid · #B0590C"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-error-solid);
+                        "
+                        title="error-solid · #DA0B6C"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          margin-right: 0.35rem;
+                          background: var(--color-secondary);
+                        "
+                        title="secondary · #4D4D4D (constant)"
+                      ></span
+                      ><span
+                        class="rounded"
+                        style="
+                          display: inline-block;
+                          width: 1.6rem;
+                          height: 1.6rem;
+                          vertical-align: -0.3rem;
+                          background: var(--color-highlight);
+                        "
+                        title="highlight · #B4F0FE (constant)"
+                      ></span>
+                    </p>
+                    <p class="bg-primary text-white">
+                      bg-primary + white text (constant solid)
+                    </p>
+                    <p class="text-primary">
+                      text-primary: ≥ 4.5:1 in both themes
+                    </p>
+                    <p>
+                      <span class="badge badge-secondary">secondary</span>
+                      <span class="badge badge-success">success</span>
+                      <span class="badge badge-warning">warning</span>
+                      <span class="badge badge-error">error</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+            <code class="language-html">
+&lt;!-- text shades (themed, AA 4.5 on the page) --&gt;
+&lt;p class="text-primary"&gt;Primary text AA light + dark&lt;/p&gt;
+&lt;p class="text-muted"&gt;Muted = gray-3 AA by default&lt;/p&gt;
+&lt;a href="#"&gt;Link: automatically themed shade&lt;/a&gt;
+&lt;!-- constant solid backgrounds + white text --&gt;
+&lt;p class="bg-primary text-white"&gt;Constant solid&lt;/p&gt;
+&lt;span class="badge badge-warning"&gt;Guaranteed white&lt;/span&gt;
+&lt;!-- constant white and canvas text: --&gt;
+&lt;span class="text-white"&gt;--color-white&lt;/span&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-10">
+                  <table>
+                    <caption>
+                      Color variables — hex value per theme
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>Variable</th>
+                        <th>Light</th>
+                        <th>Dark</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>--color-primary</code></td>
+                        <td><code>#0477BE</code></td>
+                        <td><code>#059CFA</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-primary-focus</code></td>
+                        <td><code>#035E96</code></td>
+                        <td><code>#23A8FB</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-success</code></td>
+                        <td><code>#037A87</code></td>
+                        <td><code>#04A7B9</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-success-focus</code></td>
+                        <td><code>#02565F</code></td>
+                        <td><code>#05CBE1</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-danger</code></td>
+                        <td><code>#B0590C</code></td>
+                        <td><code>#EA7610</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-danger-focus</code></td>
+                        <td><code>#8A460A</code></td>
+                        <td><code>#F08628</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-error</code></td>
+                        <td><code>#DA0B6C</code></td>
+                        <td><code>#F65AA3</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-error-focus</code></td>
+                        <td><code>#B30959</code></td>
+                        <td><code>#F65AA3</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-link-visited</code></td>
+                        <td><code>#2773BE</code></td>
+                        <td><code>#5699DC</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-secondary</code> (constant)</td>
+                        <td><code>#4D4D4D</code></td>
+                        <td><code>#4D4D4D</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>--color-border</code></td>
+                        <td><code>#8C8C8C</code></td>
+                        <td><code>#B5B5B5</code></td>
+                      </tr>
+                      <tr>
+                        <td><code>.text-muted</code> (gray-3)</td>
+                        <td><code>#737373</code></td>
+                        <td><code>#DBDBDB</code></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>--color-white</code> /
+                          <code>--color-link-text</code> (constants)
+                        </td>
+                        <td><code>#FFFFFF</code></td>
+                        <td><code>#000000</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <!-- Accessibilité -->
+            <section id="a11y" class="section">
+              <h2>Accessibility</h2>
+              <p>
+                The framework automatically applies the
+                <mark>WCAG 2.1 AA</mark> criteria: audited palette (colors and
+                contrasts), visible keyboard focus
+                (<code>:focus-visible</code>), touch targets ≥ 24px,
+                animation disabled when <code>prefers-reduced-motion</code>.
+              </p>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="container border mb-2">
+                    <p>
+                      The text below is invisible on screen but read by
+                      screen readers:
+                      <span class="sr-only"
+                        >(message only read by screen readers)</span
+                      >
+                    </p>
+                    <p>
+                      <a href="#a11y">“Bare” content link</a> — recognized by
+                      its underline, not only by its color.
+                    </p>
+                    <p>An icon button always has an accessible name:</p>
+                    <pre>
+<code class="language-html">&lt;button class="btn" aria-label="Close"&gt; &lt;i class="ti ti-x"&gt;&lt;/i&gt; &lt;/button&gt;</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre>
+            <code class="language-html">
+&lt;span class="sr-only"&gt;Sorted column: ascending&lt;/span&gt;
+&lt;button class="sr-only-focusable" aria-label="Menu"&gt;…&lt;/button&gt;
+
+&lt;!-- alerte : role="alert" + aria-live posés par alertMessage.js,
+     fermeture clavier (Entrée/Espace) + pause au survol --&gt;
+
+&lt;!-- modal : piège à focus + Échap gérés par interactions.js --&gt;
+
+&lt;!-- tabs : role="tablist/tab/tabpanel" + flèches/Orig/Fin
+     injectés par interactions.js --&gt;
+
+&lt;!-- thème : role="switch" + Entrée/Espace si le toggle
+     n'est pas un &lt;input&gt; natif (themeSwitch.js) --&gt;
+            </code>
+          </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+            <section id="social" class="section">
+              <h2>Social icons</h2>
+              <!-- Groupe de réseaux sociaux -->
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div class="socials">
+                    <a href="#" title="Follow us on Facebook">
+                      <i class="ti ti-brand-facebook"></i>
+                    </a>
+                    <a href="#" title="Follow us on Twitter">
+                      <i class="ti ti-brand-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Follow us on Dribbble">
+                      <i class="ti ti-brand-dribbble" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Follow us on Vimeo">
+                      <i class="ti ti-brand-vimeo" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Follow us on Pinterest">
+                      <i class="ti ti-brand-pinterest" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Follow us on Instagram">
+                      <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="Follow us on LinkedIn">
+                      <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <pre class="mt-1">
+  <code class="language-html">
+ &lt;div class="socials"&gt;
+    &lt;a href="#" title="Follow us on Facebook"&gt;
+      &lt;i class="ti-brands ti-facebook" aria-hidden="true">&lt;/i&gt;
+    &lt;/a&gt;
+&lt;/div&gt;  
+ </code>
+</pre>
+                </div>
+              </div>
+
+              <!-- /groupe de réseaux sociaux -->
+            </section>
+            <hr class="hr-style" />
+            <!-- Portfolio -->
+            <section id="portfolio" class="section">
+              <h2>Portfolio</h2>
+              <div class="docs-demo grid">
+                <div class="col-12 col-md-6">
+                  <div>
+                    <ul class="portfolio-menu">
+                      <li class="current" data-target="all">All</li>
+                      <li data-target="landscape">Landscape</li>
+                      <li data-target="architect">Architecture</li>
+                      <li data-target="sky">Sky</li>
+                      <li data-target="divers">Miscellaneous</li>
+                    </ul>
+                    <div class="portfolio-item">
+                      <div class="card" data-item="landscape">
+                        <img
+                          src="https://picsum.photos/id/12/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="divers">
+                        <img
+                          src="https://picsum.photos/id/31/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="sky">
+                        <img
+                          src="https://picsum.photos/id/38/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="landscape">
+                        <img
+                          src="https://picsum.photos/id/46/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="divers">
+                        <img
+                          src="https://picsum.photos/id/73/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="architect">
+                        <img
+                          src="https://picsum.photos/id/78/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="divers">
+                        <img
+                          src="https://picsum.photos/id/80/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="sky">
+                        <img
+                          src="https://picsum.photos/id/383/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="architect">
+                        <img
+                          src="https://picsum.photos/id/444/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="landscape">
+                        <img
+                          src="https://picsum.photos/id/443/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="male">
+                        <img
+                          src="https://picsum.photos/id/25/600"
+                          alt="description"
+                        />
+                      </div>
+                      <div class="card" data-item="architect">
+                        <img
+                          src="https://picsum.photos/id/142/600"
+                          alt="description"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <script type="module" src="/js/portfolio.js"></script>
+
+                  <pre class="mt-1">
+          <code class="language-html">
+ &lt;div&gt;
+  &lt;ul class="portfolio-menu"&gt;
+    &lt;li class="current" data-target="all"&gt;All&lt;/li&gt;
+    &lt;li data-target="landscape"&gt;Landscape&lt;/li&gt;
+    &lt;li data-target="architect"&gt;Architecture&lt;/li&gt;
+    &lt;li data-target="sky"&gt;Sky&lt;/li&gt;
+    &lt;li data-target="divers"&gt;Miscellaneous&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="portfolio-item"&gt;
+    &lt;div class="card" data-item="landscape"&gt;
+      &lt;img src="https://picsum.photos/id/12/600" alt="description" /&gt;
+    &lt;/div&gt;
+    &lt;div class="card" data-item="divers"&gt;
+      &lt;img src="https://picsum.photos/id/31/600" alt="description" /&gt;
+    &lt;/div&gt;
+    &lt;div class="card" data-item="sky"&gt;
+      &lt;img src="https://picsum.photos/id/38/600" alt="description" /&gt;
+    &lt;/div&gt;
+    &lt;div class="card" data-item="landscape"&gt;
+      &lt;img src="https://picsum.photos/id/46/600" alt="description" /&gt;
+    &lt;/div&gt; 
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code>
+        </pre>
+                </div>
+              </div>
+            </section>
+            <hr class="hr-style" />
+
+            <!-- Pied de page -->
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>
+          <a
+            property="dct:title"
+            rel="cc:attributionURL"
+            href="https://github.com/jm-holland/illaweight.git"
+            >illaWeight CSS</a
+          >
+          by
+          <a
+            rel="cc:attributionURL dct:creator"
+            property="cc:attributionName"
+            href="https://illaweb.fr"
+            >jm Holland</a
+          >
+          under
+          <a
+            href="https://github.com/jm-holland/illaweight/-/blob/main/LICENSE"
+            target="_blank"
+            rel="license noopener noreferrer"
+            >MIT license
+          </a>
+        </p>
+        <a href="#top" class="top-btn">
+          <i class="ti ti-arrow-up"></i>
+        </a>
+      </footer>
+    </wrapper>
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/js/docs.js"></script>
+    <script type="module" src="/js/scrollToTop.js"></script>
+  </body>
+</html>
