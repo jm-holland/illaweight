@@ -1,15 +1,15 @@
 /**
-*  illaWeightCss v1.0.0
+*  illaWeightCss v1.2.0
 *  https://illaweight.illaweb.eu
 *
-*  Copyright(c) 2024 jm Holland
+*  Copyright(c) 2026 jm Holland
 *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
 */
 
 @use "./layout/normalize";
-@use"./base/base";
-@use'./base/utilities';
-@use'./base/grid';
-@use'./layout/layout';
-@use'./layout/docs';
-@use'./layout/landing';
+@use "./base/base";
+@use "./base/utilities";
+@use "./base/grid";
+@use "./layout/layout";
+@use "./layout/docs";
+@use "./layout/landing";

@@ -14,7 +14,10 @@
     color: var(--color-gray-1);
     box-shadow: var(--color-shadow);
     cursor: pointer;
-
+    a {
+      color: var(--color-gray-7);
+      text-decoration: none;
+    }
     &:hover,
     &.current {
       background: var(--color-link);

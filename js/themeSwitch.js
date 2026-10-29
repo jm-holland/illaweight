@@ -2,7 +2,7 @@
  *  illaWeightCss v1.2.0
  *  https://illaweight.illaweb.eu
  *
- *  Copyright(c) 2024 jm Holland
+ *  Copyright(c) 2026 jm Holland
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
@@ -72,36 +72,36 @@ function switchTheme(toggleSwitch) {
 
 // Initialiser l'élément de bascule du thème
 function initThemeToggleSwitch(switchButtonSelector) {
-    // Récupérer l'interrupteur de bascule du thème
-    const toggleSwitch = document.querySelector(switchButtonSelector);
-    if (getThemeAttribute() === themes.dark) {
-        setSwitch(true, toggleSwitch);
-    }
+  // Récupérer l'interrupteur de bascule du thème
+  const toggleSwitch = document.querySelector(switchButtonSelector);
+  if (getThemeAttribute() === themes.dark) {
+    setSwitch(true, toggleSwitch);
+  }
 
-    /* Cas d'un interrupteur non natif (<input type="checkbox">) : sémantique
-       explicite + activation clavier (WCAG 2.1.1). */
-    if (!toggleSwitch.matches("input, button, a")) {
-        if (!toggleSwitch.hasAttribute("role")) {
-            toggleSwitch.setAttribute("role", "switch");
-        }
-        if (!toggleSwitch.hasAttribute("aria-label")) {
-            toggleSwitch.setAttribute("aria-label", isEnPage ? "Dark theme" : "Thème sombre");
-        }
-        toggleSwitch.setAttribute("tabindex", "0");
-        toggleSwitch.addEventListener("keydown", (event) => {
-            if (event.key === "Enter" || event.key === " " || event.key === "Spacebar") {
-                event.preventDefault();
-                event.target.click();
-            }
-        });
+  /* Cas d'un interrupteur non natif (<input type="checkbox">) : sémantique
+     explicite + activation clavier (WCAG 2.1.1). */
+  if (!toggleSwitch.matches("input, button, a")) {
+    if (!toggleSwitch.hasAttribute("role")) {
+      toggleSwitch.setAttribute("role", "switch");
     }
+    if (!toggleSwitch.hasAttribute("aria-label")) {
+      toggleSwitch.setAttribute("aria-label", isEnPage ? "Dark theme" : "Thème sombre");
+    }
+    toggleSwitch.setAttribute("tabindex", "0");
+    toggleSwitch.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " " || event.key === "Spacebar") {
+        event.preventDefault();
+        event.target.click();
+      }
+    });
+  }
 
-    // Ajouter l'événement de clic à l'interrupteur de thème
-    toggleSwitch.addEventListener(
-        "click",
-        () => switchTheme(toggleSwitch),
-        false
-    );
+  // Ajouter l'événement de clic à l'interrupteur de thème
+  toggleSwitch.addEventListener(
+    "click",
+    () => switchTheme(toggleSwitch),
+    false
+  );
 }
 
 function initTheme() {

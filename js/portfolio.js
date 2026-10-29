@@ -2,7 +2,7 @@
  *  illaWeightCss v1.2.0
  *  https://illaweight.illaweb.eu
  *
- *  Copyright(c) 2024 jm Holland
+ *  Copyright(c) 2026 jm Holland
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
