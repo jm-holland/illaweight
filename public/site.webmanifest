@@ -1,7 +1,7 @@
 {
   "name": "illaWeight CSS",
   "short_name": "illaWeight",
-  "description": "Framework CSS minimaliste, dark mode ready",
+  "description": "Framework CSS minimaliste, prêt pour le mode sombre",
   "start_url": "https://illaweight.illaweb.eu/",
   "display": "standalone",
   "background_color": "#fafafa",

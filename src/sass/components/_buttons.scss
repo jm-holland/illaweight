@@ -95,7 +95,7 @@
     transform: translateX(1.125rem);
 }
 
-/* === Création des couleurs des buttons ===*/
+/* === Création des couleurs des boutons ===*/
 @mixin button($name, $color) {
     $hover-color: color.scale($color, $lightness: -28%);
 

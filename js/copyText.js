@@ -6,7 +6,7 @@
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
-/** === Copy text === */
+/** === Copie du texte === */
 function add_icon() {
   let iconCopy = document.createElement("i");
   iconCopy.classList.add("bi", "bi-clipboard");
@@ -29,7 +29,7 @@ function copyText() {
         navigator.clipboard.writeText(copyVal);
         this.getElementsByTagName("i")[0].classList.remove("bi-clipboard");
         this.getElementsByTagName("i")[0].classList.add("bi-clipboard-check");
-        this.getElementsByTagName("i")[0].append("  copy");
+        this.getElementsByTagName("i")[0].append("  copié");
         setTimeout(() => {
           this.getElementsByTagName("i")[0].classList.remove(
             "bi-clipboard-check"
@@ -39,7 +39,7 @@ function copyText() {
         }, 1500);
       });
     } catch (e) {
-      alert("an error has occurred !");
+      alert("Une erreur est survenue !");
     }
   });
   add_icon();

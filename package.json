@@ -1,7 +1,7 @@
 {
  "name": "illaweightcss",
  "version": "1.2.0",
- "description": "illaWeightCss is a Dark Mode ready minimalist CSS Framework.",
+ "description": "illaWeightCss, framework CSS minimaliste prêt pour le mode sombre.",
  "type": "module",
  "author": "jm Holland",
  "license": "MIT",

@@ -107,21 +107,21 @@
         }
     }
 
-    /* Hide Dropdowns by Default */
+    /* Masquer les sous-menus (dropdowns) par défaut */
     ul ul {
         display: none;
         position: absolute;
         top: 100%;
     }
 
-    /* Display Dropdowns on Hover and keyboard focus */
+    /* Afficher les sous-menus au survol et au focus clavier */
     ul li:hover>ul,
     ul li:focus-within>ul {
         display: block;
         background-color: var(--color-background);
     }
 
-    /* Dropdown pinned open by click (class .open, voir js/menu_burger.js) */
+    /* Sous-menu épinglé ouvert au clic (classe .open, voir js/menu_burger.js) */
     ul li.open>ul {
         display: block;
         background-color: var(--color-background);
@@ -131,7 +131,7 @@
         content: " \0025B4";
     }
 
-    /* First Tier Dropdown */
+    /* Premier niveau de sous-menu */
     ul ul li {
         width: 10.625rem;
         float: none;
@@ -147,7 +147,7 @@
         }
     }
 
-    /* Second, Third and more Tiers	*/
+    /* Deuxième, troisième et niveaux suivants */
     ul ul ul li {
         position: relative;
         top: -3.75rem;
@@ -155,7 +155,7 @@
         background-color: var(--color-background);
     }
 
-    /** Hamburger menu */
+    /** Menu hamburger */
 
     .menu-hamburger,
     .menu-icon {

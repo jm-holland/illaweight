@@ -23,7 +23,7 @@
   }
 }
 
-/* portfolio items*/
+/* éléments du portfolio */
 .portfolio-item {
   display: flex;
   flex-flow: row wrap;
@@ -59,7 +59,7 @@
   }
 }
 
-/* Media screen */
+/* Requêtes média (responsive) */
 @include responsive("medium") {
   .portfolio-item {
     .card {

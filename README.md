@@ -1,36 +1,44 @@
 # illaWeightCss
 
-A simple **Dark Mode ready** minimalist CSS framework based on HTML and CSS
-elements according to the [Mozilla](https://developer.mozilla.org/fr/)
-documentation — une grille responsive 12 colonnes, des utilitaires et des
-composants interactifs (modal, tabs, accordion), le tout dans **~10 kB gzip**.
+Un framework CSS minimaliste **prêt pour le mode sombre**, fondé sur les
+éléments HTML et CSS de la
+[documentation Mozilla](https://developer.mozilla.org/fr/) — une grille
+responsive 12 colonnes, des utilitaires et des composants interactifs
+(modale, onglets, accordéon), le tout dans **~10 kB gzip**.
 
 - Site & documentation : <https://illaweight.illaweb.eu>
 - Licence : [MIT](./LICENSE)
 
 ![logo](public/illaWeight.png)
 
-## Features
+## Fonctionnalités
 
-**illaWeightCss** is a starting point for every website or web app. We take
-care of all the CSS work that every site needs without making it look
-cookie-cutter:
+**illaWeightCss** est un point de départ pour tout site ou application web.
+Nous nous chargeons de tout le travail CSS dont un site a besoin, sans pour
+autant lui donner un aspect « tout fait » :
 
-- A responsive flex grid that can be customized to your needs.
-- A solid base built on [Normalize.css](https://necolas.github.io/normalize.css/)
-  to fix cross-browser compatibility issues.
-- Consistently styled buttons that work with `<a>` and `<button>` elements.
-- Styles for vertical and horizontal menus, including support for dropdown menus.
-- Useful form alignments that look great on all screen sizes.
-- Various common table styles.
-- Dark mode toggle built in ([`data-theme`](https://illaweight.illaweb.eu/scripts.html#darkMod)).
-- Couleurs **conformes WCAG 2.1 AA** en light et dark (texte ≥ 4.5:1, UI ≥ 3:1) :
-  teintes « texte » thématisées + fonds « solides » constants à texte blanc garanti.
-- A11y intégrée : focus clavier visible, utilitaire `.sr-only`, alertes ARIA,
-  focus trap modal, tabs au clavier, animation coupée si l'utilisateur la refuse.
-- Interactive components via `data-attributes` — no JS framework required.
-- An extremely minimalist look that is super-easy to customize.
-- Responsive by default, with a non-responsive option.
+- Une grille flex responsive que vous pouvez adapter à vos besoins.
+- Une base solide construite sur
+  [Normalize.css](https://necolas.github.io/normalize.css/) pour corriger les
+  incompatibilités entre navigateurs.
+- Des boutons au style homogène, compatibles avec les éléments `<a>` et
+  `<button>`.
+- Des styles de menus verticaux et horizontaux, avec prise en charge des
+  sous-menus déroulants.
+- Des alignements de formulaires utiles, agréables sur toutes les tailles
+  d'écran.
+- Divers styles de tableaux courants.
+- Bascule du mode sombre intégrée ([`data-theme`](https://illaweight.illaweb.eu/scripts.html#darkMod)).
+- Couleurs **conformes WCAG 2.1 AA** en clair et en sombre (texte ≥ 4.5:1,
+  UI ≥ 3:1) : teintes « texte » thématisées + fonds « solides » constants à
+  texte blanc garanti.
+- Accessibilité intégrée : focus clavier visible, utilitaire `.sr-only`,
+  alertes ARIA, piège à focus de la modale, onglets au clavier, animation
+  coupée si l'utilisateur la refuse.
+- Composants interactifs via `data-attributes` — aucune bibliothèque JS
+  requise.
+- Un look extrêmement minimaliste, super facile à personnaliser.
+- Responsive par défaut, avec une option non responsive.
 
 ## Installation
 
@@ -104,13 +112,13 @@ npm install illaweightcss
 </html>
 ```
 
-## Color Reference
+## Référence des couleurs
 
 Palette **WCAG 2.1 AA** : les teintes « texte » varient selon le thème
-(sombrelight / claire dark), les **solides** restent constants pour garantir
+(sombre / clair), les **solides** restent constants pour garantir
 un texte blanc ≥ 4.5:1 partout (badges, fonds `bg-*`, skip-link, pagination).
 
-| Variable                        | Light (texte/fond) | Dark              |
+| Variable                        | Clair (texte/fond)  | Sombre            |
 | ------------------------------- | ------------------- | ----------------- |
 | `--color-primary` · `-solid`    | ![#0477BE](https://placehold.co/15/0477BE/0477BE) `#0477BE` | ![#059CFA](https://placehold.co/15/059CFA/059CFA) `#059CFA` |
 | `--color-primary-focus`         | ![#035E96](https://placehold.co/15/035E96/035E96) `#035E96` | ![#23A8FB](https://placehold.co/15/23A8FB/23A8FB) `#23A8FB` |
@@ -133,48 +141,48 @@ un texte blanc ≥ 4.5:1 partout (badges, fonds `bg-*`, skip-link, pagination).
 | ------------------------- | ----------------------------------------------- |
 | `illaWeightCss(.min).css` | bundle CSS unique (polices incluses en relatif) |
 | `js/alertMessage.js`      | notifications animées                           |
-| `js/interactions.js`      | API `data-attributes` modal / tabs / accordion  |
+| `js/interactions.js`      | API `data-attributes` modale / onglets / accordéon |
 | `js/menu_burger.js`       | menu hamburger + sous-menus ouverts au clic     |
 | `js/portfolio.js`         | léger filtrage de grille portfolio              |
 | `js/scrollToTop.js`       | bouton retour en haut                           |
-| `js/themeSwitch.js`       | bascule dark / light persistée                  |
+| `js/themeSwitch.js`       | bascule mode sombre / clair persistée          |
 | `fonts/`                  | Comfortaa, Manjari, Quicksand + Tabler Icons    |
 
 Documentation complète des classes et des scripts :
 <https://illaweight.illaweb.eu>
 
-## Screenshots
+## Captures d'écran
 
-![App Screenshot](public/screenshot.png)
+![Capture d'écran de l'application](public/screenshot.png)
 
-## test on browsers
+## Testé sur les navigateurs
 
 ![Brave](https://img.shields.io/badge/Brave-FB542B?style=for-the-badge&logo=Brave&logoColor=white)
 ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white)
 ![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
 ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
 
-## design logo with
+## Logo conçu avec
 
 ![Inkscape](https://img.shields.io/badge/Inkscape-e0e0e0?style=for-the-badge&logo=inkscape&logoColor=080A13)
 ![Gimp Gnu Image Manipulation Program](https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF)
 
-## Exemple code
+## Exemples de code
 
 ![CodePen](https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white)
 
-## Developed with
+## Développé avec
 
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![VSCodium](https://img.shields.io/badge/VSCodium-2F80ED?style=for-the-badge&logo=VSCodium&logoColor=0023A3)
 ![Sass](https://img.shields.io/badge/sass-hotpink.svg?style=for-the-badge&logo=Sass&logoColor=white)
 
-## languages
+## Langages
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-## Operating OS
+## Système d'exploitation
 
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)

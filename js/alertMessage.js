@@ -6,7 +6,7 @@
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
-/** === alert Message === */
+/** === Message d'alerte === */
 
 const alert = document.querySelector(".alert");
 const closeIcon = document.querySelector(".alert-close");

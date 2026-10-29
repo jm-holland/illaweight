@@ -1,7 +1,7 @@
 @use'../utils' as *;
 @use'sass:color';
 
-/** === Alert message ===*/
+/** === Message d'alerte ===*/
 .alert {
     position: fixed;
     top: 8vh;
@@ -115,7 +115,7 @@
         }
 
         .text-1 {
-            /* titre en contraste max sur le panneau teinté (AA 4.5 light+dark ;
+            /* titre en contraste max sur le panneau teinté (AA 4.5 mode clair + mode sombre ;
                l'accent statique échoue sur fond sombre) */
             color: var(--color-gray-0);
 

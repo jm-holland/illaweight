@@ -91,7 +91,7 @@ function check(name, cat, fg, bg, target, note) {
   rows.push({ name, cat, target, ratio: r, note, bgColor: cStr(bg), fgColor: cStr(fg) });
 }
 for (const th of [theme(false), theme(true)]) {
-  const t = th.dark ? "dark " : "light";
+  const t = th.dark ? "sombre " : "clair ";
   const bg = th.bg;
   const c45 = 4.5;
   check(`${t}| body (gray-1)`, "texte", th.gray[1], bg, c45);
@@ -112,7 +112,7 @@ for (const th of [theme(false), theme(true)]) {
   check(`${t}| badge/muted (blanc sur gray-6)`, "texte", P.white, th.gray[6], c45);
   check(`${t}| skip-link / pag.active (blanc sur primary)`, "texte", P.white, th.primary, c45);
   check(`${t}| bouton primary (blanc, statique)`, "texte", P.white, P.primary, c45);
-  check(`${t}| bouton primary:hover (static −28%)`, "texte", P.white, scaleL(P.primary, -28), c45);
+  check(`${t}| bouton primary en survol (statique −28%)`, "texte", P.white, scaleL(P.primary, -28), c45);
   check(`${t}| bouton secondary (blanc, statique)`, "texte", P.white, P.secondary, c45);
   check(`${t}| bouton success (blanc, statique)`, "texte", P.white, P.success, c45);
   check(`${t}| bouton warning (blanc, statique)`, "texte", P.white, P.danger, c45);
@@ -131,7 +131,7 @@ for (const th of [theme(false), theme(true)]) {
   check(`${t}| bordures (input/pagination)`, "UI", th.border, bg, 3);
   check(`${t}| scrollbar (primary)`, "UI", th.primary, bg, 3);
   /* exemptés */
-  check(`${t}| pagination.disabled (gray-5)`, "info", th.gray[5], bg, null, "disabled → exempt");
+  check(`${t}| pagination.disabled (gray-5)`, "info", th.gray[5], bg, null, "désactivé → exempt");
 }
 
 /* ---------- rapport ---------- */
@@ -143,10 +143,10 @@ for (const [cat, ttl] of [["texte", "Texte"], ["UI", "Non-textuel"], ["info", "I
   if (cat === "info") continue;
   console.log(`── ${ttl} ──`);
   console.table(grp(cat).map(r => ({
-    context: r.name, cible: r.target, ratio: r.ratio.toFixed(2),
+    contexte: r.name, cible: r.target, ratio: r.ratio.toFixed(2),
     verdict: r.ratio >= r.target ? "PASS ✅" : "FAIL ❌",
     note: r.note ?? "",
   })));
 }
 console.log("── Infos (exemptés) ──");
-console.table(grp("info").map(r => ({ context: r.name, ratio: r.ratio.toFixed(2), note: r.note ?? "" })));
+console.table(grp("info").map(r => ({ contexte: r.name, ratio: r.ratio.toFixed(2), note: r.note ?? "" })));

@@ -6,12 +6,12 @@
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
-/** === Portfolio script == */
+/** === Script portfolio === */
 let sortMenu = document.querySelector(".portfolio-menu").children;
-console.log(sortMenu);
+console.log("Menu de tri portfolio :", sortMenu);
 let sortItem = document.querySelector(".portfolio-item").children;
 for (const element of sortMenu) {
-  console.log(element);
+  console.log("Élément du menu de tri :", element);
   element.addEventListener("click", function () {
     for (const element of sortMenu) {
       element.classList.remove("current");

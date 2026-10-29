@@ -1,5 +1,5 @@
 /** == Variables de base == */
-/** == colors = */
+/** == Couleurs == */
 $gray-0: hsl(0, 0%, 0%);
 $gray-1: hsl(0, 0%, 15%);
 $gray-2: hsl(0, 0%, 30%);
@@ -12,8 +12,8 @@ $gray-8: hsl(0, 0%, 100%);
 /* Bordure : UI non-textuel, ≥ 3:1 sur les deux fonds de page (WCAG 1.4.11) */
 $border: hsl(0, 0%, 55%);
 $border-dark: hsl(0, 0%, 71%);
-/* primaire : light = solide (blanc dessus ≥ 4.5 / fg ≥ 4.6 sur #fafafa)
-   dark  = texte lisible sur #282828 (≥ 4.8) */
+/* primaire : mode clair = solide (blanc dessus ≥ 4.5 / fg ≥ 4.6 sur #fafafa)
+   mode sombre = texte lisible sur #282828 (≥ 4.8) */
 $primary: hsl(203, 96%, 38%);
 $primary-focus: hsl(203, 96%, 30%);
 $primary-dark: hsl(203, 96%, 50%);
@@ -72,7 +72,7 @@ $background-dark: rgb(40, 40, 40);
   --color-gray-6: #{$gray-6};
   --color-gray-7: #{$gray-7};
   --color-gray-8: #{$gray-8};
-  /* blanc invariable : ne subit pas l'inversion des gris en dark mode */
+  /* blanc invariable : ne subit pas l'inversion des gris en mode sombre */
   --color-white: hsl(0, 0%, 100%);
   --color-border: #{$border};
   --color-primary: #{$primary};
@@ -91,7 +91,7 @@ $background-dark: rgb(40, 40, 40);
   --color-link-text: #{$gray-0};
   --color-secondary: #{$gray-2};
   --color-secondary-focus: #{$gray-3};
-  /* fonds « pleins » à texte blanc garanti : solides constants ≥ 4.5, light et dark */
+  /* fonds « pleins » à texte blanc garanti : solides constants ≥ 4.5, mode clair et mode sombre */
   --color-primary-solid: #{$primary};
   --color-success-solid: #{$success};
   --color-warning-solid: #{$danger};
@@ -106,7 +106,7 @@ $background-dark: rgb(40, 40, 40);
   --base-font-size: 0.875rem;
 }
 
-/** == Dark Mode == */
+/** == Mode sombre == */
 [data-theme="dark"] {
   --color-background: #{$background-dark};
   --color-gray-0: #{$gray-8};

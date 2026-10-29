@@ -115,8 +115,8 @@ figure {
 }
 
 mark {
-  /* noir statique : lisible sur la surligne claire en light ET dark
-     (les gris s'inversent en dark → var(--color-gray-1) deviendrait blanc) */
+  /* noir statique : lisible sur la surligne claire en mode clair ET mode sombre
+     (les gris s'inversent en mode sombre → var(--color-gray-1) deviendrait blanc) */
   color: var(--color-link-text);
   background: linear-gradient(
     180deg,

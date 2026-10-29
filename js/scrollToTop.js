@@ -6,7 +6,7 @@
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
-/** === Scroll to top === */
+/** === Retour en haut === */
 
 document.addEventListener("scroll", handleScroll);
 
@@ -20,11 +20,11 @@ function handleScroll() {
   let GOLDEN_RATIO = 0.5;
 
   if (document.documentElement.scrollTop / scrollableHeight > GOLDEN_RATIO) {
-    //show button
+    // afficher le bouton
 
     scrollToTopBtn.style.display = "block";
   } else {
-    //hide button
+    // masquer le bouton
 
     scrollToTopBtn.style.display = "none";
   }

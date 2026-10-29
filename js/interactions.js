@@ -6,7 +6,7 @@
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
-/** === Modals — API data-attributes === */
+/** === Modales — API data-attributes === */
 /** ouvrir : <button data-modal-open="id-du-modal">, fermer : [data-modal-close], clic fond, Esc */
 
 let modalTrigger = null;
@@ -105,7 +105,7 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-/** === Tabs — API data-attributes === */
+/** === Onglets — API data-attributes === */
 /** <a href="#pane-id" data-tab>  +  .tab-pane correspondant */
 
 document.addEventListener("click", (event) => {

@@ -23,12 +23,12 @@ body {
 }
 
 
-/** === Margin / padding === */
+/** === Marges / paddings === */
 
 $ems: 1, 2, 3, 4, 5, 6, 7;
 $directions: "", "-bottom", "-top", "-left", "-right";
 
-/* Paddings and Margins */
+/* Paddings et marges */
 @each $em in $ems {
     @each $dir in $directions {
         $dir-in-rule: string.slice($dir, 2, 2);
@@ -59,7 +59,7 @@ $directions: "", "-bottom", "-top", "-left", "-right";
     }
 }
 
-/** === Reduced motion (accessibilite) === */
+/** === Mouvement réduit (accessibilité) === */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -84,7 +84,7 @@ $directions: "", "-bottom", "-top", "-left", "-right";
     outline-offset: 0.125rem;
 }
 
-/* === list === */
+/* === listes === */
 ul,
 ol {
     margin: 1rem 0;
@@ -123,7 +123,7 @@ li {
     color: var(--color-gray-1);
 }
 
-/** == Description List == */
+/** == Liste de description == */
 dt {
     padding: 0 1rem 0 0;
     line-height: var(--base-line-height);
@@ -184,12 +184,12 @@ dd {
     }
 }
 
-/** === column mixins === */
+/** === Mixins de colonnes === */
 @mixin grid($target, $context) {
     width: calc(($target/$context)*100%);
 }
 
-// margin mixins
+// mixins de margin
 @mixin mleft($target, $context) {
     margin-left: calc(($target/$context)*100%);
 }
@@ -198,7 +198,7 @@ dd {
     margin-right: calc(($target/$context)*100%);
 }
 
-// basic clearfix
+// clearfix basique
 .clearfix {
     zoom: 1;
 
@@ -215,20 +215,20 @@ dd {
     }
 }
 
-// set a max width of 960 and show ugly salmon background
+// largeur maximale de 960 (à l'origine : fond saumon affreux)
 .wrap {
     max-width: 960px;
     margin: 0 auto;
 }
 
-// fire in the hole!
+// attention, ça saute !
 .row {
     @extend .clearfix;
 }
 
-// column styles for presentation
+// styles de colonnes pour la présentation
 .col {
-    float: left; // required, duh
+    float: left; // requis, évidemment
     margin-bottom: 1rem;
     padding: 1rem 0;
 
@@ -244,7 +244,7 @@ dd {
     @include mleft(80, 960);
 }
 
-// presentational boxes
+// boîtes de présentation
 .half {
     @include grid(480, 960);
 }
@@ -265,7 +265,7 @@ dd {
     @include grid(160, 960);
 }
 
-/** == Flex Columns == */
+/** == Colonnes flexibles == */
 .row {
     display: flex;
     flex-flow: row wrap;

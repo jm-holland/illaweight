@@ -6,8 +6,8 @@
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
-/** === Menu burger closed after click on link === */
-/** === Dropdowns : le clic sur un parent eplie / replie son sous-menu === */
+/** === Menu hamburger fermé après clic sur un lien === */
+/** === Déroulants : le clic sur un parent plie / replie son sous-menu === */
 
 function closeSubmenus() {
     document.querySelectorAll(".menu li.open").forEach((li) => {
@@ -21,7 +21,7 @@ document.querySelectorAll(".menu a").forEach((link) => {
     const li = link.parentElement;
     const submenu = li.querySelector(":scope > ul");
 
-    /** Lien simple : referme le menu burger apres navigation */
+    /** Lien simple : referme le menu hamburger après navigation */
     if (!submenu) {
         link.addEventListener("click", () => {
             document.getElementById("menu-hamburger").checked = false;
@@ -30,7 +30,7 @@ document.querySelectorAll(".menu a").forEach((link) => {
         return;
     }
 
-    /** Lien parent : bascule l'ouverture (epingle le sous-menu) */
+    /** Lien parent : bascule l'ouverture (épingle le sous-menu) */
     link.setAttribute("aria-expanded", "false");
     link.setAttribute("aria-haspopup", "true");
 
@@ -40,7 +40,7 @@ document.querySelectorAll(".menu a").forEach((link) => {
         const isOpen = li.classList.toggle("open");
         link.setAttribute("aria-expanded", String(isOpen));
 
-        /** Un seul sous-menu ouvert a la fois */
+        /** Un seul sous-menu ouvert à la fois */
         document.querySelectorAll(".menu li.open").forEach((other) => {
             if (other !== li) {
                 other.classList.remove("open");
@@ -51,7 +51,7 @@ document.querySelectorAll(".menu a").forEach((link) => {
     });
 });
 
-/** Ferme les sous-menus : clic a l'exterieur ou touche Esc */
+/** Ferme les sous-menus : clic à l'extérieur ou touche Esc */
 document.addEventListener("click", (event) => {
     if (!event.target.closest(".menu")) {
         closeSubmenus();

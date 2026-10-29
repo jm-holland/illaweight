@@ -26,8 +26,8 @@ section {
 
         &:hover {
             background-color: var(--color-gray-0);
-            /* inversion complète : le fond gray-0 bascule (noir/white slugable
-               runtime), le texte suit la fin opposée de la même échelle */
+            /* inversion complète : le fond gray-0 bascule (noir/blanc permutés
+               à l'exécution), le texte suit la fin opposée de la même échelle */
             color: var(--color-gray-8);
         }
 

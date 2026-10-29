@@ -168,7 +168,7 @@ $text-colors: (
   "muted": var(--color-gray-3),
 );
 
-/* Fonds « pleins » : solides constants → texte blanc garanti ≥ 4.5, light et dark. */
+/* Fonds « pleins » : solides constants → texte blanc garanti ≥ 4.5, mode clair et mode sombre. */
 $bg-colors: (
   "primary": var(--color-primary-solid),
   "secondary": var(--color-secondary),

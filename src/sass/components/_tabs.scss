@@ -1,17 +1,17 @@
 @use'../utils' as *;
 
-/** === Tabs === */
+/** === Onglets === */
 /**
- * Markup :
+ * Balisage :
  *   <nav class="tabs">
- *     <a href="#tab-1" class="active" data-tab>Tab 1</a>
- *     <a href="#tab-2" data-tab>Tab 2</a>
+ *     <a href="#tab-1" class="active" data-tab>Onglet 1</a>
+ *     <a href="#tab-2" data-tab>Onglet 2</a>
  *   </nav>
  *   <div class="tab-content">
  *     <div class="tab-pane active" id="tab-1">...</div>
  *     <div class="tab-pane" id="tab-2">...</div>
  *   </div>
- * Interactivite : js/interactions.js (data-tab).
+ * Interactivité : js/interactions.js (data-tab).
  */
 .tabs {
     display: flex;

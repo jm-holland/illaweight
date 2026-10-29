@@ -5,21 +5,21 @@
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="description" content="Scripts JavaScript du framework illaWeight : menu burger, dark mode, alert message, scroll to top, portfolio filtre, modal, tabs et accordion via une API data-attributes.">
-		<meta name="keywords" content="illaWeight, framework CSS, CSS, minimalist CSS, dark mode, frontend, web development, responsive design, UI components, CSS léger">
+		<meta name="description" content="Scripts JavaScript du framework illaWeight : menu hamburger, mode sombre, message d'alerte, retour en haut, filtrage portfolio, modale, onglets et accordéon via une API data-attributes.">
+		<meta name="keywords" content="illaWeight, framework CSS, CSS, CSS minimaliste, mode sombre, développement frontend, développement web, design responsive, composants UI, CSS léger">
 		<meta name="author" content="Jm Holland">
 		<meta http-equiv="Content-Language" content="fr">
 		<meta name="robots" content="index, follow">
-		<meta property="og:title" content="illaWeight - Scripts JavaScript (menu burger, dark mode, modal, tabs, accordion)">
-		<meta property="og:description" content="Documentation des scripts illaWeight : interactions des composants via data-attributes, detection de theme, notifications.">
+		<meta property="og:title" content="illaWeight - Scripts JavaScript (menu hamburger, mode sombre, modale, onglets, accordéon)">
+		<meta property="og:description" content="Documentation des scripts illaWeight : interactions des composants via data-attributes, détection du thème, notifications.">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://illaweight.illaweb.eu/scripts.html">
 		<meta property="og:image" content="https://illaweight.illaweb.eu/illaWeightCss.png">
 		<meta property="og:image:alt" content="Logo ou aperçu du framework illaWeight CSS">
-		<meta property="og:site_name" content="illaWeight CSS Framework">
+		<meta property="og:site_name" content="Framework CSS illaWeight">
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="illaWeight - Scripts JavaScript (menu burger, dark mode, modal, tabs, accordion)">
-		<meta name="twitter:description" content="Documentation des scripts illaWeight : interactions des composants via data-attributes, detection de theme, notifications.">
+		<meta name="twitter:title" content="illaWeight - Scripts JavaScript (menu hamburger, mode sombre, modale, onglets, accordéon)">
+		<meta name="twitter:description" content="Documentation des scripts illaWeight : interactions des composants via data-attributes, détection du thème, notifications.">
 		<meta name="twitter:image" content="https://illaweight.illaweb.eu/illaWeightCss.png">
 		<meta name="twitter:image:alt" content="Logo ou aperçu du framework illaWeight CSS">
 		<link
@@ -37,89 +37,89 @@
 		<link rel="preload" as="font" type="font/woff2" href="/fonts/Manjari/Manjari-Regular.woff2" crossorigin>
 		<link rel="preload" as="font" type="font/woff2" href="/fonts/tabler-icons.woff2" crossorigin>
 
-		<!-- Title -->
+		<!-- Titre -->
 		<title>illaWeight - Scripts JavaScript du Framework</title>
 
 	</head>
 <body>
 		<a class="skip-link" href="#main-content">Aller au contenu principal</a>
 		<nav
-			class="navigation" aria-label="navigation">
-			<!-- Brand -->
+			class="navigation" aria-label="Navigation">
+			<!-- Marque -->
 			<div class="brand">
 				<a href="/" title="Aller à la page d'accueil">
-					<img src="/illaWeight.png" alt="logo illawebWeight Css">
+					<img src="/illaWeight.png" alt="logo illaWeight CSS">
 				</a>
 			</div>
-			<!-- Menu Hamburger-->
-			<input class="menu-hamburger" type="checkbox" id="menu-hamburger" aria-label="Open the menu"/>
+			<!-- Menu hamburger-->
+			<input class="menu-hamburger" type="checkbox" id="menu-hamburger" aria-label="Ouvrir le menu"/>
 			<label class="menu-icon" for="menu-hamburger">
 				<span class="hamburger-icon" aria-hidden="true"></span>
 			</label>
 			<script type="module" src="/js/menu_burger.js"></script>
 			<ul class="menu">
 				<li>
-					<a href="docs.html#typography">Typography</a>
+					<a href="docs.html#typography">Typographie</a>
 				</li>
 				<li>
-					<a href="docs.html#blockquote">Blockquote</a>
+					<a href="docs.html#blockquote">Citation</a>
 				</li>
 				<li>
-					<a href="docs.html#list">List</a>
+					<a href="docs.html#list">Liste</a>
 				</li>
 				<li>
-					<a href="docs.html#buttons">Buttons</a>
+					<a href="docs.html#buttons">Boutons</a>
 				</li>
 				<li>
-					<a href="docs.html#card">Card</a>
+					<a href="docs.html#card">Carte</a>
 				</li>
 				<li>
-					<a href="docs.html#form">Form</a>
+					<a href="docs.html#form">Formulaire</a>
 				</li>
 				<li>
-					<a href="docs.html#table">Table</a>
+					<a href="docs.html#table">Tableau</a>
 				</li>
 				<li>
 					<a href="docs.html#portfolio">Portfolio</a>
 				</li>
 				<li>
-					<a href="#" aria-label="submenu">Styles</a>
+					<a href="#" aria-label="sous-menu">Styles</a>
 					<ul>
 						<li><a href="docs.html#badge">Badge</a></li>
 						<li><a href="docs.html#col">Colonnes</a></li>
-						<li><a href="docs.html#grid">Grid responsive</a></li>
+						<li><a href="docs.html#grid">Grille responsive</a></li>
 						<li><a href="docs.html#pagination">Pagination</a></li>
-						<li><a href="docs.html#social">Socials</a></li>
-						<li><a href="docs.html#margin">Spacing</a></li>
-						<li><a href="docs.html#utilities">Utilities</a></li>
+						<li><a href="docs.html#social">Réseaux sociaux</a></li>
+						<li><a href="docs.html#margin">Espacement</a></li>
+						<li><a href="docs.html#utilities">Utilitaires</a></li>
 					</ul>
 				</li>
 				<li>
-					<a href="#" aria-label="submenu">Javascript</a>
+					<a href="#" aria-label="sous-menu">Javascript</a>
 					<ul>
 						<li><a href="#menuBurger">Menu burger</a></li>
-						<li><a href="#darkMod">Dark Mode</a></li>
-						<li><a href="#scrollToTop">Scroll to top</a></li>
-						<li><a href="#alertMessage">Alert Message</a></li>
+						<li><a href="#darkMod">Mode sombre</a></li>
+						<li><a href="#scrollToTop">Retour en haut</a></li>
+						<li><a href="#alertMessage">Message d'alerte</a></li>
 						<li><a href="#portfolio-script">Portfolio</a></li>
-						<li><a href="#modalDemo">Modal</a></li>
-						<li><a href="#tabsDemo">Tabs</a></li>
-						<li><a href="#accordionDemo">Accordion</a></li>
+						<li><a href="#modalDemo">Modale</a></li>
+						<li><a href="#tabsDemo">Onglets</a></li>
+						<li><a href="#accordionDemo">Accordéon</a></li>
 					</ul>
 				</li>
-				<!-- Dark Mode-->
+				<!-- Mode sombre-->
 				<li>
-					<input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Dark Mode"/>
+					<input type="checkbox" class="checkbox" id="themeSwitch" aria-label="Mode sombre"/>
 					<label for="themeSwitch" class="checkbox-label">
-						<span class="moon" title="Dark"><i class="ti ti-moon" aria-hidden="true"></i></span>
-						<span class="sun" title="light"><i class="ti ti-sun" aria-hidden="true"></i></span>
-						<span class="ball" title="Dark mode"></span>
+						<span class="moon" title="Sombre"><i class="ti ti-moon" aria-hidden="true"></i></span>
+						<span class="sun" title="Clair"><i class="ti ti-sun" aria-hidden="true"></i></span>
+						<span class="ball" title="Mode sombre"></span>
 					</label>
 					<script type="module" src="/js/themeSwitch.js"></script>
 				</li>
 			</ul>
 		</nav>
-		<!-- alert Message -->
+		<!-- Message d'alerte -->
 		<div class="alert alert-warning ">
 			<div class="alert-content">
 				<span class="alert-icon"></span>
@@ -134,14 +134,14 @@
 		</div>
 		<script type="module" src="/js/alertMessage.js"></script>
 
-		<!-- Modal demo -->
+		<!-- Modale : démo -->
 		<div class="modal" id="modal-demo" role="dialog" aria-modal="true" aria-labelledby="modal-demo-title" aria-hidden="true">
 			<div class="modal-dialog" tabindex="-1">
 				<button class="modal-close" data-modal-close aria-label="Fermer">&times;</button>
-				<h3 id="modal-demo-title">Modal</h3>
+				<h3 id="modal-demo-title">Modale</h3>
 				<p>
-					Texte de la fenêtre modale. Fermeture via le bouton close, le bouton
-					ci-dessous, un clic sur le fond grisé ou la touche
+					Texte de la fenêtre modale. Fermeture via le bouton de fermeture, le
+					bouton ci-dessous, un clic sur le fond grisé ou la touche
 					<kbd>Esc</kbd>.
 				</p>
 				<button class="button button-primary" data-modal-close>Fermer</button>
@@ -157,13 +157,13 @@
 			<aside class="docs-nav" aria-label="Sommaire de la documentation">
 					<ul>
 						<li><a href="#menuBurger">Menu burger</a></li>
-						<li><a href="#darkMod">Dark mode</a></li>
-						<li><a href="#scrollToTop">Scroll to top</a></li>
-						<li><a href="#alertMessage">Alert message</a></li>
+						<li><a href="#darkMod">Mode sombre</a></li>
+						<li><a href="#scrollToTop">Retour en haut</a></li>
+						<li><a href="#alertMessage">Message d'alerte</a></li>
 						<li><a href="#portfolio-script">Portfolio</a></li>
-						<li><a href="#modalDemo">Modal</a></li>
-						<li><a href="#tabsDemo">Tabs</a></li>
-						<li><a href="#accordionDemo">Accordion</a></li>
+						<li><a href="#modalDemo">Modale</a></li>
+						<li><a href="#tabsDemo">Onglets</a></li>
+						<li><a href="#accordionDemo">Accordéon</a></li>
 					</ul>
 					<a href="docs.html"><strong>Documentation CSS &rarr;</strong></a>
 				</aside>
@@ -173,11 +173,11 @@
 			<h2>Javascript</h2>
 			<p class="mt-1">
 					Scripts JavaScript du framework, disponibles dans le dossier
-					<code>js/</code> du depot GitHub : chargez-les tels quels sur une page
-					statique via le CDN, ou importez-les depuis les sources locales. Modal,
-					tabs et accordion fonctionnent via l'API <code>data-attributes</code> de
+					<code>js/</code> du dépôt GitHub : chargez-les tels quels sur une page
+					statique via le CDN, ou importez-les depuis les sources locales. La
+					modale, les onglets et l'accordéon fonctionnent via l'API <code>data-attributes</code> de
 					<code>interactions.js</code> ; les autres rubriques sont des modules
-					autonomes (menu burger, theme, alerte, portfolio).
+					autonomes (menu hamburger, thème, alerte, portfolio).
 				</p>
 <pre>
             <code class="language-html">
@@ -195,7 +195,7 @@
 				<p class="me-2 mt-1">Menu burger — module <code>js/menu_burger.js</code></p>
 				<pre>
             <code class="language-javascript">
-			/** == Menu Burger == */
+			/** == Menu hamburger == */
 			document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', function () {
         document.getElementById('menu-hamburger').checked = false;
@@ -206,10 +206,10 @@
 			</div>
 
 			<div class="container" id="darkMod">
-				<p class="me-2 mt-1">Dark mode — code <code>themeSwitch.js</code></p>
+				<p class="me-2 mt-1">Mode sombre — code <code>themeSwitch.js</code></p>
 				<pre>
             <code class="language-javascript">
-/** == Dark mod switch == */
+/** == Bascule du mode sombre == */
 
 const themes = {
   light: "light",
@@ -219,24 +219,24 @@ const dataAttribute = "data-theme";
 const checkedAttribute = "aria-checked";
 const localStorageKey = "theme";
 
-// Check if the OS is set to prefer the dark color scheme
+// Vérifier si le système préfère le jeu de couleurs sombre
 function userPrefersDarkThemeInOs() {
   return (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
   );
 }
-// Set the theme attribute on the document element (aka on <html>)
+// Définir l'attribut de thème sur l'élément du document (c.-à-d. sur <html>)
 function setThemeAttribute(theme) {
   document.documentElement.setAttribute(dataAttribute, theme);
 }
 
-// Get theme attribute on the document element (aka on <html>)
+// Récupérer l'attribut de thème de l'élément du document (c.-à-d. sur <html>)
 function getThemeAttribute() {
   return document.documentElement.getAttribute(dataAttribute);
 }
 
-// Get the local storage value
+// Récupérer la valeur du localStorage
 function getLocalStorage() {
   if (!window.localStorage) {
     return;
@@ -244,7 +244,7 @@ function getLocalStorage() {
   return window.localStorage.getItem(localStorageKey);
 }
 
-// Set the local storage value
+// Définir la valeur du localStorage
 function setLocalStorage(theme) {
   if (!window.localStorage) {
     return;
@@ -252,12 +252,12 @@ function setLocalStorage(theme) {
   window.localStorage.setItem(localStorageKey, theme);
 }
 
-// Set the checked attribute on the switch toggle element
+// Définir l'attribut checked sur l'élément interrupteur
 function setSwitch(state, toggleSwitch) {
   toggleSwitch.setAttribute(checkedAttribute, state);
 }
 
-// Perform theme switch
+// Effectuer la bascule de thème
 function switchTheme(toggleSwitch) {
   const wasChecked = toggleSwitch.getAttribute(checkedAttribute) === "true";
   setSwitch(!wasChecked, toggleSwitch);
@@ -270,15 +270,15 @@ function switchTheme(toggleSwitch) {
   }
 }
 
-// Initialise the theme switch element
+// Initialiser l'élément de bascule du thème
 function initThemeToggleSwitch(switchButtonSelector) {
-  // Get theme toggle switch
+  // Récupérer l'interrupteur de thème
   const toggleSwitch = document.querySelector(switchButtonSelector);
   if (getThemeAttribute() === themes.dark) {
     setSwitch(true, toggleSwitch);
   }
 
-  // Add click event to theme toggle switch
+  // Ajouter un événement clic à l'interrupteur de thème
   toggleSwitch.addEventListener(
     "click",
     () => switchTheme(toggleSwitch),
@@ -306,10 +306,10 @@ window.addEventListener("DOMContentLoaded", () => {
       </pre>
 			</div>
 			<div class="container" id="scrollToTop">
-				<p class="me-2 mt-1">Scroll to top — code <code>scrollToTop.js</code></p>
+				<p class="me-2 mt-1">Retour en haut — code <code>scrollToTop.js</code></p>
 				<pre>
           <code class="language-javascript">
-/** === Sroll to top === */
+/** === Retour en haut === */
 document.addEventListener("scroll", handleScroll);
 
 let scrollToTopBtn = document.querySelector(".top-btn");
@@ -322,11 +322,11 @@ function handleScroll() {
   let GOLDEN_RATIO = 0.5;
 
   if (document.documentElement.scrollTop / scrollableHeight > GOLDEN_RATIO) {
-    //show button
+    // afficher le bouton
 
     scrollToTopBtn.style.display = "block";
   } else {
-    //hide button
+    // masquer le bouton
 
     scrollToTopBtn.style.display = "none";
   }
@@ -346,9 +346,9 @@ function scrollToTop() {
         </pre>
 			</div>
 			<div class="container" id="alertMessage">
-				<p class="me-2 mt-1">Alert message — code <code>alertMessage.js</code></p>
+				<p class="me-2 mt-1">Message d'alerte — code <code>alertMessage.js</code></p>
 				<pre><code class="language-javascript">
-/** === Alert Message === */
+/** === Message d'alerte === */
 let alert = document.querySelector(".alert");
 let closeIcon = document.querySelector(".alert-close");
 let progress = document.querySelector(".progress");
@@ -357,7 +357,7 @@ timer = setTimeout(() => {
   alert.classList.add("hidden");
 
   progress.classList.add("hidden");
-}, 6000); //1s = 1000 milliseconds
+}, 6000); //1 s = 1000 millisecondes
 
 closeIcon.addEventListener("click", () => {
   alert.classList.add("hidden");
@@ -402,15 +402,15 @@ for (const element of sortMenu) {
 			<div class="container" id="modalDemo">
 <div class="docs-demo grid">
     <div class="col-12 col-md-6">
-				<p class="me-2">Open the modal</p>
-				<button class="button button-primary" data-modal-open="modal-demo">Open modal</button>
+				<p class="me-2">Ouvrir la modale</p>
+				<button class="button button-primary" data-modal-open="modal-demo">Ouvrir la modale</button>
 				
     </div>
     <div class="col-12 col-md-6">
 
 <pre class="mt-1"><code class="language-html">
-/** === Modal === */
-&lt;button data-modal-open="modal-demo"&gt;Open modal&lt;/button&gt;
+/** === Modale === */
+&lt;button data-modal-open="modal-demo"&gt;Ouvrir la modale&lt;/button&gt;
 
 &lt;div class="modal" id="modal-demo" role="dialog" aria-modal="true" aria-hidden="true"&gt;
   &lt;div class="modal-dialog" tabindex="-1"&gt;
@@ -427,7 +427,7 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
 
 			</div>
 			<div class="container" id="tabsDemo">
-				<p class="me-2">Tabs</p>
+				<p class="me-2">Onglets</p>
 				<nav class="tabs">
 					<a href="#tab-js" class="active" data-tab aria-selected="true">JS</a>
 					<a href="#tab-css" data-tab aria-selected="false">CSS</a>
@@ -445,10 +445,10 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
     <div class="col-12 col-md-6">
 
 <pre class="mt-1"><code class="language-html">
-/** === Tabs === */
+/** === Onglets === */
 &lt;nav class="tabs"&gt;
-  &lt;a href="#tab-1" class="active" data-tab&gt;Tab 1&lt;/a&gt;
-  &lt;a href="#tab-2" data-tab&gt;Tab 2&lt;/a&gt;
+  &lt;a href="#tab-1" class="active" data-tab&gt;Onglet 1&lt;/a&gt;
+  &lt;a href="#tab-2" data-tab&gt;Onglet 2&lt;/a&gt;
 &lt;/nav&gt;
 &lt;div class="tab-content"&gt;
   &lt;div class="tab-pane active" id="tab-1"&gt;...&lt;/div&gt;
@@ -460,7 +460,7 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
 
 			</div>
 			<div class="container" id="accordionDemo">
-				<p class="me-2">Accordion</p>
+				<p class="me-2">Accordéon</p>
 <div class="docs-demo grid">
     <div class="col-12 col-md-6">
 				<div class="accordion mb-2">
@@ -482,7 +482,7 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
     <div class="col-12 col-md-6">
 
 <pre><code class="language-html">
-/** === Accordion === */
+/** === Accordéon === */
 &lt;div class="accordion"&gt;
   &lt;details&gt;
     &lt;summary&gt;Titre&lt;/summary&gt;
@@ -502,10 +502,10 @@ Fermeture : bouton data-modal-close, clic sur le fond, ou touche Esc.
 			<p>
 				<a property="dct:title" rel="cc:attributionURL" href="https://github.com/jm-holland/illaweight.git">illaWeight
 																																																																																							            CSS</a>
-				by
+				par
 				<a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://illaweb.fr">jm
 																																																																																							            Holland</a>
-				is licensed under
+				sous
 				<a href="https://github.com/jm-holland/illaweight/-/blob/main/LICENSE" target="_blank" rel="license noopener noreferrer">licence MIT
 
 				</a>

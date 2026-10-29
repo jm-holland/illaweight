@@ -6,7 +6,7 @@
  *  licence : MIT https://gitlab.com/jmholland/illaweight/-/blob/master/LICENSE
  */
 
-/** == Dark mod switch == */
+/** === Bascule du mode sombre === */
 
 const themes = {
   light: "light",
@@ -16,24 +16,24 @@ const dataAttribute = "data-theme";
 const checkedAttribute = "aria-checked";
 const localStorageKey = "theme";
 
-// Check if the OS is set to prefer the dark color scheme
+// Vérifier si le système préfère le thème sombre
 function userPrefersDarkThemeInOs() {
   return (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
   );
 }
-// Set the theme attribute on the document element (aka on <html>)
+// Définir l'attribut de thème sur l'élément document (c'est-à-dire sur <html>)
 function setThemeAttribute(theme) {
   document.documentElement.setAttribute(dataAttribute, theme);
 }
 
-// Get theme attribute on the document element (aka on <html>)
+// Lire l'attribut de thème sur l'élément document (c'est-à-dire sur <html>)
 function getThemeAttribute() {
   return document.documentElement.getAttribute(dataAttribute);
 }
 
-// Get the local storage value
+// Lire la valeur dans le stockage local
 function getLocalStorage() {
   if (!window.localStorage) {
     return;
@@ -41,7 +41,7 @@ function getLocalStorage() {
   return window.localStorage.getItem(localStorageKey);
 }
 
-// Set the local storage value
+// Enregistrer la valeur dans le stockage local
 function setLocalStorage(theme) {
   if (!window.localStorage) {
     return;
@@ -49,12 +49,12 @@ function setLocalStorage(theme) {
   window.localStorage.setItem(localStorageKey, theme);
 }
 
-// Set the checked attribute on the switch toggle element
+// Définir l'attribut checked sur l'élément interrupteur
 function setSwitch(state, toggleSwitch) {
   toggleSwitch.setAttribute(checkedAttribute, state);
 }
 
-// Perform theme switch
+// Effectuer la bascule de thème
 function switchTheme(toggleSwitch) {
   const wasChecked = toggleSwitch.getAttribute(checkedAttribute) === "true";
   setSwitch(!wasChecked, toggleSwitch);
@@ -67,16 +67,16 @@ function switchTheme(toggleSwitch) {
   }
 }
 
-// Initialise the theme switch element
+// Initialiser l'élément de bascule du thème
 function initThemeToggleSwitch(switchButtonSelector) {
-    // Get theme toggle switch
+    // Récupérer l'interrupteur de bascule du thème
     const toggleSwitch = document.querySelector(switchButtonSelector);
     if (getThemeAttribute() === themes.dark) {
         setSwitch(true, toggleSwitch);
     }
 
-    /* Cas d'un toggle non natif (<input type="checkbox">) : semantics
-       explicit + activation clavier (WCAG 2.1.1). */
+    /* Cas d'un interrupteur non natif (<input type="checkbox">) : sémantique
+       explicite + activation clavier (WCAG 2.1.1). */
     if (!toggleSwitch.matches("input, button, a")) {
         if (!toggleSwitch.hasAttribute("role")) {
             toggleSwitch.setAttribute("role", "switch");
@@ -93,7 +93,7 @@ function initThemeToggleSwitch(switchButtonSelector) {
         });
     }
 
-    // Add click event to theme toggle switch
+    // Ajouter l'événement de clic à l'interrupteur de thème
     toggleSwitch.addEventListener(
         "click",
         () => switchTheme(toggleSwitch),

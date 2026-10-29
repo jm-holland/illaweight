@@ -37,7 +37,7 @@ const solids={primary:P.primary,success:P.success,warning:P.danger,error:P.error
  secondary:P.secondary,muted:P.muted};
 const rows=[];const chk=(ev,fg,bg,t)=>rows.push({ev,c:t,r:ratio(fg,bg),fg:n(fg),bg:n(bg)});
 for(const th of [theme(false),theme(true)]){
- const t=th.dark?"dark ":"light";const bg=th.bg;const C=4.5;
+ const t=th.dark?"sombre ":"clair ";const bg=th.bg;const C=4.5;
  chk(`${t}| body gray-1`,th.gray[1],bg,C);
  chk(`${t}| headings gray-0`,th.gray[0],bg,C);
  chk(`${t}| lien`,th.link,bg,C);chk(`${t}| lien visited`,th.visited,bg,C);
@@ -48,14 +48,14 @@ for(const th of [theme(false),theme(true)]){
  for(const[k,c]of Object.entries(solids))chk(`${t}| badge/${k} (blanc)`,P.white,c,C);
  chk(`${t}| skip-link/pag (blanc sur primary-solid)`,P.white,solids.primary,C);
  chk(`${t}| boutons statiques (blanc / $primary)`,P.white,P.primary,C);
- chk(`${t}| bouton primary hover (−28%)`,P.white,scaleL(P.primary,-28),C);
+ chk(`${t}| bouton primary en survol (−28%)`,P.white,scaleL(P.primary,-28),C);
  chk(`${t}| bouton success (blanc)`,P.white,P.success,C);
  chk(`${t}| bouton warning (blanc)`,P.white,P.danger,C);
  chk(`${t}| bouton error (blanc)`,P.white,P.error,C);
  chk(`${t}| bouton secondary (blanc \$gray-3)`,P.white,th.gray?hsl(0,0,45):hsl(0,0,45),C);
  chk(`${t}| mark (link-text noir sur highlight)`,P.gray[0],th.highlight,C);
  chk(`${t}| navigation a (gray-2)`,th.gray[2],bg,C);
- chk(`${t}| nav hover (primary)`,th.primary,bg,C);
+ chk(`${t}| nav en survol (primary)`,th.primary,bg,C);
  for(const[nm,base]of[["primary",P.primary],["success",P.success],["warning",P.danger],["error",P.error]]){
   const acc=scaleL(base,-40),panel=blend(base,0.8,bg);
   chk(`${t}| alert-${nm} titre (gray-0 sur panneau)`,th.gray[0],panel,C);
