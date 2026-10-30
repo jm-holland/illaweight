@@ -74,7 +74,27 @@
  * Complète les utilitaires statiques de _base.scss :
  * {m,p}{,t,b,l,r,x,y}-{sm,md,lg}-{1..7}  ex. .mt-md-3, .px-sm-2
  */
-@mixin spacing($prop, $prop-name, $suffix) {
+// 1. Mixin pour les classes GLOBALES (ex: .my-2, .pt-3)
+@mixin spacing($prop, $prop-name) {
+  @each $dir, $short in $short-directions {
+    @for $em from 1 through 7 {
+      .#{$prop}#{$short}-#{$em} {
+        @if $dir == "-x" {
+          #{$prop-name}-left: $em * 1rem !important;
+          #{$prop-name}-right: $em * 1rem !important;
+        } @else if $dir == "-y" {
+          #{$prop-name}-top: $em * 1rem !important;
+          #{$prop-name}-bottom: $em * 1rem !important;
+        } @else {
+          #{$prop-name}#{$dir}: $em * 1rem !important;
+        }
+      }
+    }
+  }
+}
+
+// 2. Mixin pour les classes RESPONSIVES (ex: .my-md-2, .pt-lg-3)
+@mixin spacing-responsive($prop, $prop-name, $suffix) {
   @each $dir, $short in $short-directions {
     @for $em from 1 through 7 {
       .#{$prop}#{$short}-#{$suffix}-#{$em} {
@@ -102,19 +122,23 @@ $short-directions: (
   "-y": "y",
 );
 
+// Classes globales (ex: .my-2, .mx-3, .pt-3, .py-4)
+@include spacing("m", "margin");
+@include spacing("p", "padding");
+
 @include up("sm") {
-  @include spacing("m", "margin", "sm");
-  @include spacing("p", "padding", "sm");
+  @include spacing-responsive("m", "margin", "sm");
+  @include spacing-responsive("p", "padding", "sm");
 }
 
 @include up("md") {
-  @include spacing("m", "margin", "md");
-  @include spacing("p", "padding", "md");
+  @include spacing-responsive("m", "margin", "md");
+  @include spacing-responsive("p", "padding", "md");
 }
 
 @include up("lg") {
-  @include spacing("m", "margin", "lg");
-  @include spacing("p", "padding", "lg");
+  @include spacing-responsive("m", "margin", "lg");
+  @include spacing-responsive("p", "padding", "lg");
 }
 
 /** --- Typo --- */
