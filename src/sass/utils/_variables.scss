@@ -58,7 +58,7 @@ $background-light: #fafafa;
 $background-dark: rgb(40, 40, 40);
 
 :root,
-[data-theme="default"] {
+[data-theme="light"] {
   --color-background: #{$background-light};
   --font-family: "Manjari", sans-serif;
   --transition-speed: 0.15s;

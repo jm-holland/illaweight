@@ -13,7 +13,7 @@ const isEnPage = document.documentElement.lang.startsWith("en");
 
 function add_icon() {
   let iconCopy = document.createElement("i");
-  iconCopy.classList.add("bi", "bi-clipboard");
+  iconCopy.classList.add("ti", "ti-clipboard");
 
   let code = document.querySelectorAll("code");
   let it = code.values();
@@ -31,14 +31,14 @@ function copyText() {
       preEl.addEventListener("click", () => {
         let copyVal = this.getElementsByTagName("code")[0].textContent;
         navigator.clipboard.writeText(copyVal);
-        this.getElementsByTagName("i")[0].classList.remove("bi-clipboard");
-        this.getElementsByTagName("i")[0].classList.add("bi-clipboard-check");
+        this.getElementsByTagName("i")[0].classList.remove("ti-clipboard");
+        this.getElementsByTagName("i")[0].classList.add("ti-clipboard-check");
         this.getElementsByTagName("i")[0].append(isEnPage ? "  copied" : "  copié");
         setTimeout(() => {
           this.getElementsByTagName("i")[0].classList.remove(
-            "bi-clipboard-check"
+            "ti-clipboard-check"
           );
-          this.getElementsByTagName("i")[0].classList.add("bi-clipboard");
+          this.getElementsByTagName("i")[0].classList.add("ti-clipboard");
           this.getElementsByTagName("i")[0].textContent = "";
         }, 1500);
       });
