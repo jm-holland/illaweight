@@ -55,6 +55,11 @@ main {
 .section {
   padding: 2rem;
 }
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .container {
   margin: 1rem;
